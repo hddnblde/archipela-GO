@@ -4,7 +4,7 @@ using UnityEngine;
 namespace achipelaGO.Crossword
 {
     [CreateAssetMenu(fileName = "Crossword", menuName = "archipelaGO/Crossword", order = 1)]
-    public class Crossword : ScriptableObject
+    public class CrosswordConfig : ScriptableObject
     {
         #region Fields
         [SerializeField] 
