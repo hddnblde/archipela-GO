@@ -127,40 +127,50 @@ namespace archipelaGO.Crossword
                     SerializedProperty puzzlePiece =
                         m_puzzlePieces.GetArrayElementAtIndex(i);
 
-                    DrawPuzzlePieceProperty(puzzlePiece);
+                    DrawPuzzlePieceProperty(i, puzzlePiece);
                 }
             }
         }
 
-        private void DrawPuzzlePieceProperty(SerializedProperty puzzlePiece)
+        private void DrawPuzzlePieceProperty(int index, SerializedProperty puzzlePiece)
         {
-            puzzlePiece.isExpanded = EditorGUILayout.Foldout(puzzlePiece.isExpanded,
-                puzzlePiece.displayName);
+            Rect rect = EditorGUILayout.GetControlRect();
+            float propertyWidth = (rect.width - EditorGUIUtility.labelWidth);
+            rect.width = EditorGUIUtility.labelWidth;
+
+            puzzlePiece.isExpanded = EditorGUI.Foldout(rect, puzzlePiece.isExpanded,
+                $"Word { index }");
+
+            rect.x = rect.xMax;
+            rect.width = propertyWidth;
+            
+            SerializedProperty wordBankIndex = puzzlePiece.
+                FindPropertyRelative("m_wordBankIndex");
+
+            if (m_cachedWords != null && m_cachedWords.Length > 0)
+            {
+                using (var scope = new EditorGUI.ChangeCheckScope())
+                {
+                    using (new EditorGUI.IndentLevelScope(-EditorGUI.indentLevel))
+                    {
+                        wordBankIndex.intValue = EditorGUI.
+                            Popup(rect, wordBankIndex.intValue, m_cachedWords);
+                    }
+
+                    if (scope.changed)
+                        VerifyLongestCharacterCountFromPuzzlePieces();
+                }
+            }
             
             if (!puzzlePiece.isExpanded)
                 return;
 
             SerializedProperty direction = puzzlePiece.FindPropertyRelative("m_direction"),
-                position = puzzlePiece.FindPropertyRelative("m_position"),
-                wordBankIndex = puzzlePiece.FindPropertyRelative("m_wordBankIndex");
+                position = puzzlePiece.FindPropertyRelative("m_position");
 
             using (new EditorGUI.IndentLevelScope())
             {
                 EditorGUILayout.PropertyField(direction);
-
-                if (m_cachedWords != null && m_cachedWords.Length > 0)
-                {
-                    using (var scope = new EditorGUI.ChangeCheckScope())
-                    {
-                        wordBankIndex.intValue =
-                            EditorGUILayout.Popup(new GUIContent("Word"),
-                            wordBankIndex.intValue, m_cachedWords);
-
-                        if (scope.changed)
-                            VerifyLongestCharacterCountFromPuzzlePieces();
-                    }
-                }
-
                 EditorGUILayout.PropertyField(position);
             }
         }
@@ -187,7 +197,11 @@ namespace archipelaGO.Crossword
                     title = word.FindPropertyRelative("m_title"),
                     description = word.FindPropertyRelative("m_description");
 
-                m_cachedWords[i] = new GUIContent(title.stringValue.ToUpper(), description.stringValue);
+                string tooltip = (string.IsNullOrEmpty(description.stringValue) ||
+                    string.IsNullOrWhiteSpace(description.stringValue) ?
+                    "No description." : description.stringValue);
+
+                m_cachedWords[i] = new GUIContent(title.stringValue.ToUpper(), tooltip);
             }
 
             VerifyLongestCharacterCountFromPuzzlePieces();
