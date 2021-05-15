@@ -41,6 +41,21 @@ namespace archipelaGO
 
             return m_words[index];
         }
+
+        public int LongestCharacterCount()
+        {
+            int count = 0;
+
+            foreach (Word word in m_words)
+            {
+                int currentCharacterCount = word.title.Length;
+
+                if (currentCharacterCount > count)
+                    count = currentCharacterCount;
+            }
+
+            return count;
+        }
         #endregion
     }
 }
