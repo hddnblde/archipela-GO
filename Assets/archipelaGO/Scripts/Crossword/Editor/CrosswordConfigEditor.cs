@@ -149,9 +149,17 @@ namespace archipelaGO.Crossword
                 EditorGUILayout.PropertyField(direction);
 
                 if (m_cachedWords != null && m_cachedWords.Length > 0)
-                    wordBankIndex.intValue =
-                        EditorGUILayout.Popup(new GUIContent("Word"),
-                        wordBankIndex.intValue, m_cachedWords);
+                {
+                    using (var scope = new EditorGUI.ChangeCheckScope())
+                    {
+                        wordBankIndex.intValue =
+                            EditorGUILayout.Popup(new GUIContent("Word"),
+                            wordBankIndex.intValue, m_cachedWords);
+
+                        if (scope.changed)
+                            VerifyLongestCharacterCountFromPuzzlePieces();
+                    }
+                }
 
                 EditorGUILayout.PropertyField(position);
             }
@@ -180,9 +188,32 @@ namespace archipelaGO.Crossword
                     description = word.FindPropertyRelative("m_description");
 
                 m_cachedWords[i] = new GUIContent(title.stringValue.ToUpper(), description.stringValue);
+            }
 
-                if (title.stringValue.Length > m_longestCharacterCount)
-                    m_longestCharacterCount = title.stringValue.Length;
+            VerifyLongestCharacterCountFromPuzzlePieces();
+        }
+
+        private void VerifyLongestCharacterCountFromPuzzlePieces()
+        {
+            m_longestCharacterCount = 0;
+
+            if (m_cachedWords == null)
+                return;
+
+            for (int i = 0; i < m_puzzlePieces.arraySize; i++)
+            {
+                SerializedProperty puzzlePiece = m_puzzlePieces.GetArrayElementAtIndex(i),
+                    wordBankIndex = puzzlePiece.FindPropertyRelative("m_wordBankIndex");
+                
+                int index = wordBankIndex.intValue;
+
+                if (index < 0 || index >= m_cachedWords.Length)
+                    continue;
+                
+                GUIContent word = m_cachedWords[index];
+
+                if (word.text.Length > m_longestCharacterCount)
+                    m_longestCharacterCount = word.text.Length;
             }
         }
         #endregion
