@@ -108,11 +108,12 @@ namespace archipelaGO.Crossword
             cell.SetAsEmptyTile();
         }
 
-        private void InsertCellToContainer(int row, int column, ref CrosswordCell cell) =>
-            cell.transform.SetParent(m_cellContainer.transform);
-        
-        private void CellCheck(int row, int column, ref CrosswordCell cell) =>
-            Debug.Log(cell.IsEmpty());
+        private void InsertCellToContainer(int row, int column, ref CrosswordCell cell)
+        {
+            RectTransform cellRect = cell.transform as RectTransform;
+            cellRect.SetParent(m_cellContainer.transform);
+            cellRect.localScale = Vector3.one;
+        }
         #endregion
 
 
