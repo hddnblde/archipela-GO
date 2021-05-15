@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Crossword
 {
@@ -14,7 +15,7 @@ namespace archipelaGO.Crossword
         private Vector2Int m_gridSize = Vector2Int.one * 7;
 
         [SerializeField]
-        private List<GridWord> m_gridWords = new List<GridWord>();
+        private List<PuzzlePiece> m_puzzlePieces = new List<PuzzlePiece>();
         #endregion
 
 
@@ -22,7 +23,7 @@ namespace archipelaGO.Crossword
         public WordBank wordBank => m_wordBank;
 
         public Vector2Int gridSize => m_gridSize;
-        public int wordSize => m_gridWords.Count;
+        public int wordSize => m_puzzlePieces.Count;
         #endregion
 
 
@@ -32,14 +33,14 @@ namespace archipelaGO.Crossword
             if (index < 0 || index >= wordSize)
                 return null;
 
-            return m_gridWords[index];
+            return new GridWord(m_puzzlePieces[index], m_wordBank);
         }
         #endregion
 
 
         #region Data Structure
         [System.Serializable]
-        public class GridWord
+        public struct PuzzlePiece
         {
             [SerializeField]
             private Direction m_direction;
@@ -60,6 +61,29 @@ namespace archipelaGO.Crossword
         {
             Across,
             Down
+        }
+
+        public class GridWord
+        {
+            public GridWord (PuzzlePiece gridWord, WordBank wordBank)
+            {
+                m_direction = gridWord.direction;
+                m_position = gridWord.position;
+                m_word = wordBank.GetWord(gridWord.wordBankIndex);
+            }
+
+            #region Fields
+            private Direction m_direction = Direction.Across;
+            private Vector2Int m_position = Vector2Int.zero;
+            private Word m_word = new Word();
+            #endregion
+
+
+            #region Properties
+            public Direction direction => m_direction;
+            public Vector2Int position => m_position;
+            public Word word => m_word;
+            #endregion
         }
         #endregion
     }
