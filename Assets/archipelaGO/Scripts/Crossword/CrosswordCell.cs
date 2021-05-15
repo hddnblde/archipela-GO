@@ -1,0 +1,100 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace archipelaGO.Crossword
+{
+    public class CrosswordCell : MonoBehaviour
+    {
+        #region Fields
+        [SerializeField]
+        private Text m_characterContainer = null;
+
+        [SerializeField]
+        private Image m_backgroundImage = null;
+
+        [SerializeField]
+        private float m_revealAnimationTime = 0.25f;
+
+        [Space]
+
+        [SerializeField]
+        private Color m_enabledColor = Color.white;
+
+        [SerializeField]
+        private Color m_emptyColor = Color.gray;
+
+        private enum State
+        {
+            Empty = 0,
+            CharacterHidden = 1,
+            CharacterShown = 2
+        }
+        #endregion
+
+
+        #region Public Methods
+        public void SetAsCharacterTile(char character)
+        {
+            AssignCharacter(character);
+            SetState(State.CharacterShown);
+        }
+
+        public void SetAsEmptyTile()
+        {
+            if (m_characterContainer != null)
+                m_characterContainer.text = string.Empty;
+
+            SetState(State.Empty);
+        }
+
+        public bool IsEmpty()
+        {
+            if (m_characterContainer == null)
+                return true;
+
+            return (m_characterContainer.text.Length <= 0);
+        }
+        #endregion
+
+
+        #region Internal Methods
+        private void SetState(State state)
+        {
+            (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
+            SetBackgroundColor(cell.backgroundColor);
+            ShowCharacter(cell.showCharacter);
+        }
+        
+        private void AssignCharacter(char character)
+        {
+            if (m_characterContainer != null)
+                m_characterContainer.text = $"{ character }".ToUpper();
+        }
+
+        private void SetBackgroundColor(Color color)
+        {
+            if (m_backgroundImage != null)
+                m_backgroundImage.color = color;
+        }
+
+        private void ShowCharacter(bool shown)
+        {
+            if (m_characterContainer != null)
+                m_characterContainer.enabled = shown;
+        }
+        #endregion
+
+
+        #region Helper Method
+        private (Color backgroundColor, bool showCharacter) GetCellState(State state)
+        {
+            Color backgroundColor = (state == State.Empty ?
+                m_emptyColor : m_enabledColor);
+
+            bool showCharacter = (state == State.CharacterShown);
+        
+            return (backgroundColor, showCharacter);
+        }
+        #endregion
+    }
+}
