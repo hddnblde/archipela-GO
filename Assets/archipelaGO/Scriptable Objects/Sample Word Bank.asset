@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_words:
   - m_title: noble
-    m_description: 
+    m_description: belonging to a hereditary class with high social or political
+      status; aristocratic.
   - m_title: steed
     m_description: 
   - m_title: woo
