@@ -65,6 +65,7 @@ namespace archipelaGO.Crossword
             int wordLength = word.Length;
             Vector2Int position = grid.position;
             GridDirection direction = grid.direction;
+            (int columns, int rows) gridSize = GetGridSize(m_grid);
 
             for (int i = 0; i < wordLength; i++)
             {
@@ -73,6 +74,9 @@ namespace archipelaGO.Crossword
 
                 int column = (position.x + columnOffset);
                 int row = (position.y + rowOffset);
+
+                if (row >= gridSize.rows || column >= gridSize.columns)
+                    continue;
 
                 CrosswordCell cell = m_grid[column, row];
                 char character = word[i];
