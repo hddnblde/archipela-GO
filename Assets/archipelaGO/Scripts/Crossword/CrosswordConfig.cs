@@ -14,7 +14,7 @@ namespace archipelaGO.Crossword
         [SerializeField]
         private Vector2Int m_gridSize = Vector2Int.one * 7;
 
-        [SerializeField]
+        [SerializeField, NonReorderable]
         private List<PuzzlePiece> m_puzzlePieces = new List<PuzzlePiece>();
         #endregion
 
