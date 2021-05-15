@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b93d0f3851bfb49a31dc4124fb3c41, type: 3}
+  m_Name: Sample Word Bank
+  m_EditorClassIdentifier: 
+  m_words:
+  - m_title: noble
+    m_description: 
+  - m_title: steed
+    m_description: 
+  - m_title: woo
+    m_description: 
+  - m_title: minions
+    m_description: 
+  - m_title: astonishing
+    m_description: 
+  - m_title: radiant
+    m_description: 
+  - m_title: departing
+    m_description: 
+  - m_title: wrath
+    m_description: 
+  - m_title: revel
+    m_description: 
+  - m_title: arouse
+    m_description: 
+  - m_title: endeavor
+    m_description: 
+  - m_title: enthusiasm
+    m_description: 
