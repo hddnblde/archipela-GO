@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace achipelaGO.Crossword
+namespace archipelaGO.Crossword
 {
     [CreateAssetMenu(fileName = "Crossword", menuName = "archipelaGO/Crossword", order = 1)]
     public class CrosswordConfig : ScriptableObject
