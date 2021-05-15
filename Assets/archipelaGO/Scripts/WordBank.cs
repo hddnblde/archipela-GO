@@ -26,5 +26,21 @@ namespace archipelaGO
             public string description => m_description;
         }
         #endregion
+
+
+        #region Property
+        public int wordCount => m_words?.Count ?? 0;
+        #endregion
+
+
+        #region Public Method
+        public Word GetWord(int index)
+        {
+            if (index < 0 || index >= wordCount)
+                return new Word();
+
+            return m_words[index];
+        }
+        #endregion
     }
 }
