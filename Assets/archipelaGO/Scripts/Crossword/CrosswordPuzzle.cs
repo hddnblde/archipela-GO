@@ -1,3 +1,5 @@
+using System.Text;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridDirection = archipelaGO.Crossword.CrosswordConfig.Direction;
@@ -15,6 +17,9 @@ namespace archipelaGO.Crossword
         [SerializeField]
         private GameObject m_cellPrefab = null;
 
+        [SerializeField]
+        private Text m_hintText = null;
+
         [Space]
 
         [SerializeField]
@@ -24,8 +29,25 @@ namespace archipelaGO.Crossword
         private float m_padding = 50f;
 
         private RectTransform m_rectTransform = null;
-        private CrosswordCell[,] m_grid = null;
+        #endregion
+
+
+        #region Data Structure
         private delegate void CellFunction(int column, int row, ref CrosswordCell cell);
+
+
+        private struct WordHint
+        {
+            public WordHint (int order, GridDirection direction, string description) =>
+                (m_order, m_direction, m_description) = (order, direction, description);
+
+            private int m_order;
+            private GridDirection m_direction;
+            private string m_description;
+
+            public GridDirection direction => m_direction;
+            public string text => $"{ m_order }. { m_description }";
+        }
         #endregion
 
 
@@ -42,30 +64,69 @@ namespace archipelaGO.Crossword
                 return;
 
             Vector2Int size = m_crossword.gridSize;
-            m_grid = GenerateGrid(size);
-            ModifyGridLayoutGroup(size);
-            InsertCellsToContainer(m_grid);
-            SetUpWords();
+            CrosswordCell[,] grid = InitializeGrid(size);
+            SetUpWords(grid);
         }
 
-        private void SetUpWords()
+        private CrosswordCell[,] InitializeGrid(Vector2Int size)
         {
+            CrosswordCell[,] grid = GenerateGrid(size);
+            ModifyGridLayoutGroup(size);
+            InsertCellsToContainer(grid);
+
+            return grid;
+        }
+
+        private void SetUpWords(CrosswordCell[,] grid)
+        {
+            List<Vector2Int> plottedPoints = new List<Vector2Int>();
+            List<WordHint> hints = new List<WordHint>();
+
             for (int i = 0; i < m_crossword.wordSize; i++)
             {
                 GridWord gridWord = m_crossword.GetWord(i);
 
-                if (gridWord != null)
-                    AssignGridWord(gridWord);
+                if (gridWord == null)
+                    continue;
+
+                Word word = gridWord.word;
+                Vector2Int position = gridWord.position;
+                GridDirection direction = gridWord.direction;
+
+                AssignWordToGrid(word.title, position, direction, grid);
+
+                if (!plottedPoints.Contains(position))
+                    plottedPoints.Add(position);
+
+                int hintOrder = plottedPoints.IndexOf(position) + 1;
+                WordHint hint = new WordHint(hintOrder, direction, word.description);
+                hints.Add(hint);
             }
+
+            if (m_hintText != null)
+                m_hintText.text = GenerateHints(hints);
         }
 
-        private void AssignGridWord(GridWord grid)
+        private string GenerateHints(List<WordHint> hints)
         {
-            string word = grid.word.title;
+            StringBuilder across = new StringBuilder();
+            StringBuilder down = new StringBuilder();
+
+            foreach (WordHint hint in hints)
+            {
+                if (hint.direction == GridDirection.Across)
+                    across.AppendLine(hint.text);
+                else
+                    down.AppendLine(hint.text);
+            }
+
+            return $"<b>ACROSS</b>\n<i>{ across }</i>\n<b>DOWN</b>\n<i>{ down }</i>";
+        }
+
+        private void AssignWordToGrid(string word, Vector2Int position, GridDirection direction, CrosswordCell[,] grids)
+        {
             int wordLength = word.Length;
-            Vector2Int position = grid.position;
-            GridDirection direction = grid.direction;
-            (int columns, int rows) gridSize = GetGridSize(m_grid);
+            (int columns, int rows) gridSize = GetGridSize(grids);
 
             for (int i = 0; i < wordLength; i++)
             {
@@ -78,7 +139,7 @@ namespace archipelaGO.Crossword
                 if (row >= gridSize.rows || column >= gridSize.columns)
                     continue;
 
-                CrosswordCell cell = m_grid[column, row];
+                CrosswordCell cell = grids[column, row];
                 char character = word[i];
 
                 if (cell != null)
