@@ -13,11 +13,26 @@ MonoBehaviour:
   m_Name: Sample Crossword
   m_EditorClassIdentifier: 
   m_wordBank: {fileID: 11400000, guid: 018d2dd29f39be84db1be51b1f3da7a4, type: 2}
-  m_gridSize: {x: 18, y: 12}
+  m_gridSize: {x: 15, y: 13}
   m_puzzlePieces:
   - m_direction: 0
-    m_position: {x: 0, y: 0}
+    m_position: {x: 1, y: 5}
     m_wordBankIndex: 0
   - m_direction: 1
-    m_position: {x: 0, y: 1}
+    m_position: {x: 5, y: 4}
     m_wordBankIndex: 9
+  - m_direction: 0
+    m_position: {x: 0, y: 7}
+    m_wordBankIndex: 10
+  - m_direction: 0
+    m_position: {x: 5, y: 4}
+    m_wordBankIndex: 18
+  - m_direction: 1
+    m_position: {x: 3, y: 4}
+    m_wordBankIndex: 20
+  - m_direction: 1
+    m_position: {x: 7, y: 4}
+    m_wordBankIndex: 7
+  - m_direction: 1
+    m_position: {x: 10, y: 0}
+    m_wordBankIndex: 12
