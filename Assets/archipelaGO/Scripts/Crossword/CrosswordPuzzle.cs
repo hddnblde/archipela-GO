@@ -29,7 +29,7 @@ namespace archipelaGO.Crossword
         private float m_padding = 50f;
 
         [SerializeField]
-        private CellHiding m_whenHidingCell = CellHiding.Hide;
+        private CellHiding m_emptyCellsShould = CellHiding.Hide;
 
         private RectTransform m_rectTransform = null;
         #endregion
@@ -186,7 +186,7 @@ namespace archipelaGO.Crossword
             cell = CreateCell();
             cell.gameObject.name = $"Cell [{ column }, { row }]";
 
-            bool doNotRevealCell = (m_whenHidingCell == CellHiding.Hide);
+            bool doNotRevealCell = (m_emptyCellsShould == CellHiding.Hide);
             cell.SetAsEmptyTile(doNotRevealCell);
         }
 
