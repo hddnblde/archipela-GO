@@ -7,6 +7,9 @@ namespace archipelaGO.Crossword
     {
         #region Fields
         [SerializeField]
+        private Text m_indexContainer = null;
+
+        [SerializeField]
         private Text m_characterContainer = null;
 
         [SerializeField]
@@ -33,6 +36,12 @@ namespace archipelaGO.Crossword
 
 
         #region Public Methods
+        public void SetAsCharacterTileWithIndex(char character, int index)
+        {
+            AssignIndex(index);
+            SetAsCharacterTile(character);
+        }
+
         public void SetAsCharacterTile(char character)
         {
             AssignCharacter(character);
@@ -41,9 +50,8 @@ namespace archipelaGO.Crossword
 
         public void SetAsEmptyTile()
         {
-            if (m_characterContainer != null)
-                m_characterContainer.text = string.Empty;
-
+            AssignCharacter(' ');
+            AssignIndex(-1);
             SetState(State.Empty);
         }
 
@@ -63,6 +71,12 @@ namespace archipelaGO.Crossword
             (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
             SetBackgroundColor(cell.backgroundColor);
             ShowCharacter(cell.showCharacter);
+        }
+
+        private void AssignIndex(int index)
+        {
+            if (m_indexContainer != null)
+                m_indexContainer.text = (index > 0 ? index.ToString() : string.Empty);
         }
         
         private void AssignCharacter(char character)

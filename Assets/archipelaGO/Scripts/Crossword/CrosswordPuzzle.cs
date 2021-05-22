@@ -90,16 +90,16 @@ namespace archipelaGO.Crossword
                     continue;
 
                 Word word = gridWord.word;
-                Vector2Int position = gridWord.position;
                 GridDirection direction = gridWord.direction;
-
-                AssignWordToGrid(word.title, position, direction, grid);
+                Vector2Int position = gridWord.position;
 
                 if (!plottedPoints.Contains(position))
                     plottedPoints.Add(position);
 
-                int hintOrder = plottedPoints.IndexOf(position) + 1;
-                WordHint hint = new WordHint(hintOrder, direction, word.description);
+                int wordIndex = plottedPoints.IndexOf(position) + 1;
+                AssignWordToGrid(wordIndex, word.title, position, direction, grid);
+
+                WordHint hint = new WordHint(wordIndex, direction, word.description);
                 hints.Add(hint);
             }
 
@@ -123,7 +123,7 @@ namespace archipelaGO.Crossword
             return $"<b>ACROSS</b>\n<i>{ across }</i>\n<b>DOWN</b>\n<i>{ down }</i>";
         }
 
-        private void AssignWordToGrid(string word, Vector2Int position, GridDirection direction, CrosswordCell[,] grids)
+        private void AssignWordToGrid(int index, string word, Vector2Int position, GridDirection direction, CrosswordCell[,] grids)
         {
             int wordLength = word.Length;
             (int columns, int rows) gridSize = GetGridSize(grids);
@@ -142,7 +142,12 @@ namespace archipelaGO.Crossword
                 CrosswordCell cell = grids[column, row];
                 char character = word[i];
 
-                if (cell != null)
+                if (cell == null)
+                    continue;
+                
+                if (i == 0)
+                    cell.SetAsCharacterTileWithIndex(character, index);
+                else
                     cell.SetAsCharacterTile(character);
             }
         }
