@@ -15,7 +15,7 @@ MonoBehaviour:
   m_words:
   - m_title: noble
     m_description: belonging to a hereditary class with high social or political
-      status; aristocratic.
+      status
   - m_title: steed
     m_description: 
   - m_title: woo
@@ -29,17 +29,17 @@ MonoBehaviour:
   - m_title: radiant
     m_description: 
   - m_title: departing
-    m_description: 
+    m_description: to go away
   - m_title: wrath
     m_description: 
   - m_title: revel
-    m_description: 
+    m_description: to take intense pleasure or satisfaction
   - m_title: arouse
-    m_description: 
+    m_description: to stimulate to action or to bodily readiness for activity
   - m_title: endeavor
     m_description: 
   - m_title: enthusiasm
-    m_description: 
+    m_description: strong excitement of feeling
   - m_title: peasant
     m_description: 
   - m_title: latter
@@ -51,11 +51,11 @@ MonoBehaviour:
   - m_title: sensible
     m_description: 
   - m_title: ridiculous
-    m_description: 
+    m_description: extremely silly or unreasonable
   - m_title: enraged
     m_description: 
   - m_title: abduct
-    m_description: 
+    m_description: to seize and take away (a person) by force
   - m_title: galloping
     m_description: 
   - m_title: captors
