@@ -48,19 +48,14 @@ namespace archipelaGO.Crossword
             SetState(State.CharacterShown);
         }
 
-        public void SetAsEmptyTile()
+        public void SetAsEmptyTile(bool isTransparent)
         {
+            if (isTransparent)
+                m_emptyColor = Color.clear;
+
             AssignCharacter(' ');
             AssignIndex(-1);
             SetState(State.Empty);
-        }
-
-        public bool IsEmpty()
-        {
-            if (m_characterContainer == null)
-                return true;
-
-            return (m_characterContainer.text.Length <= 0);
         }
         #endregion
 

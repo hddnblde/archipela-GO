@@ -28,6 +28,9 @@ namespace archipelaGO.Crossword
         [SerializeField]
         private float m_padding = 50f;
 
+        [SerializeField]
+        private CellHiding m_whenHidingCell = CellHiding.Hide;
+
         private RectTransform m_rectTransform = null;
         #endregion
 
@@ -47,6 +50,13 @@ namespace archipelaGO.Crossword
 
             public GridDirection direction => m_direction;
             public string text => $"{ m_order }. { m_description }";
+        }
+
+        [System.Serializable]
+        private enum CellHiding
+        {
+            UseDefaultColor,
+            Hide
         }
         #endregion
 
@@ -175,7 +185,9 @@ namespace archipelaGO.Crossword
         {
             cell = CreateCell();
             cell.gameObject.name = $"Cell [{ column }, { row }]";
-            cell.SetAsEmptyTile();
+
+            bool doNotRevealCell = (m_whenHidingCell == CellHiding.Hide);
+            cell.SetAsEmptyTile(doNotRevealCell);
         }
 
         private void InsertCellToContainer(int row, int column, ref CrosswordCell cell)
