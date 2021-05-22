@@ -179,6 +179,7 @@ MonoBehaviour:
   m_hintText: {fileID: 906266486}
   m_cellContainer: {fileID: 381353324}
   m_padding: 50
+  m_emptyCellsShould: 1
 --- !u!222 &47284660
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -315,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -375,7 +376,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 134, y: 134}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: -1, y: -1}
   m_Constraint: 1
   m_ConstraintCount: 10
 --- !u!1 &887985587
