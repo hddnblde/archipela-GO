@@ -17,27 +17,30 @@ namespace archipelaGO.VisualNovel.UI
         private float m_scrollSpeed = 29f;
 
         private int m_characterCount = 0;
+        private float m_currentTime = 0f;
         private string m_cachedText = string.Empty;
-        private Coroutine m_scrollRoutine = null;
         #endregion
 
 
-        #region Internal Methods
-        public void ShowText(string text, Color color)
+        #region Public Methods
+        public IEnumerator ShowText(string text, Color color)
         {
             if (m_text == null)
-                return;
+                yield break;
 
             m_cachedText = text;
             m_characterCount = text.Length;
             m_text.color = color;
 
-            if (m_scrollRoutine != null)
-                StopCoroutine(m_scrollRoutine);
-
-            m_scrollRoutine = StartCoroutine(ScrollText(m_characterCount, m_scrollSpeed));
+            yield return ScrollText();
         }
 
+        public void SkipTextScrolling() =>
+            m_currentTime = GetTotalDuration();
+        #endregion
+
+
+        #region Internal Methods
         private void ShowTextAtPosition(float position)
         {
             position = Mathf.Clamp(position, 0f, m_characterCount);
@@ -45,24 +48,29 @@ namespace archipelaGO.VisualNovel.UI
             string text = GetTextUpToPosition3(character.index, character.alpha);
             m_text.text = text;
         }
-        #endregion
 
-
-        #region Helper Methods
-        private IEnumerator ScrollText(float distance, float speed)
+        private IEnumerator ScrollText()
         {
-            float duration = (distance / speed);
+            float duration = GetTotalDuration();
 
-            for (float current = 0f; current < duration; current += Time.deltaTime)
+            for (m_currentTime = 0f; m_currentTime < duration; m_currentTime += Time.deltaTime)
             {
-                float t = Mathf.InverseLerp(0f, duration, current);
-                float position = Mathf.Lerp(0, distance, t);
+                float t = Mathf.InverseLerp(0f, duration, m_currentTime);
+                float position = Mathf.Lerp(0, m_characterCount, t);
                 ShowTextAtPosition(position);
                 yield return null;
             }
 
             yield return null;
             ShowTextAtPosition(m_characterCount);
+        }
+
+        private float GetTotalDuration()
+        {
+            if (m_scrollSpeed <= 0f)
+                return Mathf.Infinity;
+
+            return (m_characterCount / m_scrollSpeed);
         }
 
         private string GetTextUpToPosition3(int index, float alpha)
@@ -94,8 +102,8 @@ namespace archipelaGO.VisualNovel.UI
 
         private string GetFormatedTextWithColor(string text, Color color)
         {
-        string htmlStringRGBA = ColorUtility.ToHtmlStringRGBA(color);
-        return $"<#{ htmlStringRGBA }>{ text }</color>";
+            string htmlStringRGBA = ColorUtility.ToHtmlStringRGBA(color);
+            return $"<#{ htmlStringRGBA }>{ text }</color>";
         }
 
         private (int index, float alpha) GetCharacterIndexAndAlpha(float position)
