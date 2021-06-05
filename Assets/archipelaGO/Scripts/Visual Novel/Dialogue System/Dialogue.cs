@@ -6,7 +6,7 @@ using archipelaGO.VisualNovel.DialogueSystem.Elements;
 namespace archipelaGO.VisualNovel.DialogueSystem
 {
     [System.Serializable]
-    public class Dialogue : IEnumerable
+    public class Dialogue
     {
         #region Field
         [SerializeField]
@@ -19,11 +19,18 @@ namespace archipelaGO.VisualNovel.DialogueSystem
 
         #region Property
         public int characterIndex => m_characterIndex;
+        public int lineCount => m_lines.Count;
         #endregion
 
 
-        #region Enumerable Implementation
-        public IEnumerator GetEnumerator() => m_lines.GetEnumerator();
+        #region Public Method
+        public DialogueLine GetLine(int index)
+        {
+            if (index < 0 || index >= lineCount)
+                return new DialogueLine();
+
+            return m_lines[index];
+        }
         #endregion
     }
 }
