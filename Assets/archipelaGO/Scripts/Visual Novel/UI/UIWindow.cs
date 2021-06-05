@@ -10,7 +10,7 @@ namespace archipelaGO.VisualNovel.UI
         protected virtual void Awake() =>
             m_canvasGroup = GetComponent<CanvasGroup>();
 
-        protected void ShowCanvas(bool shown)
+        private void ShowCanvas(bool shown)
         {
             if (m_canvasGroup == null)
                 return;
@@ -19,5 +19,8 @@ namespace archipelaGO.VisualNovel.UI
             m_canvasGroup.blocksRaycasts = shown;
             m_canvasGroup.interactable = shown;
         }
+
+        protected virtual void Show() => ShowCanvas(true);
+        public virtual void Hide() => ShowCanvas(false);
     }
 }
