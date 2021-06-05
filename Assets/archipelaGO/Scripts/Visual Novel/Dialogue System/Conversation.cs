@@ -20,7 +20,7 @@ namespace archipelaGO.VisualNovel.DialogueSystem
 
 
         #region Public Method
-        public (DialogueCharacter character, Dialogue dialogue) GetDialogue(int index)
+        public (DialogueCharacter character, Dialogue dialogue) GetDialogueLine(int index)
         {
             if (m_dialogues == null || m_characters.Count <= 0)
                 return (null, null);
