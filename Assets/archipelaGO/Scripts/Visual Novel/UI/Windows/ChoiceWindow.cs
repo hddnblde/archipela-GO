@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,28 @@ namespace archipelaGO.VisualNovel.UI.Windows
 {
     public sealed class ChoiceWindow : UIWindow
     {
+        #region Data Structure
+        public class VisualNovelChoice : CustomYieldInstruction
+        {
+            public VisualNovelChoice(ChoiceWindow choiceWindow, string title, string[] choices)
+            {
+                if (choiceWindow == null)
+                    return;
+
+                choiceWindow.OnChoiceSelected += OnOptionChosen;
+                choiceWindow.ShowInternal(title, choices);
+            }
+
+            private void OnOptionChosen(int index) =>
+                m_chosenIndex = index;
+
+            private int m_chosenIndex = -1;
+            public int choiceIndex => m_chosenIndex;
+            public override bool keepWaiting => (m_chosenIndex == -1);
+        }
+        #endregion
+
+
         #region Fields
         [SerializeField]
         private Text m_titleText = null;
@@ -16,7 +39,7 @@ namespace archipelaGO.VisualNovel.UI.Windows
         private List<Text> m_choiceButtonLabels = new List<Text>();
 
         public delegate void ChoiceSelected(int index);
-        public event ChoiceSelected OnChoiceSelected;
+        private event ChoiceSelected OnChoiceSelected;
         #endregion
 
 
@@ -32,14 +55,15 @@ namespace archipelaGO.VisualNovel.UI.Windows
 
 
         #region Public Methods
-        public void Show(string title, params string[] labels)
+        public VisualNovelChoice Show(string title, params string[] labels) =>
+            new VisualNovelChoice(this, title, labels);
+
+        private void ShowInternal(string title, params string[] labels)
         {
             SetHeaderText(title);
             SetChoiceLabels(labels);
-            ShowCanvas(true);
+            Show();
         }
-
-        public void Hide() => ShowCanvas(false);
         #endregion
 
 
@@ -57,6 +81,7 @@ namespace archipelaGO.VisualNovel.UI.Windows
                 choiceButton.onClick.AddListener(() =>
                 {
                     OnChoiceSelected?.Invoke(choiceIndex);
+                    OnChoiceSelected = null;
                     Hide();
                 });
             }
