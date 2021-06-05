@@ -22,7 +22,7 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         public override bool GetChoices(out string title, out string[] choices)
         {
             title = m_title;
-            choices = m_cachedChoices;
+            choices = GenerateChoices();
 
             return true;
         }
@@ -53,19 +53,15 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         #endregion
 
 
-        #region Scriptable Object Implementation
-        private void OnEnable() => InitializeChoices();
-        private void OnDisable() => m_cachedChoices = null;
-        #endregion
-
-
         #region Internal Method
-        private void InitializeChoices()
+        private string[] GenerateChoices()
         {
-            m_cachedChoices = new string[m_branches.Count];
+            string[] choices = new string[m_branches.Count];
 
-            for (int i = 0; i < m_cachedChoices.Length; i++)
-                m_cachedChoices[i] = m_branches[i].subtitle;
+            for (int i = 0; i < choices.Length; i++)
+                choices[i] = m_branches[i].subtitle;
+
+            return choices;
         }
         #endregion
     }
