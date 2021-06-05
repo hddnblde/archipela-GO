@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
+    [System.Serializable]
     public class Plotline
     {
         [SerializeField]
