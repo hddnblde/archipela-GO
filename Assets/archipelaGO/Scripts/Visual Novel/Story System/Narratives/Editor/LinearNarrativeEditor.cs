@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEditorInternal;
 
 namespace archipelaGO.VisualNovel.StorySystem.Narratives
 {
@@ -11,18 +12,20 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             m_dialogues = null;
         
         private string[] m_characterNames = null;
+        private ReorderableList m_reorderableDialogues = null;
         #endregion
 
 
         #region Editor Implementation
         private void OnEnable() => InitializeProperties();
+        private void OnDisable() => UninitializeReorderableDialogues();
 
         public override void OnInspectorGUI()
         {
             using (var scope = new EditorGUI.ChangeCheckScope())
             {
                 DrawCharactersProperty();
-                DrawDialoguesProperty();
+                m_reorderableDialogues.DoLayoutList();
 
                 if (scope.changed)
                     serializedObject.ApplyModifiedProperties();
@@ -37,6 +40,7 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             m_characters = serializedObject.FindProperty("m_characters");
             m_dialogues = serializedObject.FindProperty("m_dialogues");
             m_characterNames = GetCharacterNamesFromCharacterSet();
+            InitializeReorderableDialogues();
         }
 
         private void DrawCharactersProperty()
@@ -49,52 +53,83 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
                     m_characterNames = GetCharacterNamesFromCharacterSet();
             }
         }
+        #endregion
 
-        private void DrawDialoguesProperty()
+
+        #region Dialogues Property Drawing Implementation
+        private void InitializeReorderableDialogues()
         {
-            m_dialogues.isExpanded = EditorGUILayout.Foldout(m_dialogues.isExpanded, m_dialogues.displayName);
-
-            if (!m_dialogues.isExpanded)
-                return;
-
-            SerializedProperty arraySize = m_dialogues.FindPropertyRelative("Array.size");
-            
-            using (new EditorGUI.IndentLevelScope())
-            {
-                EditorGUILayout.PropertyField(arraySize);
-
-                for (int i = 0; i < m_dialogues.arraySize; i++)
-                {
-                    SerializedProperty dialogue = m_dialogues.GetArrayElementAtIndex(i);
-                    DrawDialogueProperty(i, dialogue);
-                }
-            }
+            m_reorderableDialogues = new ReorderableList(serializedObject, m_dialogues);
+            m_reorderableDialogues.drawHeaderCallback += DrawDialoguesHeader;
+            m_reorderableDialogues.drawElementCallback += DrawDialogueItems;
+            m_reorderableDialogues.elementHeightCallback += GetDialogueElementHeight;
         }
 
-        private void DrawDialogueProperty(int dialogueIndex, SerializedProperty dialogue)
+        private void UninitializeReorderableDialogues()
         {
-            Rect rect = EditorGUILayout.GetControlRect();
-            const float FoldoutWidth = 2f;
-            float propertyWidth = (rect.width - FoldoutWidth);
-            rect.width = FoldoutWidth;
-            dialogue.isExpanded = EditorGUI.Foldout(rect, dialogue.isExpanded, GUIContent.none);
-            rect.x = rect.xMax;
+            if (m_reorderableDialogues == null)
+                return;
 
-            rect.width = propertyWidth;
-            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex");
-            DrawCharacterIndexProperty(rect, dialogueIndex, characterIndex);
+            m_reorderableDialogues.drawHeaderCallback -= DrawDialoguesHeader;
+            m_reorderableDialogues.drawElementCallback -= DrawDialogueItems;
+            m_reorderableDialogues.elementHeightCallback -= GetDialogueElementHeight;
+        }
+
+        private void DrawDialogueItems(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            SerializedProperty reorderableDialogue = m_reorderableDialogues.serializedProperty.GetArrayElementAtIndex(index);
+            DrawDialogueProperty(rect, index, reorderableDialogue);
+        }
+
+        private void DrawDialoguesHeader(Rect rect) =>
+            EditorGUI.LabelField(rect, m_dialogues.displayName);
+
+        private float GetDialogueElementHeight(int index)
+        {
+            SerializedProperty dialogue = m_dialogues.GetArrayElementAtIndex(index);
+            float propertyHeight = EditorGUI.GetPropertyHeight(dialogue, true);
+
+            if (dialogue.isExpanded)
+            {
+                propertyHeight -= (EditorGUIUtility.singleLineHeight +
+                    EditorGUIUtility.standardVerticalSpacing);
+            }
+
+            return propertyHeight;
+        }
+
+        private void DrawDialogueProperty(Rect rect, int dialogueIndex, SerializedProperty dialogue)
+        {
+            DrawDialogueHeader(ref rect, dialogue, dialogueIndex);
 
             if (!dialogue.isExpanded)
                 return;
 
+            rect.y = rect.yMax + EditorGUIUtility.standardVerticalSpacing;
+            rect.height = rect.height - (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
             SerializedProperty lines = dialogue.FindPropertyRelative("m_lines");
 
             using (new EditorGUI.IndentLevelScope())
-                EditorGUILayout.PropertyField(lines, true);
+                EditorGUI.PropertyField(rect, lines, true);
+        }
+
+        private void DrawDialogueHeader(ref Rect rect, SerializedProperty dialogue, int dialogueIndex)
+        {
+            const float HorizontalOffset = 8f;
+            float propertyWidth = rect.width;
+            rect.width = 0f;
+            rect.x += HorizontalOffset;
+            rect.height = EditorGUIUtility.singleLineHeight;
+            dialogue.isExpanded = EditorGUI.Foldout(rect, dialogue.isExpanded, GUIContent.none);
+            rect.width = propertyWidth - HorizontalOffset;
+            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex");
+            DrawCharacterIndexProperty(rect, dialogueIndex, characterIndex);
         }
 
         private void DrawCharacterIndexProperty(Rect rect, int index, SerializedProperty characterIndex)
         {
+            rect.y += (EditorGUIUtility.standardVerticalSpacing / 2f);
+
             if (m_characters.objectReferenceValue == null)
                 EditorGUI.LabelField(rect, $"Dialogue { index }");
             else
