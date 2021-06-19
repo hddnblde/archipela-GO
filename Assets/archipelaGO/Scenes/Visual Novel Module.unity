@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: {fileID: 770962770}
-  m_color: {r: 1, g: 1, b: 1, a: 1}
+  m_color: {r: 0.8, g: 0.76862746, b: 0.7372549, a: 1}
   m_scrollSpeed: 29
 --- !u!1 &905525894
 GameObject:
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f079a38da5179f4eab7642c9b9036a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_plot: {fileID: 0}
+  m_plot: {fileID: 11400000, guid: 26cc0b2facce15d4499fdad25d75dc5b, type: 2}
 --- !u!1 &1503643601
 GameObject:
   m_ObjectHideFlags: 0
