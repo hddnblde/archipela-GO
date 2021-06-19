@@ -10,7 +10,7 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
     {
         #region Fields
         [SerializeField]
-        private List<DialogueCharacter> m_characters = new List<DialogueCharacter>();
+        private CharacterSet m_characters = null;
 
         [SerializeField]
         private List<Dialogue> m_dialogues = new List<Dialogue>();

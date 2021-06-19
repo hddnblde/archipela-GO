@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace archipelaGO.VisualNovel.DialogueSystem.Elements
 {
-    [CreateAssetMenu(fileName = "Dialogue Character", menuName = "archipelaGO/Visual Novel/Character")]
-    public class DialogueCharacter : ScriptableObject
+    [System.Serializable]
+    public class DialogueCharacter
     {
         #region Fields
         [SerializeField]

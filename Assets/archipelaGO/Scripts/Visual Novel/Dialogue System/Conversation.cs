@@ -5,11 +5,11 @@ namespace archipelaGO.VisualNovel.DialogueSystem
 {
     public class Conversation
     {
-        public Conversation (List<DialogueCharacter> characters, List<Dialogue> dialogues) =>
+        public Conversation (CharacterSet characters, List<Dialogue> dialogues) =>
             (m_characters, m_dialogues) = (characters, dialogues);
 
         #region Fields
-        private List<DialogueCharacter> m_characters = new List<DialogueCharacter>();
+        private CharacterSet m_characters = null;
         private List<Dialogue> m_dialogues = new List<Dialogue>();
         #endregion
 
@@ -33,7 +33,7 @@ namespace archipelaGO.VisualNovel.DialogueSystem
             if (dialogue.characterIndex < 0 || dialogue.characterIndex >= m_characters.Count)
                 return (null, dialogue);
 
-            DialogueCharacter character = m_characters[dialogue.characterIndex];
+            DialogueCharacter character = m_characters.GetCharacter(dialogue.characterIndex);
 
             return (character, dialogue);
         }
