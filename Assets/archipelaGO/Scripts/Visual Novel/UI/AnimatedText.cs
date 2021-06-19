@@ -30,7 +30,7 @@ namespace archipelaGO.VisualNovel.UI
 
             m_cachedText = text;
             m_characterCount = text.Length;
-            m_text.color = color;
+            m_text.faceColor = color;
 
             yield return ScrollText();
         }
