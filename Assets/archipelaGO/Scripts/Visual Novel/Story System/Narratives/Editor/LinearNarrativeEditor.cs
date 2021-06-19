@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEditor;
 
 namespace archipelaGO.VisualNovel.StorySystem.Narratives
@@ -65,32 +66,39 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
                 for (int i = 0; i < m_dialogues.arraySize; i++)
                 {
                     SerializedProperty dialogue = m_dialogues.GetArrayElementAtIndex(i);
-                    DrawDialogueProperty(dialogue);
+                    DrawDialogueProperty(i, dialogue);
                 }
             }
         }
 
-        private void DrawDialogueProperty(SerializedProperty dialogue)
+        private void DrawDialogueProperty(int dialogueIndex, SerializedProperty dialogue)
         {
-            dialogue.isExpanded = EditorGUILayout.Foldout(dialogue.isExpanded, dialogue.displayName);
+            Rect rect = EditorGUILayout.GetControlRect();
+            const float FoldoutWidth = 2f;
+            float propertyWidth = (rect.width - FoldoutWidth);
+            rect.width = FoldoutWidth;
+            dialogue.isExpanded = EditorGUI.Foldout(rect, dialogue.isExpanded, GUIContent.none);
+            rect.x = rect.xMax;
+
+            rect.width = propertyWidth;
+            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex");
+            DrawCharacterIndexProperty(rect, dialogueIndex, characterIndex);
 
             if (!dialogue.isExpanded)
                 return;
 
-            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex"),
-                lines = dialogue.FindPropertyRelative("m_lines");
+            SerializedProperty lines = dialogue.FindPropertyRelative("m_lines");
 
             using (new EditorGUI.IndentLevelScope())
-            {
-                DrawCharacterIndexProperty(characterIndex);
                 EditorGUILayout.PropertyField(lines, true);
-            }
         }
 
-        private void DrawCharacterIndexProperty(SerializedProperty characterIndex)
+        private void DrawCharacterIndexProperty(Rect rect, int index, SerializedProperty characterIndex)
         {
-            using (var scope = new EditorGUI.DisabledGroupScope(m_characters.objectReferenceValue == null))
-                characterIndex.intValue = EditorGUILayout.Popup("Character", characterIndex.intValue, m_characterNames);
+            if (m_characters.objectReferenceValue == null)
+                EditorGUI.LabelField(rect, $"Dialogue { index }");
+            else
+                characterIndex.intValue = EditorGUI.Popup(rect, $"Dialogue { index }", characterIndex.intValue, m_characterNames);
         }
 
         private string[] GetCharacterNamesFromCharacterSet()
