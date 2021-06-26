@@ -41,12 +41,12 @@ namespace archipelaGO.SceneHandling
                 m_singletonInstance = null;
         }
 
-        public static bool IsTransitioning()
+        public static bool CanLoadANewScene()
         {
             if (m_singletonInstance != null)
-                return m_singletonInstance.m_isTransitioning;
+                return !m_singletonInstance.m_isTransitioning;
 
-            return false;
+            return true;
         }
 
         public static void LoadScene(Scene scene)
