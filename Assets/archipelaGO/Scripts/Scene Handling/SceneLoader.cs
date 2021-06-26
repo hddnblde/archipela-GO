@@ -19,8 +19,14 @@ namespace archipelaGO.SceneHandling
 
 
         #region Methods
-        public void LoadScene(string sceneName)
+        public void LoadScene(int sceneIndex)
         {
+            if (sceneIndex < 0 || sceneIndex >= SceneManager.sceneCountInBuildSettings)
+            {
+                Debug.LogWarning($"Failed to load scene index [{ sceneIndex }] because it is out of bounds!");
+                return;
+            }
+
             if (m_isTransitioning)
             {
                 Debug.LogWarning("Please wait until scene transition is finished before loading a new scene!");
@@ -30,22 +36,22 @@ namespace archipelaGO.SceneHandling
             if (m_loadSceneRoutine != null)
                 StopCoroutine(m_loadSceneRoutine);
             
-            m_loadSceneRoutine = StartCoroutine(SceneLoadingRoutine(sceneName));
+            m_loadSceneRoutine = StartCoroutine(SceneLoadingRoutine(sceneIndex));
         }
 
-        private IEnumerator SceneLoadingRoutine(string sceneName)
+        private IEnumerator SceneLoadingRoutine(int sceneIndex)
         {
             m_isTransitioning = true;
             yield return FadeScreenRoutine(true);
-            yield return LoadSceneAsynchronously(sceneName);
+            yield return LoadSceneAsynchronously(sceneIndex);
             yield return FadeScreenRoutine(false);
             m_isTransitioning = false;
         }
 
-        private IEnumerator LoadSceneAsynchronously(string sceneName)
+        private IEnumerator LoadSceneAsynchronously(int sceneIndex)
         {
             AsyncOperation sceneLoading =
-                SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+                SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
 
             yield return new WaitUntil(() => sceneLoading.isDone);
         }
