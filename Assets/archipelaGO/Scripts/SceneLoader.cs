@@ -6,6 +6,7 @@ namespace archipelaGO
 {
     public class SceneLoader : MonoBehaviour
     {
+        #region Fields
         [SerializeField]
         private float m_fadeDuration = 1.25f;
 
@@ -14,12 +15,24 @@ namespace archipelaGO
 
         private Coroutine m_loadSceneRoutine = null;
         private bool m_isTransitioning = false;
+        #endregion
 
+
+        #region Methods
         public void LoadScene(string sceneName)
         {
-            if (m_isTransitioning)
+            if (!SceneExists(sceneName))
+            {
+                Debug.LogWarning($"Failed to load { sceneName } scene because it does not exist.");
                 return;
-            
+            }
+
+            if (m_isTransitioning)
+            {
+                Debug.LogWarning("Please wait until scene transition is finished before loading a new scene!");
+                return;
+            }
+
             if (m_loadSceneRoutine != null)
                 StopCoroutine(m_loadSceneRoutine);
             
@@ -47,7 +60,7 @@ namespace archipelaGO
         {
             if (fadeIn)
                 BlockRaycasts(false);
-            
+
             float startAlpha = (fadeIn ? 0f : 1f);
             float endAlpha = (fadeIn ? 1f : 0f);
 
@@ -81,5 +94,19 @@ namespace archipelaGO
             m_screenBlocker.blocksRaycasts = blockRaycast;
             m_screenBlocker.interactable = blockRaycast;
         }
+
+        private bool SceneExists(string sceneName)
+        {
+            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+            {
+                Scene scene = SceneManager.GetSceneByBuildIndex(i);
+
+                if (string.Equals(scene.name, sceneName))
+                    return true;
+            }
+
+            return false;
+        }
+        #endregion
     }
 }
