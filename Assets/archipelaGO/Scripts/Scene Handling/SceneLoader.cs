@@ -19,6 +19,8 @@ namespace archipelaGO.SceneHandling
 
 
         #region Methods
+        public void LoadScene(Scene scene) => LoadScene((int)scene);
+
         public void LoadScene(int sceneIndex)
         {
             if (sceneIndex < 0 || sceneIndex >= SceneManager.sceneCountInBuildSettings)
