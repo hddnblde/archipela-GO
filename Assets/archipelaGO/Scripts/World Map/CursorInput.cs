@@ -6,9 +6,6 @@ namespace archipelaGO.WorldMap
     {
         #region Fields
         [SerializeField]
-        private Camera m_camera = null;
-
-        [SerializeField]
         private bool m_horizontal = true;
 
         [SerializeField]
@@ -21,6 +18,7 @@ namespace archipelaGO.WorldMap
         private Vector2 m_previousCursorPosition = Vector2.zero;
         private Vector2 m_cursorDelta = Vector2.zero;
 
+        private Camera m_camera = null;
         public delegate void CursorDragged(Vector2 delta);
         public event CursorDragged OnCursorDragged;
         #endregion
@@ -32,6 +30,9 @@ namespace archipelaGO.WorldMap
 
 
         #region Internal Methods
+        public void InitializeCamera(Camera camera) =>
+            m_camera = camera;
+
         private void DetectCursorDrag()
         {
             (Vector3 position, bool began) cursor = GetCursorPosition();
