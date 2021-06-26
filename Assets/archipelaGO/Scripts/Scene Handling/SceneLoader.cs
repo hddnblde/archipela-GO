@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace archipelaGO
+namespace archipelaGO.SceneHandling
 {
     public class SceneLoader : MonoBehaviour
     {
