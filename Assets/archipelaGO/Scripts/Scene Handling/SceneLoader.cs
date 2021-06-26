@@ -41,9 +41,12 @@ namespace archipelaGO.SceneHandling
                 m_singletonInstance = null;
         }
 
+        public static bool IsActive() =>
+            (m_singletonInstance != null);
+
         public static bool CanLoadANewScene()
         {
-            if (m_singletonInstance != null)
+            if (IsActive())
                 return !m_singletonInstance.m_isTransitioning;
 
             return true;
@@ -51,13 +54,13 @@ namespace archipelaGO.SceneHandling
 
         public static void LoadScene(Scene scene)
         {
-            if (m_singletonInstance != null)
+            if (IsActive())
                 m_singletonInstance.InternalLoadScene(scene);
         }
 
         public static void LoadScene(int sceneIndex)
         {
-            if (m_singletonInstance != null)
+            if (IsActive())
                 m_singletonInstance.InternalLoadScene(sceneIndex);
         }
         #endregion
