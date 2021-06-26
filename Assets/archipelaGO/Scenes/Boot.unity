@@ -369,7 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b751d7b0424985e44acb73ed1167a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_sceneLoader: {fileID: 1275943110}
   m_firstSceneToLoad: 1
 --- !u!4 &1387369490
 Transform:
@@ -476,7 +475,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1475172947
 RectTransform:
