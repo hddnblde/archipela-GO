@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace archipelaGO.SceneHandling
 {
-    public class SceneLoadTrigger : MonoBehaviour
+    public class SceneLoadTrigger : ClickableObject
     {
         [SerializeField]
         private Scene m_sceneToLoad = Scene.Boot;
 
         private Coroutine m_loadRoutine = null;
 
-        public void TriggerSceneLoader()
+        protected override void OnObjectClicked()
         {
             if (m_loadRoutine != null)
                 StopCoroutine(m_loadRoutine);
