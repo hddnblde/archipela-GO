@@ -9,7 +9,7 @@ namespace archipelaGO
         private SceneLoader m_sceneLoader = null;
 
         [SerializeField]
-        private string m_firstSceneToLoad = string.Empty;
+        private Scene m_firstSceneToLoad = Scene.WorldMap;
 
         private void Start()
         {
