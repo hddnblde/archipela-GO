@@ -2,7 +2,6 @@
 
 namespace archipelaGO.WorldMap
 {
-
     public class CursorInput : MonoBehaviour
     {
         #region Fields
@@ -14,6 +13,9 @@ namespace archipelaGO.WorldMap
 
         [SerializeField]
         private bool m_vertical = true;
+
+        [SerializeField]
+        private float m_deadZone = 5f;
 
         private int m_previousTouchCount = 0;
         private Vector2 m_previousCursorPosition = Vector2.zero;
@@ -47,10 +49,29 @@ namespace archipelaGO.WorldMap
 
         private void CaptureDrag(Vector3 cursorPosition, bool began)
         {
-            m_cursorDelta = (began ? Vector2.zero :
+            Vector3 currentDelta = (began ? Vector2.zero :
                 GetDelta(m_previousCursorPosition, cursorPosition));
+            
+            float deltaInWorldUnits =
+                CalculateDragDeltaInWorldUnits(cursorPosition, m_previousCursorPosition);
 
-            m_previousCursorPosition = cursorPosition;
+            bool hasMoved = (deltaInWorldUnits > m_deadZone);
+
+            m_cursorDelta = (hasMoved ? currentDelta : Vector3.zero);
+
+            if (hasMoved)
+                m_previousCursorPosition = cursorPosition;
+        }
+
+        private float CalculateDragDeltaInWorldUnits(Vector3 pointA, Vector3 pointB)
+        {
+            if (m_camera == null)
+                return 0f;
+            
+            Vector3 worldPointA = m_camera.ScreenToWorldPoint(pointA);
+            Vector3 worldPointB = m_camera.ScreenToWorldPoint(pointB);
+
+            return (worldPointB - worldPointA).magnitude;
         }
         #endregion
 
