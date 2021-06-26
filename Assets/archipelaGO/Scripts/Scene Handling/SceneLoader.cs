@@ -15,13 +15,59 @@ namespace archipelaGO.SceneHandling
 
         private Coroutine m_loadSceneRoutine = null;
         private bool m_isTransitioning = false;
+        private static SceneLoader m_singletonInstance = null;
+        #endregion
+
+
+        #region MonoBehaviour Implementation
+        private void Awake() => InitializeSingleton();
+        private void OnDestroy() => UninitializeSingleton();
+        #endregion
+
+
+        #region Singleton Implementation
+        private void InitializeSingleton()
+        {
+            if (m_singletonInstance == null)
+                m_singletonInstance = this;
+
+            else
+                Destroy(gameObject);
+        }
+
+        private void UninitializeSingleton()
+        {
+            if (m_singletonInstance == this)
+                m_singletonInstance = null;
+        }
+
+        public static bool IsTransitioning()
+        {
+            if (m_singletonInstance != null)
+                return m_singletonInstance.m_isTransitioning;
+
+            return false;
+        }
+
+        public static void LoadScene(Scene scene)
+        {
+            if (m_singletonInstance != null)
+                m_singletonInstance.InternalLoadScene(scene);
+        }
+
+        public static void LoadScene(int sceneIndex)
+        {
+            if (m_singletonInstance != null)
+                m_singletonInstance.InternalLoadScene(sceneIndex);
+        }
         #endregion
 
 
         #region Methods
-        public void LoadScene(Scene scene) => LoadScene((int)scene);
+        private void InternalLoadScene(Scene scene) =>
+            InternalLoadScene((int)scene);
 
-        public void LoadScene(int sceneIndex)
+        private void InternalLoadScene(int sceneIndex)
         {
             if (sceneIndex < 0 || sceneIndex >= SceneManager.sceneCountInBuildSettings)
             {
