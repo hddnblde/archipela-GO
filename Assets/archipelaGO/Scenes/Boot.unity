@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36de7cb43fd40a54c980ff91a501c623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fadeDuration: 1.25
+  m_fadeDuration: 0.35
   m_screenBlocker: {fileID: 1475172943}
 --- !u!114 &1275943111
 MonoBehaviour:
