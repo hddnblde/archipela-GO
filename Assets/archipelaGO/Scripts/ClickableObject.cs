@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace archipelaGO.WorldMap
+namespace archipelaGO
 {
     public abstract class ClickableObject : MonoBehaviour, IPointerClickHandler
     {
