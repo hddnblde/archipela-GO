@@ -110,7 +110,7 @@ namespace archipelaGO.SceneHandling
         private IEnumerator FadeScreenRoutine(bool fadeIn)
         {
             if (fadeIn)
-                BlockRaycasts(false);
+                BlockRaycasts(true);
 
             float startAlpha = (fadeIn ? 0f : 1f);
             float endAlpha = (fadeIn ? 1f : 0f);
@@ -126,7 +126,7 @@ namespace archipelaGO.SceneHandling
             SetScreenAlpha(endAlpha);
 
             if (!fadeIn)
-                BlockRaycasts(true);
+                BlockRaycasts(false);
             
             m_isTransitioning = false;
         }
