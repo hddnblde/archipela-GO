@@ -26,7 +26,7 @@ namespace archipelaGO.Crossword
         [SerializeField]
         private Color m_emptyColor = Color.gray;
 
-        private enum State
+        public enum State
         {
             Empty = 0,
             CharacterHidden = 1,
@@ -57,17 +57,17 @@ namespace archipelaGO.Crossword
             AssignIndex(-1);
             SetState(State.Empty);
         }
-        #endregion
 
-
-        #region Internal Methods
-        private void SetState(State state)
+        public void SetState(State state)
         {
             (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
             SetBackgroundColor(cell.backgroundColor);
             ShowCharacter(cell.showCharacter);
         }
+        #endregion
 
+
+        #region Internal Methods
         private void AssignIndex(int index)
         {
             if (m_indexContainer != null)
