@@ -84,7 +84,13 @@ namespace archipelaGO.WorldMap
                 return GetCursorPositionFromMouse();
 
             else
-                return GetCursorPositionFromTouch();
+            {
+                if (Application.platform == RuntimePlatform.Android)
+                    return GetCursorPositionFromTouch();
+
+                else
+                    return GetCursorPositionFromMouse();
+            }
         }
 
         private (Vector3 position, bool began) GetCursorPositionFromMouse()
