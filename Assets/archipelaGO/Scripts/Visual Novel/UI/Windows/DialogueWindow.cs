@@ -13,7 +13,14 @@ namespace archipelaGO.VisualNovel.UI.Windows
         [SerializeField]
         private Button m_skipButton = null;
 
+        [Space]
+
         [SerializeField]
+        private Image m_characterImage = null;
+
+        [SerializeField]
+        private Text m_characterNameText = null;
+
         private bool m_showNextDialogue = false;
         #endregion
 
@@ -70,7 +77,11 @@ namespace archipelaGO.VisualNovel.UI.Windows
         #region Internal Methods
         private void SetCharacter(Sprite sprite, string name)
         {
-            
+            if (m_characterImage != null)
+                m_characterImage.sprite = sprite;
+
+            if (m_characterNameText != null)
+                m_characterNameText.text = name;
         }
 
         private IEnumerator AnimateDialogueLine(string dialogueLine)
