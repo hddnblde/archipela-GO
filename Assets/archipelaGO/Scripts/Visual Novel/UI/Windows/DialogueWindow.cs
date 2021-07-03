@@ -41,6 +41,8 @@ namespace archipelaGO.VisualNovel.UI.Windows
         {
             if (m_animatedText != null)
                 m_animatedText.SkipTextScrolling();
+            
+            m_showNextDialogue = true;
         }
         #endregion
 
