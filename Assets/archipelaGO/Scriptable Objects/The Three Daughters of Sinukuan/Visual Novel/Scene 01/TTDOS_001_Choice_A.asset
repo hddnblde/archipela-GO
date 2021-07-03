@@ -26,4 +26,4 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Make it quick, \rthen."
+      m_text: Make it quick, then.
