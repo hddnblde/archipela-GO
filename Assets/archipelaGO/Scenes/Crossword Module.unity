@@ -171,16 +171,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 47284657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a28e998201b4a9428bdb48669943a25, type: 3}
+  m_Script: {fileID: 11500000, guid: d80f5f359ccc76b4baa4c44aaa2b746c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_crossword: {fileID: 11400000, guid: af67feca4dbd4a14eab6bdac26f3748f, type: 2}
+  m_wordPuzzle: {fileID: 11400000, guid: af67feca4dbd4a14eab6bdac26f3748f, type: 2}
   m_cellPrefab: {fileID: 2798963486211047934, guid: 92c78970720d3c54c9095204b577c633, type: 3}
-  m_hintText: {fileID: 906266486}
   m_cellContainer: {fileID: 381353324}
   m_padding: 50
+  m_emptyCellsAre: 1
+  m_hintText: {fileID: 906266486}
   m_answerField: {fileID: 1347312852}
-  m_emptyCellsShould: 1
 --- !u!222 &47284660
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 1347312853}
   - component: {fileID: 1347312852}
   m_Layer: 5
-  m_Name: Text Field
+  m_Name: Answer Text Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Word = archipelaGO.WordBank.Word;
 
-namespace archipelaGO.Crossword
+namespace archipelaGO.Puzzle
 {
     [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
     public class WordPuzzle : ScriptableObject

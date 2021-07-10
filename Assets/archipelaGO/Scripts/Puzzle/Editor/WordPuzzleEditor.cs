@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEditor;
 using Word = archipelaGO.WordBank.Word;
-using Direction = archipelaGO.Crossword.WordPuzzle.Direction;
+using Direction = archipelaGO.Puzzle.WordPuzzle.Direction;
 
-namespace archipelaGO.Crossword
+namespace archipelaGO.Puzzle
 {
     [CustomEditor(typeof(WordPuzzle))]
     public class WordPuzzleEditor : Editor

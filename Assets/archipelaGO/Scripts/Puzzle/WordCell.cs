@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace archipelaGO.Crossword
+namespace archipelaGO.Puzzle
 {
-    public class CrosswordCell : MonoBehaviour
+    public class WordCell : MonoBehaviour
     {
         #region Fields
         [SerializeField]
