@@ -1,10 +1,9 @@
 using System.Collections;
 using UnityEngine;
-using archipelaGO.VisualNovel.UI;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
-using VisualNovelChoice = archipelaGO.VisualNovel.UI.Windows.ChoiceWindow.VisualNovelChoice;
+using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
@@ -74,7 +73,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
             if (narrative.GetChoices(out title, out choices))
             {
-                VisualNovelChoice vnChoice = m_vnController.ShowAndChooseOption(title, choices);
+                WaitForChosenOption vnChoice = m_vnController.ShowAndChooseOption(title, choices);
                 yield return vnChoice;
                 choice = vnChoice.choiceIndex;
             }

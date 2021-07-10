@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using archipelaGO.VisualNovel.UI.Windows;
+using archipelaGO.UI.Windows;
 using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueLine = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueLine;
-using VisualNovelChoice = archipelaGO.VisualNovel.UI.Windows.ChoiceWindow.VisualNovelChoice;
+using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 
-namespace archipelaGO.VisualNovel.UI
+namespace archipelaGO.VisualNovel.StorySystem
 {
     public sealed class VisualNovelController : MonoBehaviour
     {
@@ -61,7 +61,7 @@ namespace archipelaGO.VisualNovel.UI
                 m_backgroundImage.sprite = sprite;
         }
 
-        public VisualNovelChoice ShowAndChooseOption(string title, string[] choices) =>
+        public WaitForChosenOption ShowAndChooseOption(string title, string[] choices) =>
             m_choiceWindow.Show(title, choices);
 
         public void HideAllWindows()

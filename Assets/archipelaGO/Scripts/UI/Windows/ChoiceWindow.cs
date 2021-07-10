@@ -1,16 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace archipelaGO.VisualNovel.UI.Windows
+namespace archipelaGO.UI.Windows
 {
-    public sealed class ChoiceWindow : UIWindow
+    public class ChoiceWindow : UIWindow
     {
         #region Data Structure
-        public class VisualNovelChoice : CustomYieldInstruction
+        public class WaitForChosenOption : CustomYieldInstruction
         {
-            public VisualNovelChoice(ChoiceWindow choiceWindow, string title, string[] choices)
+            public WaitForChosenOption(ChoiceWindow choiceWindow, string title, string[] choices)
             {
                 if (choiceWindow == null)
                     return;
@@ -55,8 +54,8 @@ namespace archipelaGO.VisualNovel.UI.Windows
 
 
         #region Public Methods
-        public VisualNovelChoice Show(string title, params string[] labels) =>
-            new VisualNovelChoice(this, title, labels);
+        public WaitForChosenOption Show(string title, params string[] labels) =>
+            new WaitForChosenOption(this, title, labels);
 
         private void ShowInternal(string title, params string[] labels)
         {

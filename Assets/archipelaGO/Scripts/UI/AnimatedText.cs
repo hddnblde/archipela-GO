@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-namespace archipelaGO.VisualNovel.UI
+namespace archipelaGO.UI
 {
     public class AnimatedText : MonoBehaviour
     {

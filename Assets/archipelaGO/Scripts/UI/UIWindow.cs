@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace archipelaGO.VisualNovel.UI
+namespace archipelaGO.UI
 {
     [RequireComponent(typeof(CanvasGroup))]
     public abstract class UIWindow : MonoBehaviour

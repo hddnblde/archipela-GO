@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace archipelaGO.VisualNovel.UI.Windows
+namespace archipelaGO.UI.Windows
 {
     public sealed class DialogueWindow : UIWindow
     {
