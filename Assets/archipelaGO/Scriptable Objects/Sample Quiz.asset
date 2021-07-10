@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
+  m_Name: Sample Quiz
+  m_EditorClassIdentifier: 
+  m_questions:
+  - m_stem: What is the answer for "1 + 1?"
+    m_correctAnswer: 2
+    m_incorrectAnswers:
+    - 3
+    - Four
+    - 5
+  - m_stem: What did the quick brown fox jumped over?
+    m_correctAnswer: The Lazy Dog
+    m_incorrectAnswers:
+    - Humpty Dumpty
+    - Your Mom
+    - The Wall
+  - m_stem: What did the Woodchuck chucked?
+    m_correctAnswer: The Wood
+    m_incorrectAnswers:
+    - A Stone
+    - A Stoner
+    - Your Mom
