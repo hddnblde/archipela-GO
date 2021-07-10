@@ -21,7 +21,7 @@ namespace archipelaGO.VisualNovel.StorySystem
         private DialogueWindow m_dialogueWindow = null;
 
         [SerializeField]
-        private VisualNovelChoiceWindow m_choiceWindow = null;
+        private ChoiceWindow m_choiceWindow = null;
 
         [Header("Audio")]
 
@@ -62,7 +62,7 @@ namespace archipelaGO.VisualNovel.StorySystem
         }
 
         public WaitForChosenOption ShowAndChooseOption(string title, string[] choices) =>
-            m_choiceWindow.Show(title, choices);
+            m_choiceWindow.Show(title, choices, true);
 
         public void HideAllWindows()
         {

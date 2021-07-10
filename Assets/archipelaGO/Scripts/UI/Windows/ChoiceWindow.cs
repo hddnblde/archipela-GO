@@ -4,22 +4,29 @@ using UnityEngine.UI;
 
 namespace archipelaGO.UI.Windows
 {
-    public abstract class ChoiceWindow : UIWindow
+    public sealed class ChoiceWindow : UIWindow
     {
         #region Data Structure
         public class WaitForChosenOption : CustomYieldInstruction
         {
-            public WaitForChosenOption(ChoiceWindow choiceWindow, string title, string[] choices)
+            public WaitForChosenOption(ChoiceWindow choiceWindow, string title, string[] choices, bool hideAfterChoosing)
             {
                 if (choiceWindow == null)
                     return;
 
-                choiceWindow.OnChoiceSelected += OnOptionChosen;
-                choiceWindow.ShowInternal(title, choices);
+                ChoiceSelected callback = (int choice) =>
+                {
+                    SelectOption(choice);
+
+                    if (hideAfterChoosing && choiceWindow != null)
+                        choiceWindow.Hide();
+                };
+
+                choiceWindow.ShowInternal(title, choices, callback);
             }
 
-            private void OnOptionChosen(int index) =>
-                m_chosenIndex = index;
+            private void SelectOption(int choice) =>
+                m_chosenIndex = choice;
 
             private int m_chosenIndex = -1;
             public int choiceIndex => m_chosenIndex;
@@ -54,11 +61,12 @@ namespace archipelaGO.UI.Windows
 
 
         #region Public Methods
-        public WaitForChosenOption Show(string message, params string[] choiceLabels) =>
-            new WaitForChosenOption(this, message, choiceLabels);
+        public WaitForChosenOption Show(string message, string[] choiceLabels, bool hideAfterChoosing) =>
+            new WaitForChosenOption(this, message, choiceLabels, hideAfterChoosing);
 
-        private void ShowInternal(string message, params string[] choiceLabels)
+        private void ShowInternal(string message, string[] choiceLabels, ChoiceSelected callback)
         {
+            OnChoiceSelected = callback;
             SetMessage(message);
             SetChoiceLabels(choiceLabels);
             Show();
@@ -90,7 +98,7 @@ namespace archipelaGO.UI.Windows
             }
         }
 
-        protected virtual void SelectChoice(int choice)
+        private void SelectChoice(int choice)
         {
             OnChoiceSelected?.Invoke(choice);
             OnChoiceSelected = null;

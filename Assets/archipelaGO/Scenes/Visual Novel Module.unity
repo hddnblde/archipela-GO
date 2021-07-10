@@ -894,7 +894,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 335200104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec6ab505f24414498cab9d5f86b8cb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2228d281137fec346b22598a5030be12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_messageText: {fileID: 1512026682}
@@ -1921,7 +1921,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
