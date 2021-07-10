@@ -63,7 +63,7 @@ namespace archipelaGO.Quiz
             private List<string> m_incorrectAnswers;
             #endregion
 
-            public (string stem, List<string> choices, int correctAnswerIndex) GetProblem()
+            public (string stem, string[] choices, int correctAnswerIndex) GetProblem()
             {
                 List<string> choices = new List<string>();
                 choices.Add(m_correctAnswer);
@@ -72,7 +72,7 @@ namespace archipelaGO.Quiz
 
                 int correctAnswerIndex = choices.IndexOf(m_correctAnswer);
 
-                return (m_stem, choices, correctAnswerIndex);
+                return (m_stem, choices.ToArray(), correctAnswerIndex);
             }
         }
         #endregion
