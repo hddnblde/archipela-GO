@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/archipelaGO/Scenes/Crossword Module.unity
     guid: 195fed47fd9c253448c0f05c68a2164c
+  - enabled: 1
+    path: Assets/archipelaGO/Scenes/Quiz Module.unity
+    guid: ca19a801dd1fad245a37a84184e4b4d6
   m_configObjects: {}
