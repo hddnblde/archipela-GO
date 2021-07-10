@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEditor;
 using Word = archipelaGO.WordBank.Word;
-using Direction = archipelaGO.Crossword.CrosswordConfig.Direction;
+using Direction = archipelaGO.Crossword.WordPuzzle.Direction;
 
 namespace archipelaGO.Crossword
 {
-    [CustomEditor(typeof(CrosswordConfig))]
-    public class CrosswordConfigEditor : Editor
+    [CustomEditor(typeof(WordPuzzle))]
+    public class WordPuzzleEditor : Editor
     {
         #region Fields
         private SerializedProperty m_wordBank = null,
@@ -68,9 +68,6 @@ namespace archipelaGO.Crossword
             m_puzzlePieces = serializedObject.FindProperty("m_puzzlePieces");
             CacheWordsFromBank();
             CacheCrossword();
-            m_crosswordGUIStyle = new GUIStyle(EditorStyles.helpBox);
-            m_crosswordGUIStyle.alignment = TextAnchor.MiddleCenter;
-            m_crosswordGUIStyle.fontStyle = FontStyle.Bold;
             Undo.undoRedoPerformed += OnUndoRedoPerformed;
         }
 
@@ -78,6 +75,9 @@ namespace archipelaGO.Crossword
 
         public override void OnInspectorGUI()
         {
+            if (m_crosswordGUIStyle == null)
+                InitializeCrosswordGUIStyle();
+
             using (var scope = new EditorGUI.ChangeCheckScope())
             {
                 DrawCustomGUI();
@@ -93,7 +93,18 @@ namespace archipelaGO.Crossword
 
 
         #region Internal Methods
-        private void OnUndoRedoPerformed() => serializedObject.Update();
+        private void OnUndoRedoPerformed()
+        {
+            serializedObject.Update();
+            CacheCrossword();
+        }
+
+        private void InitializeCrosswordGUIStyle()
+        {
+            m_crosswordGUIStyle = new GUIStyle(EditorStyles.helpBox);
+            m_crosswordGUIStyle.alignment = TextAnchor.MiddleCenter;
+            m_crosswordGUIStyle.fontStyle = FontStyle.Bold;
+        }
 
         private void DrawCustomGUI()
         {

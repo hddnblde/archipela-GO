@@ -3,8 +3,8 @@ using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GridDirection = archipelaGO.Crossword.CrosswordConfig.Direction;
-using GridWord = archipelaGO.Crossword.CrosswordConfig.GridWord;
+using GridDirection = archipelaGO.Crossword.WordPuzzle.Direction;
+using GridWord = archipelaGO.Crossword.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Crossword
@@ -13,7 +13,7 @@ namespace archipelaGO.Crossword
     {
         #region Fields
         [SerializeField]
-        private CrosswordConfig m_crossword = null;
+        private WordPuzzle m_crossword = null;
 
         [SerializeField]
         private GameObject m_cellPrefab = null;

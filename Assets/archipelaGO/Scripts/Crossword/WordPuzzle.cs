@@ -4,8 +4,8 @@ using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Crossword
 {
-    [CreateAssetMenu(fileName = "Crossword", menuName = "archipelaGO/Crossword", order = 1)]
-    public class CrosswordConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
+    public class WordPuzzle : ScriptableObject
     {
         #region Fields
         [SerializeField] 
