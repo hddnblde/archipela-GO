@@ -21,7 +21,7 @@ namespace archipelaGO.VisualNovel.StorySystem
         private DialogueWindow m_dialogueWindow = null;
 
         [SerializeField]
-        private ChoiceWindow m_choiceWindow = null;
+        private VisualNovelChoiceWindow m_choiceWindow = null;
 
         [Header("Audio")]
 
