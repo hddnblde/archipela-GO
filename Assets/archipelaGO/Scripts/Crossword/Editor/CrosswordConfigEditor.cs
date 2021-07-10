@@ -15,7 +15,48 @@ namespace archipelaGO.Crossword
         
         private GUIContent[] m_cachedWords = null;
         private int m_longestCharacterCount = 0;
-        private char[,] m_cachedCrossword = null;
+        private CrosswordCharacter[,] m_cachedCrossword = null;
+        private GUIStyle m_crosswordGUIStyle = null;
+        #endregion
+
+
+        #region Data Structure
+        private class CrosswordCharacter
+        {
+            private char m_character;
+
+            private bool m_initialized = false,
+                m_collided = false;
+            
+            public bool GetCharacter(out char character)
+            {
+                character = (m_collided ? '?' : m_character);
+                return !m_collided;
+            }
+
+            public void SetCharacter(char character)
+            {
+                if (m_initialized)
+                    m_collided = (m_character != character);
+
+                m_character = character;
+                m_initialized = true;
+            }
+        }
+
+        private class ColorScope : GUI.Scope
+        {
+            public ColorScope(Color color)
+            {
+                m_defaultGUIColor = GUI.color;
+                GUI.color = color;
+            }
+
+            private Color m_defaultGUIColor;
+
+            protected override void CloseScope() =>
+                GUI.color = m_defaultGUIColor;
+        }
         #endregion
 
 
@@ -27,6 +68,9 @@ namespace archipelaGO.Crossword
             m_puzzlePieces = serializedObject.FindProperty("m_puzzlePieces");
             CacheWordsFromBank();
             CacheCrossword();
+            m_crosswordGUIStyle = new GUIStyle(EditorStyles.helpBox);
+            m_crosswordGUIStyle.alignment = TextAnchor.MiddleCenter;
+            m_crosswordGUIStyle.fontStyle = FontStyle.Bold;
             Undo.undoRedoPerformed += OnUndoRedoPerformed;
         }
 
@@ -42,6 +86,7 @@ namespace archipelaGO.Crossword
                     serializedObject.ApplyModifiedProperties();
             }
 
+            EditorGUILayout.Space();
             VisualizeCrossword();
         }
         #endregion
@@ -252,7 +297,7 @@ namespace archipelaGO.Crossword
             DrawCells(rect, m_gridSize.vector2IntValue, m_cachedCrossword);
         }
 
-        private void DrawCells(Rect rect, Vector2Int grid, char[,] crossword)
+        private void DrawCells(Rect rect, Vector2Int grid, CrosswordCharacter[,] crossword)
         {
             if (crossword == null || crossword.GetLength(0) != grid.x || crossword.GetLength(1) != grid.y)
                 return;
@@ -267,8 +312,14 @@ namespace archipelaGO.Crossword
 
                 for (int row = 0; row < grid.y; row++)
                 {
-                    char character = crossword[column, row];
-                    GUI.Box(rect, $"{ character }", EditorStyles.helpBox);
+                    CrosswordCharacter character = crossword[column, row];
+                    char characterValue;
+                    bool collided = !character.GetCharacter(out characterValue);
+                    Color boxColor = (collided ? Color.red : GUI.color);
+
+                    using (new ColorScope(boxColor))
+                        GUI.Box(rect, $"{ characterValue }", m_crosswordGUIStyle);
+
                     rect.y = rect.yMax + Spacing;
                 }
 
@@ -284,10 +335,23 @@ namespace archipelaGO.Crossword
             return EditorGUILayout.GetControlRect(GUILayout.Height(height));
         }
 
+        private CrosswordCharacter[,] GenerateEmptyCrossword(Vector2Int gridSize)
+        {
+            CrosswordCharacter[,] crossword = new CrosswordCharacter[gridSize.x, gridSize.y];
+
+            for (int column = 0; column < gridSize.x; column++)
+            {
+                for (int row = 0; row < gridSize.y; row++)
+                    crossword[column, row] = new CrosswordCharacter();
+            }
+
+            return crossword;
+        }
+
         private void CacheCrossword()
         {
             Vector2Int gridSize = m_gridSize.vector2IntValue;
-            m_cachedCrossword = new char[gridSize.x, gridSize.y];
+            m_cachedCrossword = GenerateEmptyCrossword(gridSize);
             WordBank wordBank = m_wordBank.objectReferenceValue as WordBank;
 
             for (int i = 0; i < m_puzzlePieces.arraySize; i++)
@@ -308,7 +372,7 @@ namespace archipelaGO.Crossword
                     if (positionValue.x >= m_cachedCrossword.GetLength(0) || positionValue.y >= m_cachedCrossword.GetLength(1))
                         break;
 
-                    m_cachedCrossword[positionValue.x, positionValue.y] = wordString[characterIndex];
+                    m_cachedCrossword[positionValue.x, positionValue.y].SetCharacter(wordString[characterIndex]);
 
                     if (directionValue == Direction.Across)
                         positionValue.x++;
