@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEditor;
+using Word = archipelaGO.WordBank.Word;
+using Direction = archipelaGO.Crossword.CrosswordConfig.Direction;
 
 namespace archipelaGO.Crossword
 {
@@ -13,6 +15,7 @@ namespace archipelaGO.Crossword
         
         private GUIContent[] m_cachedWords = null;
         private int m_longestCharacterCount = 0;
+        private char[,] m_cachedCrossword = null;
         #endregion
 
 
@@ -23,6 +26,7 @@ namespace archipelaGO.Crossword
             m_gridSize = serializedObject.FindProperty("m_gridSize");
             m_puzzlePieces = serializedObject.FindProperty("m_puzzlePieces");
             CacheWordsFromBank();
+            CacheCrossword();
             Undo.undoRedoPerformed += OnUndoRedoPerformed;
         }
 
@@ -37,6 +41,8 @@ namespace archipelaGO.Crossword
                 if (scope.changed)
                     serializedObject.ApplyModifiedProperties();
             }
+
+            VisualizeCrossword();
         }
         #endregion
 
@@ -49,7 +55,14 @@ namespace archipelaGO.Crossword
             DrawWordBankProperty();
             DrawGridSizeProperty();
             EditorGUILayout.Space();
-            DrawPuzzlePiecesProperty();
+
+            using (var scope = new EditorGUI.ChangeCheckScope())
+            {
+                DrawPuzzlePiecesProperty();
+
+                if (scope.changed)
+                    CacheCrossword();
+            }
         }
 
         private void DrawWordBankProperty()
@@ -59,9 +72,11 @@ namespace archipelaGO.Crossword
                 EditorGUILayout.PropertyField(m_wordBank);
 
                 if (scope.changed)
+                {
                     CacheWordsFromBank();
+                    CacheCrossword();
+                }
             }
-
         }
 
         private void DrawGridSizeProperty()
@@ -228,6 +243,78 @@ namespace archipelaGO.Crossword
 
                 if (word.text.Length > m_longestCharacterCount)
                     m_longestCharacterCount = word.text.Length;
+            }
+        }
+        
+        private void VisualizeCrossword()
+        {
+            Rect rect = GenerateCrosswordRect(m_gridSize.vector2IntValue);
+            DrawCells(rect, m_gridSize.vector2IntValue, m_cachedCrossword);
+        }
+
+        private void DrawCells(Rect rect, Vector2Int grid, char[,] crossword)
+        {
+            if (crossword == null || crossword.GetLength(0) != grid.x || crossword.GetLength(1) != grid.y)
+                return;
+
+            const float Spacing = 4f;
+            float yPivot = rect.position.y;
+            rect.size = new Vector2(rect.width / grid.x, rect.height / grid.y) - (Vector2.one * Spacing);
+
+            for (int column = 0; column < grid.x; column++)
+            {
+                rect.y = yPivot;
+
+                for (int row = 0; row < grid.y; row++)
+                {
+                    char character = crossword[column, row];
+                    GUI.Box(rect, $"{ character }", EditorStyles.helpBox);
+                    rect.y = rect.yMax + Spacing;
+                }
+
+                rect.x = rect.xMax + Spacing;
+            }
+        }
+
+        private Rect GenerateCrosswordRect(Vector2Int size)
+        {
+            const float GridSize = 30f;
+            float height = (GridSize * size.y);
+
+            return EditorGUILayout.GetControlRect(GUILayout.Height(height));
+        }
+
+        private void CacheCrossword()
+        {
+            Vector2Int gridSize = m_gridSize.vector2IntValue;
+            m_cachedCrossword = new char[gridSize.x, gridSize.y];
+            WordBank wordBank = m_wordBank.objectReferenceValue as WordBank;
+
+            for (int i = 0; i < m_puzzlePieces.arraySize; i++)
+            {
+                SerializedProperty puzzlePiece = m_puzzlePieces.GetArrayElementAtIndex(i);
+
+                SerializedProperty wordBankIndex = puzzlePiece.FindPropertyRelative("m_wordBankIndex"),
+                    direction = puzzlePiece.FindPropertyRelative("m_direction"),
+                    position = puzzlePiece.FindPropertyRelative("m_position");
+                
+                Word word = wordBank.GetWord(wordBankIndex.intValue);
+                string wordString = word.title.ToUpper();
+                Direction directionValue = (Direction)direction.enumValueIndex;
+                Vector2Int positionValue = position.vector2IntValue;
+
+                for (int characterIndex = 0; characterIndex < wordString.Length; characterIndex++)
+                {
+                    if (positionValue.x >= m_cachedCrossword.GetLength(0) || positionValue.y >= m_cachedCrossword.GetLength(1))
+                        break;
+
+                    m_cachedCrossword[positionValue.x, positionValue.y] = wordString[characterIndex];
+
+                    if (directionValue == Direction.Across)
+                        positionValue.x++;
+                    else
+                        positionValue.y++;
+                }
             }
         }
         #endregion
