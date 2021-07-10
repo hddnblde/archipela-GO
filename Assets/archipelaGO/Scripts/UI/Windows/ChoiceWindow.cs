@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace archipelaGO.UI.Windows
 {
-    public class ChoiceWindow : UIWindow
+    public abstract class ChoiceWindow : UIWindow
     {
         #region Data Structure
         public class WaitForChosenOption : CustomYieldInstruction
@@ -30,7 +30,7 @@ namespace archipelaGO.UI.Windows
 
         #region Fields
         [SerializeField]
-        private Text m_titleText = null;
+        private Text m_messageText = null;
 
         [SerializeField]
         private List<Button> m_choiceButtons = new List<Button>();
@@ -54,14 +54,23 @@ namespace archipelaGO.UI.Windows
 
 
         #region Public Methods
-        public WaitForChosenOption Show(string title, params string[] labels) =>
-            new WaitForChosenOption(this, title, labels);
+        public WaitForChosenOption Show(string message, params string[] choiceLabels) =>
+            new WaitForChosenOption(this, message, choiceLabels);
 
-        private void ShowInternal(string title, params string[] labels)
+        private void ShowInternal(string message, params string[] choiceLabels)
         {
-            SetHeaderText(title);
-            SetChoiceLabels(labels);
+            SetMessage(message);
+            SetChoiceLabels(choiceLabels);
             Show();
+        }
+        #endregion
+
+
+        #region UI Window Implementation
+        public override void Hide()
+        {
+            OnChoiceSelected = null;
+            base.Hide();
         }
         #endregion
 
@@ -75,15 +84,16 @@ namespace archipelaGO.UI.Windows
             {
                 Text labelText = choiceButton.GetComponentInChildren<Text>();
                 m_choiceButtonLabels.Add(labelText);
-                int choiceIndex = m_choiceButtons.IndexOf(choiceButton);
 
-                choiceButton.onClick.AddListener(() =>
-                {
-                    OnChoiceSelected?.Invoke(choiceIndex);
-                    OnChoiceSelected = null;
-                    Hide();
-                });
+                int choiceIndex = m_choiceButtons.IndexOf(choiceButton);
+                choiceButton.onClick.AddListener(() => SelectChoice(choiceIndex));
             }
+        }
+
+        protected virtual void SelectChoice(int choice)
+        {
+            OnChoiceSelected?.Invoke(choice);
+            OnChoiceSelected = null;
         }
 
         private void UninitializeChoiceButtons()
@@ -92,10 +102,10 @@ namespace archipelaGO.UI.Windows
                 choiceButton.onClick.RemoveAllListeners();
         }
 
-        private void SetHeaderText(string text)
+        private void SetMessage(string text)
         {
-            if (m_titleText != null)
-                m_titleText.text = text;
+            if (m_messageText != null)
+                m_messageText.text = text;
         }
 
         private void SetChoiceLabels(params string[] labels)
