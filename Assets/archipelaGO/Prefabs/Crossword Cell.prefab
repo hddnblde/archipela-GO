@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7876049d27eb44b9ea8429f1ef9ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_interactable: 0
   m_indexContainer: {fileID: 1132331347854272402}
   m_characterContainer: {fileID: 5497155671473685500}
   m_backgroundImage: {fileID: 6831548354694065876}
