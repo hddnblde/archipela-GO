@@ -16,6 +16,23 @@ namespace archipelaGO.Puzzle
 
 
         #region Data Structure
+        private class CrosswordPuzzlePiece : PuzzlePiece
+        {
+            public CrosswordPuzzlePiece(string word, WordCell[] cells) : base(word, cells) {}
+
+            public override void Reveal()
+            {
+                if (m_cells == null)
+                    return;
+
+                foreach (WordCell cell in m_cells)
+                {
+                    if (cell != null)
+                        cell.SetState(WordCell.State.CharacterShown);
+                }
+            }
+        }
+
         private class CrosswordHint : WordHint
         {
             public CrosswordHint (int order, GridDirection direction, string description) =>
@@ -62,9 +79,15 @@ namespace archipelaGO.Puzzle
             cell.SetState(WordCell.State.CharacterHidden);
         }
 
-        protected override void InitializeEmptyCell(WordCell cell) =>
+        protected override void InitializeCell(int column, int row, WordCell cell)
+        {
+            base.InitializeCell(column, row, cell);
             cell.SetAsEmptyTile(true);
-        
+        }
+
+        protected override PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells) =>
+            new CrosswordPuzzlePiece(word, cells);
+
         protected override WordHint GenerateHint(int order, GridWord gridWord) =>
             new CrosswordHint(order, gridWord.direction, gridWord.word.description);
 

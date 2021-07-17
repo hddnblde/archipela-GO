@@ -29,21 +29,23 @@ namespace archipelaGO.Puzzle
         private Text m_hintText = null;
 
         private RectTransform m_rectTransform = null;
-        private List<PuzzlePiece> m_puzzlePieces = new List<PuzzlePiece>();
+        private List<PuzzlePiece> m_pendingPieces = new List<PuzzlePiece>();
+        private List<PuzzlePiece> m_solvedPieces = new List<PuzzlePiece>();
         private List<WordHint> m_hints = new List<WordHint>();
+        private WordCell[,] m_wordGrid = null;
         #endregion
 
 
         #region Data Structure
         private delegate void CellFunction(int column, int row, ref WordCell cell);
 
-        protected class PuzzlePiece
+        protected abstract class PuzzlePiece
         {
             public PuzzlePiece(string word, WordCell[] cells) =>
                 (m_word, m_cells) = (word.ToLower(), cells);
 
             private string m_word = string.Empty;
-            private WordCell[] m_cells = null;
+            protected WordCell[] m_cells = null;
 
             public bool Matches(string word)
             {
@@ -53,23 +55,20 @@ namespace archipelaGO.Puzzle
                 return string.Equals(m_word, word.ToLower());
             }
 
-            public void Reveal()
-            {
-                if (m_cells == null)
-                    return;
-
-                foreach (WordCell cell in m_cells)
-                {
-                    if (cell != null)
-                        cell.SetState(WordCell.State.CharacterShown);
-                }
-            }
+            public abstract void Reveal();
         }
 
         protected abstract class WordHint
         {
             public abstract string GetHint();
         }
+        #endregion
+
+
+        #region Properties
+        protected int Columns => (m_wordGrid?.GetLength(0) ?? 0);
+        protected int Rows => (m_wordGrid?.GetLength(1) ?? 0);
+        protected int SolvedPiecesCount => m_solvedPieces.Count;
         #endregion
 
 
@@ -85,12 +84,15 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region Abstract Functions
+        #region Puzzle Functions        
+        protected virtual void InitializeCell(int column, int row, WordCell cell) =>
+            cell.gameObject.name = $"Cell [{ column }, { row }]";
+
         protected abstract void OnPuzzleCompleted();
         protected abstract void AssignCharacterToCell(char character, int characterIndex, int puzzleIndex, WordCell cell);
-        protected abstract void InitializeEmptyCell(WordCell cell);
         protected abstract WordHint GenerateHint(int order, GridWord gridWord);
         protected abstract string GenerateHintText(List<WordHint> hints);
+        protected abstract PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells);
         #endregion
 
 
@@ -101,8 +103,8 @@ namespace archipelaGO.Puzzle
                 return;
 
             Vector2Int size = m_wordPuzzle.gridSize;
-            WordCell[,] grid = InitializeGrid(size);
-            SetUpWords(grid);
+            m_wordGrid = InitializeGrid(size);
+            SetUpWords(m_wordGrid);
         }
 
         private void SetUpHints()
@@ -111,23 +113,51 @@ namespace archipelaGO.Puzzle
                 m_hintText.text = GenerateHintText(m_hints);
         }
 
-        protected void VerifyAnswer(string answer)
+        protected bool VerifyAnswer(string answer)
         {
             PuzzlePiece result = GetPuzzlePiece(answer);
 
             if (result == null)
-                return;
+                return false;
 
             result.Reveal();
-            m_puzzlePieces.Remove(result);
 
-            if (m_puzzlePieces.Count <= 0)
+            if (m_pendingPieces.Contains(result))
+                m_pendingPieces.Remove(result);
+
+            if (!m_solvedPieces.Contains(result))
+                m_solvedPieces.Add(result);
+
+            if (m_pendingPieces.Count <= 0)
                 OnPuzzleCompleted();
+
+            return true;
+        }
+
+        protected PuzzlePiece GetSolvedPuzzlePiece(int index)
+        {
+            if (index < 0 || index >= SolvedPiecesCount)
+                return null;
+
+            return m_solvedPieces[index];
         }
         #endregion
 
 
         #region Grid Implementation
+        protected WordCell GetCell(Vector2Int position) =>
+            GetCell(position.x, position.y);
+
+        protected WordCell GetCell(int column, int row)
+        {
+            if (m_wordGrid == null || (column < 0) ||
+                (row < 0) || (column >= Columns) ||
+                (row >= Rows))
+                return null;
+
+            return m_wordGrid[column, row];
+        }
+
         private WordCell[,] InitializeGrid(Vector2Int size)
         {
             WordCell[,] grid = GenerateGrid(size);
@@ -140,7 +170,7 @@ namespace archipelaGO.Puzzle
         private void SetUpWords(WordCell[,] grid)
         {
             List<Vector2Int> plottedPoints = new List<Vector2Int>();
-            m_puzzlePieces.Clear();
+            m_pendingPieces.Clear();
             m_hints.Clear();
 
             for (int i = 0; i < m_wordPuzzle.wordSize; i++)
@@ -159,7 +189,7 @@ namespace archipelaGO.Puzzle
 
                 int wordIndex = plottedPoints.IndexOf(position) + 1;
                 PuzzlePiece puzzlePiece = GeneratePuzzlePiece(wordIndex, word.title, position, direction, grid);
-                m_puzzlePieces.Add(puzzlePiece);
+                m_pendingPieces.Add(puzzlePiece);
 
                 int orderNumber = (i + 1);
                 WordHint hint = GenerateHint(orderNumber, gridWord);
@@ -185,9 +215,10 @@ namespace archipelaGO.Puzzle
 
         private void CreateAndAssignCell(int column, int row, ref WordCell cell)
         {
-            cell = CreateCell();
-            cell.gameObject.name = $"Cell [{ column }, { row }]";
-            InitializeEmptyCell(cell);
+            cell = CreateCell(column, row);
+
+            if (cell != null)
+                InitializeCell(column, row, cell);
         }
 
         private void InsertCellToContainer(int row, int column, ref WordCell cell)
@@ -220,14 +251,15 @@ namespace archipelaGO.Puzzle
                     function?.Invoke(column, row, ref grid[column, row]);
         }
 
-        private WordCell CreateCell()
+        private WordCell CreateCell(int column, int row)
         {
             if (m_cellPrefab == null)
                 return null;
 
             GameObject cell = Instantiate(m_cellPrefab);
+            WordCell wordCellComponent = cell.GetComponent<WordCell>();
 
-            return cell.GetComponent<WordCell>();
+            return wordCellComponent;
         }
 
         private PuzzlePiece GeneratePuzzlePiece(int index, string word, Vector2Int position, GridDirection direction, WordCell[,] grids)
@@ -256,7 +288,7 @@ namespace archipelaGO.Puzzle
                     AssignCharacterToCell(character, characterIndex, index, cell);
             }
 
-            return new PuzzlePiece(word, cells.ToArray());
+            return GeneratePuzzlePiece(word, cells.ToArray());
         }
 
         private bool GridSizeInvalid(WordCell[,] grid)
@@ -285,7 +317,7 @@ namespace archipelaGO.Puzzle
 
         private PuzzlePiece GetPuzzlePiece(string word) =>
         (
-            from puzzlePiece in m_puzzlePieces
+            from puzzlePiece in m_pendingPieces
             where puzzlePiece.Matches(word)
             select puzzlePiece
         ).FirstOrDefault();
