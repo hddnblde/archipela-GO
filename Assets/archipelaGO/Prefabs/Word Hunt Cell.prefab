@@ -127,12 +127,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7876049d27eb44b9ea8429f1ef9ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_interactable: 1
   m_indexContainer: {fileID: 1132331347854272402}
   m_characterContainer: {fileID: 5497155671473685500}
   m_backgroundImage: {fileID: 6831548354694065876}
   m_revealAnimationTime: 0.25
   m_enabledColor: {r: 1, g: 1, b: 1, a: 1}
   m_emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_highlightedColor: {r: 1, g: 0.537543, b: 0, a: 1}
 --- !u!222 &7312112954385406747
 CanvasRenderer:
   m_ObjectHideFlags: 0
