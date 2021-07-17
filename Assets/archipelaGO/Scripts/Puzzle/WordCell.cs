@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace archipelaGO.Puzzle
 {
-    public class WordCell : MonoBehaviour
+    public class WordCell : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         #region Fields
+        [SerializeField]
+        private bool m_interactable = true;
+
         [SerializeField]
         private Text m_indexContainer = null;
 
@@ -26,11 +30,34 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private Color m_emptyColor = Color.gray;
 
+        public event PointerEvent OnPressedDown,
+            OnPressedUp;
+        #endregion
+
+
+        #region Data Structure
+        public delegate void PointerEvent();
+
         public enum State
         {
             Empty = 0,
             CharacterHidden = 1,
             CharacterShown = 2
+        }
+        #endregion
+
+
+        #region Pointer Events Implementation
+        public void OnPointerDown(PointerEventData pointerEventData)
+        {
+            if (m_interactable)
+                OnPressedDown?.Invoke();
+        }
+
+        public void OnPointerUp(PointerEventData pointerEventData)
+        {
+            if (!m_interactable)
+                OnPressedUp?.Invoke();
         }
         #endregion
 
