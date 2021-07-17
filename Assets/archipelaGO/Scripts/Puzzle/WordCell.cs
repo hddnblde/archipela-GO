@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace archipelaGO.Puzzle
 {
-    public class WordCell : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class WordCell : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler
     {
         #region Fields
         [SerializeField]
@@ -29,14 +29,26 @@ namespace archipelaGO.Puzzle
 
         [SerializeField]
         private Color m_emptyColor = Color.gray;
+        
+        [SerializeField]
+        private Color m_highlightedColor = Color.yellow;
 
-        public event PointerEvent OnPressedDown,
-            OnPressedUp;
+        private bool m_highlighted = false;
+        public event CursorEvent OnCursorEventInvoked;
+        private State m_currentState = State.Empty;
+        private char m_assignedCharacter = ' ';
         #endregion
 
 
         #region Data Structure
-        public delegate void PointerEvent();
+        public delegate void CursorEvent(CursorState state);
+
+        public enum CursorState
+        {
+            Pressed,
+            Entered,
+            Released
+        }
 
         public enum State
         {
@@ -47,17 +59,28 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
+        #region Property
+        public char assignedCharacter => m_assignedCharacter;
+        #endregion
+
+
         #region Pointer Events Implementation
         public void OnPointerDown(PointerEventData pointerEventData)
         {
             if (m_interactable)
-                OnPressedDown?.Invoke();
+                OnCursorEventInvoked?.Invoke(CursorState.Pressed);
         }
 
         public void OnPointerUp(PointerEventData pointerEventData)
         {
             if (m_interactable)
-                OnPressedUp?.Invoke();
+                OnCursorEventInvoked?.Invoke(CursorState.Released);
+        }
+
+        public void OnPointerEnter(PointerEventData pointerEventData)
+        {
+            if (m_interactable)
+                OnCursorEventInvoked?.Invoke(CursorState.Entered);
         }
         #endregion
 
@@ -87,9 +110,16 @@ namespace archipelaGO.Puzzle
 
         public void SetState(State state)
         {
+            m_currentState = state;
             (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
             SetBackgroundColor(cell.backgroundColor);
             ShowCharacter(cell.showCharacter);
+        }
+
+        public void SetAsHighlighted(bool highlighted)
+        {
+            m_highlighted = highlighted;
+            SetState(m_currentState);
         }
         #endregion
 
@@ -103,6 +133,8 @@ namespace archipelaGO.Puzzle
         
         private void AssignCharacter(char character)
         {
+            m_assignedCharacter = character;
+
             if (m_characterContainer != null)
                 m_characterContainer.text = $"{ character }".ToUpper();
         }
@@ -124,12 +156,27 @@ namespace archipelaGO.Puzzle
         #region Helper Method
         private (Color backgroundColor, bool showCharacter) GetCellState(State state)
         {
-            Color backgroundColor = (state == State.Empty ?
-                m_emptyColor : m_enabledColor);
-
+            Color backgroundColor = GetStateColor(state);
             bool showCharacter = (state == State.CharacterShown);
         
             return (backgroundColor, showCharacter);
+        }
+
+        private Color GetStateColor(State state)
+        {
+            switch (state)
+            {
+                case State.Empty:
+                    return m_emptyColor;
+
+                default:
+
+                    if (m_highlighted)
+                        return m_highlightedColor;
+
+                    else
+                        return m_enabledColor;
+            }
         }
         #endregion
     }
