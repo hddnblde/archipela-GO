@@ -56,7 +56,7 @@ namespace archipelaGO.Puzzle
 
         public void OnPointerUp(PointerEventData pointerEventData)
         {
-            if (!m_interactable)
+            if (m_interactable)
                 OnPressedUp?.Invoke();
         }
         #endregion
