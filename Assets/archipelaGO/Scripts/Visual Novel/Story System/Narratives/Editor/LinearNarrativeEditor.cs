@@ -109,6 +109,9 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             rect.height = rect.height - (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing);
             SerializedProperty lines = dialogue.FindPropertyRelative("m_lines");
 
+            if (dialogue == null || lines == null)
+                return;
+
             using (new EditorGUI.IndentLevelScope())
                 EditorGUI.PropertyField(rect, lines, true);
         }
