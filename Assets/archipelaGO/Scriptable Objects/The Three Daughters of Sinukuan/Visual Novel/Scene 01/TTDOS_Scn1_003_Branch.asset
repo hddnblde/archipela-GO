@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91623a688d5a7a645b615586e6015bff, type: 3}
-  m_Name: TTDOS_003_Branch
+  m_Name: TTDOS_Scn1_003_Branch
   m_EditorClassIdentifier: 
   m_title: What would you do?
   m_branches:
