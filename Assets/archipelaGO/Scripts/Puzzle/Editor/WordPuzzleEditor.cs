@@ -380,7 +380,8 @@ namespace archipelaGO.Puzzle
 
                 for (int characterIndex = 0; characterIndex < wordString.Length; characterIndex++)
                 {
-                    if (positionValue.x >= m_cachedCrossword.GetLength(0) || positionValue.y >= m_cachedCrossword.GetLength(1))
+                    if (positionValue.x >= m_cachedCrossword.GetLength(0) || positionValue.y >= m_cachedCrossword.GetLength(1) ||
+                        positionValue.x < 0 || positionValue.y < 0)
                         break;
 
                     m_cachedCrossword[positionValue.x, positionValue.y].SetCharacter(wordString[characterIndex]);
