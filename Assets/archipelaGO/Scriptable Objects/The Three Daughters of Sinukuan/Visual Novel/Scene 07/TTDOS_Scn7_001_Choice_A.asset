@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TTDOS_Scn7_001_Choice_A
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
+  m_dialogues:
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "If that\u2019s the case, I think it\u2019s much better if we let you
+        be."
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: No, brother. I will not leave this place until one of them goes with
+        me.
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: What are you planning to do?
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "You\u2019ll see."

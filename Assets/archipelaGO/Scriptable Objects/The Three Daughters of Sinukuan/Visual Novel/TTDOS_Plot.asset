@@ -50,3 +50,9 @@ MonoBehaviour:
     m_narrative: {fileID: 11400000, guid: 2de59ffb700834f4e9ac7cd61d047582, type: 2}
   - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 89650deb4a909d143a2534f5ed5bb37e, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: f45bd3e2c43719743a47794971d7aeed, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: dd99c888c3932434080c23744d504307, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 5f4c72baace2f54449d8c2f3b5442505, type: 2}
