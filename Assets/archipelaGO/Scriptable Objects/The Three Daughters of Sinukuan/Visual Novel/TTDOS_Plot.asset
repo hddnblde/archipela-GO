@@ -58,3 +58,9 @@ MonoBehaviour:
     m_narrative: {fileID: 11400000, guid: 5f4c72baace2f54449d8c2f3b5442505, type: 2}
   - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: cb30944054dd11040b3afeb0ac5c885e, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 20f3a164f9e77b849ad6f0dd19527422, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 2696e51f2ed25454e81b9797136b629b, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 437a9e631fb33bc409ffb1bee49979eb, type: 2}
