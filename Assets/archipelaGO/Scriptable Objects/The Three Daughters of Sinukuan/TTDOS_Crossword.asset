@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
+  m_Name: TTDOS_Crossword
+  m_EditorClassIdentifier: 
+  m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
+  m_gridSize: {x: 19, y: 19}
+  m_puzzlePieces:
+  - m_direction: 1
+    m_position: {x: 9, y: 0}
+    m_wordBankIndex: 32
+  - m_direction: 1
+    m_position: {x: 13, y: 0}
+    m_wordBankIndex: 5
+  - m_direction: 0
+    m_position: {x: 13, y: 1}
+    m_wordBankIndex: 21
+  - m_direction: 0
+    m_position: {x: 8, y: 5}
+    m_wordBankIndex: 12
+  - m_direction: 1
+    m_position: {x: 10, y: 5}
+    m_wordBankIndex: 3
+  - m_direction: 1
+    m_position: {x: 4, y: 6}
+    m_wordBankIndex: 15
+  - m_direction: 1
+    m_position: {x: 1, y: 8}
+    m_wordBankIndex: 24
+  - m_direction: 0
+    m_position: {x: 6, y: 8}
+    m_wordBankIndex: 2
+  - m_direction: 0
+    m_position: {x: 0, y: 9}
+    m_wordBankIndex: 35
+  - m_direction: 0
+    m_position: {x: 6, y: 10}
+    m_wordBankIndex: 31
+  - m_direction: 1
+    m_position: {x: 5, y: 12}
+    m_wordBankIndex: 14
+  - m_direction: 0
+    m_position: {x: 7, y: 12}
+    m_wordBankIndex: 11
+  - m_direction: 1
+    m_position: {x: 12, y: 12}
+    m_wordBankIndex: 0
+  - m_direction: 1
+    m_position: {x: 7, y: 14}
+    m_wordBankIndex: 7
+  - m_direction: 0
+    m_position: {x: 1, y: 15}
+    m_wordBankIndex: 29
