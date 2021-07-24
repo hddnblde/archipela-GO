@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TTDOS_Scn6_001_Choice_A
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
+  m_dialogues:
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: How about we just leave them. They seem uncomfortable.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Oh come on, don\u2019t tell me you\u2019re having some cold feet?"
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Of course not! I just want them to think that we are gentlemen. If
+        we try to insist what we want, they might not trust us.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Ooohhh! That\u2019s something sensible, brother. But I apologize for
+        I cannot wait any longer. I\u2019ll declare my love to one of them."
+  - m_characterIndex: 3
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "I don\u2019t want to let this chance escape too, Kalaw. I\u2019m with
+        Magat."
