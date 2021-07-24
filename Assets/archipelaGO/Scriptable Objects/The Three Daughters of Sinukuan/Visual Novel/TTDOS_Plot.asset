@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4964ae67cdd6449b6d206331a79bf8, type: 3}
-  m_Name: TTDOS_Scene_01
+  m_Name: TTDOS_Plot
   m_EditorClassIdentifier: 
   m_backgroundScenes: []
   m_plotlines:
@@ -24,3 +24,17 @@ MonoBehaviour:
     m_narrative: {fileID: 11400000, guid: 8b9ad8b6a61daa646bad829c778d5d9e, type: 2}
   - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 6d3e011388f4db44390c9c774e5e6992, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 2ee5887d4f7e1b749905c4d66098ca40, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: a1d54452c1cd5cf459d3ee9c72233ce7, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 17b587f25e5fe714ba182c17cc5aca9c, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 0fa2b0cfbe386ce4c915bae4785f3d19, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d8ac0ab9c7fc681439cbc44b8b0e98ef, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 28a7d8609700a6f448774f04a9c66bd7, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d14f87828d25dc74ea981398ed87b8a5, type: 2}
