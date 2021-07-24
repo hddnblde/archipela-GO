@@ -27,3 +27,5 @@ MonoBehaviour:
     m_name: Rosa-Minda
   - m_sprite: {fileID: 0}
     m_name: Rosalina
+  - m_sprite: {fileID: 0}
+    m_name: "Do\xF1a Maria"
