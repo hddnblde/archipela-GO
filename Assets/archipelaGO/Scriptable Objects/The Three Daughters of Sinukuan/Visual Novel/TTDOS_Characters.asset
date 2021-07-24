@@ -21,3 +21,5 @@ MonoBehaviour:
     m_name: Magat
   - m_sprite: {fileID: 0}
     m_name: Maglente
+  - m_sprite: {fileID: 0}
+    m_name: Makiling
