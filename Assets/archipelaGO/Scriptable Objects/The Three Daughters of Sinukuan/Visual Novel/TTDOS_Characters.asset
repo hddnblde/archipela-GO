@@ -23,3 +23,5 @@ MonoBehaviour:
     m_name: Maglente
   - m_sprite: {fileID: 0}
     m_name: Makiling
+  - m_sprite: {fileID: 0}
+    m_name: Rosa-Minda
