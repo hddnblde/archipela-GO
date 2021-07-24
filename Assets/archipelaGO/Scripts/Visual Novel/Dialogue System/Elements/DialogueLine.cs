@@ -9,7 +9,7 @@ namespace archipelaGO.VisualNovel.DialogueSystem.Elements
         [SerializeField]
         private AudioClip m_voiceOver;
 
-        [SerializeField, TextArea(3, 7)]
+        [SerializeField, TextArea(3, 50)]
         private string m_text;
         #endregion
 
