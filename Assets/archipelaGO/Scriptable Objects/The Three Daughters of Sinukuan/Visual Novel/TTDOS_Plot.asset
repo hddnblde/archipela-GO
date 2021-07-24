@@ -56,3 +56,5 @@ MonoBehaviour:
     m_narrative: {fileID: 11400000, guid: dd99c888c3932434080c23744d504307, type: 2}
   - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 5f4c72baace2f54449d8c2f3b5442505, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: cb30944054dd11040b3afeb0ac5c885e, type: 2}
