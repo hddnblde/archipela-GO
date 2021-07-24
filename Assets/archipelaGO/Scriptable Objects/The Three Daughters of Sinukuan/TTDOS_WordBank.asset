@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b93d0f3851bfb49a31dc4124fb3c41, type: 3}
+  m_Name: TTDOS_WordBank
+  m_EditorClassIdentifier: 
+  m_words:
+  - m_title: steed
+    m_partOfSpeech: 0
+    m_description: A horse used or trained for riding
+  - m_title: woo
+    m_partOfSpeech: 3
+    m_description: To seek to gain or bring about
+  - m_title: minion
+    m_partOfSpeech: 0
+    m_description: A mean dependent, follower, or underling; a subordinate
+  - m_title: astonishing
+    m_partOfSpeech: 2
+    m_description: Causing a feeling of great surprise or wonder
+  - m_title: marvelous
+    m_partOfSpeech: 2
+    m_description: Causing wonder; notably superior
+  - m_title: radiant
+    m_partOfSpeech: 2
+    m_description: Vividly bright and shining
+  - m_title: departing
+    m_partOfSpeech: 3
+    m_description: To go away; leave
+  - m_title: wrath
+    m_partOfSpeech: 0
+    m_description: Strong vengeful anger; punishment for an offense or a crime
+  - m_title: revel
+    m_partOfSpeech: 3
+    m_description: To take intense pleasure or satisfaction
+  - m_title: arouse
+    m_partOfSpeech: 3
+    m_description: To stimulate to action or to bodily readiness for activity
+  - m_title: endeavor
+    m_partOfSpeech: 0
+    m_description: To work with set of purpose
+  - m_title: enthusiasm
+    m_partOfSpeech: 0
+    m_description: Strong excitement of feeling
+  - m_title: peasant
+    m_partOfSpeech: 0
+    m_description: Persons tilling the soil as small landowners or as laborers
+  - m_title: latter
+    m_partOfSpeech: 2
+    m_description: Belonging to a subsequent/later time or period
+  - m_title: shabby
+    m_partOfSpeech: 2
+    m_description: Clothed with old, worn, or seedy garments
+  - m_title: spoil
+    m_partOfSpeech: 3
+    m_description: To ruin; to damage seriously
+  - m_title: darac
+    m_partOfSpeech: 0
+    m_description: Corn remains that is fed to swines/pigs
+  - m_title: binibini
+    m_partOfSpeech: 0
+    m_description: A young lady
+  - m_title: sensible
+    m_partOfSpeech: 2
+    m_description: Having, containing, or indicative of good sense or reason
+  - m_title: ridiculous
+    m_partOfSpeech: 2
+    m_description: Extremely silly or unreasonable
+  - m_title: enraged
+    m_partOfSpeech: 3
+    m_description: To fill with rage/anger
+  - m_title: abduct
+    m_partOfSpeech: 3
+    m_description: To seize and take away by force
+  - m_title: galloping
+    m_partOfSpeech: 3
+    m_description: "Going at a pace by springing\r"
+  - m_title: captors
+    m_partOfSpeech: 0
+    m_description: One that has captured a person or thing
+  - m_title: culprits
+    m_partOfSpeech: 0
+    m_description: One accused of or charged with a crime
+  - m_title: fury
+    m_partOfSpeech: 0
+    m_description: Intense, disordered, and often destructive rage
+  - m_title: slay
+    m_partOfSpeech: 3
+    m_description: To kill violently
+  - m_title: grasp
+    m_partOfSpeech: 3
+    m_description: To make the motion of seizing; clutching
+  - m_title: hurled
+    m_partOfSpeech: 3
+    m_description: To throw down with violence
+  - m_title: slumbering
+    m_partOfSpeech: 3
+    m_description: To sleep lightly
+  - m_title: tremendous
+    m_partOfSpeech: 2
+    m_description: Notably by reason of extreme size, power, greatness, or excellence
+  - m_title: horrible
+    m_partOfSpeech: 2
+    m_description: Extremely bad or unpleasant
+  - m_title: avenge
+    m_partOfSpeech: 3
+    m_description: To exact satisfaction for (a wrong) by punishing the wrongdoer
+  - m_title: pestle
+    m_partOfSpeech: 0
+    m_description: A usually club-shaped implement for pounding or grinding substances
+      in a mortar
+  - m_title: pounding
+    m_partOfSpeech: 3
+    m_description: To strike heavily or repeatedly
+  - m_title: summit
+    m_partOfSpeech: 0
+    m_description: "The topmost level\r"
