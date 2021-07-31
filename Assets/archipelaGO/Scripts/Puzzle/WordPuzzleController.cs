@@ -2,7 +2,6 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GridDirection = archipelaGO.Puzzle.WordPuzzle.Direction;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
 
@@ -181,7 +180,7 @@ namespace archipelaGO.Puzzle
                     continue;
 
                 Word word = gridWord.word;
-                GridDirection direction = gridWord.direction;
+                int direction = gridWord.direction;
                 Vector2Int position = gridWord.position;
 
                 if (!plottedPoints.Contains(position))
@@ -262,7 +261,7 @@ namespace archipelaGO.Puzzle
             return wordCellComponent;
         }
 
-        private PuzzlePiece GeneratePuzzlePiece(int index, string word, Vector2Int position, GridDirection direction, WordCell[,] grids)
+        private PuzzlePiece GeneratePuzzlePiece(int index, string word, Vector2Int position, int direction, WordCell[,] grids)
         {
             int wordLength = word.Length;
             (int columns, int rows) gridSize = GetGridSize(grids);
@@ -270,16 +269,13 @@ namespace archipelaGO.Puzzle
 
             for (int characterIndex = 0; characterIndex < wordLength; characterIndex++)
             {
-                int columnOffset = (direction == GridDirection.Across ? characterIndex : 0);
-                int rowOffset = (direction == GridDirection.Down ? characterIndex : 0);
+                (int column, int row) currentCellPosition = GetCellPosition(position, direction, wordLength, characterIndex);
 
-                int column = (position.x + columnOffset);
-                int row = (position.y + rowOffset);
-
-                if (row >= gridSize.rows || column >= gridSize.columns)
+                if (currentCellPosition.row >= gridSize.rows || currentCellPosition.column >= gridSize.columns ||
+                    currentCellPosition.row < 0 || currentCellPosition.column < 0)
                     continue;
 
-                WordCell cell = grids[column, row];
+                WordCell cell = grids[currentCellPosition.column, currentCellPosition.row];
                 cells.Add(cell);
 
                 char character = word[characterIndex];
@@ -290,6 +286,8 @@ namespace archipelaGO.Puzzle
 
             return GeneratePuzzlePiece(word, cells.ToArray());
         }
+
+        protected abstract (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition);
 
         private bool GridSizeInvalid(WordCell[,] grid)
         {
