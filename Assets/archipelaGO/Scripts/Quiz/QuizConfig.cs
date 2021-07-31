@@ -53,13 +53,13 @@ namespace archipelaGO.Quiz
         public struct Question
         {
             #region Fields
-            [SerializeField]
+            [SerializeField, TextArea(4, 12)]
             private string m_stem;
 
-            [SerializeField]
+            [SerializeField, TextArea(3, 5)]
             private string m_correctAnswer;
 
-            [SerializeField]
+            [SerializeField, TextArea(3, 5)]
             private List<string> m_incorrectAnswers;
             #endregion
 
