@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
+  m_Name: TTDOS_Quiz
+  m_EditorClassIdentifier: 
+  m_questions:
+  - m_stem: Who is the king of the mountain which is situated in the southern part
+      of Luzon?
+    m_correctAnswer: Haring Makiling
+    m_incorrectAnswers:
+    - Haring Sinukuan
+    - Haring Kalaw
+    - Haring Magat
+  - m_stem: "What are the names of Sinukuan\u2019s daughters?"
+    m_correctAnswer: Rosa-Minda, Rosalina, Dona Maria
+    m_incorrectAnswers:
+    - Maria, Dona-Rosa, Rosalina
+    - Dona Maria, Rosalinda, Minda
+    - Maria, Rosa-Minda, Dona Rosa
+  - m_stem: What was the big news that Magat came to deliver?
+    m_correctAnswer: He discovered the existence of beautiful princesses.
+    m_incorrectAnswers:
+    - There will be a big feast in their palace.
+    - 'A hunting adventure will take place soon. '
+    - "He won the battle against Sinukuan\u2019s army."
+  - m_stem: "Why did the three daughters of Sinukuan decline the love proposal of
+      Makiling\u2019s sons?"
+    m_correctAnswer: They vowed never to get marry
+    m_incorrectAnswers:
+    - They already have some suitors which they like.
+    - "Their father doesn\u2019t allow them to have some suitors."
+    - They are busy buying darac.
+  - m_stem: What tragic fate did Magat, Kalaw, and Maglente suffer from at the end
+      of the story?
+    m_correctAnswer: They were crushed to death.
+    m_incorrectAnswers:
+    - They were hit by flying stones.
+    - They were attacked by the towns folks.
+    - They were burned alive.
+  - m_stem: In a short story, characters are categorized into static and dynamic.
+      A static character is about the same person at the duration of the literary
+      piece. It does not undergo a series of changes. On the other hand, a dynamic
+      character is often a subject for a major transformation as the story progresses.
+      Given this premise, which among the following characters may be considered
+      as a DYNAMIC character?
+    m_correctAnswer: Maglente
+    m_incorrectAnswers:
+    - Haring Sinukuan
+    - Rosa-Minda
+    - Magat
+  - m_stem: With one of his powerful hands, Sinukuan grasped and hurled all three
+      brothers towards Mount Makiling because of his fury. Which among the following
+      words is synonymous with the underlined word?
+    m_correctAnswer: Anger
+    m_incorrectAnswers:
+    - Happiness
+    - Anxiety
+    - Fear
+  - m_stem: "Enraged by their second failure, the three brothers used all of their
+      strength to kidnap Sinukuan\u2019s precious daughters and carried them away
+      in their horses. Given this scenario, what\u2019s the best word to describe
+      the way the three brothers behaved?"
+    m_correctAnswer: Irresponsible
+    m_incorrectAnswers:
+    - Childish
+    - Wise
+    - Respectful
+  - m_stem: Imagery in literature is a literary device that describes objects, actions,
+      and ideas in a way that appeals to the physical senses (sight, hearing, smell,
+      touch, taste) to help readers get a good and solid picture of the scene being
+      narrated. Which among the following is an example of imagery?
+    m_correctAnswer: Makiling took a huge pestle for pounding stones, and hurled
+      it towards Sinukuan. It hit the tip of Mt. Arayat, killing a lot of people
+      with flying stones.
+    m_incorrectAnswers:
+    - "\u201CFather would surely not allow this whole thing! The whole idea is ridiculous.\u201D"
+    - There was panic in the town. Everybody was crying.
+    - "The brothers declared their love to the three daughters. However, things didn\u2019t
+      go exactly the way they imagined it."
+  - m_stem: Metaphor, a figure of speech directly compares two objects which are
+      different from each other but shares a similar attribute. Which of the following
+      statements make use of a metaphor?
+    m_correctAnswer: "\u201CDo\xF1a Maria\u2019s radiant beauty is my morning sun.\u201D"
+    m_incorrectAnswers:
+    - Sinukuan can be defeated because the three brothers are strong.
+    - Makiling had three sons who possessed an adventurous spirit.
+    - "\u201COnce we return, prepare the finest meals in this palace. We\u2019ll
+      eat until our stomachs are full!\u201D"
