@@ -2,7 +2,7 @@ using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GridDirection = archipelaGO.Puzzle.WordPuzzle.Direction;
+using GridDirection = archipelaGO.Puzzle.CrosswordDirection;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 
 namespace archipelaGO.Puzzle
@@ -35,14 +35,14 @@ namespace archipelaGO.Puzzle
 
         private class CrosswordHint : WordHint
         {
-            public CrosswordHint (int order, GridDirection direction, string description) =>
+            public CrosswordHint (int order, int direction, string description) =>
                 (m_order, m_direction, m_description) = (order, direction, description);
 
             private int m_order;
-            private GridDirection m_direction;
+            private int m_direction;
             private string m_description;
 
-            public GridDirection direction => m_direction;
+            public int direction => m_direction;
             public override string GetHint() => $"{ m_order }. { m_description }";
         }
         #endregion
@@ -101,15 +101,32 @@ namespace archipelaGO.Puzzle
                 if (!(hint is CrosswordHint))
                     continue;
                 
+                const int AcrossDirection = 0;
                 CrosswordHint crosswordHint = (hint as CrosswordHint);
 
-                if (crosswordHint.direction == GridDirection.Across)
+                if (crosswordHint.direction == AcrossDirection)
                     across.AppendLine(crosswordHint.GetHint());
                 else
                     down.AppendLine(crosswordHint.GetHint());
             }
 
             return $"<b>ACROSS</b>\n<i>{ across }</i>\n<b>DOWN</b>\n<i>{ down }</i>";
+        }
+
+        protected override (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition) =>
+            CalculateCellPosition(anchor, direction, length, currentPosition);
+
+        public static (int column, int row) CalculateCellPosition(Vector2Int anchor, int direction, int length, int currentPosition)
+        {
+            const int AcrossDirection = 0, DownDirection = 1;
+            direction = Mathf.Clamp(direction, AcrossDirection, DownDirection);
+            int columnOffset = (direction == AcrossDirection ? currentPosition : 0);
+            int rowOffset = (direction == DownDirection ? currentPosition : 0);
+
+            int column = (anchor.x + columnOffset);
+            int row = (anchor.y + rowOffset);
+
+            return (column, row);
         }
         #endregion
 

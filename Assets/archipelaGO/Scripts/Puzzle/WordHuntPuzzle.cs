@@ -79,6 +79,34 @@ namespace archipelaGO.Puzzle
             return $"<b>Words</b>\n<i>{ wordHuntHints }</i>";
         }
 
+        protected override (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition) =>
+            CalculateCellPosition(anchor, direction, length, currentPosition);
+
+        public static (int column, int row) CalculateCellPosition(Vector2Int anchor, int direction, int length, int currentPosition)
+        {
+            const int FlippedValueThreshold = 4;
+            const int HorizontalDirection = 0, VerticalDirection = 1, DiagonalUpDirection = 2, DiagonalDownDirection = 3;
+
+            bool isFlipped = (direction >= FlippedValueThreshold);
+
+            if (isFlipped)
+                direction -= FlippedValueThreshold;
+            
+            int horizontalDelta = (direction == VerticalDirection ? 0 : currentPosition);
+            int verticalDelta = (direction == HorizontalDirection ? 0 : (direction == DiagonalUpDirection ? -currentPosition : currentPosition));
+
+            if (isFlipped)
+            {
+                verticalDelta = -verticalDelta;
+                horizontalDelta = -horizontalDelta;
+            }
+
+            int column = (anchor.x + horizontalDelta);
+            int row = (anchor.y + verticalDelta);
+
+            return (column, row);
+        }
+
         private char GenerateRandomCharacter()
         {
             int randomIndex = Random.Range(0, m_lettersInTheAlphabet.Length);
