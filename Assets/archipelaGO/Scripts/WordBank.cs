@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace archipelaGO
 {
@@ -22,12 +23,12 @@ namespace archipelaGO
             [SerializeField]
             private PartOfSpeech m_partOfSpeech;
 
-            [SerializeField, TextArea]
-            private string m_description;
+            [SerializeField, TextArea, FormerlySerializedAs("m_description")]
+            private string m_definition;
 
             public string title => m_title;
             public PartOfSpeech partOfSpeech => m_partOfSpeech;
-            public string description => m_description;
+            public string definition => m_definition;
         }
 
         [System.Serializable]

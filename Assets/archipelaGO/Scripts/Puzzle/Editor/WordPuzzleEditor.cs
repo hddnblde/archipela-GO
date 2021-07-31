@@ -282,7 +282,7 @@ namespace archipelaGO.Puzzle
             {
                 SerializedProperty word = words.GetArrayElementAtIndex(i),
                     title = word.FindPropertyRelative("m_title"),
-                    description = word.FindPropertyRelative("m_description");
+                    description = word.FindPropertyRelative("m_definition");
 
                 string tooltip = (string.IsNullOrEmpty(description.stringValue) ||
                     string.IsNullOrWhiteSpace(description.stringValue) ?
