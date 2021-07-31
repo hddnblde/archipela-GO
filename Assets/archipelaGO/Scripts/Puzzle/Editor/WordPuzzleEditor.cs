@@ -381,6 +381,12 @@ namespace archipelaGO.Puzzle
             m_cachedCrossword = GenerateEmptyCrossword(gridSize);
             WordBank wordBank = m_wordBank.objectReferenceValue as WordBank;
 
+            if (wordBank == null)
+            {
+                Debug.LogWarning("Failed to cache crossword because Word Bank isn't assigned.");
+                return;
+            }
+
             for (int i = 0; i < m_puzzlePieces.arraySize; i++)
             {
                 SerializedProperty puzzlePiece = m_puzzlePieces.GetArrayElementAtIndex(i);
