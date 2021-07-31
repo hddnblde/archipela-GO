@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEditor;
 using Word = archipelaGO.WordBank.Word;
-using Direction = archipelaGO.Puzzle.WordPuzzle.Direction;
 
 namespace archipelaGO.Puzzle
 {
@@ -9,14 +8,18 @@ namespace archipelaGO.Puzzle
     public class WordPuzzleEditor : Editor
     {
         #region Fields
-        private SerializedProperty m_wordBank = null,
+        private SerializedProperty m_puzzleType = null,
+            m_wordBank = null,
             m_gridSize = null,
             m_puzzlePieces = null;
-        
+
         private GUIContent[] m_cachedWords = null;
         private int m_longestCharacterCount = 0;
         private CrosswordCharacter[,] m_cachedCrossword = null;
         private GUIStyle m_crosswordGUIStyle = null;
+
+        private readonly string[] CrosswordDirections = { "Across", "Down" };
+        private readonly string[] WordHuntDirections = { "→", "↓", "↗", "↘", "←", "↑", "↙", "↖" };
         #endregion
 
 
@@ -63,6 +66,7 @@ namespace archipelaGO.Puzzle
         #region Editor Implementation
         private void OnEnable()
         {
+            m_puzzleType = serializedObject.FindProperty("m_puzzleType");
             m_wordBank = serializedObject.FindProperty("m_wordBank");
             m_gridSize = serializedObject.FindProperty("m_gridSize");
             m_puzzlePieces = serializedObject.FindProperty("m_puzzlePieces");
@@ -108,6 +112,7 @@ namespace archipelaGO.Puzzle
 
         private void DrawCustomGUI()
         {
+            EditorGUILayout.PropertyField(m_puzzleType);
             DrawWordBankProperty();
             DrawGridSizeProperty();
             EditorGUILayout.Space();
@@ -241,9 +246,20 @@ namespace archipelaGO.Puzzle
 
             using (new EditorGUI.IndentLevelScope())
             {
-                EditorGUILayout.PropertyField(direction);
+                DrawDirectionProperty(direction);
                 EditorGUILayout.PropertyField(position);
             }
+        }
+
+        private void DrawDirectionProperty(SerializedProperty direction)
+        {
+            const int CrosswordIndex = 0;
+
+            string[] directionsContext = (m_puzzleType.enumValueIndex == CrosswordIndex ?
+                CrosswordDirections : WordHuntDirections);
+
+            direction.intValue = EditorGUILayout.Popup(direction.displayName,
+                direction.intValue, directionsContext);
         }
 
         private void CacheWordsFromBank()
@@ -375,21 +391,18 @@ namespace archipelaGO.Puzzle
                 
                 Word word = wordBank.GetWord(wordBankIndex.intValue);
                 string wordString = word.title.ToUpper();
-                Direction directionValue = (Direction)direction.enumValueIndex;
+                int directionValue = direction.intValue;
                 Vector2Int positionValue = position.vector2IntValue;
 
                 for (int characterIndex = 0; characterIndex < wordString.Length; characterIndex++)
                 {
-                    if (positionValue.x >= m_cachedCrossword.GetLength(0) || positionValue.y >= m_cachedCrossword.GetLength(1) ||
-                        positionValue.x < 0 || positionValue.y < 0)
+                    (int column, int row) cell = WordHuntPuzzle.CalculateCellPosition(positionValue, directionValue, wordString.Length, characterIndex);
+
+                    if (cell.column >= m_cachedCrossword.GetLength(0) || cell.row >= m_cachedCrossword.GetLength(1) ||
+                        cell.column < 0 || cell.row < 0)
                         break;
 
-                    m_cachedCrossword[positionValue.x, positionValue.y].SetCharacter(wordString[characterIndex]);
-
-                    if (directionValue == Direction.Across)
-                        positionValue.x++;
-                    else
-                        positionValue.y++;
+                    m_cachedCrossword[cell.column, cell.row].SetCharacter(wordString[characterIndex]);
                 }
             }
         }
