@@ -4,27 +4,13 @@ using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Puzzle
 {
-    
-    [System.Serializable]
-    public enum CrosswordDirection
-    {
-        Across = 0,
-        Down = 1
-    }
-
-    [System.Serializable]
-    public enum WordHuntDirection
-    {
-        Vertical = 0,
-        Horizontal = 1,
-        DiagonalUp = 2,
-        DiagonalDown = 3
-    }
-
     [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
     public class WordPuzzle : ScriptableObject
     {
         #region Fields
+        [SerializeField]
+        private PuzzleType m_puzzleType = PuzzleType.Crossword;
+
         [SerializeField] 
         private WordBank m_wordBank = null;
 
@@ -33,6 +19,16 @@ namespace archipelaGO.Puzzle
 
         [SerializeField, NonReorderable]
         private List<PuzzlePiece> m_puzzlePieces = new List<PuzzlePiece>();
+        #endregion
+
+
+        #region Data Structure
+        [System.Serializable]
+        private enum PuzzleType
+        {
+            Crossword = 0,
+            WordHunt = 1
+        }
         #endregion
 
 
