@@ -4,6 +4,23 @@ using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Puzzle
 {
+    
+    [System.Serializable]
+    public enum CrosswordDirection
+    {
+        Across = 0,
+        Down = 1
+    }
+
+    [System.Serializable]
+    public enum WordHuntDirection
+    {
+        Vertical = 0,
+        Horizontal = 1,
+        DiagonalUp = 2,
+        DiagonalDown = 3
+    }
+
     [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
     public class WordPuzzle : ScriptableObject
     {
@@ -43,7 +60,7 @@ namespace archipelaGO.Puzzle
         public struct PuzzlePiece
         {
             [SerializeField]
-            private Direction m_direction;
+            private int m_direction;
 
             [SerializeField]
             private Vector2Int m_position;
@@ -52,15 +69,8 @@ namespace archipelaGO.Puzzle
             private int m_wordBankIndex;
 
             public int wordBankIndex => m_wordBankIndex;
-            public Direction direction => m_direction;
+            public int direction => m_direction;
             public Vector2Int position => m_position;
-        }
-
-        [System.Serializable]
-        public enum Direction
-        {
-            Across,
-            Down
         }
 
         public class GridWord
@@ -73,14 +83,14 @@ namespace archipelaGO.Puzzle
             }
 
             #region Fields
-            private Direction m_direction = Direction.Across;
+            private int m_direction = 0;
             private Vector2Int m_position = Vector2Int.zero;
             private Word m_word = new Word();
             #endregion
 
 
             #region Properties
-            public Direction direction => m_direction;
+            public int direction => m_direction;
             public Vector2Int position => m_position;
             public Word word => m_word;
             #endregion
