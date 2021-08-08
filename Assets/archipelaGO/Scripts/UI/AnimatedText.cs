@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 
 namespace archipelaGO.UI
 {
-    public class AnimatedText : MonoBehaviour
+    public class AnimatedText : MonoBehaviour, IPointerClickHandler
     {
         #region Fields
         [SerializeField]
@@ -19,6 +20,20 @@ namespace archipelaGO.UI
         private int m_characterCount = 0;
         private float m_currentTime = 0f;
         private string m_cachedText = string.Empty;
+        #endregion
+
+
+        #region Pointer Click Handler Implementation
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            int selectedHyperlinkIndex;
+
+            if (HyperlinkWasSelected(Input.mousePosition, out selectedHyperlinkIndex))
+            {
+                var link = m_text.textInfo.linkInfo[selectedHyperlinkIndex];
+                //TODO: implement hyperlink to Word Bank (i.e show the dictionary)
+            }
+        }
         #endregion
 
 
@@ -121,6 +136,13 @@ namespace archipelaGO.UI
             }
 
             return (index, alpha);
+        }
+
+        private bool HyperlinkWasSelected(Vector3 pointerPosition, out int index)
+        {
+            index = TMP_TextUtilities.FindIntersectingLink(m_text, pointerPosition, null);
+
+            return (index != -1);
         }
         #endregion
     }
