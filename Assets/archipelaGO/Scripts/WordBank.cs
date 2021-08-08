@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -48,7 +49,7 @@ namespace archipelaGO
         #endregion
 
 
-        #region Public Method
+        #region Public Methods
         public Word GetWord(int index)
         {
             if (index < 0 || index >= wordCount)
@@ -57,19 +58,13 @@ namespace archipelaGO
             return m_words[index];
         }
 
-        public int LongestCharacterCount()
+        public int GetWordIndex(string match)
         {
-            int count = 0;
+            var matchedWord = (from word in m_words
+                where word.title.Contains(match)
+                select word).FirstOrDefault();
 
-            foreach (Word word in m_words)
-            {
-                int currentCharacterCount = word.title.Length;
-
-                if (currentCharacterCount > count)
-                    count = currentCharacterCount;
-            }
-
-            return count;
+            return m_words.IndexOf(matchedWord);
         }
         #endregion
     }
