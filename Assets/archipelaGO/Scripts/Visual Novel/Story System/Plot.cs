@@ -8,6 +8,9 @@ namespace archipelaGO.VisualNovel.StorySystem
     {
         #region Fields
         [SerializeField]
+        private WordBank m_wordBank = null;
+
+        [SerializeField]
         private List<Sprite> m_backgroundScenes = new List<Sprite>();
 
         [SerializeField]
@@ -17,6 +20,8 @@ namespace archipelaGO.VisualNovel.StorySystem
 
         #region Property
         public int plotlineCount => m_plotlines.Count;
+
+        public WordBank wordBank => m_wordBank;
         #endregion
 
 
