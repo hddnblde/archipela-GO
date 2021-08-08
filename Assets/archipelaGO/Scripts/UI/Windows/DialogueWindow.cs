@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,12 +64,12 @@ namespace archipelaGO.UI.Windows
             base.Hide();
         }
 
-        public IEnumerator ShowDialogueLine(Sprite characterSprite, string characterName, string dialogueLine)
+        public IEnumerator ShowDialogueLine(Sprite characterSprite, string characterName, string dialogueLine, WordBank wordBank)
         {
             m_showNextDialogue = false;
             Show();
             SetCharacter(characterSprite, characterName);
-            yield return AnimateDialogueLine(dialogueLine);
+            yield return AnimateDialogueLine(dialogueLine, wordBank);
             yield return new WaitUntil(() => m_showNextDialogue);
             Hide();
         }
@@ -84,10 +86,39 @@ namespace archipelaGO.UI.Windows
                 m_characterNameText.text = name;
         }
 
-        private IEnumerator AnimateDialogueLine(string dialogueLine)
+        private IEnumerator AnimateDialogueLine(string dialogueLine, WordBank wordBank)
         {
-            if (m_animatedText != null)
-                yield return m_animatedText.ShowText(dialogueLine, Color.white);
+            if (m_animatedText == null)
+                yield break;
+
+            string postProcessedDialogueLine = ApplyHyperlinkPostProcessingToDialogueLine(dialogueLine, wordBank);
+
+            yield return m_animatedText.ShowText(postProcessedDialogueLine, Color.white);
+        }
+
+        private string ApplyHyperlinkPostProcessingToDialogueLine(string line, WordBank wordBank)
+        {
+            Regex regex = new Regex(@"{[a-zA-Z\s]*}");
+            MatchCollection matches = regex.Matches(line);
+            List<(string, string)> postProcesors = new List<(string, string)>();
+
+            for (int i = 0; i < matches.Count; i++)
+            {
+                string match = matches[i].Value;
+                string normalizedMatch = match.Substring(1, match.Length - 2);
+                int wordIndex = wordBank.GetWordIndex(normalizedMatch);
+
+                string postProcessedWord = (wordIndex != -1 ?
+                    $"<style=Link><link=\"{ wordIndex }\">{ normalizedMatch }</link></style>" :
+                    match);
+                
+                postProcesors.Add((match, postProcessedWord));
+            }
+
+            foreach ((string key, string value) postProcessor in postProcesors)
+                line = line.Replace(postProcessor.key, postProcessor.value);
+
+            return line;
         }
         #endregion
     }

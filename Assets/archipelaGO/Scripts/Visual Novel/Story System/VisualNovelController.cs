@@ -42,7 +42,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Public Methods
-        public IEnumerator ShowDialogue(DialogueCharacter character, Dialogue dialogue)
+        public IEnumerator ShowDialogue(DialogueCharacter character, Dialogue dialogue, WordBank wordBank)
         {
             for (int i = 0; i < dialogue.lineCount; i++)
             {
@@ -51,7 +51,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
                 yield return m_dialogueWindow.
                     ShowDialogueLine(character.sprite,
-                    character.characterName, line.text);
+                    character.characterName, line.text, wordBank);
             }
         }
 

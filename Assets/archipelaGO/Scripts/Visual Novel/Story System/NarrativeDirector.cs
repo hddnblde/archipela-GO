@@ -61,11 +61,11 @@ namespace archipelaGO.VisualNovel.StorySystem
             {
                 (Narrative narrative, Sprite scene) plotline = plot.GetPlotline(i);
                 SetScene(plotline.scene);
-                yield return PlayNarrative(plotline.narrative);
+                yield return PlayNarrative(plotline.narrative, plot.wordBank);
             }
         }
 
-        private IEnumerator PlayNarrative(Narrative narrative)
+        private IEnumerator PlayNarrative(Narrative narrative, WordBank wordBank)
         {
             string title;
             string[] choices;
@@ -89,7 +89,7 @@ namespace archipelaGO.VisualNovel.StorySystem
                     conversation.GetDialogueLine(i);
 
                 yield return m_vnController.
-                    ShowDialogue(dialogueLine.character, dialogueLine.dialogue);
+                    ShowDialogue(dialogueLine.character, dialogueLine.dialogue, wordBank);
             }
         }
         #endregion
