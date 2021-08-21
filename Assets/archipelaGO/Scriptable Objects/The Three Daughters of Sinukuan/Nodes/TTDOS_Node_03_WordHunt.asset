@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
-  m_Name: TTDOS_WordHunt
+  m_Name: TTDOS_Node_03_WordHunt
   m_EditorClassIdentifier: 
   m_puzzleType: 1
   m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}

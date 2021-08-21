@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
-  m_Name: TTDOS_Quiz
+  m_Name: TTDOS_Node_04_Quiz
   m_EditorClassIdentifier: 
   m_questions:
   - m_stem: Who is the king of the mountain which is situated in the southern part
