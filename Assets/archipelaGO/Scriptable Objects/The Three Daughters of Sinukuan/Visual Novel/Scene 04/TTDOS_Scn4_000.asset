@@ -26,11 +26,11 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Is that darac they\u2019re buying? Come! Let\u2019s check them out."
+      m_text: "Is that {darac} they\u2019re buying? Come! Let\u2019s check them out."
   - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: The three princes decided to follow the peasant girls in order to know
-        where they lived. However, the latter, after finishing their marketing, went
-        towards the mountain instead of directly heading home to change from their
-        peasant attires into their royal ones.
+      m_text: The three princes decided to follow the {{peasant}} girls in order
+        to know where they lived. However, the {latter}, after finishing their marketing,
+        went towards the mountain instead of directly heading home to change from
+        their {{peasant}} attires into their royal ones.

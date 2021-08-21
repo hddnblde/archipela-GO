@@ -25,7 +25,7 @@ MonoBehaviour:
   - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Unknown to Makiling\u2019s son, a peasant farmer saw the eloping persons
-        and reported the case to the town folks. There was panic in the town. Everybody
-        was crying. The news soon reached Sinukuan\u2019s knowledge and he himself
-        pursued the captors of his daughters."
+      m_text: "Unknown to Makiling\u2019s son, a {peasant} farmer saw the eloping
+        persons and reported the case to the town folks. There was panic in the town.
+        Everybody was crying. The news soon reached Sinukuan\u2019s knowledge and
+        he himself pursued the {captors} of his daughters."

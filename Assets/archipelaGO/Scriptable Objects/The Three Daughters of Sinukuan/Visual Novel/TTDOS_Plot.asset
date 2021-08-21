@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4964ae67cdd6449b6d206331a79bf8, type: 3}
   m_Name: TTDOS_Plot
   m_EditorClassIdentifier: 
+  m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
   m_backgroundScenes: []
   m_plotlines:
   - m_backgroundIndex: 0

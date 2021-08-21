@@ -17,8 +17,8 @@ MonoBehaviour:
   - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Enraged by their second failure, the three brothers used all of their
-        strength to abduct Sinukuan\u2019s precious daughters. The poor girls surprised
-        by the event, didn\u2019t have the chance to protest. They just soon found
-        themselves taken away on swift horses, galloping farther and farther from
-        Arayat."
+      m_text: "{Enraged} by their second failure, the three brothers used all of
+        their strength to {abduct} Sinukuan\u2019s precious daughters. The poor girls
+        surprised by the event, didn\u2019t have the chance to protest. They just
+        soon found themselves taken away on swift horses, {galloping} farther and
+        farther from Arayat."

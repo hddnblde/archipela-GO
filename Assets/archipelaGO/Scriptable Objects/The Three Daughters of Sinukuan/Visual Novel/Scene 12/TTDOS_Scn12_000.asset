@@ -22,7 +22,7 @@ MonoBehaviour:
   - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: And Sinukuan hurled the massive and heavy mortar to Makiling. The latter
-        was hit at the middle reducing Mount Makiling into almost a hill. Thousands
-        of people were killed in Southern Luzon by this tremendous duel and Makiling
-        himself seeing that he was defeated sought rest by suicide.
+      m_text: And Sinukuan {hurled} the massive and heavy mortar to Makiling. The
+        {latter} was hit at the middle reducing Mount Makiling into almost a hill.
+        Thousands of people were killed in Southern Luzon by this {tremendous} duel
+        and Makiling himself seeing that he was defeated sought rest by suicide.

@@ -21,6 +21,6 @@ MonoBehaviour:
   - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Makiling was at that time slumbering in his palace when he was awakened
-        by a tremendous noise produced by a falling body. When he looked at the window,
-        he saw a horrible scene. His three sons had been crushed to death.
+      m_text: Makiling was at that time {slumbering} in his palace when he was awakened
+        by a {tremendous} noise produced by a falling body. When he looked at the
+        window, he saw a {horrible} scene. His three sons had been crushed to death.

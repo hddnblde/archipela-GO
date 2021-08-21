@@ -21,7 +21,7 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "If the rumors were true and these daughters really possess such radiant
+      m_text: "If the rumors were true and these daughters really possess such {radiant}
         beauty, then perhaps that\u2019s something we should not let slip away."
   - m_characterIndex: 2
     m_lines:
@@ -30,13 +30,14 @@ MonoBehaviour:
   - m_characterIndex: 4
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Seems like I could no longer refrain you from departing. However, please
-        take care not to arouse the wrath of Sinukuan. You know how he is.
+      m_text: Seems like I could no longer refrain you from {departing}. However,
+        please take care not to {arouse} the {wrath} of Sinukuan. You know how he
+        is.
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We will surely be careful, father. Once we return, prepare the finest
-        meals in this palace. We\u2019ll revel until our hearts desire; until our
+        meals in this palace. We\u2019ll {revel} until our hearts desire; until our
         stomachs are full!"
   - m_characterIndex: 1
     m_lines:

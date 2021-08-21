@@ -30,8 +30,8 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Ooohhh! That\u2019s something sensible, brother. But I apologize for
-        I cannot wait any longer. I\u2019ll declare my love to one of them."
+      m_text: "Ooohhh! That\u2019s something {sensible}, brother. But I apologize
+        for I cannot wait any longer. I\u2019ll declare my love to one of them."
   - m_characterIndex: 3
     m_lines:
     - m_voiceOver: {fileID: 0}

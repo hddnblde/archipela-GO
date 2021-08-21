@@ -17,10 +17,10 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Apologies, Maglente. But I think it\u2019s an astonishing one. In
-        fact it\u2019s a marvelous idea!"
+      m_text: "Apologies, Maglente. But I think it\u2019s an {astonishing} one. In
+        fact it\u2019s a {marvelous} idea!"
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "See? What did I tell you, Maglente. It is indeed a marvelous idea,
+      m_text: "See? What did I tell you, Maglente. It is indeed a {marvelous} idea,
         Kalaw! I\u2019m glad we are on the same page here."
