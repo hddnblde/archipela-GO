@@ -107,7 +107,7 @@ namespace archipelaGO.UI.Windows
             {
                 string match = matches[i].Value;
                 string normalizedMatch = match.Substring(1, match.Length - 2);
-                int wordIndex = wordBank.GetWordIndex(normalizedMatch);
+                int wordIndex = wordBank.GetWordIndex(normalizedMatch.ToLower());
 
                 string postProcessedWord = (wordIndex != -1 ?
                     $"<style=Link><link=\"{ wordIndex }\">{ normalizedMatch }</link></style>" :
