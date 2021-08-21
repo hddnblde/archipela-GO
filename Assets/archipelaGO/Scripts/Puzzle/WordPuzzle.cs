@@ -9,9 +9,6 @@ namespace archipelaGO.Puzzle
     public class WordPuzzle : GameProgress
     {
         #region Fields
-        [SerializeField]
-        private PuzzleType m_puzzleType = PuzzleType.Crossword;
-
         [SerializeField] 
         private WordBank m_wordBank = null;
 
@@ -23,19 +20,7 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region Data Structure
-        [System.Serializable]
-        private enum PuzzleType
-        {
-            Crossword = 0,
-            WordHunt = 1
-        }
-        #endregion
-
-
         #region Properties
-        public WordBank wordBank => m_wordBank;
-
         public Vector2Int gridSize => m_gridSize;
         public int wordSize => m_puzzlePieces.Count;
         #endregion
