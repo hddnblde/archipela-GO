@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using GameProgress = archipelaGO.Progression.GameProgress;
 
 namespace archipelaGO.Quiz
 {
     [CreateAssetMenu(fileName = "Quiz", menuName = "archipelaGO/Quiz", order = 2)]
-    public class QuizConfig : ScriptableObject
+    public class QuizConfig : GameProgress
     {
         #region Fields
         [SerializeField]
