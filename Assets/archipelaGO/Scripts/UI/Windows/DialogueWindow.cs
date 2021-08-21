@@ -28,19 +28,19 @@ namespace archipelaGO.UI.Windows
 
 
         #region MonoBehaviour Implementation
-        private void OnEnable() => AddListenerToSkipButton();
-        private void OnDisable() => RemoveListenerFromSkipButton();
+        private void OnEnable() => AddEventListeners();
+        private void OnDisable() => RemoveEventListeners();
         #endregion
 
 
         #region Skip Button Implementation
-        private void AddListenerToSkipButton()
+        private void AddEventListeners()
         {
             if (m_skipButton != null)
                 m_skipButton.onClick.AddListener(OnSkipButtonPressed);
         }
 
-        private void RemoveListenerFromSkipButton()
+        private void RemoveEventListeners()
         {
             if (m_skipButton != null)
                 m_skipButton.onClick.RemoveListener(OnSkipButtonPressed);
@@ -50,7 +50,7 @@ namespace archipelaGO.UI.Windows
         {
             if (m_animatedText != null)
                 m_animatedText.SkipTextScrolling();
-            
+
             m_showNextDialogue = true;
         }
         #endregion
@@ -91,9 +91,10 @@ namespace archipelaGO.UI.Windows
             if (m_animatedText == null)
                 yield break;
 
-            string postProcessedDialogueLine = ApplyHyperlinkPostProcessingToDialogueLine(dialogueLine, wordBank);
+            string postProcessedDialogueLine =
+                ApplyHyperlinkPostProcessingToDialogueLine(dialogueLine, wordBank);
 
-            yield return m_animatedText.ShowText(postProcessedDialogueLine, Color.white);
+            yield return m_animatedText.ShowText(postProcessedDialogueLine, Color.white, wordBank);
         }
 
         private string ApplyHyperlinkPostProcessingToDialogueLine(string line, WordBank wordBank)
@@ -111,7 +112,7 @@ namespace archipelaGO.UI.Windows
                 string postProcessedWord = (wordIndex != -1 ?
                     $"<style=Link><link=\"{ wordIndex }\">{ normalizedMatch }</link></style>" :
                     match);
-                
+
                 postProcesors.Add((match, postProcessedWord));
             }
 

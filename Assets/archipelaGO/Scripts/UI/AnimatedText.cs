@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.UI
 {
@@ -20,25 +21,41 @@ namespace archipelaGO.UI
         private int m_characterCount = 0;
         private float m_currentTime = 0f;
         private string m_cachedText = string.Empty;
+        private WordBank m_cachedWordBank = null;
+
+        public static event WordSelected OnWordSelected;
+        public delegate void WordSelected(Word word);
         #endregion
 
 
         #region Pointer Click Handler Implementation
         public void OnPointerClick(PointerEventData eventData)
         {
+            if (m_cachedWordBank == null)
+                return;
+
             int selectedHyperlinkIndex;
 
-            if (HyperlinkWasSelected(Input.mousePosition, out selectedHyperlinkIndex))
-            {
-                var link = m_text.textInfo.linkInfo[selectedHyperlinkIndex];
-                //TODO: implement hyperlink to Word Bank (i.e show the dictionary)
-            }
+            if (!HyperlinkWasSelected(Input.mousePosition, out selectedHyperlinkIndex))
+                return;
+
+            var link = m_text.textInfo.linkInfo[selectedHyperlinkIndex];
+            int hyperlinkIDValue;
+
+            if (!int.TryParse(link.GetLinkID(), out hyperlinkIDValue))
+                return;
+            
+            if (hyperlinkIDValue < 0 || hyperlinkIDValue >= m_cachedWordBank.wordCount)
+                return;
+
+            Word selectedWord = m_cachedWordBank.GetWord(hyperlinkIDValue);
+            OnWordSelected?.Invoke(selectedWord);
         }
         #endregion
 
 
         #region Public Methods
-        public IEnumerator ShowText(string text, Color color)
+        public IEnumerator ShowText(string text, Color color, WordBank wordBank)
         {
             if (m_text == null)
                 yield break;
@@ -46,6 +63,7 @@ namespace archipelaGO.UI
             m_cachedText = text;
             m_characterCount = text.Length;
             m_text.faceColor = color;
+            m_cachedWordBank = wordBank;
 
             yield return ScrollText();
         }
