@@ -105,17 +105,24 @@ namespace archipelaGO.SceneHandling
             m_loaded = false;
             yield return FadeScreenRoutine(true);
             yield return LoadSceneAsynchronously(sceneIndex);
-            m_loaded = true;
             yield return FadeScreenRoutine(false);
             m_isTransitioning = false;
         }
 
         private IEnumerator LoadSceneAsynchronously(int sceneIndex)
         {
-            AsyncOperation sceneLoading =
-                SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+            AsyncOperation sceneLoading =
+                SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
             yield return new WaitUntil(() => sceneLoading.isDone);
+
+            m_loaded = true;
+
+            AsyncOperation sceneUnloading =
+                SceneManager.UnloadSceneAsync(currentSceneIndex);
+
+            yield return new WaitUntil(() => sceneUnloading.isDone);
         }
 
         private IEnumerator FadeScreenRoutine(bool fadeIn)
