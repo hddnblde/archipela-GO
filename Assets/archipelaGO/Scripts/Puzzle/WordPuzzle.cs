@@ -5,10 +5,19 @@ using GameConfig = archipelaGO.Game.GameConfig;
 
 namespace archipelaGO.Puzzle
 {
+    public enum PuzzleType
+    {
+        Crossword = 0,
+        WordHunt = 1
+    }
+
     [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
     public class WordPuzzle : GameConfig
     {
         #region Fields
+        [SerializeField]
+        private PuzzleType m_puzzleType = PuzzleType.Crossword;
+
         [SerializeField] 
         private WordBank m_wordBank = null;
 
@@ -21,6 +30,7 @@ namespace archipelaGO.Puzzle
 
 
         #region Properties
+        public PuzzleType puzzleType => m_puzzleType;
         public Vector2Int gridSize => m_gridSize;
         public int wordSize => m_puzzlePieces.Count;
         #endregion
