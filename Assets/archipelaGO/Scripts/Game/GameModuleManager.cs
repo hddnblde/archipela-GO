@@ -11,6 +11,7 @@ namespace archipelaGO.Game
 {
     public class GameModuleManager : MonoBehaviour
     {
+        #region Fields
         [SerializeField]
         private VisualNovelModule m_visualNovelModule = null;
 
@@ -22,34 +23,80 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private QuizModule m_quizModule = null;
+        #endregion
 
+
+        #region Public Method
         public void LoadModule(GameConfig gameConfig)
         {
             switch (gameConfig)
             {
                 case VisualNovelConfig vnConfig:
-                    m_visualNovelModule?.Initialize(vnConfig);
+                    LoadVisualNovel(vnConfig);
                 break;
 
                 case WordPuzzleConfig wordPuzzleConfig:
-
-                    switch (wordPuzzleConfig.puzzleType)
-                    {
-                        case Puzzle.PuzzleType.Crossword:
-                            m_crosswordModule?.Initialize(wordPuzzleConfig);
-                        break;
-
-                        case Puzzle.PuzzleType.WordHunt:
-                            m_wordHuntModule?.Initialize(wordPuzzleConfig);
-                        break;
-                    }
-
+                    LoadPuzzleModule(wordPuzzleConfig);
                 break;
 
                 case QuizConfig quizConfig:
-                    m_quizModule?.Initialize(quizConfig);
+                    LoadQuizModule(quizConfig);
                 break;
             }
         }
+        #endregion
+
+
+        #region Internal Methods
+        private void LoadVisualNovel(VisualNovelConfig config)
+        {
+            if (m_visualNovelModule == null)
+                return;
+
+            m_visualNovelModule.gameObject.SetActive(true);
+            m_visualNovelModule.Initialize(config);
+        }
+
+        private void LoadPuzzleModule(WordPuzzleConfig config)
+        {
+            switch (config.puzzleType)
+            {
+                case Puzzle.PuzzleType.Crossword:
+                    LoadCrosswordModule(config);
+                break;
+
+                case Puzzle.PuzzleType.WordHunt:
+                    LoadWordHuntModule(config);
+                break;
+            }
+        }
+
+        private void LoadCrosswordModule(WordPuzzleConfig config)
+        {
+            if (m_crosswordModule == null)
+                return;
+
+            m_crosswordModule.gameObject.SetActive(true);
+            m_crosswordModule.Initialize(config);
+        }
+
+        private void LoadWordHuntModule(WordPuzzleConfig config)
+        {
+            if (m_wordHuntModule == null)
+                return;
+
+            m_wordHuntModule.gameObject.SetActive(true);
+            m_wordHuntModule.Initialize(config);
+        }
+
+        private void LoadQuizModule(QuizConfig config)
+        {
+            if (m_quizModule == null)
+                return;
+
+            m_quizModule.gameObject.SetActive(true);
+            m_quizModule.Initialize(config);
+        }
+        #endregion
     }
 }
