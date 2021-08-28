@@ -23,8 +23,8 @@ namespace archipelaGO.Quiz
         #endregion
 
 
-        #region GameElementController Implementation
-        protected override void OnInitialize(QuizConfig config)
+        #region Game Module Implementation
+        public override void Initialize(QuizConfig config)
         {
             m_quiz = config;
             BeginQuizRoutine();

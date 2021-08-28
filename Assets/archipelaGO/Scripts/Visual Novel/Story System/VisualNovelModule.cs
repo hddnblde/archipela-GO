@@ -20,8 +20,8 @@ namespace archipelaGO.VisualNovel.StorySystem
         #endregion
 
 
-        #region GameElementController Implementation
-        protected override void OnInitialize(Plot config)
+        #region Game Module Implementation
+        public override void Initialize(Plot config)
         {
             InitializeVisualNovelController();
             StopPlot();

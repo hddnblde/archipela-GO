@@ -47,13 +47,13 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region GameElementController Implementation
-        protected override void OnInitialize(WordPuzzle config)
+        #region Game Module Implementation
+        public override void Initialize(WordPuzzle config)
         {
             if (m_answerField != null)
                 m_answerField.onEndEdit.AddListener(OnSubmitAnswer);
 
-            base.OnInitialize(config);
+            base.Initialize(config);
         }
         #endregion
 

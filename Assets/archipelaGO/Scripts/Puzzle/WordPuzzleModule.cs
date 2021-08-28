@@ -71,8 +71,8 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region GameElementController Implementation
-        protected override void OnInitialize(WordPuzzle config)
+        #region Game Module Implementation
+        public override void Initialize(WordPuzzle config)
         {
             m_rectTransform = transform as RectTransform;
             m_wordPuzzle = config;
