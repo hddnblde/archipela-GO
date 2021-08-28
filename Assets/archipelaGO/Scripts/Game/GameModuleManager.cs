@@ -13,9 +13,6 @@ namespace archipelaGO.Game
     {
         #region Fields
         [SerializeField]
-        private GameConfig m_gameConfig = null;
-
-        [SerializeField]
         private VisualNovelModule m_visualNovelModule = null;
 
         [SerializeField]
@@ -28,7 +25,6 @@ namespace archipelaGO.Game
         private QuizModule m_quizModule = null;
         #endregion
 
-        private void Start() => LoadModule(m_gameConfig);
 
         #region Public Method
         public void LoadModule(GameConfig gameConfig)
