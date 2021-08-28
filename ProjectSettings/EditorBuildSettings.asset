@@ -9,15 +9,12 @@ EditorBuildSettings:
     path: Assets/archipelaGO/Scenes/Boot.unity
     guid: 5f182fe77a7b7e04bb8469c87627f347
   - enabled: 1
+    path: Assets/archipelaGO/Scenes/Main.unity
+    guid: 2f43836469883564babad5414533fdfd
+  - enabled: 1
     path: Assets/archipelaGO/Scenes/World Map.unity
     guid: b69f860fe67b7474486d06a242b294e5
   - enabled: 1
-    path: Assets/archipelaGO/Scenes/Visual Novel Module.unity
-    guid: c48b1d4fc3e815c4c863849731871979
-  - enabled: 1
-    path: Assets/archipelaGO/Scenes/Crossword Module.unity
-    guid: 195fed47fd9c253448c0f05c68a2164c
-  - enabled: 1
-    path: Assets/archipelaGO/Scenes/Quiz Module.unity
-    guid: ca19a801dd1fad245a37a84184e4b4d6
+    path: Assets/archipelaGO/Scenes/Game.unity
+    guid: 0a3171d1f140e634da2fb6b1d0bb7038
   m_configObjects: {}
