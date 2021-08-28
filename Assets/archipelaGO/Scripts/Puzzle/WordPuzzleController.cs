@@ -2,8 +2,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GameElementController = archipelaGO.Game.GameElementController;
-using GameConfig = archipelaGO.Game.GameConfig;
+using GameElementController = archipelaGO.Game.GameElementController<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
 
@@ -73,13 +72,10 @@ namespace archipelaGO.Puzzle
 
 
         #region GameElementController Implementation
-        public override void Initialize(GameConfig config)
+        public override void Initialize(WordPuzzle config)
         {
-            if (!(config is WordPuzzle))
-                return;
-
             m_rectTransform = transform as RectTransform;
-            m_wordPuzzle = config as WordPuzzle;
+            m_wordPuzzle = config;
             SetUpGrid();
             SetUpHints();
         }

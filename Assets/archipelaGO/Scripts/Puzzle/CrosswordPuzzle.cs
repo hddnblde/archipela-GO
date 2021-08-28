@@ -49,7 +49,7 @@ namespace archipelaGO.Puzzle
 
 
         #region GameElementController Implementation
-        public override void Initialize(GameConfig config)
+        public override void Initialize(WordPuzzle config)
         {
             if (m_answerField != null)
                 m_answerField.onEndEdit.AddListener(OnSubmitAnswer);

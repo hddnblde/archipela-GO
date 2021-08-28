@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameElementController = archipelaGO.Game.GameElementController;
-using GameConfig = archipelaGO.Game.GameConfig;
+using GameElementController = archipelaGO.Game.GameElementController<archipelaGO.Quiz.QuizConfig>;
 using archipelaGO.UI.Windows;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 using Question = archipelaGO.Quiz.QuizConfig.Question;
@@ -25,12 +24,9 @@ namespace archipelaGO.Quiz
 
 
         #region GameElementController Implementation
-        public override void Initialize(GameConfig config)
+        public override void Initialize(QuizConfig config)
         {
-            if (!(config is QuizConfig))
-                return;
-
-            m_quiz = config as QuizConfig;
+            m_quiz = config;
             BeginQuizRoutine();
         }
         #endregion

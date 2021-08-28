@@ -2,8 +2,9 @@ using UnityEngine;
 
 namespace archipelaGO.Game
 {
-    public abstract class GameElementController : MonoBehaviour
+    public abstract class GameElementController<T> : MonoBehaviour
+        where T : GameConfig
     {
-        public abstract void Initialize(GameConfig config);
+        public abstract void Initialize(T config);
     }
 }

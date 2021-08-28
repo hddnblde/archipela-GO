@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using GameElementController = archipelaGO.Game.GameElementController;
+using GameElementController = archipelaGO.Game.GameElementController<archipelaGO.VisualNovel.StorySystem.Plot>;
 using GameConfig = archipelaGO.Game.GameConfig;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
@@ -22,16 +22,11 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region GameElementController Implementation
-        public override void Initialize(GameConfig config)
+        public override void Initialize(Plot config)
         {
-            if (!(config is Plot))
-                return;
-
             InitializeVisualNovelController();
             StopPlot();
-
-            Plot plot = config as Plot;
-            m_plotRoutine = StartCoroutine(PlotPlayback(plot));
+            m_plotRoutine = StartCoroutine(PlotPlayback(config));
         }
         #endregion
 
