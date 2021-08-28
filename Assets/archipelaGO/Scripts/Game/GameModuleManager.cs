@@ -23,8 +23,6 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private QuizModule m_quizModule = null;
-
-        public event GameCompleted OnGameCompleted;
         #endregion
 
 
@@ -96,8 +94,11 @@ namespace archipelaGO.Game
             module.Initialize(config);
         }
 
-        private void InvokeOnGameCompleted(GameConfig config) =>
-            OnGameCompleted?.Invoke(config);
+        private void InvokeOnGameCompleted(GameConfig config)
+        {
+            if (config != null)
+                ProgressDataHandler.Unlock(config.name);
+        }
         #endregion
     }
 }
