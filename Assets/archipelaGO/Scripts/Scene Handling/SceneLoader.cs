@@ -127,8 +127,6 @@ namespace archipelaGO.SceneHandling
 
             if (!fadeIn)
                 BlockRaycasts(false);
-            
-            m_isTransitioning = false;
         }
 
         private void SetScreenAlpha(float alpha)
