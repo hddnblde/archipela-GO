@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using VisualNovelConfig = archipelaGO.VisualNovel.StorySystem.Plot;
 using WordPuzzleConfig = archipelaGO.Puzzle.WordPuzzle;
@@ -23,17 +24,21 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private QuizModule m_quizModule = null;
+
+        private List<string> m_unlockableModules = new List<string>();
         #endregion
 
 
         #region Public Method
-        public void LoadModule(GameConfig gameConfig)
+        public void LoadModule(GameConfig gameConfig, params string[] unlockableModules)
         {
             if (gameConfig == null)
             {
                 Debug.LogError("Failed to load module because game config is null.");
                 return;
             }
+
+            m_unlockableModules.AddRange(unlockableModules);
 
             switch (gameConfig)
             {
@@ -94,10 +99,10 @@ namespace archipelaGO.Game
             module.Initialize(config);
         }
 
-        private void InvokeOnGameCompleted(GameConfig config)
+        private void InvokeOnGameCompleted()
         {
-            if (config != null)
-                ProgressDataHandler.Unlock(config.name);
+            foreach (string unlockedModule in m_unlockableModules)
+                ProgressDataHandler.Unlock(unlockedModule);
         }
         #endregion
     }
