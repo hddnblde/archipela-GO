@@ -402,7 +402,7 @@ namespace archipelaGO.Puzzle
 
                 for (int characterIndex = 0; characterIndex < wordString.Length; characterIndex++)
                 {
-                    (int column, int row) cell = WordHuntPuzzle.CalculateCellPosition(positionValue, directionValue, wordString.Length, characterIndex);
+                    (int column, int row) cell = WordHuntPuzzleModule.CalculateCellPosition(positionValue, directionValue, wordString.Length, characterIndex);
 
                     if (cell.column >= m_cachedCrossword.GetLength(0) || cell.row >= m_cachedCrossword.GetLength(1) ||
                         cell.column < 0 || cell.row < 0)

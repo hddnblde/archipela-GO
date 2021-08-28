@@ -8,7 +8,7 @@ using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Puzzle
 {
-    public abstract class WordPuzzleController : GameModule
+    public abstract class WordPuzzleModule : GameModule
     {
         #region Fields
         [SerializeField]

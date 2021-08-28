@@ -6,7 +6,7 @@ using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 
 namespace archipelaGO.Puzzle
 {
-    public class CrosswordPuzzle : WordPuzzleController
+    public class CrosswordPuzzleModule : WordPuzzleModule
     {
         #region Fields
         [SerializeField]

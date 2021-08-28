@@ -3,8 +3,8 @@ using VisualNovelConfig = archipelaGO.VisualNovel.StorySystem.Plot;
 using WordPuzzleConfig = archipelaGO.Puzzle.WordPuzzle;
 using QuizConfig = archipelaGO.Quiz.QuizConfig;
 using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.NarrativeDirector;
-using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzle;
-using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzle;
+using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
+using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
 using QuizModule = archipelaGO.Quiz.QuizController;
 
 namespace archipelaGO.Game

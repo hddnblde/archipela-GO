@@ -7,7 +7,7 @@ using CursorState = archipelaGO.Puzzle.WordCell.CursorState;
 
 namespace archipelaGO.Puzzle
 {
-    public class WordHuntPuzzle : WordPuzzleController
+    public class WordHuntPuzzleModule : WordPuzzleModule
     {
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
