@@ -24,11 +24,15 @@ namespace archipelaGO
             [SerializeField]
             private PartOfSpeech m_partOfSpeech;
 
+            [SerializeField]
+            private AudioClip m_pronunciation;
+
             [SerializeField, TextArea, FormerlySerializedAs("m_description")]
             private string m_definition;
 
             public string title => m_title;
             public PartOfSpeech partOfSpeech => m_partOfSpeech;
+            public AudioClip pronunciationClip => m_pronunciation;
             public string definition => m_definition;
         }
 
