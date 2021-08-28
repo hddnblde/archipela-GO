@@ -2,7 +2,6 @@ using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GameConfig = archipelaGO.Game.GameConfig;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 
 namespace archipelaGO.Puzzle
