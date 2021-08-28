@@ -2,13 +2,13 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GameElementController = archipelaGO.Game.GameElementController<archipelaGO.Puzzle.WordPuzzle>;
+using GameModule = archipelaGO.Game.GameModule<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Puzzle
 {
-    public abstract class WordPuzzleController : GameElementController
+    public abstract class WordPuzzleController : GameModule
     {
         #region Fields
         [SerializeField]

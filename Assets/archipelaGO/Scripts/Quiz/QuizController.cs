@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameElementController = archipelaGO.Game.GameElementController<archipelaGO.Quiz.QuizConfig>;
+using GameModule = archipelaGO.Game.GameModule<archipelaGO.Quiz.QuizConfig>;
 using archipelaGO.UI.Windows;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 using Question = archipelaGO.Quiz.QuizConfig.Question;
 
 namespace archipelaGO.Quiz
 {
-    public class QuizController : GameElementController
+    public class QuizController : GameModule
     {
         #region Fields
         [SerializeField, Range(5, 20)]
