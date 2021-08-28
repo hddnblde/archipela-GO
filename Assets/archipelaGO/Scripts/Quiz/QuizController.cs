@@ -16,11 +16,9 @@ namespace archipelaGO.Quiz
         private int m_items = 10;
 
         [SerializeField]
-        private QuizConfig m_quiz = null;
-
-        [SerializeField]
         private ChoiceWindow m_choiceWindow = null;
 
+        private QuizConfig m_quiz = null;
         private Coroutine m_quizRoutine = null;
         private int m_guessedCorrectAnswers = 0;
         #endregion
