@@ -56,15 +56,8 @@ namespace archipelaGO.Game
 
 
         #region Internal Methods
-        private void LoadVisualNovel(VisualNovelConfig config)
-        {
-            if (m_visualNovelModule == null)
-                return;
-
-            m_visualNovelModule.OnGameCompleted += InvokeOnGameCompleted;
-            m_visualNovelModule.gameObject.SetActive(true);
-            m_visualNovelModule.Initialize(config);
-        }
+        private void LoadVisualNovel(VisualNovelConfig config) =>
+            LoadModule<VisualNovelModule, VisualNovelConfig>(m_visualNovelModule, config);
 
         private void LoadPuzzleModule(WordPuzzleConfig config)
         {
@@ -80,34 +73,27 @@ namespace archipelaGO.Game
             }
         }
 
-        private void LoadCrosswordModule(WordPuzzleConfig config)
+        private void LoadCrosswordModule(WordPuzzleConfig config) =>
+            LoadModule<CrosswordPuzzleModule, WordPuzzleConfig>(m_crosswordModule, config);
+
+        private void LoadWordHuntModule(WordPuzzleConfig config) =>
+            LoadModule<WordHuntPuzzleModule, WordPuzzleConfig>(m_wordHuntModule, config);
+
+        private void LoadQuizModule(QuizConfig config) =>
+            LoadModule<QuizModule, QuizConfig>(m_quizModule, config);
+        #endregion
+
+
+        #region Helper Methods
+        private void LoadModule<M, G>(M module, G config) where M : GameModule<G>
+            where G : GameConfig
         {
-            if (m_crosswordModule == null)
+            if (module == null)
                 return;
 
-            m_crosswordModule.OnGameCompleted += InvokeOnGameCompleted;
-            m_crosswordModule.gameObject.SetActive(true);
-            m_crosswordModule.Initialize(config);
-        }
-
-        private void LoadWordHuntModule(WordPuzzleConfig config)
-        {
-            if (m_wordHuntModule == null)
-                return;
-
-            m_wordHuntModule.OnGameCompleted += InvokeOnGameCompleted;
-            m_wordHuntModule.gameObject.SetActive(true);
-            m_wordHuntModule.Initialize(config);
-        }
-
-        private void LoadQuizModule(QuizConfig config)
-        {
-            if (m_quizModule == null)
-                return;
-
-            m_quizModule.OnGameCompleted += InvokeOnGameCompleted;
-            m_quizModule.gameObject.SetActive(true);
-            m_quizModule.Initialize(config);
+            module.OnGameCompleted += InvokeOnGameCompleted;
+            module.gameObject.SetActive(true);
+            module.Initialize(config);
         }
 
         private void InvokeOnGameCompleted(GameConfig config) =>
