@@ -7,7 +7,7 @@ namespace archipelaGO.Progression
     public class GameProgressCollection : ScriptableObject
     {
         [SerializeField]
-        private List<GameProgress> m_keys = new List<GameProgress>();
+        private List<GameConfig> m_keys = new List<GameConfig>();
 
         public int keyCount => m_keys.Count;
 

@@ -11,9 +11,6 @@ namespace archipelaGO.Puzzle
     {
         #region Fields
         [SerializeField]
-        private WordPuzzle m_wordPuzzle = null;
-
-        [SerializeField]
         private GameObject m_cellPrefab = null;
 
         [Space]
@@ -31,6 +28,8 @@ namespace archipelaGO.Puzzle
         private List<PuzzlePiece> m_pendingPieces = new List<PuzzlePiece>();
         private List<PuzzlePiece> m_solvedPieces = new List<PuzzlePiece>();
         private List<WordHint> m_hints = new List<WordHint>();
+
+        private WordPuzzle m_wordPuzzle = null;
         private WordCell[,] m_wordGrid = null;
         #endregion
 
@@ -74,16 +73,17 @@ namespace archipelaGO.Puzzle
         #region MonoBehaviour Implementation
         protected virtual void Awake() =>
             m_rectTransform = transform as RectTransform;
-
-        protected void Start()
-        {
-            SetUpGrid();
-            SetUpHints();
-        }
         #endregion
 
 
-        #region Puzzle Functions        
+        #region Puzzle Functions
+        public void InitializePuzzle(WordPuzzle wordPuzzle)
+        {
+            m_wordPuzzle = wordPuzzle;
+            SetUpGrid();
+            SetUpHints();
+        }
+
         protected virtual void InitializeCell(int column, int row, WordCell cell) =>
             cell.gameObject.name = $"Cell [{ column }, { row }]";
 

@@ -12,9 +12,6 @@ namespace archipelaGO.VisualNovel.StorySystem
     {
         #region Fields
         [SerializeField]
-        private Plot m_plot = null;
-
-        [SerializeField]
         private float m_startDelay = 1.85f;
 
         private VisualNovelController m_vnController = null;
@@ -24,18 +21,17 @@ namespace archipelaGO.VisualNovel.StorySystem
 
         #region MonoBehaviour Implementation
         private void Awake() => InitializeVisualNovelController();
-        private void Start() => Invoke("PlayPlot", m_startDelay);
         #endregion
 
 
         #region Public Method
-        public void PlayPlot()
+        public void PlayPlot(Plot plot)
         {
-            if (m_plot == null)
+            if (plot == null)
                 return;
 
             StopPlot();
-            m_plotRoutine = StartCoroutine(PlotPlayback(m_plot));
+            m_plotRoutine = StartCoroutine(PlotPlayback(plot));
         }
 
         private void StopPlot()
@@ -57,6 +53,8 @@ namespace archipelaGO.VisualNovel.StorySystem
 
         private IEnumerator PlotPlayback(Plot plot)
         {
+            yield return new WaitForSeconds(m_startDelay);
+
             for (int i = 0; i < plot.plotlineCount; i++)
             {
                 (Narrative narrative, Sprite scene) plotline = plot.GetPlotline(i);

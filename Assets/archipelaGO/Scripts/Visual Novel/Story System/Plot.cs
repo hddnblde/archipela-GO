@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GameProgress = archipelaGO.Progression.GameProgress;
+using GameConfig = archipelaGO.Progression.GameConfig;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
     [CreateAssetMenu(fileName = "Plot", menuName = "archipelaGO/Visual Novel/Plot")]
-    public class Plot : GameProgress
+    public class Plot : GameConfig
     {
         #region Fields
         [SerializeField]
