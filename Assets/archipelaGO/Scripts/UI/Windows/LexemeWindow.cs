@@ -65,7 +65,7 @@ namespace archipelaGO.UI.Windows
         private void OnWordSelected(Word word)
         {
             SetTitleText(word.title);
-            SetPartOfSpeechText(word.partOfSpeech.ToString());
+            SetPartOfSpeechText(word.partOfSpeech.ToString().ToLower());
             SetDefinitionText(word.definition);
             m_cachedPronunciationClip = word.pronunciationClip;
             Show();
