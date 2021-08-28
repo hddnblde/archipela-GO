@@ -2,6 +2,7 @@ using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GameConfig = archipelaGO.Game.GameConfig;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 
 namespace archipelaGO.Puzzle
@@ -47,14 +48,19 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region MonoBehaviour Implementation
-        protected override void Awake()
+        #region GameElementController Implementation
+        public override void Initialize(GameConfig config)
         {
-            base.Awake();
-
             if (m_answerField != null)
                 m_answerField.onEndEdit.AddListener(OnSubmitAnswer);
+
+            base.Initialize(config);
         }
+        #endregion
+
+
+        #region MonoBehaviour Implementation
+        
 
         private void OnDestroy()
         {

@@ -2,12 +2,14 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GameElementController = archipelaGO.Game.GameElementController;
+using GameConfig = archipelaGO.Game.GameConfig;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
 
 namespace archipelaGO.Puzzle
 {
-    public abstract class WordPuzzleController : MonoBehaviour
+    public abstract class WordPuzzleController : GameElementController
     {
         #region Fields
         [SerializeField]
@@ -70,18 +72,24 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
-        #region MonoBehaviour Implementation
-        protected virtual void Awake() =>
+        #region GameElementController Implementation
+        public override void Initialize(GameConfig config)
+        {
+            if (!(config is WordPuzzle))
+                return;
+
             m_rectTransform = transform as RectTransform;
+            m_wordPuzzle = config as WordPuzzle;
+            SetUpGrid();
+            SetUpHints();
+        }
         #endregion
 
 
         #region Puzzle Functions
         public void InitializePuzzle(WordPuzzle wordPuzzle)
         {
-            m_wordPuzzle = wordPuzzle;
-            SetUpGrid();
-            SetUpHints();
+            
         }
 
         protected virtual void InitializeCell(int column, int row, WordCell cell) =>

@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using GameElementController = archipelaGO.Game.GameElementController;
+using GameConfig = archipelaGO.Game.GameConfig;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
@@ -8,7 +10,7 @@ using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOpt
 namespace archipelaGO.VisualNovel.StorySystem
 {
     [RequireComponent(typeof(VisualNovelController))]
-    public class NarrativeDirector : MonoBehaviour
+    public class NarrativeDirector : GameElementController
     {
         #region Fields
         [SerializeField]
@@ -19,21 +21,22 @@ namespace archipelaGO.VisualNovel.StorySystem
         #endregion
 
 
-        #region MonoBehaviour Implementation
-        private void Awake() => InitializeVisualNovelController();
+        #region GameElementController Implementation
+        public override void Initialize(GameConfig config)
+        {
+            if (!(config is Plot))
+                return;
+
+            InitializeVisualNovelController();
+            StopPlot();
+
+            Plot plot = config as Plot;
+            m_plotRoutine = StartCoroutine(PlotPlayback(plot));
+        }
         #endregion
 
 
-        #region Public Method
-        public void PlayPlot(Plot plot)
-        {
-            if (plot == null)
-                return;
-
-            StopPlot();
-            m_plotRoutine = StartCoroutine(PlotPlayback(plot));
-        }
-
+        #region Internal Methods
         private void StopPlot()
         {
             if (m_plotRoutine != null)
@@ -41,10 +44,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
             m_vnController.HideAllWindows();
         }
-        #endregion
 
-
-        #region Internal Methods
         private void InitializeVisualNovelController() =>
             m_vnController = GetComponent<VisualNovelController>();
 

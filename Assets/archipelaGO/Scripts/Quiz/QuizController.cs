@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameElementController = archipelaGO.Game.GameElementController;
+using GameConfig = archipelaGO.Game.GameConfig;
 using archipelaGO.UI.Windows;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 using Question = archipelaGO.Quiz.QuizConfig.Question;
 
 namespace archipelaGO.Quiz
 {
-    public class QuizController : MonoBehaviour
+    public class QuizController : GameElementController
     {
         #region Fields
         [SerializeField, Range(5, 20)]
@@ -24,8 +26,15 @@ namespace archipelaGO.Quiz
         #endregion
 
 
-        #region MonoBehaviour Implementation
-        private void Start() => BeginQuizRoutine();
+        #region GameElementController Implementation
+        public override void Initialize(GameConfig config)
+        {
+            if (!(config is QuizConfig))
+                return;
+
+            m_quiz = config as QuizConfig;
+            BeginQuizRoutine();
+        }
         #endregion
 
 
