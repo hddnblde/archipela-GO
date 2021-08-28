@@ -9,6 +9,20 @@ namespace archipelaGO.Puzzle
 {
     public class WordHuntPuzzleModule : WordPuzzleModule
     {
+        #region Fields
+        private const string LettersInTheAlphabet =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        private bool m_cellDragBegan = false;
+
+        private Vector2Int m_cellDragStartPosition = Vector2Int.zero,
+            m_cellDragEndPosition = Vector2Int.zero;
+        
+        private string m_pendingWord = string.Empty;
+        #endregion
+
+
+        #region Data Structure
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
             public WordHuntPuzzlePiece(string word, WordCell[] cells) : base(word, cells) {}
@@ -36,14 +50,10 @@ namespace archipelaGO.Puzzle
 
             public override string GetHint() => $"{ m_order }. { m_word }";
         }
+        #endregion
 
-        private readonly string m_lettersInTheAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        private bool m_cellDragBegan = false;
-        private Vector2Int m_cellDragStartPosition = Vector2Int.zero,
-            m_cellDragEndPosition = Vector2Int.zero;
-        
-        private string m_pendingWord = string.Empty;
 
+        #region Word Puzzle Implementation
         protected override void OnPuzzleCompleted()
         {
             Debug.Log("Word Hunt Puzzle: Puzzle finished! You have won!!");
@@ -81,37 +91,47 @@ namespace archipelaGO.Puzzle
 
         protected override (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition) =>
             CalculateCellPosition(anchor, direction, length, currentPosition);
+        #endregion
 
-        public static (int column, int row) CalculateCellPosition(Vector2Int anchor, int direction, int length, int currentPosition)
+
+        #region Internal Methods
+        private void UpdateCellVisuals()
         {
-            const int FlippedValueThreshold = 4;
-            const int HorizontalDirection = 0, VerticalDirection = 1, DiagonalUpDirection = 2, DiagonalDownDirection = 3;
-
-            bool isFlipped = (direction >= FlippedValueThreshold);
-
-            if (isFlipped)
-                direction -= FlippedValueThreshold;
-            
-            int horizontalDelta = (direction == VerticalDirection ? 0 : currentPosition);
-            int verticalDelta = (direction == HorizontalDirection ? 0 : (direction == DiagonalUpDirection ? -currentPosition : currentPosition));
-
-            if (isFlipped)
-            {
-                verticalDelta = -verticalDelta;
-                horizontalDelta = -horizontalDelta;
-            }
-
-            int column = (anchor.x + horizontalDelta);
-            int row = (anchor.y + verticalDelta);
-
-            return (column, row);
+            UnhighlightAllCells();
+            HighlightAllAnsweredCells();
         }
 
+        private void UnhighlightAllCells()
+        {
+            for (int column = 0; column < Columns; column++)
+            {
+                for (int row = 0; row < Rows; row++)
+                {
+                    WordCell cell = GetCell(column, row);
+                    cell.SetAsHighlighted(false);
+                }
+            }
+        }
+
+        private void HighlightAllAnsweredCells()
+        {
+            for (int i = 0; i < SolvedPiecesCount; i++)
+            {
+                PuzzlePiece solvedPiece = GetSolvedPuzzlePiece(i);
+
+                if (solvedPiece != null)
+                    solvedPiece.Reveal();
+            }
+        }
+        #endregion
+
+
+        #region Helper Methods
         private char GenerateRandomCharacter()
         {
-            int randomIndex = Random.Range(0, m_lettersInTheAlphabet.Length);
+            int randomIndex = Random.Range(0, LettersInTheAlphabet.Length);
 
-            return m_lettersInTheAlphabet[randomIndex];
+            return LettersInTheAlphabet[randomIndex];
         }
 
         private CursorEvent GenerateCursorEventHandler(int column, int row)
@@ -178,35 +198,6 @@ namespace archipelaGO.Puzzle
             return word;
         }
 
-        private void UpdateCellVisuals()
-        {
-            UnhighlightAllCells();
-            HighlightAllAnsweredCells();
-        }
-
-        private void UnhighlightAllCells()
-        {
-            for (int column = 0; column < Columns; column++)
-            {
-                for (int row = 0; row < Rows; row++)
-                {
-                    WordCell cell = GetCell(column, row);
-                    cell.SetAsHighlighted(false);
-                }
-            }
-        }
-
-        private void HighlightAllAnsweredCells()
-        {
-            for (int i = 0; i < SolvedPiecesCount; i++)
-            {
-                PuzzlePiece solvedPiece = GetSolvedPuzzlePiece(i);
-
-                if (solvedPiece != null)
-                    solvedPiece.Reveal();
-            }
-        }
-
         private List<Vector2Int> GetCellPositions(Vector2Int start, Vector2Int end)
         {
             List<Vector2Int> positions = new List<Vector2Int>();
@@ -244,5 +235,34 @@ namespace archipelaGO.Puzzle
             else
                 return new Vector2Int(signedX, signedY);
         }
+        #endregion
+
+
+        #region Static Method
+        public static (int column, int row) CalculateCellPosition(Vector2Int anchor, int direction, int length, int currentPosition)
+        {
+            const int FlippedValueThreshold = 4;
+            const int HorizontalDirection = 0, VerticalDirection = 1, DiagonalUpDirection = 2, DiagonalDownDirection = 3;
+
+            bool isFlipped = (direction >= FlippedValueThreshold);
+
+            if (isFlipped)
+                direction -= FlippedValueThreshold;
+            
+            int horizontalDelta = (direction == VerticalDirection ? 0 : currentPosition);
+            int verticalDelta = (direction == HorizontalDirection ? 0 : (direction == DiagonalUpDirection ? -currentPosition : currentPosition));
+
+            if (isFlipped)
+            {
+                verticalDelta = -verticalDelta;
+                horizontalDelta = -horizontalDelta;
+            }
+
+            int column = (anchor.x + horizontalDelta);
+            int row = (anchor.y + verticalDelta);
+
+            return (column, row);
+        }
+        #endregion
     }
 }

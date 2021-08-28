@@ -59,8 +59,6 @@ namespace archipelaGO.Puzzle
 
 
         #region MonoBehaviour Implementation
-        
-
         private void OnDestroy()
         {
             if (m_answerField != null)
