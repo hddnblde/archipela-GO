@@ -6,6 +6,7 @@ namespace archipelaGO.SceneHandling
 {
     public class SceneLoadTrigger : ClickableObject
     {
+        #region Fields
         [SerializeField]
         private ProgressManager m_progressManager = null;
 
@@ -13,7 +14,12 @@ namespace archipelaGO.SceneHandling
         private Scene m_sceneToLoad = Scene.Boot;
 
         private Coroutine m_loadRoutine = null;
+        public delegate void SceneLoaded();
+        public event SceneLoaded OnSceneLoaded;
+        #endregion
 
+
+        #region ClickableObject Implementation
         protected override bool IsInteractable()
         {
             if (m_progressManager == null)
@@ -35,11 +41,20 @@ namespace archipelaGO.SceneHandling
 
             m_loadRoutine = StartCoroutine(LoadSceneRoutine());
         }
+        #endregion
 
+
+        #region Internal Methods
         private IEnumerator LoadSceneRoutine()
         {
             yield return new WaitUntil(SceneLoader.CanLoadANewScene);
             SceneLoader.LoadScene(m_sceneToLoad);
+            yield return new WaitUntil(SceneLoader.FinishedLoadingScene);
+            InvokeOnSceneLoaded();
         }
+
+        private void InvokeOnSceneLoaded() =>
+            OnSceneLoaded?.Invoke();
+        #endregion
     }
 }
