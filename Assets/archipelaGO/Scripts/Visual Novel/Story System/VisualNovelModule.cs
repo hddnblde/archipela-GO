@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.VisualNovel.StorySystem.Plot>;
-using GameConfig = archipelaGO.Game.GameConfig;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
@@ -10,7 +9,7 @@ using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOpt
 namespace archipelaGO.VisualNovel.StorySystem
 {
     [RequireComponent(typeof(VisualNovelController))]
-    public class NarrativeDirector : GameModule
+    public class VisualNovelModule : GameModule
     {
         #region Fields
         [SerializeField]

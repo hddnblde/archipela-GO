@@ -2,7 +2,7 @@ using UnityEngine;
 using VisualNovelConfig = archipelaGO.VisualNovel.StorySystem.Plot;
 using WordPuzzleConfig = archipelaGO.Puzzle.WordPuzzle;
 using QuizConfig = archipelaGO.Quiz.QuizConfig;
-using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.NarrativeDirector;
+using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.VisualNovelModule;
 using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
 using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
 using QuizModule = archipelaGO.Quiz.QuizController;
