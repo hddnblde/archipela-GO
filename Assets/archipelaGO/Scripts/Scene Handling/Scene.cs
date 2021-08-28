@@ -3,9 +3,8 @@ namespace archipelaGO.SceneHandling
     public enum Scene
     {
         Boot = 0,
-        WorldMap = 1,
-        VisualNovel = 2,
-        Crossword = 3,
-        Quiz = 4
+        Main = 1,
+        WorldMap = 2,
+        Game = 3
     }
 }
