@@ -5,7 +5,7 @@ using QuizConfig = archipelaGO.Quiz.QuizConfig;
 using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.VisualNovelModule;
 using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
 using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
-using QuizModule = archipelaGO.Quiz.QuizController;
+using QuizModule = archipelaGO.Quiz.QuizModule;
 
 namespace archipelaGO.Game
 {

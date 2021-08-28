@@ -8,7 +8,7 @@ using Question = archipelaGO.Quiz.QuizConfig.Question;
 
 namespace archipelaGO.Quiz
 {
-    public class QuizController : GameModule
+    public class QuizModule : GameModule
     {
         #region Fields
         [SerializeField, Range(5, 20)]
