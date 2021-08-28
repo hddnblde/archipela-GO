@@ -14,7 +14,7 @@ namespace archipelaGO.SceneHandling
         private CanvasGroup m_screenBlocker = null;
 
         private Coroutine m_loadSceneRoutine = null;
-        private bool m_isTransitioning = false;
+        private bool m_isTransitioning = false, m_loaded = false;
         private static SceneLoader m_singletonInstance = null;
         #endregion
 
@@ -44,12 +44,21 @@ namespace archipelaGO.SceneHandling
         public static bool IsActive() =>
             (m_singletonInstance != null);
 
-        public static bool CanLoadANewScene()
+        public static bool FinishedLoadingScene()
         {
             if (IsActive())
-                return !m_singletonInstance.m_isTransitioning;
+                return m_singletonInstance.m_loaded;
 
             return true;
+        }
+
+        public static bool CanLoadANewScene()
+        {
+            if (!IsActive())
+                return true;
+
+            return !m_singletonInstance.m_isTransitioning &&
+                m_singletonInstance.m_loaded;
         }
 
         public static void LoadScene(Scene scene)
@@ -93,8 +102,10 @@ namespace archipelaGO.SceneHandling
         private IEnumerator SceneLoadingRoutine(int sceneIndex)
         {
             m_isTransitioning = true;
+            m_loaded = false;
             yield return FadeScreenRoutine(true);
             yield return LoadSceneAsynchronously(sceneIndex);
+            m_loaded = true;
             yield return FadeScreenRoutine(false);
             m_isTransitioning = false;
         }
