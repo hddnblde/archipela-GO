@@ -2,13 +2,14 @@ using UnityEngine;
 
 namespace archipelaGO.Game
 {
+    public delegate void GameCompleted(GameConfig gameConfig);
+
     public abstract class GameModule<T> : MonoBehaviour
         where T : GameConfig
     {
         #region Fields
         private T m_gameConfig = null;
 
-        public delegate void GameCompleted(T gameConfig);
         public event GameCompleted OnGameCompleted;
         #endregion
 
@@ -25,7 +26,8 @@ namespace archipelaGO.Game
         protected void InvokeGameCompleted()
         {
             OnGameCompleted?.Invoke(m_gameConfig);
-            Debug.LogWarning($"Game Module ({ m_gameConfig.name }) completed!");
+            OnGameCompleted = null;
+            Debug.LogWarning($"Game Module [{ m_gameConfig.name }] completed!");
         }
         #endregion
     }
