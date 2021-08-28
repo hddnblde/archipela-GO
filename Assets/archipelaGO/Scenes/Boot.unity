@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b751d7b0424985e44acb73ed1167a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstSceneToLoad: 1
+  m_firstSceneToLoad: 2
 --- !u!4 &1387369490
 Transform:
   m_ObjectHideFlags: 0

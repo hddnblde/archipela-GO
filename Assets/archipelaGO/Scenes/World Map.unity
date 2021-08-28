@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 641278126}
   - component: {fileID: 641278130}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: World Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,9 +297,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 648137241}
-  - component: {fileID: 648137240}
   - component: {fileID: 648137239}
   - component: {fileID: 648137243}
+  - component: {fileID: 648137244}
+  - component: {fileID: 648137240}
   - component: {fileID: 648137242}
   m_Layer: 3
   m_Name: Obj_01_Visual Novel
@@ -321,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progressManager: {fileID: 648137243}
-  m_sceneToLoad: 2
+  m_sceneToLoad: 3
 --- !u!212 &648137240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -419,6 +420,21 @@ MonoBehaviour:
   m_progressIndex: -1
   m_unlockableKeys:
   - {fileID: 857450597}
+--- !u!114 &648137244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648137238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04bad2a51333044bbf36cf18f395b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneLoadTrigger: {fileID: 648137239}
+  m_gameConfig: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+  m_unlockableModules: []
 --- !u!1 &857450592
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,9 +444,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 857450596}
-  - component: {fileID: 857450595}
   - component: {fileID: 857450594}
   - component: {fileID: 857450597}
+  - component: {fileID: 857450598}
+  - component: {fileID: 857450595}
   - component: {fileID: 857450593}
   m_Layer: 3
   m_Name: Obj_02_Crossword
@@ -550,6 +567,21 @@ MonoBehaviour:
   m_progressIndex: 0
   m_unlockableKeys:
   - {fileID: 898655350}
+--- !u!114 &857450598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857450592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04bad2a51333044bbf36cf18f395b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneLoadTrigger: {fileID: 857450594}
+  m_gameConfig: {fileID: 11400000, guid: f0b098210c426104297daace8a613d8b, type: 2}
+  m_unlockableModules: []
 --- !u!1 &898655345
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,9 +591,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 898655349}
-  - component: {fileID: 898655348}
   - component: {fileID: 898655347}
   - component: {fileID: 898655350}
+  - component: {fileID: 898655351}
+  - component: {fileID: 898655348}
   - component: {fileID: 898655346}
   m_Layer: 3
   m_Name: Obj_03_Word Hunt
@@ -681,6 +714,21 @@ MonoBehaviour:
   m_progressIndex: 1
   m_unlockableKeys:
   - {fileID: 921468007}
+--- !u!114 &898655351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898655345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04bad2a51333044bbf36cf18f395b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneLoadTrigger: {fileID: 898655347}
+  m_gameConfig: {fileID: 11400000, guid: 8ba47db969a43f84e865e5a2d177fbea, type: 2}
+  m_unlockableModules: []
 --- !u!1 &921468002
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,9 +738,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 921468006}
-  - component: {fileID: 921468005}
   - component: {fileID: 921468004}
   - component: {fileID: 921468007}
+  - component: {fileID: 921468008}
+  - component: {fileID: 921468005}
   - component: {fileID: 921468003}
   m_Layer: 3
   m_Name: Obj_04_Quiz
@@ -730,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progressManager: {fileID: 921468007}
-  m_sceneToLoad: 4
+  m_sceneToLoad: 3
 --- !u!212 &921468005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -811,6 +860,21 @@ MonoBehaviour:
   m_progressCollection: {fileID: 11400000, guid: 7493482241f063348b0b834e7b594ad9, type: 2}
   m_progressIndex: 2
   m_unlockableKeys: []
+--- !u!114 &921468008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921468002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04bad2a51333044bbf36cf18f395b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneLoadTrigger: {fileID: 921468004}
+  m_gameConfig: {fileID: 11400000, guid: 8212f860bead4bb4e9a2c3d7a5ee32ab, type: 2}
+  m_unlockableModules: []
 --- !u!1 &1872318018
 GameObject:
   m_ObjectHideFlags: 0
