@@ -72,7 +72,7 @@ namespace archipelaGO.Puzzle
 
 
         #region GameElementController Implementation
-        public override void Initialize(WordPuzzle config)
+        protected override void OnInitialize(WordPuzzle config)
         {
             m_rectTransform = transform as RectTransform;
             m_wordPuzzle = config;
@@ -83,11 +83,6 @@ namespace archipelaGO.Puzzle
 
 
         #region Puzzle Functions
-        public void InitializePuzzle(WordPuzzle wordPuzzle)
-        {
-            
-        }
-
         protected virtual void InitializeCell(int column, int row, WordCell cell) =>
             cell.gameObject.name = $"Cell [{ column }, { row }]";
 
@@ -132,7 +127,10 @@ namespace archipelaGO.Puzzle
                 m_solvedPieces.Add(result);
 
             if (m_pendingPieces.Count <= 0)
+            {
                 OnPuzzleCompleted();
+                InvokeGameCompleted();
+            }
 
             return true;
         }

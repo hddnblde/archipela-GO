@@ -48,12 +48,12 @@ namespace archipelaGO.Puzzle
 
 
         #region GameElementController Implementation
-        public override void Initialize(WordPuzzle config)
+        protected override void OnInitialize(WordPuzzle config)
         {
             if (m_answerField != null)
                 m_answerField.onEndEdit.AddListener(OnSubmitAnswer);
 
-            base.Initialize(config);
+            base.OnInitialize(config);
         }
         #endregion
 
@@ -149,7 +149,7 @@ namespace archipelaGO.Puzzle
         protected override void OnPuzzleCompleted()
         {
             Debug.Log("Crossword Puzzle: Puzzle finished! You have won!!");
-            
+
             if (m_answerField == null)
                 return;
 

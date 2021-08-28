@@ -21,7 +21,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region GameElementController Implementation
-        public override void Initialize(Plot config)
+        protected override void OnInitialize(Plot config)
         {
             InitializeVisualNovelController();
             StopPlot();
@@ -55,6 +55,8 @@ namespace archipelaGO.VisualNovel.StorySystem
                 SetScene(plotline.scene);
                 yield return PlayNarrative(plotline.narrative, plot.wordBank);
             }
+
+            InvokeGameCompleted();
         }
 
         private IEnumerator PlayNarrative(Narrative narrative, WordBank wordBank)

@@ -24,7 +24,7 @@ namespace archipelaGO.Quiz
 
 
         #region GameElementController Implementation
-        public override void Initialize(QuizConfig config)
+        protected override void OnInitialize(QuizConfig config)
         {
             m_quiz = config;
             BeginQuizRoutine();
@@ -74,7 +74,9 @@ namespace archipelaGO.Quiz
                     m_guessedCorrectAnswers++;
             }
 
+            //TODO: clear screen
             Debug.Log($"Quiz finished! Guessed correct answers = { m_guessedCorrectAnswers }");
+            InvokeGameCompleted();
         }
         #endregion
     }
