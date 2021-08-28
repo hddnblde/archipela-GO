@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace archipelaGO.Progression
+namespace archipelaGO.Game
 {
     [CreateAssetMenu(fileName = "Game Progress", menuName = "archipelaGO/Game Progress")]
     public class GameProgressCollection : ScriptableObject

@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using ProgressManager = archipelaGO.Progression.ProgressManager;
+using ProgressManager = archipelaGO.Game.ProgressManager;
 
 namespace archipelaGO.SceneHandling
 {

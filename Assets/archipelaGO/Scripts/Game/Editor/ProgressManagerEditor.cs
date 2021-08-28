@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace archipelaGO.Progression
+namespace archipelaGO.Game
 {
     [CustomEditor(typeof(ProgressManager))]
     public class ProgressManagerEditor : Editor

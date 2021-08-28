@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GameConfig = archipelaGO.Progression.GameConfig;
+using GameConfig = archipelaGO.Game.GameConfig;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {

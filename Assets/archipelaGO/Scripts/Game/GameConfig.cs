@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace archipelaGO.Progression
+namespace archipelaGO.Game
 {
     public abstract class GameConfig : ScriptableObject {}
 }

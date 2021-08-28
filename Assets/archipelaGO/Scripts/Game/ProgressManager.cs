@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace archipelaGO.Progression
+namespace archipelaGO.Game
 {
     public class ProgressManager : MonoBehaviour
     {

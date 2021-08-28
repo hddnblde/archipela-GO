@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace archipelaGO.Progression
+namespace archipelaGO.Game
 {
     public static class ProgressDataHandler
     {
