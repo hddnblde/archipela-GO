@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progressCollection: {fileID: 11400000, guid: 7493482241f063348b0b834e7b594ad9, type: 2}
-  m_progressIndex: 0
+  m_progressIndex: -1
   m_unlockableKeys:
   - {fileID: 898655350}
 --- !u!114 &857450598
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progressCollection: {fileID: 11400000, guid: 7493482241f063348b0b834e7b594ad9, type: 2}
-  m_progressIndex: 1
+  m_progressIndex: -1
   m_unlockableKeys:
   - {fileID: 921468007}
 --- !u!114 &898655351
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progressCollection: {fileID: 11400000, guid: 7493482241f063348b0b834e7b594ad9, type: 2}
-  m_progressIndex: 2
+  m_progressIndex: -1
   m_unlockableKeys: []
 --- !u!114 &921468008
 MonoBehaviour:
