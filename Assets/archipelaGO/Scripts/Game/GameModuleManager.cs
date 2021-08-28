@@ -23,6 +23,8 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private QuizModule m_quizModule = null;
+
+        public event GameCompleted OnGameCompleted;
         #endregion
 
 
@@ -59,6 +61,7 @@ namespace archipelaGO.Game
             if (m_visualNovelModule == null)
                 return;
 
+            m_visualNovelModule.OnGameCompleted += InvokeOnGameCompleted;
             m_visualNovelModule.gameObject.SetActive(true);
             m_visualNovelModule.Initialize(config);
         }
@@ -82,6 +85,7 @@ namespace archipelaGO.Game
             if (m_crosswordModule == null)
                 return;
 
+            m_crosswordModule.OnGameCompleted += InvokeOnGameCompleted;
             m_crosswordModule.gameObject.SetActive(true);
             m_crosswordModule.Initialize(config);
         }
@@ -91,6 +95,7 @@ namespace archipelaGO.Game
             if (m_wordHuntModule == null)
                 return;
 
+            m_wordHuntModule.OnGameCompleted += InvokeOnGameCompleted;
             m_wordHuntModule.gameObject.SetActive(true);
             m_wordHuntModule.Initialize(config);
         }
@@ -100,9 +105,13 @@ namespace archipelaGO.Game
             if (m_quizModule == null)
                 return;
 
+            m_quizModule.OnGameCompleted += InvokeOnGameCompleted;
             m_quizModule.gameObject.SetActive(true);
             m_quizModule.Initialize(config);
         }
+
+        private void InvokeOnGameCompleted(GameConfig config) =>
+            OnGameCompleted?.Invoke(config);
         #endregion
     }
 }
