@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace archipelaGO.Game
 {
-    [CreateAssetMenu(fileName = "Game Module Library", menuName = "archipelaGO/Game Module Library")]
-    public class GameModuleLibrary : ScriptableObject
+    [CreateAssetMenu(fileName = "Game Library", menuName = "archipelaGO/Game Library")]
+    public class GameLibrary : ScriptableObject
     {
         #region Field
         [SerializeField]
