@@ -315,7 +315,6 @@ GameObject:
   m_Component:
   - component: {fileID: 641278131}
   - component: {fileID: 641278129}
-  - component: {fileID: 641278128}
   - component: {fileID: 641278127}
   - component: {fileID: 641278126}
   - component: {fileID: 641278130}
@@ -384,14 +383,6 @@ MonoBehaviour:
   m_bounds: {x: 28.54, y: 15}
   m_boundsPadding: {x: 1, y: 0}
   m_boundsPivot: {x: 0, y: 0}
---- !u!81 &641278128
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641278125}
-  m_Enabled: 1
 --- !u!20 &641278129
 Camera:
   m_ObjectHideFlags: 0
