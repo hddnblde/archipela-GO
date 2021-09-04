@@ -10,7 +10,7 @@ using QuizModule = archipelaGO.Quiz.QuizModule;
 
 namespace archipelaGO.Game
 {
-    public class GameModuleManager : MonoBehaviour
+    public class GameModuleLoader : MonoBehaviour
     {
         #region Fields
         [SerializeField]
