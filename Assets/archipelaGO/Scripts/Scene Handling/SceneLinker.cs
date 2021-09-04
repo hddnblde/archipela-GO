@@ -12,7 +12,7 @@ namespace archipelaGO.SceneHandling
 
 
         #region MonoBehaviour Implementation
-        private void Awake()
+        protected void Awake()
         {
             m_sceneLoadTrigger = GetComponent<SceneLoadTrigger>();
 
