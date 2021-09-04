@@ -7,6 +7,8 @@ using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.VisualNovelModule;
 using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
 using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
 using QuizModule = archipelaGO.Quiz.QuizModule;
+using WorldMapLinker = archipelaGO.WorldMap.WorldMapLinker;
+using GameLibrary = archipelaGO.Game.GameLibrary;
 
 namespace archipelaGO.Game
 {
@@ -29,7 +31,15 @@ namespace archipelaGO.Game
         #endregion
 
 
-        #region Public Method
+        #region Public Methods
+        public void SetUpWorldMapLinkers(GameLibrary library)
+        {
+            WorldMapLinker[] linkers = GameObject.FindObjectsOfType<WorldMapLinker>(true);
+
+            foreach (WorldMapLinker linker in linkers)
+                linker.SetGameLibrary(library);
+        }
+
         public void LoadModule(GameModuleConfig module, params string[] unlockableModules)
         {
             if (module == null)

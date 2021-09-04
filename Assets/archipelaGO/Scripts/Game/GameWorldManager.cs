@@ -9,9 +9,6 @@ namespace archipelaGO.Game
     {
         #region Field
         [SerializeField]
-        private GameLibrary m_library = null;
-
-        [SerializeField]
         private GameObject m_nodePrefab = null;
 
         [SerializeField]
@@ -19,31 +16,26 @@ namespace archipelaGO.Game
         #endregion
 
 
-        #region MonoBehaviour Implementation
-        private void Awake() => InitializeWorldMap();
-        #endregion
-
-
-        #region Internal Methods
-        private void InitializeWorldMap()
+        #region Methods
+        public void LoadWorld(GameLibrary library)
         {
-            if (m_library == null)
+            if (library == null)
             {
                 Debug.LogError("Failed to create nodes. Please assign a library then try again!");
                 return;
             }
 
-            InitializeWorldBackground();
-            CreateNodes();
+            InitializeWorldBackground(library);
+            CreateNodes(library);
         }
 
-        private void InitializeWorldBackground()
+        private void InitializeWorldBackground(GameLibrary library)
         {
             if (m_worldBackgroundRenderer != null)
-                m_worldBackgroundRenderer.sprite = m_library.worldBackground;
+                m_worldBackgroundRenderer.sprite = library.worldBackground;
         }
 
-        private void CreateNodes()
+        private void CreateNodes(GameLibrary library)
         {
             if (m_nodePrefab == null)
             {
@@ -51,28 +43,23 @@ namespace archipelaGO.Game
                 return;
             }
 
-            for (int i = 0; i < m_library.moduleCount; i++)
-            {
-                GameModuleNode moduleNode = m_library.GetNode(i);
-                CreateNode(i, moduleNode);
-            }
+            for (int i = 0; i < library.moduleCount; i++)
+                CreateNode(library, i);
         }
 
-        private void CreateNode(int index, GameModuleNode node)
+        private void CreateNode(GameLibrary library, int index)
         {
-            GameObject nodeGameObject = Instantiate(m_nodePrefab, node.position, Quaternion.identity);
+            Vector2 nodePosition = library.GetNodePosition(index);
+            GameObject nodeGameObject = Instantiate(m_nodePrefab, nodePosition, Quaternion.identity);
             nodeGameObject.name = $"Node { index + 1 }";
-            nodeGameObject.SetActive(false);
             nodeGameObject.transform.SetParent(transform);
 
             GameModuleLinker moduleMediator = nodeGameObject.AddComponent<GameModuleLinker>();
-            SceneLoadTrigger sceneLoadTrigger = nodeGameObject.AddComponent<SceneLoadTrigger>();
+            SceneLoadTrigger sceneLoadTrigger = nodeGameObject.GetComponent<SceneLoadTrigger>();
 
-            moduleMediator.Initialize(node.config, sceneLoadTrigger);
+            moduleMediator.Initialize(library, index);
             sceneLoadTrigger.SetSceneToLoad(Scene.Game);
-            nodeGameObject.SetActive(true);
         }
-
         #endregion
     }
 }

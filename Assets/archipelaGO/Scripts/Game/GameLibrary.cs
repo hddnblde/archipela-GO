@@ -46,8 +46,30 @@ namespace archipelaGO.Game
         #endregion
 
 
-        #region Method
-        public ModuleNode GetNode(int index)
+        #region Methods
+        public Vector2 GetNodePosition(int index)
+        {
+            ModuleNode node = GetNode(index);
+
+            if (node != null)
+                return node.position;
+
+            else
+                return Vector2.zero;
+        }
+
+        public GameModuleConfig GetNodeConfig(int index)
+        {
+            ModuleNode node = GetNode(index);
+
+            if (node != null)
+                return node.config;
+
+            else
+                return null;
+        }
+
+        private ModuleNode GetNode(int index)
         {
             if (index < 0 || index >= moduleCount)
                 return null;
