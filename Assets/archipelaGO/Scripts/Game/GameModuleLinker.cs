@@ -1,28 +1,37 @@
 using SceneLinker = archipelaGO.SceneHandling.SceneLinker<archipelaGO.Game.GameLoader>;
-using SceneLoadTrigger = archipelaGO.SceneHandling.SceneLoadTrigger;
 
 namespace archipelaGO.Game
 {
     public class GameModuleLinker : SceneLinker
     {
         #region Fields
-        private GameModuleConfig m_module = null;
+        private GameLibrary m_library = null;
+        private int m_moduleIndex = -1;
         private string[] m_unlockableModules = null;
         #endregion
 
 
         #region Methods
-        public void Initialize(GameModuleConfig module, SceneLoadTrigger sceneLoadTrigger, params string[] unlockableModules)
+        public void Initialize(GameLibrary library, int moduleIndex, params string[] unlockableModules)
         {
-            m_module = module;
+            m_library = library;
+            m_moduleIndex = moduleIndex;
             m_unlockableModules = unlockableModules;
-            SetSceneLoadTrigger(sceneLoadTrigger);
         }
 
         protected override void OnSceneLoaded(GameLoader gameLoader)
         {
-            if (gameLoader != null)
-                gameLoader.LoadModule(m_module, m_unlockableModules);
+            if (gameLoader == null || m_library == null ||
+                m_moduleIndex < 0 || m_moduleIndex >= m_library.moduleCount)
+                return;
+
+            gameLoader.SetUpWorldMapLinkers(m_library);
+
+            GameModuleConfig moduleConfig =
+                m_library.GetNodeConfig(m_moduleIndex);
+
+            if (moduleConfig != null)
+                gameLoader.LoadModule(moduleConfig, m_unlockableModules);
         }
         #endregion
     }
