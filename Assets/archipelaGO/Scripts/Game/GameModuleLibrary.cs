@@ -4,7 +4,7 @@ using UnityEngine;
 namespace archipelaGO.Game
 {
     [CreateAssetMenu(fileName = "Game Module Library", menuName = "archipelaGO/Game Module Library")]
-    public class GameConfigLibrary : ScriptableObject
+    public class GameModuleLibrary : ScriptableObject
     {
         #region Field
         [SerializeField]
