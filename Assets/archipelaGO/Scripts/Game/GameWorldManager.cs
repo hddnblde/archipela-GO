@@ -65,7 +65,7 @@ namespace archipelaGO.Game
             nodeGameObject.SetActive(false);
             nodeGameObject.transform.SetParent(transform);
 
-            GameModuleMediator moduleMediator = nodeGameObject.AddComponent<GameModuleMediator>();
+            GameModuleLinker moduleMediator = nodeGameObject.AddComponent<GameModuleLinker>();
             SceneLoadTrigger sceneLoadTrigger = nodeGameObject.AddComponent<SceneLoadTrigger>();
 
             moduleMediator.Initialize(node.config, sceneLoadTrigger);

@@ -3,10 +3,10 @@ using SceneLoadTrigger = archipelaGO.SceneHandling.SceneLoadTrigger;
 
 namespace archipelaGO.Game
 {
-    public class GameModuleMediator : SceneLinker
+    public class GameModuleLinker : SceneLinker
     {
         #region Fields
-        private GameModuleConfig m_gameConfig = null;
+        private GameModuleConfig m_module = null;
         private string[] m_unlockableModules = null;
         #endregion
 
@@ -14,7 +14,7 @@ namespace archipelaGO.Game
         #region Methods
         public void Initialize(GameModuleConfig module, SceneLoadTrigger sceneLoadTrigger, params string[] unlockableModules)
         {
-            m_gameConfig = module;
+            m_module = module;
             m_unlockableModules = unlockableModules;
             SetSceneLoadTrigger(sceneLoadTrigger);
         }
@@ -22,7 +22,7 @@ namespace archipelaGO.Game
         protected override void OnSceneLoaded(GameLoader gameLoader)
         {
             if (gameLoader != null)
-                gameLoader.LoadModule(m_gameConfig, m_unlockableModules);
+                gameLoader.LoadModule(m_module, m_unlockableModules);
         }
         #endregion
     }
