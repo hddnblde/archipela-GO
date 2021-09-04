@@ -10,7 +10,7 @@ using QuizModule = archipelaGO.Quiz.QuizModule;
 
 namespace archipelaGO.Game
 {
-    public class GameModuleLoader : MonoBehaviour
+    public class GameLoader : MonoBehaviour
     {
         #region Fields
         [SerializeField]
@@ -30,17 +30,17 @@ namespace archipelaGO.Game
 
 
         #region Public Method
-        public void LoadModule(GameModuleConfig gameConfig, params string[] unlockableModules)
+        public void LoadModule(GameModuleConfig module, params string[] unlockableModules)
         {
-            if (gameConfig == null)
+            if (module == null)
             {
-                Debug.LogError("Failed to load module because game config is null.");
+                Debug.LogError("Failed to load module because it is null.");
                 return;
             }
 
             m_unlockableModules.AddRange(unlockableModules);
 
-            switch (gameConfig)
+            switch (module)
             {
                 case VisualNovelConfig vnConfig:
                     LoadVisualNovel(vnConfig);

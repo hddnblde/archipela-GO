@@ -36,8 +36,8 @@ namespace archipelaGO.Game
         #region Internal Methods
         private void OnSceneLoaded()
         {
-            GameModuleLoader moduleManager =
-                GameObject.FindObjectOfType<GameModuleLoader>();
+            GameLoader moduleManager =
+                GameObject.FindObjectOfType<GameLoader>();
 
             if (moduleManager != null)
                 moduleManager.LoadModule(m_gameConfig, GetUnlockableModules());
