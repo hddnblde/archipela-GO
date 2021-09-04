@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TTDOS_Node_01_VisualNovel
   m_EditorClassIdentifier: 
   m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
-  m_backgroundScenes: []
+  m_backgroundScenes:
+  - {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
   m_plotlines:
   - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 9ba23d1eaf645e34ba4e15ff1fa299cb, type: 2}
