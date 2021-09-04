@@ -13,6 +13,7 @@ namespace archipelaGO.Game
 
 
         #region Data Structure
+        [System.Serializable]
         public class ModuleNode
         {
             #region Fields
