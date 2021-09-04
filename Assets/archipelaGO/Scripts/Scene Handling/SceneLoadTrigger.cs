@@ -7,8 +7,7 @@ namespace archipelaGO.SceneHandling
     public class SceneLoadTrigger : ClickableObject
     {
         #region Fields
-        [SerializeField]
-        private ProgressManager m_progressManager = null;
+        // private ProgressManager m_progressManager = null;
 
         [SerializeField]
         private Scene m_sceneToLoad = Scene.Boot;
@@ -22,10 +21,12 @@ namespace archipelaGO.SceneHandling
         #region ClickableObject Implementation
         protected override bool IsInteractable()
         {
-            if (m_progressManager == null)
-                return true;
+            // if (m_progressManager == null)
+            //     return true;
 
-            return m_progressManager.IsUnlocked();
+            // return m_progressManager.IsUnlocked();
+
+            return true;
         }
 
         protected override void OnObjectClicked()
@@ -44,7 +45,9 @@ namespace archipelaGO.SceneHandling
         #endregion
 
 
-        #region Internal Methods
+        #region Methods
+        public void SetSceneToLoad(Scene scene) => m_sceneToLoad = scene;
+
         private IEnumerator LoadSceneRoutine()
         {
             yield return new WaitUntil(SceneLoader.CanLoadANewScene);

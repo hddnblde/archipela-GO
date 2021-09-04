@@ -6,7 +6,13 @@ namespace archipelaGO.Game
     [CreateAssetMenu(fileName = "Game Library", menuName = "archipelaGO/Game Library")]
     public class GameLibrary : ScriptableObject
     {
-        #region Field
+        #region Fields
+        [SerializeField]
+        private Sprite m_worldBackground = null;
+
+        [SerializeField]
+        private Sprite m_nodeSprite = null;
+
         [SerializeField]
         private List<ModuleNode> m_modules = new List<ModuleNode>();
         #endregion
@@ -33,7 +39,9 @@ namespace archipelaGO.Game
         #endregion
 
 
-        #region Property
+        #region Properties
+        public Sprite worldBackground => m_worldBackground;
+        public Sprite nodeSprite => m_nodeSprite;
         public int moduleCount => m_modules.Count;
         #endregion
 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using SceneLoadTrigger = archipelaGO.SceneHandling.SceneLoadTrigger;
 
@@ -7,14 +6,9 @@ namespace archipelaGO.Game
     public class GameModuleMediator : MonoBehaviour
     {
         #region Fields
-        [SerializeField]
         private SceneLoadTrigger m_sceneLoadTrigger = null;
-
-        [SerializeField]
         private GameModuleConfig m_gameConfig = null;
-
-        [SerializeField]
-        private List<GameModuleConfig> m_unlockableModules = new List<GameModuleConfig>();
+        private string[] m_unlockableModules = null;
         #endregion
 
 
@@ -33,27 +27,21 @@ namespace archipelaGO.Game
         #endregion
 
 
-        #region Internal Methods
+        #region Methods
+        public void Initialize(GameModuleConfig module, SceneLoadTrigger sceneLoadTrigger, params string[] unlockableModules)
+        {
+            m_gameConfig = module;
+            m_sceneLoadTrigger = sceneLoadTrigger;
+            m_unlockableModules = unlockableModules;
+        }
+
         private void OnSceneLoaded()
         {
             GameLoader moduleManager =
                 GameObject.FindObjectOfType<GameLoader>();
 
             if (moduleManager != null)
-                moduleManager.LoadModule(m_gameConfig, GetUnlockableModules());
-        }
-
-        private string[] GetUnlockableModules()
-        {
-            List<string> unlockableKeys = new List<string>();
-
-            foreach (GameModuleConfig unlockableModule in m_unlockableModules)
-            {
-                if (unlockableModule != null)
-                    unlockableKeys.Add(unlockableModule.name);
-            }
-
-            return unlockableKeys.ToArray();
+                moduleManager.LoadModule(m_gameConfig, m_unlockableModules);
         }
         #endregion
     }
