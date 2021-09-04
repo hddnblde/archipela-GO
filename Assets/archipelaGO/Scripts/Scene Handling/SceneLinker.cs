@@ -2,11 +2,23 @@ using UnityEngine;
 
 namespace archipelaGO.SceneHandling
 {
+    [RequireComponent(typeof(SceneLoadTrigger))]
     public abstract class SceneLinker<T> : MonoBehaviour
         where T : MonoBehaviour
     {
         #region Field
         private SceneLoadTrigger m_sceneLoadTrigger = null;
+        #endregion
+
+
+        #region MonoBehaviour Implementation
+        private void Awake()
+        {
+            m_sceneLoadTrigger = GetComponent<SceneLoadTrigger>();
+
+            if (m_sceneLoadTrigger != null)
+                m_sceneLoadTrigger.OnSceneLoaded += InvokeSceneLoaded;
+        }
         #endregion
 
 
@@ -16,14 +28,6 @@ namespace archipelaGO.SceneHandling
 
 
         #region Internal Methods
-        protected void SetSceneLoadTrigger(SceneLoadTrigger sceneLoadTrigger)
-        {
-            m_sceneLoadTrigger = sceneLoadTrigger;
-
-            if (m_sceneLoadTrigger != null)
-                sceneLoadTrigger.OnSceneLoaded += InvokeSceneLoaded;
-        }
-
         private void InvokeSceneLoaded()
         {
             if (m_sceneLoadTrigger != null)
