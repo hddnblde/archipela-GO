@@ -80,7 +80,10 @@ namespace archipelaGO.UI.Windows
         private void SetCharacter(Sprite sprite, string name)
         {
             if (m_characterImage != null)
+            {
                 m_characterImage.sprite = sprite;
+                m_characterImage.enabled = (sprite != null);
+            }
 
             if (m_characterNameText != null)
                 m_characterNameText.text = name;
