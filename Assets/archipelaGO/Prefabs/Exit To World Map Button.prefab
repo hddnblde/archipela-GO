@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348489684250607817}
-  - component: {fileID: 1348489684250607820}
   - component: {fileID: 1348489684250607819}
+  - component: {fileID: 600217459930201057}
+  - component: {fileID: 1348489684250607820}
   - component: {fileID: 1348489684250607818}
   m_Layer: 5
   m_Name: Exit To World Map Button
@@ -39,14 +40,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
---- !u!222 &1348489684250607820
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348489684250607816}
-  m_CullTransparentMesh: 1
 --- !u!114 &1348489684250607819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,8 +52,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6dc54bc03c928e408c3abe139749bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_progressManager: {fileID: 0}
   m_sceneToLoad: 2
+--- !u!114 &600217459930201057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348489684250607816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df753873d04ec56409870461334a4ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_library: {fileID: 0}
+--- !u!222 &1348489684250607820
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348489684250607816}
+  m_CullTransparentMesh: 1
 --- !u!114 &1348489684250607818
 MonoBehaviour:
   m_ObjectHideFlags: 0
