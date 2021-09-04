@@ -3,7 +3,7 @@ using UnityEngine;
 namespace archipelaGO.Game
 {
     public abstract class GameModule<T> : MonoBehaviour
-        where T : GameConfig
+        where T : GameModuleConfig
     {
         #region Fields
         private T m_gameConfig = null;

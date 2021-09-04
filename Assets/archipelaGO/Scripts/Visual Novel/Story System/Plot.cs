@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GameConfig = archipelaGO.Game.GameConfig;
+using GameModuleConfig = archipelaGO.Game.GameModuleConfig;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
     [CreateAssetMenu(fileName = "Plot", menuName = "archipelaGO/Game Module/Visual Novel Plot", order = 0)]
-    public class Plot : GameConfig
+    public class Plot : GameModuleConfig
     {
         #region Fields
         [SerializeField]

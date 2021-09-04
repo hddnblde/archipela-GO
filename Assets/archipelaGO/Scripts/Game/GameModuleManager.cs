@@ -30,7 +30,7 @@ namespace archipelaGO.Game
 
 
         #region Public Method
-        public void LoadModule(GameConfig gameConfig, params string[] unlockableModules)
+        public void LoadModule(GameModuleConfig gameConfig, params string[] unlockableModules)
         {
             if (gameConfig == null)
             {
@@ -89,7 +89,7 @@ namespace archipelaGO.Game
 
         #region Helper Methods
         private void LoadModule<M, G>(M module, G config) where M : GameModule<G>
-            where G : GameConfig
+            where G : GameModuleConfig
         {
             if (module == null)
                 return;

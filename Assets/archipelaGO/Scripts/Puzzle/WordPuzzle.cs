@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Word = archipelaGO.WordBank.Word;
-using GameConfig = archipelaGO.Game.GameConfig;
+using GameModuleConfig = archipelaGO.Game.GameModuleConfig;
 
 namespace archipelaGO.Puzzle
 {
@@ -12,7 +12,7 @@ namespace archipelaGO.Puzzle
     }
 
     [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Game Module/Word Puzzle", order = 1)]
-    public class WordPuzzle : GameConfig
+    public class WordPuzzle : GameModuleConfig
     {
         #region Fields
         [SerializeField]

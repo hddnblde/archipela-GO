@@ -11,10 +11,10 @@ namespace archipelaGO.Game
         private SceneLoadTrigger m_sceneLoadTrigger = null;
 
         [SerializeField]
-        private GameConfig m_gameConfig = null;
+        private GameModuleConfig m_gameConfig = null;
 
         [SerializeField]
-        private List<GameConfig> m_unlockableModules = new List<GameConfig>();
+        private List<GameModuleConfig> m_unlockableModules = new List<GameModuleConfig>();
         #endregion
 
 
@@ -47,7 +47,7 @@ namespace archipelaGO.Game
         {
             List<string> unlockableKeys = new List<string>();
 
-            foreach (GameConfig unlockableModule in m_unlockableModules)
+            foreach (GameModuleConfig unlockableModule in m_unlockableModules)
             {
                 if (unlockableModule != null)
                     unlockableKeys.Add(unlockableModule.name);
