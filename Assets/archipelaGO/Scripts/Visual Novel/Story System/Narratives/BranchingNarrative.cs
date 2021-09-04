@@ -13,8 +13,6 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
 
         [SerializeField]
         private List<NarrativeBranch> m_branches = new List<NarrativeBranch>();
-
-        private string[] m_cachedChoices = null;
         #endregion
 
 

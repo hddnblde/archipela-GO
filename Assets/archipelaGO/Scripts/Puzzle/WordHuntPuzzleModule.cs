@@ -242,7 +242,7 @@ namespace archipelaGO.Puzzle
         public static (int column, int row) CalculateCellPosition(Vector2Int anchor, int direction, int length, int currentPosition)
         {
             const int FlippedValueThreshold = 4;
-            const int HorizontalDirection = 0, VerticalDirection = 1, DiagonalUpDirection = 2, DiagonalDownDirection = 3;
+            const int HorizontalDirection = 0, VerticalDirection = 1, DiagonalUpDirection = 2;
 
             bool isFlipped = (direction >= FlippedValueThreshold);
 
