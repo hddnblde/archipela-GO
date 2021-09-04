@@ -4,7 +4,7 @@ using GameConfig = archipelaGO.Game.GameConfig;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
-    [CreateAssetMenu(fileName = "Plot", menuName = "archipelaGO/Visual Novel/Plot")]
+    [CreateAssetMenu(fileName = "Plot", menuName = "archipelaGO/Game Module/Visual Novel Plot", order = 0)]
     public class Plot : GameConfig
     {
         #region Fields

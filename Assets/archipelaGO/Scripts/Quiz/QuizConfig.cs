@@ -4,7 +4,7 @@ using GameConfig = archipelaGO.Game.GameConfig;
 
 namespace archipelaGO.Quiz
 {
-    [CreateAssetMenu(fileName = "Quiz", menuName = "archipelaGO/Quiz", order = 2)]
+    [CreateAssetMenu(fileName = "Quiz", menuName = "archipelaGO/Game Module/Quiz", order = 2)]
     public class QuizConfig : GameConfig
     {
         #region Fields

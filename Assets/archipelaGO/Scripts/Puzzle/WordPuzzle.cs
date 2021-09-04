@@ -11,7 +11,7 @@ namespace archipelaGO.Puzzle
         WordHunt = 1
     }
 
-    [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Word Puzzle", order = 1)]
+    [CreateAssetMenu(fileName = "Word Puzzle", menuName = "archipelaGO/Game Module/Word Puzzle", order = 1)]
     public class WordPuzzle : GameConfig
     {
         #region Fields
