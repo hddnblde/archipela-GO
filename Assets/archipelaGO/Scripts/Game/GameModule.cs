@@ -6,8 +6,6 @@ namespace archipelaGO.Game
         where T : GameModuleConfig
     {
         #region Fields
-        private T m_gameConfig = null;
-
         public delegate void GameCompleted();
         public event GameCompleted OnGameCompleted;
         #endregion
@@ -20,7 +18,6 @@ namespace archipelaGO.Game
         {
             OnGameCompleted?.Invoke();
             OnGameCompleted = null;
-            Debug.LogWarning($"Game Module [{ m_gameConfig.name }] completed!");
         }
         #endregion
     }
