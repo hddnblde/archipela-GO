@@ -17,7 +17,7 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Good morning, {binibini}s! Mind if we help you carry your loads of
+      m_text: Good morning, {binibinis}! Mind if we help you carry your loads of
         {darac}?
   - m_characterIndex: 5
     m_lines:

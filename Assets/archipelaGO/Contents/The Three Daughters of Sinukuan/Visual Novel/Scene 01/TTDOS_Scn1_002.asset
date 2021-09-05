@@ -54,7 +54,7 @@ MonoBehaviour:
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "No, it won\u2019t as long as we be extra careful. You know that Sinukuan
-        and his {minion}s can\u2019t stand a chance against us, right?"
+        and his {minions} can\u2019t stand a chance against us, right?"
     - m_voiceOver: {fileID: 0}
       m_text: "By the way, what\u2019s your take on this, Kalaw? You suddenly became
         quiet."
