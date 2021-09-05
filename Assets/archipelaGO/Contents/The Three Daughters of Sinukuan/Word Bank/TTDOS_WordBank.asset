@@ -14,226 +14,228 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_words:
   - m_title: steed
+    m_phoneticSpelling: "/st\u0113d/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: fc0f49029de168c4d87df682323c5239, type: 3}
     m_definition: A horse used or trained for riding
   - m_title: woo
+    m_phoneticSpelling: "/wo\u035Eo/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 40da733f96a4c4b40976105ad99b3792, type: 3}
     m_definition: To seek to gain or bring about
   - m_title: minion
+    m_phoneticSpelling: "/\u02C8miny\u0259n/"
     m_keywords:
     - minions
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: af046debe34c8784ea359e6bda4cc191, type: 3}
     m_definition: A mean dependent, follower, or underling; a subordinate
   - m_title: astonishing
+    m_phoneticSpelling: "/\u0259\u02C8st\xE4n\u0259SHiNG/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 7e4bed4cbd1a0fd4983dc356dc0ab72b, type: 3}
     m_definition: Causing a feeling of great surprise or wonder
   - m_title: marvelous
+    m_phoneticSpelling: "/\u02C8m\xE4rv(\u0259)l\u0259s/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 835aa0524468c8c49a08f027009e2730, type: 3}
     m_definition: Causing wonder; notably superior
   - m_title: radiant
+    m_phoneticSpelling: "/\u02C8r\u0101d\u0113\u0259nt/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: dbf9d2fe1dd250c4f93e2e9da52ce220, type: 3}
     m_definition: Vividly bright and shining
   - m_title: depart
+    m_phoneticSpelling: "/d\u0259\u02C8p\xE4rt/"
     m_keywords:
     - departing
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 06b4ccb2bee5c3d40916cc27a03c2cfb, type: 3}
     m_definition: To go away; leave
   - m_title: wrath
+    m_phoneticSpelling: /raTH/
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: e4322841b006d0d4a9beb0e19c2328ff, type: 3}
     m_definition: Strong vengeful anger; punishment for an offense or a crime
   - m_title: revel
+    m_phoneticSpelling: "/\u02C8rev\u0259l/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 754c2bef3f172d9468279d035d53cee7, type: 3}
     m_definition: To take intense pleasure or satisfaction
   - m_title: arouse
+    m_phoneticSpelling: "/\u0259\u02C8rouz/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 71a0944be8699634f81f43869d791990, type: 3}
     m_definition: To stimulate to action or to bodily readiness for activity
   - m_title: endeavor
+    m_phoneticSpelling: "/\u0259n\u02C8dev\u0259r/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 6227dba2762bfea40bc3007de5caa727, type: 3}
     m_definition: To work with set of purpose
   - m_title: enthusiasm
+    m_phoneticSpelling: "/in\u02C8TH(y)o\u035Eoz\u0113\u02CCaz\u0259m, en\u02C8TH(y)o\u035Eoz\u0113\u02CCaz\u0259m"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: f20b0fb5d2c197c47bb2215347e3b699, type: 3}
     m_definition: Strong excitement of feeling
   - m_title: peasant
+    m_phoneticSpelling: "/\u02C8pez(\u0259)nt/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 3a662e80755924843a3da9c1aaf29367, type: 3}
     m_definition: Persons tilling the soil as small landowners or as laborers
   - m_title: latter
+    m_phoneticSpelling: "/\u02C8lad\u0259r/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 1e7e8b0ecf9e5a144b4e0ec26a1b2c7e, type: 3}
     m_definition: Belonging to a subsequent/later time or period
   - m_title: shabby
+    m_phoneticSpelling: "/\u02C8SHab\u0113/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 9149a72826b24fd4cb2952176c7c3f8a, type: 3}
     m_definition: Clothed with old, worn, or seedy garments
   - m_title: spoil
+    m_phoneticSpelling: /spoil/
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: f7caf21387d65d845a9c05e01f33190e, type: 3}
     m_definition: To ruin; to damage seriously
   - m_title: darac
+    m_phoneticSpelling: "/d\u0259r\u0251k/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 1b707b0a5f24a5245823bec50d322d2e, type: 3}
     m_definition: Corn remains that is fed to swines/pigs
   - m_title: binibini
+    m_phoneticSpelling: /binibini/
     m_keywords:
     - binibinis
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 77576d473efe2b141a09fa20cc4abe5b, type: 3}
     m_definition: A young lady
   - m_title: sensible
+    m_phoneticSpelling: "/\u02C8sens\u0259b(\u0259)l/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 545808610f58042429987f9a55d797fd, type: 3}
     m_definition: Having, containing, or indicative of good sense or reason
   - m_title: ridiculous
+    m_phoneticSpelling: "/r\u0259\u02C8diky\u0259l\u0259s/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 7b1dc03acf5c45e41be381d0ad291661, type: 3}
     m_definition: Extremely silly or unreasonable
   - m_title: enraged
+    m_phoneticSpelling: "/in\u02C8r\u0101jd, en\u02C8r\u0101jd/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 403b8f2bf63398745a9297bc6569d582, type: 3}
     m_definition: To fill with rage/anger
   - m_title: abduct
+    m_phoneticSpelling: "/ab\u02C8d\u0259kt, \u0259b\u02C8d\u0259kt/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 08642e732af722443b53e828eb94fe3a, type: 3}
     m_definition: To seize and take away by force
   - m_title: galloping
+    m_phoneticSpelling: "/\u02C8\u0261al\u0259piNG/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: c1e7df1019e9e6146bc4eb31933ae888, type: 3}
     m_definition: "Going at a pace by springing\r"
-  - m_title: captors
-    m_keywords: []
-    m_phoneticSpelling: 
+  - m_title: captor
+    m_phoneticSpelling: "/\u02C8kapt\u0259r, \u02C8kap\u02CCt\xF4r/"
+    m_keywords:
+    - captors
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 35d8cd74406d3f54981cf21d92ed12a6, type: 3}
     m_definition: One that has captured a person or thing
-  - m_title: culprits
-    m_keywords: []
-    m_phoneticSpelling: 
+  - m_title: culprit
+    m_phoneticSpelling: "/\u02C8k\u0259lpr\u0259t, \u02C8k\u0259l\u02CCprit/"
+    m_keywords:
+    - culprit
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: c92763691f6ee2140ba10d967fd05dc1, type: 3}
     m_definition: One accused of or charged with a crime
   - m_title: fury
+    m_phoneticSpelling: "/\u02C8fyo\u035Dor\u0113/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: eaceb07559d25ce4eb214b874842cec6, type: 3}
     m_definition: Intense, disordered, and often destructive rage
   - m_title: slay
+    m_phoneticSpelling: "/sl\u0101/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 21fec9607844d9a4e857c3f28f5a6752, type: 3}
     m_definition: To kill violently
   - m_title: grasp
+    m_phoneticSpelling: "/\u0261rasp/"
     m_keywords:
     - grasped
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 66555826b08726c42bccf854207076e9, type: 3}
     m_definition: To make the motion of seizing; clutching
   - m_title: hurl
+    m_phoneticSpelling: "/h\u0259rl/"
     m_keywords:
     - hurled
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: bac723c995554ec4d98d91d146d7679d, type: 3}
     m_definition: To throw down with violence
   - m_title: slumber
+    m_phoneticSpelling: "/\u02C8sl\u0259mb\u0259r/"
     m_keywords:
     - slumbering
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 88eb0edccd333ce409d682a65b17faf5, type: 3}
     m_definition: To sleep lightly
   - m_title: tremendous
+    m_phoneticSpelling: "/tr\u0259\u02C8mend\u0259s/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 97432d55c3abf894396b472778a6fccd, type: 3}
     m_definition: Notably by reason of extreme size, power, greatness, or excellence
   - m_title: horrible
+    m_phoneticSpelling: "/\u02C8h\xF4r\u0259b(\u0259)l/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: c5f76e86f2f07db4fa03e0b75dcd116f, type: 3}
     m_definition: Extremely bad or unpleasant
   - m_title: avenge
+    m_phoneticSpelling: "/\u0259\u02C8venj/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: db678d12178868143ab1b3f92f982eb1, type: 3}
     m_definition: To exact satisfaction for (a wrong) by punishing the wrongdoer
   - m_title: pestle
+    m_phoneticSpelling: "/\u02C8pestl, \u02C8pes\u0259l/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 260e7c30f625731488e310490ca3af2d, type: 3}
     m_definition: A usually club-shaped implement for pounding or grinding substances
       in a mortar
   - m_title: pound
+    m_phoneticSpelling: /pound/
     m_keywords:
     - pounding
-    m_phoneticSpelling: 
     m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: e40fbb072a3b6f549809ab94cce79e63, type: 3}
     m_definition: To strike heavily or repeatedly
   - m_title: summit
+    m_phoneticSpelling: "/\u02C8s\u0259m\u0259t/"
     m_keywords: []
-    m_phoneticSpelling: 
     m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 4fd536a158383af4e9bb14dd93a64594, type: 3}
     m_definition: "The topmost level\r"
