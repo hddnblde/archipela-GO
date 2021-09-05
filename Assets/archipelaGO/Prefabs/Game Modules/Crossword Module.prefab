@@ -529,6 +529,7 @@ MonoBehaviour:
   m_cellContainer: {fileID: 2802357202194657208}
   m_padding: 50
   m_hintText: {fileID: 2802357201651340706}
+  m_revealFirstLetterOfAllWords: 1
   m_answerField: {fileID: 2802357203299028480}
 --- !u!223 &2802357202763286096
 Canvas:
