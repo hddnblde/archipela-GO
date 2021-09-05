@@ -18,8 +18,15 @@ namespace archipelaGO
         [System.Serializable]
         public struct Word
         {
+            #region Fields
             [SerializeField]
             private string m_title;
+
+            [SerializeField]
+            private List<string> m_keywords;
+
+            [SerializeField]
+            private string m_phoneticSpelling;
 
             [SerializeField]
             private PartOfSpeech m_partOfSpeech;
@@ -29,11 +36,59 @@ namespace archipelaGO
 
             [SerializeField, TextArea, FormerlySerializedAs("m_description")]
             private string m_definition;
+            #endregion
 
+
+            #region Properties
             public string title => m_title;
+            public string phoneticSpelling => m_phoneticSpelling;
             public PartOfSpeech partOfSpeech => m_partOfSpeech;
             public AudioClip pronunciationClip => m_pronunciation;
             public string definition => m_definition;
+            #endregion
+
+
+            #region Methods
+            public bool IsMatched(string key)
+            {
+                string match;
+
+                return IsMatched(key, out match);
+            }
+
+            public bool IsMatched(string key, out string match)
+            {
+                foreach (string keyword in GetSortedListOfKeywords())
+                {
+                    if (!string.Equals(keyword, key))
+                        continue;
+                    
+                    match = keyword;
+                    return true;
+                }
+
+                if (m_title.Contains(key))
+                {
+                    match = m_title;
+                    return true;
+                }
+
+                match = string.Empty;
+                return false;
+            }
+
+            public List<string> GetKeywords()
+            {
+                List<string> keywords = new List<string>();
+                keywords.Add(m_title);
+                keywords.AddRange(m_keywords);
+
+                return keywords;
+            }
+
+            private List<string> GetSortedListOfKeywords() =>
+                m_keywords.OrderByDescending(key => key.Length).ToList();
+            #endregion
         }
 
         [System.Serializable]
@@ -65,7 +120,7 @@ namespace archipelaGO
         public int GetWordIndex(string match)
         {
             var matchedWord = (from word in m_words
-                where word.title.Contains(match)
+                where word.IsMatched(match)
                 select word).FirstOrDefault();
 
             return m_words.IndexOf(matchedWord);
