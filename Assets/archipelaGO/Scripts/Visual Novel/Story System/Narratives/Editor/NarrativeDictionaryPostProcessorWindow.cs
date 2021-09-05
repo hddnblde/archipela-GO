@@ -106,10 +106,11 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         {
             string textValue = textProperty.stringValue;
             textValue = textValue.Replace("{", string.Empty).Replace("}", string.Empty);
+            const string Prefix = @"(?<![\w\d])", Suffix = @"(?![\w\d])";
 
             foreach (string word in words)
             {
-                string pattern = $@"{word}";
+                string pattern = $@"{ Prefix }{ word }{ Suffix }";
                 Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
                 MatchCollection matches = regex.Matches(textValue);
 
@@ -129,8 +130,8 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             
             for (int i = 0; i < m_wordBank.wordCount; i++)
             {
-                string word = m_wordBank.GetWord(i).title;
-                collection.Add(word);
+                List<string> keywords = m_wordBank.GetWord(i).GetKeywords();
+                collection.AddRange(keywords);
             }
 
             return collection.OrderByDescending(s => s).ToList();
