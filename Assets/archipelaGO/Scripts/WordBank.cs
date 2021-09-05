@@ -23,10 +23,10 @@ namespace archipelaGO
             private string m_title;
 
             [SerializeField]
-            private List<string> m_keywords;
+            private string m_phoneticSpelling;
 
             [SerializeField]
-            private string m_phoneticSpelling;
+            private List<string> m_keywords;
 
             [SerializeField]
             private PartOfSpeech m_partOfSpeech;
