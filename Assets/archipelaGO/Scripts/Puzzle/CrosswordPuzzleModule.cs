@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
+using CellState = archipelaGO.Puzzle.WordCell.State;
 
 namespace archipelaGO.Puzzle
 {
     public class CrosswordPuzzleModule : WordPuzzleModule
     {
         #region Fields
+        [SerializeField]
+        private bool m_revealFirstLetterOfAllWords = false;
+
         [SerializeField]
         private InputField m_answerField = null;
         #endregion
@@ -27,7 +31,7 @@ namespace archipelaGO.Puzzle
                 foreach (WordCell cell in m_cells)
                 {
                     if (cell != null)
-                        cell.SetState(WordCell.State.CharacterShown);
+                        cell.SetState(CellState.CharacterShown);
                 }
             }
         }
@@ -78,7 +82,10 @@ namespace archipelaGO.Puzzle
             else
                 cell.SetAsCharacterTile(character);
 
-            cell.SetState(WordCell.State.CharacterHidden);
+            CellState beginState = (isFirstCharacter && m_revealFirstLetterOfAllWords) ?
+                CellState.CharacterShown : CellState.CharacterHidden;
+
+            cell.SetState(beginState);
         }
 
         protected override void InitializeCell(int column, int row, WordCell cell)
