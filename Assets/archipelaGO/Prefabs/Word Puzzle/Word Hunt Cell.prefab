@@ -134,7 +134,7 @@ MonoBehaviour:
   m_revealAnimationTime: 0.25
   m_enabledColor: {r: 1, g: 1, b: 1, a: 1}
   m_emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_highlightedColor: {r: 1, g: 0.537543, b: 0, a: 1}
+  m_highlightedColor: {r: 1, g: 0.86910975, b: 0, a: 1}
 --- !u!222 &7312112954385406747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
+  m_Color: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
