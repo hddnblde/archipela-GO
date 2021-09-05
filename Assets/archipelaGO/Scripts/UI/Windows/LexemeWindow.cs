@@ -24,6 +24,9 @@ namespace archipelaGO.UI.Windows
         private Text m_titleText = null;
 
         [SerializeField]
+        private Text m_phoneticSpellingText = null;
+
+        [SerializeField]
         private Text m_partOfSpeechText = null;
 
         [SerializeField]
@@ -65,6 +68,7 @@ namespace archipelaGO.UI.Windows
         private void OnWordSelected(Word word)
         {
             SetTitleText(word.title);
+            SetPhoneticSpellingText(word.phoneticSpelling);
             SetPartOfSpeechText(word.partOfSpeech.ToString().ToLower());
             SetDefinitionText(word.definition);
             m_cachedPronunciationClip = word.pronunciationClip;
@@ -83,6 +87,12 @@ namespace archipelaGO.UI.Windows
 
             if (m_titleLayoutGroup != null)
                 LayoutRebuilder.ForceRebuildLayoutImmediate(m_titleLayoutGroup.transform as RectTransform);
+        }
+
+        private void SetPhoneticSpellingText(string phoneticSpelling)
+        {
+            phoneticSpelling = $"\t{ phoneticSpelling }";
+            SetText(m_phoneticSpellingText, phoneticSpelling);
         }
         
         private void SetPartOfSpeechText(string partOfSpeech) =>
