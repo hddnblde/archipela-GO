@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.Quiz.QuizConfig>;
 using archipelaGO.UI.Windows;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
-using Question = archipelaGO.Quiz.QuizConfig.Question;
 
 namespace archipelaGO.Quiz
 {
@@ -41,7 +41,7 @@ namespace archipelaGO.Quiz
             if (m_quizRoutine != null)
                 StopCoroutine(m_quizRoutine);
 
-            List<Question> questions = GenerateQuestions();
+            List<(string, string[], int[])> questions = GenerateQuestions();
 
             if (questions == null)
                 return;
@@ -49,7 +49,7 @@ namespace archipelaGO.Quiz
             m_quizRoutine = StartCoroutine(QuizRoutine(questions));
         }
 
-        private List<Question> GenerateQuestions()
+        private List<(string, string[], int[])> GenerateQuestions()
         {
             if (m_quiz == null || m_items <= 0)
                 return null;
@@ -57,20 +57,20 @@ namespace archipelaGO.Quiz
             return m_quiz.GenerateRandomSetOfQuestions(m_items);
         }
 
-        private IEnumerator QuizRoutine(List<Question> questions)
+        private IEnumerator QuizRoutine(List<(string, string[], int[])> questions)
         {
             m_guessedCorrectAnswers = 0;
 
-            foreach (Question question in questions)
+            foreach ((string stem, string[] choices, int[] correctAnswers) question in questions)
             {
-                (string stem, string[] choices, int correctAnswerIndex) problem = question.GetProblem();
+                // (string stem, string[] choices, int correctAnswerIndex) problem = question.GetProblem();
 
                 WaitForChosenOption quizChoice =
-                    m_choiceWindow.Show(problem.stem, problem.choices, false);
+                    m_choiceWindow.Show(question.stem, question.choices, false);
 
                 yield return quizChoice;
 
-                if (quizChoice.choiceIndex == problem.correctAnswerIndex)
+                if (question.correctAnswers.Contains(quizChoice.choiceIndex))
                     m_guessedCorrectAnswers++;
             }
 
