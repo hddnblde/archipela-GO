@@ -9,24 +9,45 @@ namespace archipelaGO.Quiz
     {
         #region Fields
         [SerializeField]
+        private bool m_shuffleQuestions = false;
+
+        [SerializeField]
+        private bool m_shuffleChoices = false;
+
+        [SerializeField]
         private List<Question> m_questions = new List<Question>();
         #endregion
 
 
         #region Methods
-        public List<Question> GenerateRandomSetOfQuestions(int count)
+        public List<(string stem, string[] choices, int[] correctAnswers)> GenerateRandomSetOfQuestions(int count)
         {
-            List<Question> shuffledQuestions = new List<Question>();
-            shuffledQuestions.AddRange(m_questions);
-            shuffledQuestions = ShuffleList<Question>(shuffledQuestions);
+            List<Question> questions = new List<Question>();
+            questions.AddRange(m_questions);
 
-            if (shuffledQuestions.Count > count)
+            if (m_shuffleQuestions)
+                questions = ShuffleList<Question>(questions);
+
+            if (questions.Count > count)
             {
-                int difference = (shuffledQuestions.Count - count);
-                shuffledQuestions.RemoveRange(count, difference);
+                int difference = (questions.Count - count);
+                questions.RemoveRange(count, difference);
             }
 
-            return shuffledQuestions;
+            return GenerateItems(questions, m_shuffleChoices);
+        }
+        
+        private List<(string, string[], int[])> GenerateItems(List<Question> questions, bool shuffleChoices)
+        {
+            if (questions == null || questions.Count <= 0)
+                return null;
+
+            List<(string, string[], int[])> items = new List<(string, string[], int[])>();
+
+            foreach (Question question in questions)
+                items.Add(question.GetProblem(shuffleChoices));
+
+            return items;
         }
 
         private static List<T> ShuffleList<T>(List<T> list)
@@ -51,30 +72,60 @@ namespace archipelaGO.Quiz
 
         #region Data Structure
         [System.Serializable]
-        public struct Question
+        private struct Question
         {
             #region Fields
             [SerializeField, TextArea(4, 12)]
             private string m_stem;
 
-            [SerializeField, TextArea(3, 5)]
-            private string m_correctAnswer;
-
-            [SerializeField, TextArea(3, 5)]
-            private List<string> m_incorrectAnswers;
+            [SerializeField]
+            private List<Answer> m_answers;
             #endregion
 
-            public (string stem, string[] choices, int correctAnswerIndex) GetProblem()
+            public (string stem, string[] choices, int[] answers) GetProblem(bool shuffleChoices)
             {
-                List<string> choices = new List<string>();
-                choices.Add(m_correctAnswer);
-                choices.AddRange(m_incorrectAnswers);
-                choices = ShuffleList<string>(choices);
+                (string[] choices, int[] correctAnswers) item =
+                    GenerateItem(shuffleChoices);
 
-                int correctAnswerIndex = choices.IndexOf(m_correctAnswer);
-
-                return (m_stem, choices.ToArray(), correctAnswerIndex);
+                return (m_stem, item.choices, item.correctAnswers);
             }
+
+            private (string[] choices, int[] correctAnswers) GenerateItem(bool shuffled)
+            {
+                List<Answer> answers = new List<Answer>();
+                answers.AddRange(m_answers);
+
+                if (shuffled)
+                    answers = ShuffleList<Answer>(answers);
+                
+                List<string> choices = new List<string>();
+                List<int> correctAnswers = new List<int>();
+
+                for (int i = 0; i < answers.Count; i++)
+                {
+                    Answer answer = answers[i];
+                    choices.Add(answer.text);
+
+                    if (answer.isCorrect)
+                        correctAnswers.Add(i);
+                }
+
+                return (choices.ToArray(), correctAnswers.ToArray());
+            }
+        }
+
+        [System.Serializable]
+        private struct Answer
+        {
+            [SerializeField, TextArea(2, 2)]
+            private string m_text;
+
+            [SerializeField]
+            private bool m_isCorrect;
+
+
+            public bool isCorrect => m_isCorrect;
+            public string text => m_text;
         }
         #endregion
     }
