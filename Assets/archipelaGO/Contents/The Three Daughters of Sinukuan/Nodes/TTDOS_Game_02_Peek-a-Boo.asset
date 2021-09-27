@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
+  m_Name: TTDOS_Game_02_Peek-a-Boo
+  m_EditorClassIdentifier: 
+  m_puzzleType: 1
+  m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
+  m_gridSize: {x: 14, y: 14}
+  m_puzzlePieces:
+  - m_direction: 0
+    m_position: {x: 1, y: 1}
+    m_wordBankIndex: 4
+  - m_direction: 0
+    m_position: {x: 6, y: 4}
+    m_wordBankIndex: 17
+  - m_direction: 1
+    m_position: {x: 4, y: 7}
+    m_wordBankIndex: 26
+  - m_direction: 2
+    m_position: {x: 2, y: 11}
+    m_wordBankIndex: 27
+  - m_direction: 0
+    m_position: {x: 0, y: 2}
+    m_wordBankIndex: 28
+  - m_direction: 0
+    m_position: {x: 7, y: 11}
+    m_wordBankIndex: 33
+  - m_direction: 0
+    m_position: {x: 1, y: 3}
+    m_wordBankIndex: 30
+  - m_direction: 4
+    m_position: {x: 12, y: 5}
+    m_wordBankIndex: 18
+  - m_direction: 0
+    m_position: {x: 4, y: 12}
+    m_wordBankIndex: 19
+  - m_direction: 4
+    m_position: {x: 8, y: 6}
+    m_wordBankIndex: 22
