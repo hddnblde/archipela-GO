@@ -14,26 +14,207 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_words:
   - m_title: ecstatic
+    m_phoneticSpelling: "ec\xB7\u200Bstat\xB7\u200Bic | \\ ek-\u02C8sta-tik, ik-\u02C8sta-
+      \\"
+    m_keywords: []
     m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
     m_definition: Full of overwhelming emotion; delightful
   - m_title: offspring
+    m_phoneticSpelling: "off\xB7\u200Bspring | \\ \u02C8\u022Ff-\u02CCspri\u014B
+      \\"
+    m_keywords: []
     m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
     m_definition: A child; Progeny
   - m_title: undoubted
+    m_phoneticSpelling: "un\xB7\u200Bdoubt\xB7\u200Bed | \\ \u02CC\u0259n-\u02C8dau\u0307-t\u0259d
+      \\"
+    m_keywords: []
     m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
     m_definition: Not doubted; Genuine
   - m_title: tremendous
+    m_phoneticSpelling: "tre\xB7\u200Bmen\xB7\u200Bdous | \\ tri-\u02C8men-d\u0259s\\"
+    m_keywords: []
     m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
     m_definition: Notable by a reason of extreme size, power, greatness, or excellence
   - m_title: grief
+    m_phoneticSpelling: "\\ \u02C8gr\u0113f \\"
+    m_keywords: []
     m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
     m_definition: A cause of great suffering
   - m_title: ward off
+    m_phoneticSpelling: "\\ \u02C8w\u022Frd \u02C8\u022Ff \\"
+    m_keywords: []
     m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
     m_definition: To avoid being hit by (something)
-  - m_title: resolved
+  - m_title: resolve
+    m_phoneticSpelling: "re\xB7\u200Bsolve | \\ ri-\u02C8z\xE4lv, -\u02C8z\u022Flv
+      \\"
+    m_keywords:
+    - resolved
     m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
     m_definition: To deal with successfully; Clear up
   - m_title: risky
+    m_phoneticSpelling: "\\ \u02C8ri-sk\u0113 \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Attended with risk or danger
+  - m_title: insane
+    m_phoneticSpelling: "in\xB7\u200Bsane | \\ (\u02CC)in-\u02C8s\u0101n \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Unable to think in a clear or sensible way.
+  - m_title: nefarious
+    m_phoneticSpelling: "ne\xB7\u200Bfar\xB7\u200Bi\xB7\u200Bous | \\ ni-\u02C8fer-\u0113-\u0259s
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Not conforming to a high moral standard; morally unacceptable
+  - m_title: troublemaker
+    m_phoneticSpelling: "trou\xB7\u200Bble\xB7\u200Bmak\xB7\u200Ber | \\\u02C8tr\u0259-b\u0259l-\u02CCm\u0101-k\u0259r
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: A person who causes trouble or creates problems
+  - m_title: dispute
+    m_phoneticSpelling: "dis\xB7\u200Bpute | \\ di-\u02C8spy\xFCt \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: An often noisy or angry expression of differing opinions
+  - m_title: rascal
+    m_phoneticSpelling: "ras\xB7\u200Bcal | \\ \u02C8ra-sk\u0259l \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: A mean, evil, or unprincipled person
+  - m_title: dispatch
+    m_phoneticSpelling: "\\ d\u0259\u02C8spaCH \\"
+    m_keywords: []
     m_partOfSpeech: 3
-    m_definition: To deal with successfully; Clear up
+    m_pronunciation: {fileID: 0}
+    m_definition: To cause to go to be taken from one place to another
+  - m_title: enrage
+    m_phoneticSpelling: "en\xB7\u200Brage | \\ in-\u02C8r\u0101j,en- \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: "Feeling or showing\r anger"
+  - m_title: shatter
+    m_phoneticSpelling: "shat\xB7\u200Bter | \\ \u02C8sha-t\u0259r \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: To cause to break with violence and much noise
+  - m_title: wander
+    m_phoneticSpelling: "wan\xB7\u200Bder | \\ \u02C8w\xE4n-d\u0259r \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: To move about without a fixed course, aim, or goal
+  - m_title: fragment
+    m_phoneticSpelling: "frag\xB7\u200Bment | \\ \u02C8frag-\u02CCment \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: Broken or separated into distinct parts
+  - m_title: pertain
+    m_phoneticSpelling: "per\xB7\u200Btain | \\ p\u0259r-\u02C8t\u0101n \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: To have reference
+  - m_title: backstabbing
+    m_phoneticSpelling: "back\xB7\u200Bstab\xB7\u200Bbing | \\ \u02C8bak-\u02CCsta-bi\u014B
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: Betrayal
+  - m_title: joint
+    m_phoneticSpelling: "\\ \u02C8j\u022Fint \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: United, combined
+  - m_title: vain
+    m_phoneticSpelling: "\\ \u02C8v\u0101n \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Unsuccessful, Useless
+  - m_title: endow
+    m_phoneticSpelling: "en\xB7\u200Bdow | \\ in-\u02C8dau\u0307,en- \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: To provide with something freely or naturally
+  - m_title: feat
+    m_phoneticSpelling: "\\ \u02C8f\u0113t \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: An act or product of skill, endurance, or ingenuity.
+  - m_title: albeit
+    m_phoneticSpelling: "al\xB7\u200Bbe\xB7\u200Bit | \\ \u022Fl-\u02C8b\u0113-\u0259t,al-
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 5
+    m_pronunciation: {fileID: 0}
+    m_definition: Even though, although
+  - m_title: radiance
+    m_phoneticSpelling: "ra\xB7\u200Bdi\xB7\u200Bance | \\ \u02C8r\u0101-d\u0113-\u0259n(t)s
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: Brightness
+  - m_title: befitting
+    m_phoneticSpelling: "be\xB7\u200Bfit\xB7\u200Bting | \\ bi-\u02C8fi-ti\u014B,
+      b\u0113- \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Suitable, appropriate
+  - m_title: serene
+    m_phoneticSpelling: "se\xB7\u200Brene | \\ s\u0259-\u02C8r\u0113n \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Shining bright and steady
+  - m_title: wicked
+    m_phoneticSpelling: "wick\xB7\u200Bed | \\ \u02C8wi-k\u0259d \\"
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: Evil, vile
+  - m_title: candor
+    m_phoneticSpelling: "can\xB7\u200Bdor | \\ \u02C8kan-d\u0259r,-\u02CCd\u022Fr
+      \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: Brightness, brilliance
+  - m_title: reincarnate
+    m_phoneticSpelling: "re\xB7\u200Bin\xB7\u200Bcar\xB7\u200Bnate | \\ \u02CCr\u0113-\u0259n-\u02C8k\xE4r-\u02CCn\u0101t,
+      (\u02CC)r\u0113-\u02C8in-\u02CCk\xE4r- \\"
+    m_keywords: []
+    m_partOfSpeech: 3
+    m_pronunciation: {fileID: 0}
+    m_definition: To give a concrete or actual form
+  - m_title: wrongdoing
+    m_phoneticSpelling: "\\ \u02C8r\xF4NG\u02CCdo\u035EoiNG \\"
+    m_keywords: []
+    m_partOfSpeech: 0
+    m_pronunciation: {fileID: 0}
+    m_definition: Evil or improper behavior or action
