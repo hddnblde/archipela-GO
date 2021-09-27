@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
+  m_Name: HTWWM_Game_03_TrainOfThought
+  m_EditorClassIdentifier: 
+  m_shuffleQuestions: 0
+  m_shuffleChoices: 1
+  m_questions:
+  - m_stem: Who are the god of the sky above and the god of water?
+    m_answers:
+    - m_text: Captan and Maguayan
+      m_isCorrect: 1
+    - m_text: Captan and Lidagat
+      m_isCorrect: 0
+    - m_text: Lihangin and Lidagat
+      m_isCorrect: 0
+    - m_text: Lihangin and Maguayan
+      m_isCorrect: 0
+  - m_stem: What tragic fate befell the parents of Licalibutan, Liadlao, Libulan,
+      and Lisuga?
+    m_answers:
+    - m_text: Both of them died.
+      m_isCorrect: 1
+    - m_text: They are nowhere to be found.
+      m_isCorrect: 0
+    - m_text: They vanished into thin air.
+      m_isCorrect: 0
+    - m_text: They were captured by an enemy.
+      m_isCorrect: 0
+  - m_stem: How was Libulan described in the story?
+    m_answers:
+    - m_text: He has a rock-solid body and is both strong and brave.
+      m_isCorrect: 0
+    - m_text: He is made of copper and appears to be timid.
+      m_isCorrect: 1
+    - m_text: He is made of gold and is cheerful.
+      m_isCorrect: 0
+    - m_text: He is sweet and formed of silver.
+      m_isCorrect: 0
+  - m_stem: What agreement did Captan and Maguayan reach after the death of their
+      children?
+    m_answers:
+    - m_text: It will be Captan who will run the kingdom of Lihangin and Lidagat.
+      m_isCorrect: 0
+    - m_text: It will be Maguayan who will take over the kingdom of Lihangin and
+        Lidagat.
+      m_isCorrect: 0
+    - m_text: "They will hand over Lihangin and Lidagat\u2019s kingdom to Licalibutan."
+      m_isCorrect: 1
+    - m_text: They will just abandon the kingdom of Lihangin and Lidagat and ask
+        the orphans to live with them.
+      m_isCorrect: 0
+  - m_stem: What risky and undespicable plan did Licalibutan came up with while ruling
+      his parents' kingdom?
+    m_answers:
+    - m_text: He aims to take over other kingdoms to expand his dominion.
+      m_isCorrect: 0
+    - m_text: He intends to increase his power by dethroning his grandfather, Captan.
+      m_isCorrect: 1
+    - m_text: He plans to acquire more power by defeating his grandmother, Maguayan.
+      m_isCorrect: 0
+    - m_text: He plans to marry off his sister to another god in order to gain more
+        connections.
+      m_isCorrect: 0
+  - m_stem: How did Licalibutan's and his brothers' scheme end?
+    m_answers:
+    - m_text: They abandoned their plans because they were suddenly scared.
+      m_isCorrect: 0
+    - m_text: The devious plan was discovered, and so, they were scolded by their
+        grandparents.
+      m_isCorrect: 0
+    - m_text: They shattered and melted due to the three lightning bolts sent after
+        them.
+      m_isCorrect: 1
+    - m_text: "They were successful and have ruled over Captan\u2019s kingdom."
+      m_isCorrect: 0
+  - m_stem: What happened to Lisuga in the course of the story?
+    m_answers:
+    - m_text: She assisted her grandparents in reviving her dead siblings.
+      m_isCorrect: 0
+    - m_text: She decided to transform herself into the stars that shine at night.
+      m_isCorrect: 0
+    - m_text: She was caught in the wrath of her grandfather and died too.
+      m_isCorrect: 1
+    - m_text: "She was the only survivor of Lihangin and Lisuga\u2019s children."
+      m_isCorrect: 0
+  - m_stem: "<i>\u201CCaptan and Maguayan gave their all in bringing back Lihangin
+      and Lidagat\u2019s children with\r\ntheir joint powers. But as expected, all
+      their efforts were in vain.\u201D\r</i>\nGiven this scenario, what\u2019s the
+      best word to describe the mood of Captan and Maguayan?"
+    m_answers:
+    - m_text: Brokenhearted
+      m_isCorrect: 0
+    - m_text: Contented
+      m_isCorrect: 0
+    - m_text: Joyful
+      m_isCorrect: 1
+    - m_text: Pleased
+      m_isCorrect: 0
+  - m_stem: "<i>\u201CAs for that wicked Licalibutan, he gave no candor, but his
+      body could support a new race of humanity.\u201D</i>\nWhat conclusion can you
+      draw from this scenario?"
+    m_answers:
+    - m_text: A wrongdoer may still have the opportunity to do good in the end.
+      m_isCorrect: 1
+    - m_text: Being arrogant will kill you.
+      m_isCorrect: 0
+    - m_text: Humanity deserves a chance to live.
+      m_isCorrect: 0
+    - m_text: "One should be empathic to one\u2019s feelings."
+      m_isCorrect: 0
+  - m_stem: In the selection, Lisuga was described to be gentle and sweet, whereas
+      his brothers are involved in mischiefs. What can you infer from this scenario?
+    m_answers:
+    - m_text: Each gender reveals a unique identity.
+      m_isCorrect: 1
+    - m_text: Men will always be involved in mischiefs.
+      m_isCorrect: 0
+    - m_text: Women are always gentle, and men are always violent.
+      m_isCorrect: 0
+    - m_text: Women are raised more properly than men.
+      m_isCorrect: 0
