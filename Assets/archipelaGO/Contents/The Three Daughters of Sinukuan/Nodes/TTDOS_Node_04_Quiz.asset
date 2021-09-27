@@ -13,130 +13,120 @@ MonoBehaviour:
   m_Name: TTDOS_Node_04_Quiz
   m_EditorClassIdentifier: 
   m_shuffleQuestions: 0
-  m_shuffleChoices: 0
+  m_shuffleChoices: 1
   m_questions:
-  - m_stem: Who is the king of the mountain which is situated in the southern part
+  - m_stem: Who is the king of the mountain, which is situated in the southern part
       of Luzon?
     m_answers:
-    - m_text: Haring Makiling
-      m_isCorrect: 1
-    - m_text: Haring Sinukuan
-      m_isCorrect: 0
-    - m_text: Haring Kalaw
-      m_isCorrect: 0
     - m_text: 'Haring Magat
 
 '
       m_isCorrect: 0
+    - m_text: Haring Makiling
+      m_isCorrect: 0
+    - m_text: Haring Kalaw
+      m_isCorrect: 0
+    - m_text: Haring Sinukuan
+      m_isCorrect: 1
   - m_stem: "What are the names of Sinukuan\u2019s daughters?"
     m_answers:
-    - m_text: Rosa-Minda, Rosalina, Dona Maria
+    - m_text: "Do\xF1a Maria, Rosalinda, Minda"
+      m_isCorrect: 0
+    - m_text: "Maria, Do\xF1a-Rosa, Rosalina"
+      m_isCorrect: 0
+    - m_text: "Maria, Rosa-Minda, Do\xF1a Rosa"
+      m_isCorrect: 0
+    - m_text: "Rosa-Minda, Rosalina, Do\xF1a Maria"
       m_isCorrect: 1
-    - m_text: Maria, Dona-Rosa, Rosalina
-      m_isCorrect: 0
-    - m_text: Dona Maria, Rosalinda, Minda
-      m_isCorrect: 0
-    - m_text: Maria, Rosa-Minda, Dona Rosa
-      m_isCorrect: 0
-  - m_stem: What was the big news that Magat came to deliver?
+  - m_stem: How did the sons of Makiling discover the daughters of Sinukuan?
     m_answers:
-    - m_text: He discovered the existence of beautiful princesses.
+    - m_text: As they were on a hunting expedition, they chanced upon these ladies.
+      m_isCorrect: 0
+    - m_text: As they were roaming around the marketplace in Arayat, they saw three
+        peasant girls and followed them.
       m_isCorrect: 1
-    - m_text: There will be a big feast in their palace.
+    - m_text: They were appropriately introduced by their fathers during a special
+        occasion.
       m_isCorrect: 0
-    - m_text: 'A hunting adventure will take place soon. '
-      m_isCorrect: 0
-    - m_text: "He won the battle against Sinukuan\u2019s army."
+    - m_text: They were invited to the kingdom of Sinukuan and saw the ladies there.
       m_isCorrect: 0
   - m_stem: "Why did the three daughters of Sinukuan decline the love proposal of
       Makiling\u2019s sons?"
     m_answers:
-    - m_text: They vowed never to get marry
-      m_isCorrect: 1
     - m_text: They already have some suitors which they like.
-      m_isCorrect: 0
-    - m_text: "Their father doesn\u2019t allow them to have some suitors."
       m_isCorrect: 0
     - m_text: They are busy buying darac.
       m_isCorrect: 0
+    - m_text: "Their father doesn\u2019t allow them to have some suitors."
+      m_isCorrect: 0
+    - m_text: They vowed never to get marry
+      m_isCorrect: 1
   - m_stem: What tragic fate did Magat, Kalaw, and Maglente suffer from at the end
       of the story?
     m_answers:
-    - m_text: They were crushed to death.
-      m_isCorrect: 1
-    - m_text: They were hit by flying stones.
-      m_isCorrect: 0
     - m_text: They were attacked by the towns folks.
       m_isCorrect: 0
     - m_text: They were burned alive.
       m_isCorrect: 0
-  - m_stem: In a short story, characters are categorized into static and dynamic.
-      A static character is about the same person at the duration of the literary
-      piece. It does not undergo a series of changes. On the other hand, a dynamic
-      character is often a subject for a major transformation as the story progresses.
-      Given this premise, which among the following characters may be considered
-      as a DYNAMIC character?
-    m_answers:
-    - m_text: Maglente
+    - m_text: They were crushed to death.
       m_isCorrect: 1
-    - m_text: Haring Sinukuan
+    - m_text: They were hit by flying stones.
       m_isCorrect: 0
-    - m_text: Rosa-Minda
-      m_isCorrect: 0
-    - m_text: Magat
-      m_isCorrect: 0
-  - m_stem: With one of his powerful hands, Sinukuan grasped and hurled all three
-      brothers towards Mount Makiling because of his fury. Which among the following
-      words is synonymous with the underlined word?
+  - m_stem: "<i>\"Enraged by their second failure, the three brothers used all of
+      their strength to kidnap Sinukuan\u2019s precious daughters and carried them
+      away in their horses.\"</i>\nGiven this scenario, what\u2019s the best word
+      to describe the way the three brothers behaved?"
     m_answers:
-    - m_text: Anger
-      m_isCorrect: 1
-    - m_text: Happiness
-      m_isCorrect: 0
-    - m_text: Anxiety
-      m_isCorrect: 0
-    - m_text: Fear
-      m_isCorrect: 0
-  - m_stem: "Enraged by their second failure, the three brothers used all of their
-      strength to kidnap Sinukuan\u2019s precious daughters and carried them away
-      in their horses. Given this scenario, what\u2019s the best word to describe
-      the way the three brothers behaved?"
-    m_answers:
-    - m_text: Irresponsible
-      m_isCorrect: 1
     - m_text: Childish
-      m_isCorrect: 0
-    - m_text: Wise
       m_isCorrect: 0
     - m_text: Respectful
       m_isCorrect: 0
-  - m_stem: Imagery in literature is a literary device that describes objects, actions,
-      and ideas in a way that appeals to the physical senses (sight, hearing, smell,
-      touch, taste) to help readers get a good and solid picture of the scene being
-      narrated. Which among the following is an example of imagery?
-    m_answers:
-    - m_text: Makiling took a huge pestle for pounding stones, and hurled it towards
-        Sinukuan. It hit the tip of Mt. Arayat, killing a lot of people with flying
-        stones.
+    - m_text: Irresponsible
       m_isCorrect: 1
-    - m_text: "\u201CFather would surely not allow this whole thing! The whole idea
-        is ridiculous.\u201D"
+    - m_text: Wise
       m_isCorrect: 0
-    - m_text: There was panic in the town. Everybody was crying.
-      m_isCorrect: 0
-    - m_text: "The brothers declared their love to the three daughters. However,
-        things didn\u2019t go exactly the way they imagined it."
-      m_isCorrect: 0
-  - m_stem: Metaphor, a figure of speech directly compares two objects which are
-      different from each other but shares a similar attribute. Which of the following
-      statements make use of a metaphor?
+  - m_stem: "In the selection, Haring Sinukuan, the father of Do\xF1a Maria, Rosalina,
+      and Rosa-Minda\r chased after the three sons of Makiling which lead to their
+      downfall. What can you infer\r from this scenario?"
     m_answers:
-    - m_text: "\u201CDo\xF1a Maria\u2019s radiant beauty is my morning sun.\u201D"
+    - m_text: Fathers are good at hunting bad people.
+      m_isCorrect: 0
+    - m_text: Fathers are tough.
+      m_isCorrect: 0
+    - m_text: Fathers are violent.
+      m_isCorrect: 0
+    - m_text: Fathers will do everything to protect their children.
       m_isCorrect: 1
-    - m_text: Sinukuan can be defeated because the three brothers are strong.
+  - m_stem: Based on the story, what might be a serious consequence of being violent?
+    m_answers:
+    - m_text: Loss of dignity
       m_isCorrect: 0
-    - m_text: Makiling had three sons who possessed an adventurous spirit.
+    - m_text: Loss of money
       m_isCorrect: 0
-    - m_text: "\u201COnce we return, prepare the finest meals in this palace. We\u2019ll
-        eat until our stomachs are full!\u201D"
+    - m_text: Loss of life
+      m_isCorrect: 1
+    - m_text: Loss of power
+      m_isCorrect: 0
+  - m_stem: "What prevailing moods triggered the tragic ending to this story which
+      caused not only the\r race of Makiling but also the lives of the innocent people
+      residing in the area?"
+    m_answers:
+    - m_text: Anger and Greed
+      m_isCorrect: 0
+    - m_text: Greed and Power
+      m_isCorrect: 0
+    - m_text: Anger and Pride
+      m_isCorrect: 1
+    - m_text: Pride and Greed
+      m_isCorrect: 0
+  - m_stem: Instead of resorting to violence, which among the following may be the
+      best alternate option if things go against your plan?
+    m_answers:
+    - m_text: Analyze the situation and rethink new strategies to make it work well.
+      m_isCorrect: 1
+    - m_text: Ask other people to do the job for you.
+      m_isCorrect: 0
+    - m_text: Just drop the matter and leave peacefully.
+      m_isCorrect: 0
+    - m_text: Sit on the floor and cry.
       m_isCorrect: 0
