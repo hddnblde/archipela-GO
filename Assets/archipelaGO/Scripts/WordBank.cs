@@ -43,6 +43,7 @@ namespace archipelaGO
             public string title => m_title;
             public string phoneticSpelling => m_phoneticSpelling;
             public PartOfSpeech partOfSpeech => m_partOfSpeech;
+            public string partOfSpeechAbridged => AbbreviatePartOfSpeech(m_partOfSpeech);
             public AudioClip pronunciationClip => m_pronunciation;
             public string definition => m_definition;
             #endregion
@@ -88,6 +89,33 @@ namespace archipelaGO
 
             private List<string> GetSortedListOfKeywords() =>
                 m_keywords.OrderByDescending(key => key.Length).ToList();
+
+            private string AbbreviatePartOfSpeech(PartOfSpeech partOfSpeech)
+            {
+                switch (partOfSpeech)
+                {
+                    case PartOfSpeech.Noun:
+                        return "n.";
+
+                    case PartOfSpeech.Pronoun:
+                        return "pron.";
+
+                    case PartOfSpeech.Adjective:
+                        return "adj.";
+
+                    case PartOfSpeech.Verb:
+                        return "v.";
+
+                    case PartOfSpeech.Adverb:
+                        return "adv.";
+
+                    case PartOfSpeech.Conjuction:
+                        return "conj.";
+
+                    default:
+                        return string.Empty;
+                }
+            }
             #endregion
         }
 
@@ -98,7 +126,8 @@ namespace archipelaGO
             Pronoun = 1,
             Adjective = 2,
             Verb = 3,
-            Adverb = 4
+            Adverb = 4,
+            Conjuction = 5
         }
         #endregion
 
