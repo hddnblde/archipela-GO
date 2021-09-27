@@ -98,7 +98,7 @@ namespace archipelaGO.Puzzle
             new CrosswordPuzzlePiece(word, cells);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord) =>
-            new CrosswordHint(order, gridWord.direction, gridWord.word.definition);
+            new CrosswordHint(order, gridWord.direction, $"({ gridWord.word.partOfSpeechAbridged }) { gridWord.word.definition }");
 
         protected override string GenerateHintText(List<WordHint> hints)
         {
