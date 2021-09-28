@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4964ae67cdd6449b6d206331a79bf8, type: 3}
+  m_Name: HTWWM_VisualNovel
+  m_EditorClassIdentifier: 
+  m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
+  m_backgroundScenes:
+  - {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
+  m_plotlines:
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 96c921229e056ea40bb9b4e005d1cf53, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: f4b8f261b8e79ab409964cf41d80a6d0, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d33d125216c09b4418a7d28cd6e1e633, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: a5d6ebd560cdabb45beef5c80288ddf8, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: f9dec64355a1aef48a12bc56728fa3ae, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 774599a661ba5c0438df257bf5f3c2e8, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 0d87ffaeb6d502246801d51aa085a704, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: e4a58225cca005044952540c4e0939d1, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d04836dbf9ffbbe4f86ea3012363ff2a, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d139b2aaf0f1a4c4baf37c92fc83e52e, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 8d54453838aeeb6479784621edd7905a, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 0b44505d93b3799438f0d68569e9e067, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: e52364b2f7384a340be0d54b8bde450c, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: a24f0c5817f03364b93bddd5a5996f83, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 1823e166633a55642bd03e95b8227e8a, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 8a9a61a728e44af4fbb31dbc64bfe175, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 646eff2ca848ba449978e325f9b7cb00, type: 2}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ff910254d845947ac67cd858402628, type: 3}
+  m_Name: HTWWM_Characters
+  m_EditorClassIdentifier: 
+  m_characters:
+  - m_sprite: {fileID: 0}
+    m_name: Narrator
+  - m_sprite: {fileID: 0}
+    m_name: Captan (You)
+  - m_sprite: {fileID: 0}
+    m_name: Maguayan
+  - m_sprite: {fileID: 0}
+    m_name: Lihangin
+  - m_sprite: {fileID: 0}
+    m_name: Lidagat
+  - m_sprite: {fileID: 0}
+    m_name: Licalibutan
+  - m_sprite: {fileID: 0}
+    m_name: Liadlao
+  - m_sprite: {fileID: 0}
+    m_name: Libulan
+  - m_sprite: {fileID: 0}
+    m_name: Lisuga
