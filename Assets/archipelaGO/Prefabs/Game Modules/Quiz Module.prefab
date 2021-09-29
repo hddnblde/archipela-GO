@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_items: 10
+  m_timeDelayBeforeMovingToNextItem: 3.15
   m_choiceWindow: {fileID: 6214296514815039110}
 --- !u!223 &6214296513412119725
 Canvas:
@@ -1171,6 +1172,9 @@ MonoBehaviour:
   - {fileID: 6214296513161749829}
   - {fileID: 6214296514443473848}
   - {fileID: 6214296513375116910}
+  m_correctAnswerColor: {r: 0, g: 1, b: 0, a: 1}
+  m_incorrectAnswerColor: {r: 1, g: 0, b: 0, a: 1}
+  m_nonAnsweredColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &6214296514865375790
 GameObject:
   m_ObjectHideFlags: 0
