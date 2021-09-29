@@ -42,13 +42,19 @@ namespace archipelaGO.Puzzle
 
         private class WordHuntHint : WordHint
         {
-            public WordHuntHint (int order, string word) =>
-                (m_order, m_word) = (order, word);
+            public WordHuntHint (int order, string word, bool guessed)
+            {
+                m_order = order;
+                m_word = word;
+
+                if (guessed)
+                    m_word = $"<u>{ m_word }</u>";
+            }
 
             private int m_order;
             private string m_word;
 
-            public override string GetHint() => $"{ m_order }. { m_word }";
+            public override string GetHint() => $"{ m_word.ToUpper() }";
         }
         #endregion
 
@@ -76,8 +82,12 @@ namespace archipelaGO.Puzzle
         protected override PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells) =>
             new WordHuntPuzzlePiece(word, cells);
 
-        protected override WordHint GenerateHint(int order, GridWord gridWord) =>
-            new WordHuntHint(order, gridWord.word.title);
+        protected override WordHint GenerateHint(int order, GridWord gridWord)
+        {
+            bool guessed = AlreadyAnswered(gridWord.word.title);
+
+            return new WordHuntHint(order, gridWord.word.title, guessed);
+        }
 
         protected override string GenerateHintText(List<WordHint> hints)
         {
@@ -86,7 +96,7 @@ namespace archipelaGO.Puzzle
             foreach (WordHint hint in hints)
                 wordHuntHints.AppendLine(hint.GetHint());
 
-            return $"<b>Words</b>\n<i>{ wordHuntHints }</i>";
+            return $"<b>Words</b>\n{ wordHuntHints }";
         }
 
         protected override (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition) =>
@@ -168,6 +178,7 @@ namespace archipelaGO.Puzzle
         {
             m_cellDragBegan = false;
             VerifyAnswer(m_pendingWord);
+            SetUpHints();
         }
 
         private void OnCellPointerEnter(int column, int row)

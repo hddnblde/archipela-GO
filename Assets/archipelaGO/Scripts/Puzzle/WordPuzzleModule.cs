@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using Word = archipelaGO.WordBank.Word;
+using TMPro;
 
 namespace archipelaGO.Puzzle
 {
@@ -23,7 +24,7 @@ namespace archipelaGO.Puzzle
         private float m_padding = 50f;
 
         [SerializeField]
-        private Text m_hintText = null;
+        private TextMeshProUGUI m_hintText = null;
 
         private RectTransform m_rectTransform = null;
         private List<PuzzlePiece> m_pendingPieces = new List<PuzzlePiece>();
@@ -105,8 +106,10 @@ namespace archipelaGO.Puzzle
             SetUpWords(m_wordGrid);
         }
 
-        private void SetUpHints()
+        protected void SetUpHints()
         {
+            GenerateHints();
+
             if (m_hintText != null)
                 m_hintText.text = GenerateHintText(m_hints);
         }
@@ -133,6 +136,17 @@ namespace archipelaGO.Puzzle
             }
 
             return true;
+        }
+
+        protected bool AlreadyAnswered(string answer)
+        {
+            foreach (PuzzlePiece solvedPiece in m_solvedPieces)
+            {
+                if (solvedPiece.Matches(answer))
+                    return true;
+            }
+
+            return false;
         }
 
         protected PuzzlePiece GetSolvedPuzzlePiece(int index)
@@ -172,7 +186,6 @@ namespace archipelaGO.Puzzle
         {
             List<Vector2Int> plottedPoints = new List<Vector2Int>();
             m_pendingPieces.Clear();
-            m_hints.Clear();
 
             for (int i = 0; i < m_wordPuzzle.wordSize; i++)
             {
@@ -191,6 +204,19 @@ namespace archipelaGO.Puzzle
                 int wordIndex = plottedPoints.IndexOf(position) + 1;
                 PuzzlePiece puzzlePiece = GeneratePuzzlePiece(wordIndex, word.title, position, direction, grid);
                 m_pendingPieces.Add(puzzlePiece);
+            }
+        }
+
+        private void GenerateHints()
+        {            
+            m_hints.Clear();
+
+            for (int i = 0; i < m_wordPuzzle.wordSize; i++)
+            {
+                GridWord gridWord = m_wordPuzzle.GetWord(i);
+
+                if (gridWord == null)
+                    continue;
 
                 int orderNumber = (i + 1);
                 WordHint hint = GenerateHint(orderNumber, gridWord);
