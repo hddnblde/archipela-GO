@@ -17,9 +17,6 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private GameObject m_lineHintPrefab = null;
 
-        private Vector3 m_startCellWorldPosition = Vector3.zero,
-            m_endCellWorldPosition = Vector3.zero;
-
         private const string LettersInTheAlphabet =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -133,7 +130,7 @@ namespace archipelaGO.Puzzle
             }
         }
 
-        private void DrawLineHint(Vector3 startScreenPoint, Vector3 endScreenPoint)
+        private void DrawLineHint(Vector3 startPosition, Vector3 endPosition, float width)
         {
             if (m_lineHintPrefab == null)
                 return;
@@ -144,14 +141,14 @@ namespace archipelaGO.Puzzle
             if (lineHintImage == null)
                 return;
 
-            Vector3 direction = (endScreenPoint - startScreenPoint);
+            Vector3 direction = (endPosition - startPosition);
             float angle = Mathf.Rad2Deg * Mathf.Atan2(direction.y, direction.x);
             lineHintImage.rectTransform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
-            Vector3 midPoint = (startScreenPoint + endScreenPoint) / 2f;
+            Vector3 midPoint = (startPosition + endPosition) / 2f;
             lineHintImage.transform.position = midPoint;
-            float widthPadding = lineHintImage.rectTransform.rect.height;
-            lineHintImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, direction.magnitude + widthPadding);
+            // float widthPadding = lineHintImage.rectTransform.rect.height;
+            lineHintImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
         }
 
         private Vector2 WorldPositionToScreenPoint(Vector3 worldPosition)
@@ -201,7 +198,6 @@ namespace archipelaGO.Puzzle
             m_cellDragStartPosition = new Vector2Int(column, row);
             m_pendingWord = string.Empty;
             WordCell cell = GetCell(column, row);
-            m_startCellWorldPosition = cell.transform.position;
         }
 
         private void OnCellPressedUp(int column, int row)
@@ -209,7 +205,19 @@ namespace archipelaGO.Puzzle
             m_cellDragBegan = false;
 
             if (VerifyAnswer(m_pendingWord))
-                DrawLineHint(m_startCellWorldPosition, m_endCellWorldPosition);
+            {
+                WordCell startCell = GetCell(m_cellDragStartPosition);
+                WordCell endCell = GetCell(m_cellDragEndPosition);
+
+                RectTransform startCellRectTransform = startCell.transform as RectTransform;
+                RectTransform endCellRectTransform = endCell.transform as RectTransform;
+
+                Vector3 startCellWorldPosition = startCellRectTransform.transform.position;
+                Vector3 endCellWorldPosition = endCellRectTransform.transform.position;
+                float width = (endCellRectTransform.anchoredPosition3D - startCellRectTransform.anchoredPosition3D).magnitude;
+                float widthPadding = (startCellRectTransform.rect.width / 2f) + (endCellRectTransform.rect.width / 2f) - 8f;
+                DrawLineHint(startCellWorldPosition, endCellWorldPosition, width + widthPadding);
+            }
 
             SetUpHints();
         }
@@ -220,11 +228,9 @@ namespace archipelaGO.Puzzle
                 return;
 
             m_cellDragEndPosition = new Vector2Int(column, row);
-            
+
             List<Vector2Int> affectedCellPositions = GetCellPositions(m_cellDragStartPosition, m_cellDragEndPosition);
-            Vector2Int lastCellPosition = affectedCellPositions[affectedCellPositions.Count - 1];
-            WordCell lastCell = GetCell(lastCellPosition);
-            m_endCellWorldPosition = lastCell.transform.position;
+            m_cellDragEndPosition = affectedCellPositions[affectedCellPositions.Count - 1];
             m_pendingWord = GetWordFromAffectedCellPositions(affectedCellPositions);
         }
 
