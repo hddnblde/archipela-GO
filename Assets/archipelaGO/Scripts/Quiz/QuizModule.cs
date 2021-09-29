@@ -15,6 +15,9 @@ namespace archipelaGO.Quiz
         private int m_items = 10;
 
         [SerializeField]
+        private float m_delayBeforeMovingToNextItem = 3.15f;
+
+        [SerializeField]
         private ChoiceWindow m_choiceWindow = null;
 
         private QuizConfig m_quiz = null;
@@ -63,8 +66,6 @@ namespace archipelaGO.Quiz
 
             foreach ((string stem, string[] choices, int[] correctAnswers) question in questions)
             {
-                // (string stem, string[] choices, int correctAnswerIndex) problem = question.GetProblem();
-
                 WaitForChosenOption quizChoice =
                     m_choiceWindow.Show(question.stem, question.choices, false);
 
@@ -72,6 +73,10 @@ namespace archipelaGO.Quiz
 
                 if (question.correctAnswers.Contains(quizChoice.choiceIndex))
                     m_guessedCorrectAnswers++;
+
+                m_choiceWindow.ShowCorrectAnswer(quizChoice.choiceIndex, question.correctAnswers);
+                
+                yield return new WaitForSeconds(m_delayBeforeMovingToNextItem);
             }
 
             //TODO: clear screen
