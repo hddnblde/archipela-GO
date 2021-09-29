@@ -1,6 +1,7 @@
 using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using CursorEvent = archipelaGO.Puzzle.WordCell.CursorEvent;
 using CursorState = archipelaGO.Puzzle.WordCell.CursorState;
@@ -10,6 +11,15 @@ namespace archipelaGO.Puzzle
     public class WordHuntPuzzleModule : WordPuzzleModule
     {
         #region Fields
+        [SerializeField]
+        private RectTransform m_lineHintParent = null;
+
+        [SerializeField]
+        private GameObject m_lineHintPrefab = null;
+
+        private Vector3 m_startCellWorldPosition = Vector3.zero,
+            m_endCellWorldPosition = Vector3.zero;
+
         private const string LettersInTheAlphabet =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -26,18 +36,7 @@ namespace archipelaGO.Puzzle
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
             public WordHuntPuzzlePiece(string word, WordCell[] cells) : base(word, cells) {}
-
-            public override void Reveal()
-            {
-                if (m_cells == null)
-                    return;
-
-                foreach (WordCell cell in m_cells)
-                {
-                    if (cell != null)
-                        cell.SetAsHighlighted(true);
-                }
-            }
+            public override void Reveal() {}
         }
 
         private class WordHuntHint : WordHint
@@ -133,6 +132,35 @@ namespace archipelaGO.Puzzle
                     solvedPiece.Reveal();
             }
         }
+
+        private void DrawLineHint(Vector3 startScreenPoint, Vector3 endScreenPoint)
+        {
+            if (m_lineHintPrefab == null)
+                return;
+            
+            GameObject lineHintGameObject = Instantiate(m_lineHintPrefab, m_lineHintParent);
+            Image lineHintImage = lineHintGameObject.GetComponent<Image>();
+
+            if (lineHintImage == null)
+                return;
+
+            Vector3 direction = (endScreenPoint - startScreenPoint);
+            float angle = Mathf.Rad2Deg * Mathf.Atan2(direction.y, direction.x);
+            lineHintImage.rectTransform.rotation = Quaternion.Euler(Vector3.forward * angle);
+
+            Vector3 midPoint = (startScreenPoint + endScreenPoint) / 2f;
+            lineHintImage.transform.position = midPoint;
+            float widthPadding = lineHintImage.rectTransform.rect.height;
+            lineHintImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, direction.magnitude + widthPadding);
+        }
+
+        private Vector2 WorldPositionToScreenPoint(Vector3 worldPosition)
+        {
+            if (Camera.main == null)
+                return Vector3.zero;
+
+            return Camera.main.WorldToScreenPoint(worldPosition);
+        }
         #endregion
 
 
@@ -172,12 +200,17 @@ namespace archipelaGO.Puzzle
             m_cellDragBegan = true;
             m_cellDragStartPosition = new Vector2Int(column, row);
             m_pendingWord = string.Empty;
+            WordCell cell = GetCell(column, row);
+            m_startCellWorldPosition = cell.transform.position;
         }
 
         private void OnCellPressedUp(int column, int row)
         {
             m_cellDragBegan = false;
-            VerifyAnswer(m_pendingWord);
+
+            if (VerifyAnswer(m_pendingWord))
+                DrawLineHint(m_startCellWorldPosition, m_endCellWorldPosition);
+
             SetUpHints();
         }
 
@@ -187,7 +220,11 @@ namespace archipelaGO.Puzzle
                 return;
 
             m_cellDragEndPosition = new Vector2Int(column, row);
+            
             List<Vector2Int> affectedCellPositions = GetCellPositions(m_cellDragStartPosition, m_cellDragEndPosition);
+            Vector2Int lastCellPosition = affectedCellPositions[affectedCellPositions.Count - 1];
+            WordCell lastCell = GetCell(lastCellPosition);
+            m_endCellWorldPosition = lastCell.transform.position;
             m_pendingWord = GetWordFromAffectedCellPositions(affectedCellPositions);
         }
 
