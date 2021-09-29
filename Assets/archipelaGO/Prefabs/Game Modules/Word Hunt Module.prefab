@@ -30,6 +30,7 @@ RectTransform:
   m_Children:
   - {fileID: 3371227761944687438}
   - {fileID: 3371227762883929273}
+  - {fileID: 243199724011054529}
   m_Father: {fileID: 3371227761404012632}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -149,6 +150,8 @@ MonoBehaviour:
   m_cellContainer: {fileID: 3371227762883929223}
   m_padding: 50
   m_hintText: {fileID: 2251810266785520429}
+  m_lineHintParent: {fileID: 243199724011054529}
+  m_lineHintPrefab: {fileID: 2077448971213940056, guid: df1f732b3b0435745a4d4e6d249b201f, type: 3}
 --- !u!223 &3371227761586521546
 Canvas:
   m_ObjectHideFlags: 0
@@ -610,6 +613,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!1 &7603039636771213088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243199724011054529}
+  m_Layer: 5
+  m_Name: Hint Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &243199724011054529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603039636771213088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3371227761313483953}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 600, y: 0}
+  m_SizeDelta: {x: 0, y: -1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &5357238815487045932
 PrefabInstance:
   m_ObjectHideFlags: 0
