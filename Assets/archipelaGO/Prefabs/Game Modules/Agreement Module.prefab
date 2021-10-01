@@ -1,0 +1,1503 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7047377835819149978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377835819149979}
+  - component: {fileID: 7047377835819149977}
+  - component: {fileID: 7047377835819149976}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377835819149979
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835819149978}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7047377837063979215}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377835819149977
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835819149978}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377835819149976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835819149978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 61
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 78
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Accept
+--- !u!1 &7047377835864715535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377835864715532}
+  - component: {fileID: 7047377835864715523}
+  - component: {fileID: 7047377835864715522}
+  - component: {fileID: 7047377835864715533}
+  m_Layer: 5
+  m_Name: Decline Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377835864715532
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835864715535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836891971491}
+  m_Father: {fileID: 7047377836989148701}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: 0}
+  m_SizeDelta: {x: -60, y: -30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377835864715523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835864715535}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377835864715522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835864715535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7047377835864715533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377835864715535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 0.2278016, b: 0.031372547, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.4620159, b: 0.3254717, a: 1}
+    m_PressedColor: {r: 0.6226415, g: 0.12604079, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 7047377835864715522}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7047377836006889276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836006889277}
+  - component: {fileID: 7047377836006889267}
+  - component: {fileID: 7047377836006889266}
+  m_Layer: 5
+  m_Name: Text Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836006889277
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836006889276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377837099260138}
+  m_Father: {fileID: 7047377836241285842}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.2}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -13.75}
+  m_SizeDelta: {x: -80, y: -52.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377836006889267
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836006889276}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836006889266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836006889276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7047377836241285853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836241285842}
+  - component: {fileID: 7047377836241285840}
+  - component: {fileID: 7047377836241285843}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836241285842
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836241285853}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836006889277}
+  - {fileID: 7047377836989148701}
+  m_Father: {fileID: 7047377836545051948}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377836241285840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836241285853}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836241285843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836241285853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7047377836545051951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836545051948}
+  - component: {fileID: 7047377836545051938}
+  - component: {fileID: 7047377836545051949}
+  m_Layer: 5
+  m_Name: Agreement Module
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836545051948
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836545051951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836241285842}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &7047377836545051938
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836545051951}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7047377836545051949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836545051951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a666fde5203c41a06315096837ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resetChoices: 0
+  m_EULA: {fileID: 4900000, guid: 9fad8715fa774284a888845414ad4e52, type: 3}
+  m_privacyPolicy: {fileID: 4900000, guid: aeefbbc62760f4f4e9f74b1a4655c494, type: 3}
+  m_scrollRect: {fileID: 0}
+  m_agreementText: {fileID: 7047377836794963008}
+  m_acceptButton: {fileID: 7047377837063979212}
+  m_declineButton: {fileID: 7047377835864715533}
+--- !u!1 &7047377836621715595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836621715592}
+  - component: {fileID: 7047377836621715599}
+  - component: {fileID: 7047377836621715598}
+  - component: {fileID: 7047377836621715593}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836621715592
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836621715595}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836794963010}
+  m_Father: {fileID: 7047377837099260138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &7047377836621715599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836621715595}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836621715598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836621715595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7047377836621715593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836621715595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!1 &7047377836769339526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836769339527}
+  - component: {fileID: 7047377836769339525}
+  - component: {fileID: 7047377836769339524}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836769339527
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836769339526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7047377837531736106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377836769339525
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836769339526}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836769339524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836769339526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7047377836794963021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836794963010}
+  - component: {fileID: 7047377836794963009}
+  - component: {fileID: 7047377836794963011}
+  - component: {fileID: 7047377836794963008}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836794963010
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836794963021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7047377836621715592}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 45, y: 0}
+  m_SizeDelta: {x: -80, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &7047377836794963009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836794963021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!222 &7047377836794963011
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836794963021}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836794963008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836794963021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "<b>END-USER LICENSE AGREEMENT</b>\r\n\r\nThis End-User License Agreement
+    (EULA) describes the terms of the agreement reached between customers (hereinafter
+    \"you\") who use \"ArchipelaGO!\" (hereinafter, the \"Application\") and MG Escoto
+    (hereinafter, \"MGE\"). Prior to the use of this Application, you must agree
+    to the terms of this EULA.\r\n\r\nThe application is not sold to you; it is licensed
+    to you. The terms used in this agreement may include the provisions under the
+    Republic Act No. 8293 or the Intellectual Property Code of the Philippines. An
+    Act Prescribing the Intellectual Property Code and Establishing the Intellectual
+    Property Office, Providing for Its Powers and Functions.\r\n\r\n<b>I. LIMITED
+    LICENSE CONDITIONS</b>\r\n\r\nMGE grants you a non-exclusive, non-transferable,
+    limited license to install and use the Application on a single device for non-commercial
+    purposes (hereinafter, the \"License\"), in accordance with the terms of use
+    shown on the Application's download site (hereinafter, the \"Sale and Service
+    Terms\"). The License granted to you is conditional upon your compliance with
+    this EULA. Any commercial use of the Application is strictly forbidden. Copying,
+    renting, leasing, transferring, publicly publishing, or otherwise disseminating
+    the downloaded Application, as well as transferring or sub-licensing the Application's
+    rights, is strictly prohibited. The duration of the License that you have been
+    issued with begins on the date you install or use the Application and ends on
+    the date you dispose of the Application or MGE terminates the License, whichever
+    comes first.\r\n\r\nAfter one year of inactivity, MGE reserves the right to delete
+    any user data. If you attempt to avert the Application's security measures, the
+    License granted to you will be immediately terminated.\r\n\r\n<b>1. Restrictions</b>\r\n\r\nExcept
+    as expressly authorized under this EULA, your right to use the Application is
+    limited to the scope of the License granted above; hence, you maynot duplicate,
+    exhibit, disable, distribute, perform, publish, or modify the Application or
+    any of its components, or create derivative works from the Application, without
+    the prior written consent of MGE. Unless specifically approved by the owner,
+    you are also prohibited from making copies of the Application available on a
+    network where it could be accessed by many users.\r\n\r\nThe intellectual property
+    rights granted to you under this EULA are restricted to those held by MGE and
+    its licensors with respect to the Application, and do not include any rights
+    to other patents or intellectual property. You may not decompile, disassemble,
+    or reverse-engineer the Application or any of its components in any way unless
+    permitted by law.\r\n\r\nAny product identification, copyright, or other intellectual
+    property right disclosures (including but not limited to trademarks and logos)
+    and any other legends made by MGE in the Application must not be removed, altered,
+    or rendered illegible by you. If your use of the Application includes the use
+    of a third party's rights and that third party demands that you comply with its
+    terms of use, you must comply with those terms of use when using the Application.\r\n\r\n<b>2.
+    Reservation of Rights</b>\r\n\r\nExcept for the rights expressly licensed or
+    granted to you herein, MGE reserves all rights in the\r\nApplication, including
+    all copyrights, trademarks, other intellectual property rights, and publicity
+    rights\r\n(which includes, but is not limited to, all characters, narratives,
+    photos, photographs, animations, music,\r\nand texts).\r\n\r\n<b>3. Your Contributions</b>\r\n\r\nYou
+    may contribute to the Application and related goods and services (including,
+    but not limited to, any and all ideas and creations; hereinafter the same) if
+    expressly approved in the Application. If your contribution, as a result of your
+    use of the Application, gives rise to any copyright or other intellectual property
+    rights (including the right to obtain any intellectual property rights; hereinafter
+    the same), you must provide MGE all of the aforementioned rights of use gratuitously.\r\n\r\nThe
+    rights include the right to copy, adapt, modify, perform, display, publish, broadcast,
+    record, videotape, play, distribute, publicly transmit, or otherwise communicate
+    your contributions to the public through any means, now known or unknown, and
+    to distribute your contributions without notice or compensation for the entire
+    term of intellectual property protection granted to you. You expressly forgot
+    your right to such notification or compensation, even if it is required by law.\r\n\r\nUnder
+    the law anent this EULA, you agree not to exercise any moral rights of an author
+    or other rights with respect to MGE's and other players' use and enjoyment of
+    your contributions in connection with the application and connected goods and
+    services.\r\n\r\nSuch provision governing the non-exercise of an author's and
+    others' moral rights shall survive the expiration of the effective term hereof
+    applicable to you.\r\n\r\nYour contributions made through the application shall
+    be limited to those conceived, invented, devised, or created solely by you, and
+    if MGE receives any claim or demand from a co-idea provider, co-inventor, co-deviser,
+    or co-creator, or from any third-party who provided an idea for, invented, devised,
+    or created such contribution, in connection with the use and licensing of such
+    contributions to a third-party, you agree to release MGE from liability and to
+    bear all costs and expenses associated with resolving such claim or demand.\r\n\r\n<b>4.
+    Access</b>\r\n\r\nTo download and use the Application, you must provide your
+    own equipment, Internet connections, mobile devices, and/or service plans. MGE
+    makes no representations or warranties regarding the Application's accessibility
+    from all wireless devices or its compatibility with any of the wireless carriers'
+    services.\r\n\r\nMGE makes no guarantee that the Application will be available
+    for download in all geographic locations. You are believed to have acknowledged
+    that when you use the Application. Your wireless carrier may charge you for data,
+    messaging, and/or other wireless access. Please contact your wireless provider
+    to determine the charges that apply to you. You are responsible for all fees
+    associated with downloading the application from your mobile device.\r\n\r\n<b>II.
+    CONSENT TO USE OF DATA</b>\r\n\r\nYou agree that MGE may collect, use, store,
+    transmit, and otherwise utilise non-personally identifiable technical and related
+    information about your mobile device, operating system, application software,
+    and peripheral hardware to allow product support and other customer services.
+    Additionally, MGE may collect, use, store, transmit, and otherwise make use of
+    non-personally identifiable statistics about the application and any services
+    associated with it (collectively, the \u201CServices\").\r\n\r\nMGE may use,
+    store, transmit, and make other uses of this information and the aggregate in
+    order to improve their goods and services, and MGE may also share anonymous aggregate
+    data with its affiliates and third-party service providers.\r\n\r\n<b>III. IN-GAME
+    ADVERTISING</b>\r\n\r\nThe application may have a feature that allows a third-party
+    to display in-game advertisements during future upgrades that are periodically
+    uploaded with new material to your mobile device while you are online.\r\n\r\nWhile
+    you are using the Application, MGE may use information logged from your device,
+    such as your age and gender, to guarantee that the appropriate advertisement
+    is presented within the application and to determine the number of the advertisements'
+    accumulated views.\r\n\r\nThe IP address, unique device identification number,
+    manufacturer, and model of your mobile device are all logged, as is your (in-game)
+    location, the duration of the advertisement's visibility, the size of the advertisement,
+    and your response to the commercial (if any). Except for the advertisement suppliers
+    and assignees approved by MGE, the only logged data that may be accessible to
+    parties is the aggregate number of views the relevant advertisement received,
+    in an anonymous form.\r\n\r\nIf you do not intend to receive such advertisements
+    or for the aforementioned information to be used in this manner, please refrain
+    from using the Application.\r\n\r\n<b>IV. ID MANAGEMENT, ETC.</b>\r\n\r\nYou
+    may utilize the Application's downloadable service by entering an ID issued to
+    you by MGE or a third-party designated by MGE (hereafter, \"ID\").\r\n\r\nMGE
+    shall not retain any ID or password supplied by a third-party designated by MGE.
+    You are solely responsible for the ID's management.\r\n\r\nAs a result, all use
+    of the services via the ID is presumed to be by you, and you are responsible
+    for all usage costs and other obligations. You are expressly barred from accessing
+    the services using any other ID than your own ( for example, any idea of an existing
+    or fictional third-party).\r\n\r\n<b>V. PROHIBITED ACTS</b>\r\n\r\nBy using the
+    services, you agree not to engage in any activity that violates or may violate
+    any of the following (collectively, \" Prohibited Act\").\r\n\r\nIf MGE reasonably
+    believes you have committed a Prohibited Act, you will be deemed to have materially
+    broken this Agreement, and MGE may immediately remove the relevant portion of
+    the Agreement or prevent you from accessing the Services without notifying you.\r\n\r\nIf
+    MGE determines that disclosure and provision to a court, a public prosecutor's
+    office, the police, a local government, or other institution authorized under
+    this section is necessary for the purpose of protecting MGE's rights, property,
+    and other assets, to protect against criminal acts, and to protect human life,
+    body, and property, among other things, and to promote the healthy growth and
+    protection of children, MGE may disclose and provide to a court, a public prosecutor's
+    office, the police, a local government, or any other institution authorized by
+    applicable laws and regulations, your log-in information, mobile device terminal
+    information, service link-up information, and other relevant information even
+    without your permission.\r\n\r\n1. Unpleasant language or behaviour directed
+    at other customers, or credit-damaging or libelous language or conduct directed
+    against other customers or third parties, such as slander or spreading false
+    stories about other customers or third parties;\r\n2. Sexually suggestive language
+    or conduct, threatening language or conduct, violence language or conduct , racially
+    prejudicial language or conduct, discriminatory language or conduct, illegal
+    language or conduct, vulgar language or conduct, obscene language or conduct,
+    defamatory language or conduct, or any other objectionable language or conduct;\r\n3.
+    Impersonation of an officer or other member of staff involved in the development
+    of this Application;\r\n4. Formation of an action by a group (clan) with prejudice
+    beliefs based on religion, ethnicity, gender, ethnic groups, human rights, or
+    any other prejudice views, or engaging in group solicitation, exchanges of illegal
+    commodities, or religious activity for the sake of commercial activity;\r\n5.
+    Any conduct that violates international law, the constitution, state statutes,
+    municipal ordinances, or any other rules or regulations;\r\n6. Any act that infringes
+    or may infringe against MGE's or third-parties' copyright, trademark, or other
+    proprietary rights;\r\n7. Falsification, deletion, unauthorized access to, and
+    unauthorized use of the Application via all types of tools, impersonation of
+    an existing or fictional party ( including the use of another party's ID ), and
+    similar acts with respect to the information reflected in the Application.\r\n8.
+    Any act that collects or has the potential to collect, or stores or has the potential
+    to store, personal information about other customers or third parties;\r\n9.
+    Any and all acts whose primary objective, in the opinion of MGE, is to participate
+    in or cause meetings, contacts, or other interactions with acquaintances of the
+    opposite sex;\r\n10. Any act intended to facilitate sexual relations or immoral
+    actions;\r\n11. Any act that promotes or motivates juveniles to flee their homes;\r\n12.
+    Any act that is considered to have a detrimental effect on or to obstruct the
+    development of minors' character;\r\n13. Any application that displays or transmits
+    material equating to child pornography or child abuse, or any act that sells
+    media containing such information, or that which displays or transmits any advertisement
+    equating to the transmission, displaying, or sale thereof;\r\n14. Any act of
+    writing things that invite minors to be opposite sex dating partners, or any
+    act of writing things that invite adults to be children's opposite sex dating
+    partners;\r\n15. Any conduct contrary to public order and morals, or the instigation
+    or assistance in the commission of such an act, or any act that may result in
+    such an act, or the instigation or assistance in the commission of such an act;\r\n16.
+    Any act associated with illegal acts (transfer of pistols or other items, manufacture
+    of explosives, provision of child pornography, forgery of official documents,
+    murder, intimidation, betting, gambling, fraud, misuse of a controlled substance,
+    child prostitution, illegal sale of financial accounts and mobile phones, etc.
+    ), or the instigation or assistance of such acts, or any act that results in
+    the death of another person.\r\n17. Any act associated with suicide or self-incrimination,
+    or the instigation or assistance of such acts, or any act that may result in
+    such connection, instigation, or assistance;\r\n18. Rent, transfer, name change,
+    sale, pawning, or granting a permit for the use of the Application's ID and gaming
+    data to third parties, as well as provision thereof as security;\r\n19. Utilization
+    of the application for purposes other than those specified by MGE;\r\n20. Apart
+    from the acts specified in the preceding paragraphs, any and all acts that have
+    harmed or may harm MGE and the management side of the Services;\r\n21. Acts that
+    relate to each of the preceding items;\r\n22. Other acts that MGE deems to be
+    forbidden which are notified and disclosed to you.\r\n\r\n<b>VI. DISCLAIMER OF
+    WARRANTIES</b>\r\n\r\nUnless otherwise specified by law, the Application is given
+    \"as is,\" may contain errors, and is used at your own risk without warranty
+    of any sort, assurances, or guarantees.\r\n\r\nYou bear all risks associated
+    with satisfactory quality and performance. MGE makes no express, implied, or
+    statutory warranties, including implied warranties of condition, uninterrupted
+    use, merchantability, satisfactory quality, fitness for a particular purpose,
+    and non-infringement of third party rights in the Application, as well as warranties
+    (if any) arising out of a transaction, usage, or trade practice.\r\n\r\nHence,
+    MGE makes no warranty that the Application will not be interfered with in any
+    way. For an instance, it makes no guarantee that the Application will meet your
+    requirements, that it will operate without interruption or error, that it will
+    be compatible with or interoperate with any other application, that any errors
+    in the Application will be corrected, or that the Application will be available
+    for reinstallation in the same or multiple telecommunications devices.\r\n\r\nMoreover,
+    MGE makes no guarantee that data created and obtained by you (including, but
+    not limited to, in-game items of the game, or other data) while using the Application
+    will not be lost for any reason or cause.\r\n\r\nMGE or any authorized representative
+    or employee of MGE makes no warranty, expressed or implied. As some jurisdictions
+    do not permit the exclusion of our implied warranties or limitations on consumers'
+    statutory rights, the foregoing exclusions and limitations may not apply to you
+    in jurisdictions where the said exclusion of or limitations on implied warranties
+    or limitations on consumers' statutory rights conflict with the foregoing.\r\n\r\n<b>VII.
+    LIMITATION OF LIABILITY</b>\r\n\r\nUnless otherwise caused by MGE's willful conduct
+    or gross negligence, MGE shall not be liable to you for any personal injury,
+    property damage, lost profits, cost of substitute goods or services, loss of
+    data, loss of credibility, work stoppage, device failure or malfunction, or any
+    other form of direct or indirect, special, incidental, consequential, or exemplary
+    damages.\r\n\r\nDue to the fact that some jurisdictions do not permit a limitation
+    of liability for death, personal injury, fraudulent misrepresentation, or certain
+    intentional or negligent acts, or violations of specific statutes, or a limitation
+    on incidental or consequential damages, the preceding exclusions and limitations
+    may not apply to you in places where they contravene with applicable laws or
+    court judgments.\r\n\r\nMGE's total liability to you for all damages (except
+    as otherwise required by law) shall in no event exceed the amount actually paid
+    by you for the Application, and in the case where the Application and this Service
+    are provided free of charge, MGE shall be under no obligation to compensate you
+    in any way.\r\n\r\n<b>VIII. INJUNCTIVE RELIEF</b>\r\n\r\nYou acknowledge that
+    a breach of this Agreement will result in irreparable harm to MGE for which monetary
+    damages would be insufficient compensation. In addition to any other remedies
+    available to MGE under this Agreement or at law, MGE may seek temporary relief
+    (provisional measures) to prevent such breach without requiring you to provide
+    money or other security or proof of damage.\r\n\r\n<b>IX. GOVERNING LAW AND JURISDICTION</b>\r\n\r\nThis
+    agreement and your use of the application shall be governed by the laws of the
+    Philippines.\r\n\r\n<b>X. ENTIRE AGREEMENT</b>\r\n\r\nUnless otherwise specified
+    in this Agreement, this Agreement comprises the complete agreement between you
+    and MGE with respect to the Application and replaces any prior or contemporaneous
+    understandings with respect to the Agreement's subject matter. No failure or
+    delay on the part of either party in exercising any right or authority under
+    this agreement shall be construed as a waiver thereof, nor shall any single or
+    partial exercise of any right or authority under this agreement preclude further
+    exercise of any other right or authority under this agreement.\r\n\r\n<b>XI.
+    HANDLING OF PERSONAL INFORMATION</b>\r\n\r\nWith regards to the application,
+    MGE recognizes the value of your personal information and its social responsibility
+    to protect it; as such, it makes every effort to appropriately handle personal
+    information in line with applicable laws and regulations, as well as the accompanying
+    privacy policy.\r\n\r\nAdditionally, MGE will constantly assess its efforts to
+    ensure that personal information is protected efficiently.\r\n\r\nAs such, MGE
+    aims to establish suitable security measures to prevent unauthorized access to,
+    loss, destruction, falsification, and leakage of personal information, as well
+    as other similar acts. Additionally, with regards to the sharing of personal
+    information to other parties, MGE will never entrust, provide, or reveal your
+    personal information anddata included in the Application to third parties, save
+    in the following circumstances:\r\n\r\n1. Your consent is obtained;\r\n2. The
+    handling of personal data is entrusted to MGE only to the extent necessary to
+    perform the services provided by MGE;\r\n3. In accordance with applicable laws
+    and regulations;\r\n4. There is a requirement to safeguard human life, body,
+    or property, and obtaining your consent is challenging;\r\n5. It is critical
+    to improve public health or to support healthy child development, and securing
+    your consent is challenging; or\r\n6. When MGE is required to collaborate in
+    the management of administrative affairs by a national body, a local public authority,
+    or their entrustee pursuant to applicable laws and regulations, the administration
+    of said affairs may be distributed with your consent.\r\n\r\n<b>XII. REVISED
+    TERMS</b>\r\n\r\nMGE reserves the right, without previous notice to the user,
+    to modify the terms of this Agreement at any time and for any reason.\r\n\r\nChanges
+    to this EULA will take effect immediately upon notification by MGE via the Application.
+    If you continue to use our service after we make changes to this Agreement, you
+    are deemed to have consented to all of the new terms.\r\n\r\nIf the agreement
+    is amended or altered, you will remain subject to the terms and conditions you
+    previously agreed to while using the Application.\r\n\r\n<b>XIII. TERMINATION
+    OF SERVICES</b>\r\n\r\nMGE will notify you thirty (30) days in advance of terminating
+    the Service. After that, any content provided through the Service will be erased.\r\n\r\nCreated:
+    25.09.2021"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7047377836891971490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836891971491}
+  - component: {fileID: 7047377836891971489}
+  - component: {fileID: 7047377836891971488}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836891971491
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836891971490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7047377835864715532}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377836891971489
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836891971490}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377836891971488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836891971490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 61
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 78
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Decline
+--- !u!1 &7047377836989148700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377836989148701}
+  m_Layer: 5
+  m_Name: Buttons Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377836989148701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377836989148700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377837063979215}
+  - {fileID: 7047377835864715532}
+  m_Father: {fileID: 7047377836241285842}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.2}
+  m_AnchoredPosition: {x: 0, y: 6.25}
+  m_SizeDelta: {x: -50, y: -37.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7047377837030502029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377837030502018}
+  - component: {fileID: 7047377837030502017}
+  - component: {fileID: 7047377837030502016}
+  - component: {fileID: 7047377837030502019}
+  m_Layer: 5
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377837030502018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837030502029}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377837531736106}
+  m_Father: {fileID: 7047377837099260138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 58, y: 0}
+  m_Pivot: {x: 1, y: 1}
+--- !u!222 &7047377837030502017
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837030502029}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377837030502016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837030502029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7047377837030502019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837030502029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 7047377836769339524}
+  m_HandleRect: {fileID: 7047377836769339527}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.06385967
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7047377837063979214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377837063979215}
+  - component: {fileID: 7047377837063979202}
+  - component: {fileID: 7047377837063979213}
+  - component: {fileID: 7047377837063979212}
+  m_Layer: 5
+  m_Name: Accept Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377837063979215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837063979214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377835819149979}
+  m_Father: {fileID: 7047377836989148701}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: -60, y: -30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377837063979202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837063979214}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377837063979213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837063979214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7047377837063979212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837063979214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.05014179, g: 1, b: 0.033018887, a: 1}
+    m_HighlightedColor: {r: 0.514743, g: 1, b: 0.504717, a: 1}
+    m_PressedColor: {r: 0.011840203, g: 0.5849056, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 7047377837063979213}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7047377837099260117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377837099260138}
+  - component: {fileID: 7047377837099260137}
+  - component: {fileID: 7047377837099260136}
+  - component: {fileID: 7047377837099260139}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377837099260138
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837099260117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836621715592}
+  - {fileID: 7047377837030502018}
+  m_Father: {fileID: 7047377836006889277}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7047377837099260137
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837099260117}
+  m_CullTransparentMesh: 1
+--- !u!114 &7047377837099260136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837099260117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7047377837099260139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837099260117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 7047377836794963010}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 7047377836621715592}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 7047377837030502019}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7047377837531736085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047377837531736106}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7047377837531736106
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047377837531736085}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7047377836769339527}
+  m_Father: {fileID: 7047377837030502018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
