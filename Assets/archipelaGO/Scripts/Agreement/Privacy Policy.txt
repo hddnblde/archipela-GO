@@ -1,0 +1,48 @@
+<b>PRIVACY POLICY</b>
+
+“ArchipelaGO!” and I, Mary Grace Escoto, the application's designer, realize both our obligation and the gravity of protecting client information. We are conscientious about appropriately handling all personal information by adhering to all applicable laws and standards, as indicated in the following personal information protection policy. Additionally, we update linked projects on a regular basis to ensure our effectiveness and the protection of personal information.
+
+<b>I. PURPOSE OF INFORMATION ACQUIREMENT</b>
+
+As part of our app and service, we use users' information in the following ways. Additionally, it is the users' responsibility to disclose this information to us. If the user refuses to supply us with some or all of the required information, the app or portions of the app may be inaccessible.
+
+<b>1. E-mail Address</b>
+
+Your email address is used just for account verification, recovery, and (very infrequently) critical account information. We do not use email to communicate site updates, announcements, or other information. In the future, if such features are added, they will be explicitly opt-in. Your email address will never be given to a third party.
+
+<b>2. IP address and list of active sessions</b>
+
+These are used for the detection and prevention of misuse, as well as account security. This data is never disclosed to third parties.
+
+<b>3. Personal Information Protection</b>
+
+We will implement appropriate security measures to protect the customer's personal information from destruction, alteration, leakage, and other unauthorized access in accordance with RA 10173 or the Philippines' Data Privacy Act of 2012 (DPA) where it aims to: “protect the fundamental human right to privacy of communication while ensuring free flow of information to promote innovation and growth [and] the [State’s] inherent obligation to ensure that personal information in information and communications systems in government and in the private sector are secured and protected”.
+
+<b>4. Disclosure of Personal Information to Third Parties</b>
+
+We will never share or reveal any of the customer's personal information submitted to us via this application to other parties, save in the following circumstances:
+
+a. Your consent is obtained;
+b. The handling of personal data is entrusted to MGE only to the extent necessary to perform the services provided by MGE;
+c. In accordance with applicable laws and regulations;
+d. There is a requirement to safeguard human life, body, or property, and obtaining your consent is challenging;
+e. It is critical to improve public health or to support healthy child development, and securing your consent is challenging; or
+f. When MGE is required to collaborate in the management of administrative affairs by a national body, a local public authority, or their entrustee pursuant to applicable laws and regulations, the administration of said affairs may be distributed with your consent.
+
+<b>5. Disclosure, Revision, Cessation etc. of Personal Information</b>
+
+If a client requests the disclosure, cessation, or deletion of personal information provided with our team, we will reply promptly and appropriately after verifying the customer's identification.
+
+<b>6. Suspension and Deletion of Personal Information</b>
+
+If a client wishes to request disclosure, revision, or deletion of personal information shared with our team, please contact us at lms.smarteducation@gmail.com. We will reply promptly and appropriately after verifying the customer's identification.
+
+Additionally, we reserve the right to withhold information on the method(s) by which we will delete customer information from our servers from our end-users.
+
+<b>7. Contact Details</b>
+
+All requests for personal information should be directed to:
+ArchipelaGO!
+lms.smarteducation@gmail.com
+
+Enacted: 25.09.2021

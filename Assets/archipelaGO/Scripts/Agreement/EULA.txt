@@ -1,0 +1,160 @@
+<b>END-USER LICENSE AGREEMENT</b>
+
+This End-User License Agreement (EULA) describes the terms of the agreement reached between customers (hereinafter "you") who use "ArchipelaGO!" (hereinafter, the "Application") and MG Escoto (hereinafter, "MGE"). Prior to the use of this Application, you must agree to the terms of this EULA.
+
+The application is not sold to you; it is licensed to you. The terms used in this agreement may include the provisions under the Republic Act No. 8293 or the Intellectual Property Code of the Philippines. An Act Prescribing the Intellectual Property Code and Establishing the Intellectual Property Office, Providing for Its Powers and Functions.
+
+<b>I. LIMITED LICENSE CONDITIONS</b>
+
+MGE grants you a non-exclusive, non-transferable, limited license to install and use the Application on a single device for non-commercial purposes (hereinafter, the "License"), in accordance with the terms of use shown on the Application's download site (hereinafter, the "Sale and Service Terms"). The License granted to you is conditional upon your compliance with this EULA. Any commercial use of the Application is strictly forbidden. Copying, renting, leasing, transferring, publicly publishing, or otherwise disseminating the downloaded Application, as well as transferring or sub-licensing the Application's rights, is strictly prohibited. The duration of the License that you have been issued with begins on the date you install or use the Application and ends on the date you dispose of the Application or MGE terminates the License, whichever comes first.
+
+After one year of inactivity, MGE reserves the right to delete any user data. If you attempt to avert the Application's security measures, the License granted to you will be immediately terminated.
+
+<b>1. Restrictions</b>
+
+Except as expressly authorized under this EULA, your right to use the Application is limited to the scope of the License granted above; hence, you maynot duplicate, exhibit, disable, distribute, perform, publish, or modify the Application or any of its components, or create derivative works from the Application, without the prior written consent of MGE. Unless specifically approved by the owner, you are also prohibited from making copies of the Application available on a network where it could be accessed by many users.
+
+The intellectual property rights granted to you under this EULA are restricted to those held by MGE and its licensors with respect to the Application, and do not include any rights to other patents or intellectual property. You may not decompile, disassemble, or reverse-engineer the Application or any of its components in any way unless permitted by law.
+
+Any product identification, copyright, or other intellectual property right disclosures (including but not limited to trademarks and logos) and any other legends made by MGE in the Application must not be removed, altered, or rendered illegible by you. If your use of the Application includes the use of a third party's rights and that third party demands that you comply with its terms of use, you must comply with those terms of use when using the Application.
+
+<b>2. Reservation of Rights</b>
+
+Except for the rights expressly licensed or granted to you herein, MGE reserves all rights in the
+Application, including all copyrights, trademarks, other intellectual property rights, and publicity rights
+(which includes, but is not limited to, all characters, narratives, photos, photographs, animations, music,
+and texts).
+
+<b>3. Your Contributions</b>
+
+You may contribute to the Application and related goods and services (including, but not limited to, any and all ideas and creations; hereinafter the same) if expressly approved in the Application. If your contribution, as a result of your use of the Application, gives rise to any copyright or other intellectual property rights (including the right to obtain any intellectual property rights; hereinafter the same), you must provide MGE all of the aforementioned rights of use gratuitously.
+
+The rights include the right to copy, adapt, modify, perform, display, publish, broadcast, record, videotape, play, distribute, publicly transmit, or otherwise communicate your contributions to the public through any means, now known or unknown, and to distribute your contributions without notice or compensation for the entire term of intellectual property protection granted to you. You expressly forgot your right to such notification or compensation, even if it is required by law.
+
+Under the law anent this EULA, you agree not to exercise any moral rights of an author or other rights with respect to MGE's and other players' use and enjoyment of your contributions in connection with the application and connected goods and services.
+
+Such provision governing the non-exercise of an author's and others' moral rights shall survive the expiration of the effective term hereof applicable to you.
+
+Your contributions made through the application shall be limited to those conceived, invented, devised, or created solely by you, and if MGE receives any claim or demand from a co-idea provider, co-inventor, co-deviser, or co-creator, or from any third-party who provided an idea for, invented, devised, or created such contribution, in connection with the use and licensing of such contributions to a third-party, you agree to release MGE from liability and to bear all costs and expenses associated with resolving such claim or demand.
+
+<b>4. Access</b>
+
+To download and use the Application, you must provide your own equipment, Internet connections, mobile devices, and/or service plans. MGE makes no representations or warranties regarding the Application's accessibility from all wireless devices or its compatibility with any of the wireless carriers' services.
+
+MGE makes no guarantee that the Application will be available for download in all geographic locations. You are believed to have acknowledged that when you use the Application. Your wireless carrier may charge you for data, messaging, and/or other wireless access. Please contact your wireless provider to determine the charges that apply to you. You are responsible for all fees associated with downloading the application from your mobile device.
+
+<b>II. CONSENT TO USE OF DATA</b>
+
+You agree that MGE may collect, use, store, transmit, and otherwise utilise non-personally identifiable technical and related information about your mobile device, operating system, application software, and peripheral hardware to allow product support and other customer services. Additionally, MGE may collect, use, store, transmit, and otherwise make use of non-personally identifiable statistics about the application and any services associated with it (collectively, the “Services").
+
+MGE may use, store, transmit, and make other uses of this information and the aggregate in order to improve their goods and services, and MGE may also share anonymous aggregate data with its affiliates and third-party service providers.
+
+<b>III. IN-GAME ADVERTISING</b>
+
+The application may have a feature that allows a third-party to display in-game advertisements during future upgrades that are periodically uploaded with new material to your mobile device while you are online.
+
+While you are using the Application, MGE may use information logged from your device, such as your age and gender, to guarantee that the appropriate advertisement is presented within the application and to determine the number of the advertisements' accumulated views.
+
+The IP address, unique device identification number, manufacturer, and model of your mobile device are all logged, as is your (in-game) location, the duration of the advertisement's visibility, the size of the advertisement, and your response to the commercial (if any). Except for the advertisement suppliers and assignees approved by MGE, the only logged data that may be accessible to parties is the aggregate number of views the relevant advertisement received, in an anonymous form.
+
+If you do not intend to receive such advertisements or for the aforementioned information to be used in this manner, please refrain from using the Application.
+
+<b>IV. ID MANAGEMENT, ETC.</b>
+
+You may utilize the Application's downloadable service by entering an ID issued to you by MGE or a third-party designated by MGE (hereafter, "ID").
+
+MGE shall not retain any ID or password supplied by a third-party designated by MGE. You are solely responsible for the ID's management.
+
+As a result, all use of the services via the ID is presumed to be by you, and you are responsible for all usage costs and other obligations. You are expressly barred from accessing the services using any other ID than your own ( for example, any idea of an existing or fictional third-party).
+
+<b>V. PROHIBITED ACTS</b>
+
+By using the services, you agree not to engage in any activity that violates or may violate any of the following (collectively, " Prohibited Act").
+
+If MGE reasonably believes you have committed a Prohibited Act, you will be deemed to have materially broken this Agreement, and MGE may immediately remove the relevant portion of the Agreement or prevent you from accessing the Services without notifying you.
+
+If MGE determines that disclosure and provision to a court, a public prosecutor's office, the police, a local government, or other institution authorized under this section is necessary for the purpose of protecting MGE's rights, property, and other assets, to protect against criminal acts, and to protect human life, body, and property, among other things, and to promote the healthy growth and protection of children, MGE may disclose and provide to a court, a public prosecutor's office, the police, a local government, or any other institution authorized by applicable laws and regulations, your log-in information, mobile device terminal information, service link-up information, and other relevant information even without your permission.
+
+1. Unpleasant language or behaviour directed at other customers, or credit-damaging or libelous language or conduct directed against other customers or third parties, such as slander or spreading false stories about other customers or third parties;
+2. Sexually suggestive language or conduct, threatening language or conduct, violence language or conduct , racially prejudicial language or conduct, discriminatory language or conduct, illegal language or conduct, vulgar language or conduct, obscene language or conduct, defamatory language or conduct, or any other objectionable language or conduct;
+3. Impersonation of an officer or other member of staff involved in the development of this Application;
+4. Formation of an action by a group (clan) with prejudice beliefs based on religion, ethnicity, gender, ethnic groups, human rights, or any other prejudice views, or engaging in group solicitation, exchanges of illegal commodities, or religious activity for the sake of commercial activity;
+5. Any conduct that violates international law, the constitution, state statutes, municipal ordinances, or any other rules or regulations;
+6. Any act that infringes or may infringe against MGE's or third-parties' copyright, trademark, or other proprietary rights;
+7. Falsification, deletion, unauthorized access to, and unauthorized use of the Application via all types of tools, impersonation of an existing or fictional party ( including the use of another party's ID ), and similar acts with respect to the information reflected in the Application.
+8. Any act that collects or has the potential to collect, or stores or has the potential to store, personal information about other customers or third parties;
+9. Any and all acts whose primary objective, in the opinion of MGE, is to participate in or cause meetings, contacts, or other interactions with acquaintances of the opposite sex;
+10. Any act intended to facilitate sexual relations or immoral actions;
+11. Any act that promotes or motivates juveniles to flee their homes;
+12. Any act that is considered to have a detrimental effect on or to obstruct the development of minors' character;
+13. Any application that displays or transmits material equating to child pornography or child abuse, or any act that sells media containing such information, or that which displays or transmits any advertisement equating to the transmission, displaying, or sale thereof;
+14. Any act of writing things that invite minors to be opposite sex dating partners, or any act of writing things that invite adults to be children's opposite sex dating partners;
+15. Any conduct contrary to public order and morals, or the instigation or assistance in the commission of such an act, or any act that may result in such an act, or the instigation or assistance in the commission of such an act;
+16. Any act associated with illegal acts (transfer of pistols or other items, manufacture of explosives, provision of child pornography, forgery of official documents, murder, intimidation, betting, gambling, fraud, misuse of a controlled substance, child prostitution, illegal sale of financial accounts and mobile phones, etc. ), or the instigation or assistance of such acts, or any act that results in the death of another person.
+17. Any act associated with suicide or self-incrimination, or the instigation or assistance of such acts, or any act that may result in such connection, instigation, or assistance;
+18. Rent, transfer, name change, sale, pawning, or granting a permit for the use of the Application's ID and gaming data to third parties, as well as provision thereof as security;
+19. Utilization of the application for purposes other than those specified by MGE;
+20. Apart from the acts specified in the preceding paragraphs, any and all acts that have harmed or may harm MGE and the management side of the Services;
+21. Acts that relate to each of the preceding items;
+22. Other acts that MGE deems to be forbidden which are notified and disclosed to you.
+
+<b>VI. DISCLAIMER OF WARRANTIES</b>
+
+Unless otherwise specified by law, the Application is given "as is," may contain errors, and is used at your own risk without warranty of any sort, assurances, or guarantees.
+
+You bear all risks associated with satisfactory quality and performance. MGE makes no express, implied, or statutory warranties, including implied warranties of condition, uninterrupted use, merchantability, satisfactory quality, fitness for a particular purpose, and non-infringement of third party rights in the Application, as well as warranties (if any) arising out of a transaction, usage, or trade practice.
+
+Hence, MGE makes no warranty that the Application will not be interfered with in any way. For an instance, it makes no guarantee that the Application will meet your requirements, that it will operate without interruption or error, that it will be compatible with or interoperate with any other application, that any errors in the Application will be corrected, or that the Application will be available for reinstallation in the same or multiple telecommunications devices.
+
+Moreover, MGE makes no guarantee that data created and obtained by you (including, but not limited to, in-game items of the game, or other data) while using the Application will not be lost for any reason or cause.
+
+MGE or any authorized representative or employee of MGE makes no warranty, expressed or implied. As some jurisdictions do not permit the exclusion of our implied warranties or limitations on consumers' statutory rights, the foregoing exclusions and limitations may not apply to you in jurisdictions where the said exclusion of or limitations on implied warranties or limitations on consumers' statutory rights conflict with the foregoing.
+
+<b>VII. LIMITATION OF LIABILITY</b>
+
+Unless otherwise caused by MGE's willful conduct or gross negligence, MGE shall not be liable to you for any personal injury, property damage, lost profits, cost of substitute goods or services, loss of data, loss of credibility, work stoppage, device failure or malfunction, or any other form of direct or indirect, special, incidental, consequential, or exemplary damages.
+
+Due to the fact that some jurisdictions do not permit a limitation of liability for death, personal injury, fraudulent misrepresentation, or certain intentional or negligent acts, or violations of specific statutes, or a limitation on incidental or consequential damages, the preceding exclusions and limitations may not apply to you in places where they contravene with applicable laws or court judgments.
+
+MGE's total liability to you for all damages (except as otherwise required by law) shall in no event exceed the amount actually paid by you for the Application, and in the case where the Application and this Service are provided free of charge, MGE shall be under no obligation to compensate you in any way.
+
+<b>VIII. INJUNCTIVE RELIEF</b>
+
+You acknowledge that a breach of this Agreement will result in irreparable harm to MGE for which monetary damages would be insufficient compensation. In addition to any other remedies available to MGE under this Agreement or at law, MGE may seek temporary relief (provisional measures) to prevent such breach without requiring you to provide money or other security or proof of damage.
+
+<b>IX. GOVERNING LAW AND JURISDICTION</b>
+
+This agreement and your use of the application shall be governed by the laws of the Philippines.
+
+<b>X. ENTIRE AGREEMENT</b>
+
+Unless otherwise specified in this Agreement, this Agreement comprises the complete agreement between you and MGE with respect to the Application and replaces any prior or contemporaneous understandings with respect to the Agreement's subject matter. No failure or delay on the part of either party in exercising any right or authority under this agreement shall be construed as a waiver thereof, nor shall any single or partial exercise of any right or authority under this agreement preclude further exercise of any other right or authority under this agreement.
+
+<b>XI. HANDLING OF PERSONAL INFORMATION</b>
+
+With regards to the application, MGE recognizes the value of your personal information and its social responsibility to protect it; as such, it makes every effort to appropriately handle personal information in line with applicable laws and regulations, as well as the accompanying privacy policy.
+
+Additionally, MGE will constantly assess its efforts to ensure that personal information is protected efficiently.
+
+As such, MGE aims to establish suitable security measures to prevent unauthorized access to, loss, destruction, falsification, and leakage of personal information, as well as other similar acts. Additionally, with regards to the sharing of personal information to other parties, MGE will never entrust, provide, or reveal your personal information anddata included in the Application to third parties, save in the following circumstances:
+
+1. Your consent is obtained;
+2. The handling of personal data is entrusted to MGE only to the extent necessary to perform the services provided by MGE;
+3. In accordance with applicable laws and regulations;
+4. There is a requirement to safeguard human life, body, or property, and obtaining your consent is challenging;
+5. It is critical to improve public health or to support healthy child development, and securing your consent is challenging; or
+6. When MGE is required to collaborate in the management of administrative affairs by a national body, a local public authority, or their entrustee pursuant to applicable laws and regulations, the administration of said affairs may be distributed with your consent.
+
+<b>XII. REVISED TERMS</b>
+
+MGE reserves the right, without previous notice to the user, to modify the terms of this Agreement at any time and for any reason.
+
+Changes to this EULA will take effect immediately upon notification by MGE via the Application. If you continue to use our service after we make changes to this Agreement, you are deemed to have consented to all of the new terms.
+
+If the agreement is amended or altered, you will remain subject to the terms and conditions you previously agreed to while using the Application.
+
+<b>XIII. TERMINATION OF SERVICES</b>
+
+MGE will notify you thirty (30) days in advance of terminating the Service. After that, any content provided through the Service will be erased.
+
+Created: 25.09.2021
