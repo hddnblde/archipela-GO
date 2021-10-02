@@ -12,7 +12,7 @@ namespace archipelaGO.UI.Windows
         public void ShowHintText(string text)
         {
             if (m_text != null)
-                m_text.text = text;
+                m_text.text = GetHeader() + text;
 
             Show();
         }
@@ -22,5 +22,7 @@ namespace archipelaGO.UI.Windows
             if (shown)
                 Hide();
         }
+
+        private string GetHeader() => "<align=center>[ HINT ]</align>\n";
     }
 }

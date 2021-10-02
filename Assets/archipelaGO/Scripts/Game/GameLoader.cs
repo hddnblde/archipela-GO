@@ -8,7 +8,7 @@ using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
 using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
 using QuizModule = archipelaGO.Quiz.QuizModule;
 using WorldMapLinker = archipelaGO.WorldMap.WorldMapLinker;
-using GameLibrary = archipelaGO.Game.GameLibrary;
+using GameHint = archipelaGO.UI.Windows.GameHintWindow;
 
 namespace archipelaGO.Game
 {
@@ -26,6 +26,9 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private QuizModule m_quizModule = null;
+
+        [SerializeField]
+        private GameHint m_hintScreen = null;
 
         private List<string> m_unlockableModules = new List<string>();
         #endregion
@@ -107,6 +110,15 @@ namespace archipelaGO.Game
             module.OnGameCompleted += InvokeOnGameCompleted;
             module.gameObject.SetActive(true);
             module.Initialize(config);
+
+            if (config.requireTapToContinue)
+                ShowHintScreen(config.hint);
+        }
+
+        private void ShowHintScreen(string hintText)
+        {
+            if (m_hintScreen != null)
+                m_hintScreen.ShowHintText(hintText);
         }
 
         private void InvokeOnGameCompleted()
