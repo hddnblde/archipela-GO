@@ -24,43 +24,43 @@ MonoBehaviour:
   m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
   m_gridSize: {x: 16, y: 16}
   m_puzzlePieces:
+  - m_direction: 1
+    m_position: {x: 15, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 15
+  - m_direction: 1
+    m_position: {x: 11, y: 1}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 24
+  - m_direction: 1
+    m_position: {x: 8, y: 4}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 17
   - m_direction: 0
-    m_position: {x: 0, y: 0}
+    m_position: {x: 8, y: 5}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 25
+  - m_direction: 1
+    m_position: {x: 2, y: 6}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 4
+  - m_direction: 0
+    m_position: {x: 0, y: 8}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 21
+  - m_direction: 1
+    m_position: {x: 10, y: 8}
     m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
-    m_position: {x: 0, y: 0}
+    m_position: {x: 1, y: 10}
     m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
+    m_wordBankIndex: 1
+  - m_direction: 1
+    m_position: {x: 6, y: 10}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 7
   - m_direction: 0
-    m_position: {x: 0, y: 0}
+    m_position: {x: 8, y: 15}
     m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
-  - m_direction: 0
-    m_position: {x: 0, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
-    m_wordBankIndex: 0
+    m_wordBankIndex: 28
