@@ -17,8 +17,8 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: As for that wicked Licalibutan, he gave no candor, but his body could
-        support a new race of humanity.
+      m_text: As for that {wicked} Licalibutan, he gave no {candor}, but his body
+        could support a new race of humanity.
     - m_voiceOver: {fileID: 0}
       m_text: Could you take care of this for me, by the way?
   - m_characterIndex: 2

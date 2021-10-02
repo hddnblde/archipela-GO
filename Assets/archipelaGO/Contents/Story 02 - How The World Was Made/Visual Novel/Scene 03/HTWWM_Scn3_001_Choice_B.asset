@@ -25,7 +25,7 @@ MonoBehaviour:
         flesh and blood, too. I believe you\u2019ll get the hang of it, eventually."
     - m_voiceOver: {fileID: 0}
       m_text: Besides, they need someone aside from me to teach them with good skills
-        to ward off evil.
+        to {ward off} evil.
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}

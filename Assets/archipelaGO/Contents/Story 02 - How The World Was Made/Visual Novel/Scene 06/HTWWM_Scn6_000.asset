@@ -27,7 +27,7 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "What are you talking about? Which attack do you pertain to? I didn\u2019t
+      m_text: "What are you talking about? Which attack do you {pertain} to? I didn\u2019t
         order any attack! I was far down in the sea, fast asleep!"
   - m_characterIndex: 1
     m_lines:
@@ -38,8 +38,8 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "And you thought I was behind all that backstabbing? Aren\u2019t we
-        on the same side, huh?"
+      m_text: "And you thought I was behind all that {backstabbing}? Aren\u2019t
+        we on the same side, huh?"
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}

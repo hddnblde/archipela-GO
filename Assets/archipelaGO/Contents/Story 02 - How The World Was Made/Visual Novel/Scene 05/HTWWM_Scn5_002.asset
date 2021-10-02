@@ -22,8 +22,8 @@ MonoBehaviour:
         Libulan into a ball.
     - m_voiceOver: {fileID: 0}
       m_text: The second struck the golden Liadlao, causing him to melt as well.
-        The third bolt struck Licalibutan, delivering his rocky body to shatter and
-        fall into the sea.
+        The third bolt struck Licalibutan, delivering his rocky body to {shatter}
+        and fall into the sea.
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}

@@ -22,8 +22,8 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "My heart\u2019s in pain, Captan. However, I think their offspring
-        must have tremendous grief than what I feel right now. They are now left
+      m_text: "My heart\u2019s in pain, Captan. However, I think their {offspring}
+        must have {tremendous} {grief} than what I feel right now. They are now left
         without a father and a mother."
   - m_characterIndex: 1
     m_lines:

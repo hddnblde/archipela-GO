@@ -31,8 +31,8 @@ MonoBehaviour:
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Maguayan, I\u2019m so ecstatic. Look at these adorable children! Lidagat
-        and Lihangin surely know how to make marvelous offsprings!"
+      m_text: "Maguayan, I\u2019m so {ecstatic}. Look at these adorable children!
+        Lidagat and Lihangin surely know how to make marvelous offsprings!"
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   - m_characterIndex: 2
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Our sweet and gentle granddaughter. Her silver radiance and form really
-        suits her.
+      m_text: Our sweet and gentle granddaughter. Her silver {radiance} and form
+        really suits her.
   - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
