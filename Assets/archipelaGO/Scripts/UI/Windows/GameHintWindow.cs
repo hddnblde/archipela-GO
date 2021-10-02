@@ -23,6 +23,6 @@ namespace archipelaGO.UI.Windows
                 Hide();
         }
 
-        private string GetHeader() => "<align=center>[ HINT ]</align>\n";
+        private string GetHeader() => "<align=center>[ HINT ]</align>\n\n";
     }
 }
