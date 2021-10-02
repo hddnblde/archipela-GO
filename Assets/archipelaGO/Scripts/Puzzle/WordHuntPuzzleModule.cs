@@ -147,16 +147,7 @@ namespace archipelaGO.Puzzle
 
             Vector3 midPoint = (startPosition + endPosition) / 2f;
             lineHintImage.transform.position = midPoint;
-            // float widthPadding = lineHintImage.rectTransform.rect.height;
             lineHintImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
-        }
-
-        private Vector2 WorldPositionToScreenPoint(Vector3 worldPosition)
-        {
-            if (Camera.main == null)
-                return Vector3.zero;
-
-            return Camera.main.WorldToScreenPoint(worldPosition);
         }
         #endregion
 
@@ -280,14 +271,24 @@ namespace archipelaGO.Puzzle
             int signedX = Mathf.FloorToInt(Mathf.Sign(direction.x));
             int signedY = Mathf.FloorToInt(Mathf.Sign(direction.y));
 
-            if (absoluteX > absoluteY)
-                return new Vector2Int(signedX, 0);
-
-            else if (absoluteY > absoluteX)
-                return new Vector2Int(0, signedY);
+            if (DirectionIsWithinDiagonalThreshold(new Vector2Int(absoluteX, absoluteY)))
+                return new Vector2Int(signedX, signedY);
 
             else
-                return new Vector2Int(signedX, signedY);
+            {
+                if (absoluteX > absoluteY)
+                    return new Vector2Int(signedX, 0);
+
+                else
+                    return new Vector2Int(0, signedY);
+            }
+        }
+
+        private bool DirectionIsWithinDiagonalThreshold(Vector2Int direction)
+        {
+            const float AngleOfTolerance = 60f;
+
+            return Vector2.Angle(Vector2Int.one, direction) <= (AngleOfTolerance / 2f);
         }
         #endregion
 
