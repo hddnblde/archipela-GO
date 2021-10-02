@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91623a688d5a7a645b615586e6015bff, type: 3}
+  m_Name: TMOM_Scn6_001_Branch
+  m_EditorClassIdentifier: 
+  m_title: What would you do?
+  m_branches:
+  - m_subtitle: Run and hide
+    m_narrative: {fileID: 11400000, guid: e25b0e90ad0449a4fb900178e99b9d2a, type: 2}
+  - m_subtitle: Face Pah
+    m_narrative: {fileID: 11400000, guid: 3418f1f2bc8a43e4097b860a3a8ebe87, type: 2}

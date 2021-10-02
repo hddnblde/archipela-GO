@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
+  m_Name: TMOM_Game_03_TrainOfThought
+  m_EditorClassIdentifier: 
+  m_hint: "Congratulations for coming this far! We are so proud of you. As your last
+    adventure for this story, we need you to think critically and apply your learnings
+    from the selection. Answer all of our questions to earn your next badge for this
+    series! If you\u2019re ready for this game, put on your thinking hat, and hop
+    on!"
+  m_requireTapToContinue: 1
+  m_shuffleQuestions: 0
+  m_shuffleChoices: 1
+  m_questions:
+  - m_stem: What saddening scenario covered the whole of Mindanao?
+    m_answers:
+    - m_text: 'Mindanao is suffering from a great famine.
+
+'
+      m_isCorrect: 0
+    - m_text: Mindanao is being attacked.
+      m_isCorrect: 0
+    - m_text: The place is engulfed by seawater.
+      m_isCorrect: 0
+    - m_text: The place is infested by pernicious monsters.
+      m_isCorrect: 1
+  - m_stem: Who is the beast of Mount Matutun that slays those who dare to defy it?
+    m_answers:
+    - m_text: 'Balbal
+
+'
+      m_isCorrect: 0
+    - m_text: Kurita
+      m_isCorrect: 0
+    - m_text: Pah
+      m_isCorrect: 0
+    - m_text: Tarabusaw
+      m_isCorrect: 1
+  - m_stem: How is Balbal described in the story?
+    m_answers:
+    - m_text: 'It had many limbs and lived on both land and sea.
+
+'
+      m_isCorrect: 0
+    - m_text: It is a hideous creature related to a variety of apes.
+      m_isCorrect: 0
+    - m_text: It is a large bird with enormous wings that can cover the sun.
+      m_isCorrect: 0
+    - m_text: It is a seven-headed night bird.
+      m_isCorrect: 1
+  - m_stem: Who are the great rajas in the story who decided to help Mindanao from
+      their demise?
+    m_answers:
+    - m_text: Raja Indarapatra and Raja Kurita
+      m_isCorrect: 0
+    - m_text: Raja Indarapatra and Raja Sulayman
+      m_isCorrect: 1
+    - m_text: Raja Sulayman and Raja Tarabusaw
+      m_isCorrect: 0
+    - m_text: Raja Tarabusaw and Raja Kurita
+      m_isCorrect: 0
+  - m_stem: "What sort of aid did Raja Indarapatra provide Raja Sulayman with before
+      he departed to\r slay the beast?"
+    m_answers:
+    - m_text: A battalion of soldiers
+      m_isCorrect: 0
+    - m_text: Some magic potions
+      m_isCorrect: 1
+    - m_text: The Juru Pakal
+      m_isCorrect: 0
+    - m_text: The Tree of Life
+      m_isCorrect: 0
+  - m_stem: "During his escapade towards the extermination of the hideous and dangerous
+      monsters of\r Mindanao, what kind of disaster did Raja Sulayman encounter?"
+    m_answers:
+    - m_text: He accidentally stabbed himself with the Juru Pakal.
+      m_isCorrect: 0
+    - m_text: He fell off a cliff while climbing Mount Kabalalan.
+      m_isCorrect: 0
+    - m_text: One of Balbal's seven heads spitted acid on him.
+      m_isCorrect: 0
+    - m_text: Pah's massive wings collapsed and crushed him.
+      m_isCorrect: 1
+  - m_stem: How did Raja Indarapatra sense the death of his brother?
+    m_answers:
+    - m_text: He read it through a letter.
+      m_isCorrect: 0
+    - m_text: He saw it in his dreams.
+      m_isCorrect: 0
+    - m_text: The messenger told him.
+      m_isCorrect: 0
+    - m_text: The tree withered and died.
+      m_isCorrect: 1
+  - m_stem: "<i>\u201CRaising his head, Indarapatra turned around and saw a small
+      jar of water near him.\r He knew that the jar was sent down from heaven, so
+      he took it and poured its water on\r the bones of his brother, and his brother
+      came to life again.\u201D</i>\n\nWhat characteristics does Raja\r Indarapatra
+      display in this scenario?"
+    m_answers:
+    - m_text: Anxious but Religious
+      m_isCorrect: 0
+    - m_text: Insecure but Kind
+      m_isCorrect: 0
+    - m_text: Quick-witted and Kind
+      m_isCorrect: 0
+    - m_text: Religious and Compassionate
+      m_isCorrect: 1
+  - m_stem: "<i>\u201CI\u2019m afraid I cannot give you my permission to go on. You
+      have gone through so much in this\r journey. I think it\u2019s best if you
+      go back to Mantapuli and regain your strength.\u201D</i>\n\n\rGiven this scenario,
+      what\u2019s the best word to describe the relationship of the two brothers?"
+    m_answers:
+    - m_text: Discouraging
+      m_isCorrect: 0
+    - m_text: Insensitive
+      m_isCorrect: 0
+    - m_text: Nurturing
+      m_isCorrect: 1
+    - m_text: Thoughtless
+      m_isCorrect: 0
+  - m_stem: "Despite not being affected by the disaster caused by the creatures attacking
+      Mindanao,\r Raja Indarapatra and Raja Sulayman decided to help and save the
+      place. Which of the\r following statements expresses the same thought?"
+    m_answers:
+    - m_text: Everyone wishes to change the world, but no one wishes to change himself.
+      m_isCorrect: 0
+    - m_text: "It\u2019s natural to be on guard at times."
+      m_isCorrect: 0
+    - m_text: "The most certain way to succeed is always to try just one more time.\u201D"
+      m_isCorrect: 0
+    - m_text: The purpose of life is to contribute in some way to making things better.
+      m_isCorrect: 1

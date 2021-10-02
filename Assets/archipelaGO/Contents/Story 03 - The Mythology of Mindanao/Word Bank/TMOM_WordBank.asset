@@ -1,0 +1,297 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b93d0f3851bfb49a31dc4124fb3c41, type: 3}
+  m_Name: TMOM_WordBank
+  m_EditorClassIdentifier: 
+  m_words:
+  - m_title: lowlands
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: prosperous
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: affluence
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: pernicious
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: devour
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: petty
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: defy
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: adjacent
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: oppose
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: snuff
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: devastate
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: odd
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: distant
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: ravage
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: zeal
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: enthusiasm
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: endeavor
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: interfere
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: overrun
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: steady
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: populace
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: perilous
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: kris
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: foretell
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: eradicate
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: savage
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: victorious
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: summit
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: alas
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: dreadful
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: utter
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: astonishing
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: scourge
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: awful
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: martyr
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: combat
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: havoc
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: befallen
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: massive
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: wither
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: owe
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: omen
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: assure
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: vanquish
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: slaughter
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: noxious
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 
+  - m_title: wretched
+    m_phoneticSpelling: 
+    m_keywords: []
+    m_partOfSpeech: 2
+    m_pronunciation: {fileID: 0}
+    m_definition: 

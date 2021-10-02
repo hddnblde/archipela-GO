@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TMOM_Scn11_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: It was then decided that Raja Sulayman must return to Mantapuli, whereas
+        Raja Indarapatra continued his march to Mount Gurayn, where he met the {dreadful}
+        bird that had seven heads.
+  - m_characterIndex: 6
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: You fool! How dare you challenge me?
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Haha! For I know, I can easily defeat you.
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: With his Juru Pakal, Indarapatra easily slaughtered Balbal. Having
+        destroyed all these {noxious} animals and having restored peace and safety
+        to the land, he then set himself searching for the people that might have
+        escaped destruction.

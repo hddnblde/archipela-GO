@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
+  m_Name: TMOM_Game_01_BrainDrain
+  m_EditorClassIdentifier: 
+  m_hint: "Kudos for finishing the story! To further engage you in this literary
+    text, we have prepared this puzzle for you. Have you noticed and checked out
+    our set of vocabulary words as you go about our selection? If yes, then you\u2019ll
+    have an edge in accomplishing this game. Answer all 10 items through the DEFINITIONS
+    given so you could earn a badge! How cool is that? As a head start, we have provided
+    you with some clues. Good luck!"
+  m_requireTapToContinue: 1
+  m_puzzleType: 0
+  m_wordBank: {fileID: 11400000, guid: 8d21eb487f6bb5942a6b39b31b095f13, type: 2}
+  m_gridSize: {x: 20, y: 19}
+  m_puzzlePieces:
+  - m_direction: 1
+    m_position: {x: 8, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 8
+  - m_direction: 1
+    m_position: {x: 15, y: 1}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 39
+  - m_direction: 0
+    m_position: {x: 14, y: 3}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 19
+  - m_direction: 0
+    m_position: {x: 7, y: 5}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 10
+  - m_direction: 1
+    m_position: {x: 9, y: 5}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 26
+  - m_direction: 0
+    m_position: {x: 8, y: 9}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 0
+  - m_direction: 1
+    m_position: {x: 6, y: 11}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 46
+  - m_direction: 0
+    m_position: {x: 4, y: 12}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 21
+  - m_direction: 0
+    m_position: {x: 2, y: 15}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 36
+  - m_direction: 0
+    m_position: {x: 0, y: 17}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_wordBankIndex: 38

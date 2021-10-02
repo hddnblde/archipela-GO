@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TMOM_Scn8_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Sad at heart but full of determination and desire for revenge, Raja
+        Indarapatra got up, put on his sword and belt, and came over to Mindanao
+        to search for his brother. He traveled in the air with wonderful speed and
+        came to Kabalalan first.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "This must be Kurita\u2019s bones lying everywhere. My brother had
+        gone here."
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Indarapatra then went to Matutun.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: He even defeated Tarabusaw.
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Indarapatra passed on Mount Bita and resumed his search for Raja Sulayman.
+        There he saw the dead bird lying on the ground, and as he lifted the severed
+        wing, he saw the bones of Sulayman and recognized them by means of the sword
+        that was lying by their side.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Oh Sulayman! What a sad fate.
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Raising his head, Indarapatra turned around and saw a small jar of
+        water near him. He knew that the jar was sent down from heaven, so he took
+        it and poured its water on the bones of his brother, and his brother came
+        to life again.
