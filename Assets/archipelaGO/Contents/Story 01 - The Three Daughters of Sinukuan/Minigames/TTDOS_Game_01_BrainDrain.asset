@@ -12,37 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: TTDOS_Game_01_BrainDrain
   m_EditorClassIdentifier: 
+  m_hint: "Kudos for finishing the story! To further engage you in this literary
+    text, we have prepared this puzzle for you. Have you noticed and checked out
+    our set of vocabulary words as you go about our selection? If yes, then you\u2019ll
+    have an edge in accomplishing this game. Answer all 10 items through the DEFINITIONS
+    given so you could earn a badge! How cool is that? As a head start, we have provided
+    you with some clues. Good luck!"
+  m_requireTapToContinue: 1
   m_puzzleType: 0
   m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
   m_gridSize: {x: 14, y: 14}
   m_puzzlePieces:
   - m_direction: 1
     m_position: {x: 13, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 35
   - m_direction: 1
     m_position: {x: 9, y: 1}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 14
   - m_direction: 1
     m_position: {x: 1, y: 2}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 32
   - m_direction: 1
     m_position: {x: 5, y: 3}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 11
   - m_direction: 0
     m_position: {x: 0, y: 4}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 12
   - m_direction: 1
     m_position: {x: 11, y: 4}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 24
   - m_direction: 0
     m_position: {x: 8, y: 5}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 21
   - m_direction: 0
     m_position: {x: 5, y: 8}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 29
   - m_direction: 1
     m_position: {x: 1, y: 9}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 7
   - m_direction: 0
     m_position: {x: 1, y: 10}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 5

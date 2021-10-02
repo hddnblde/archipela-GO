@@ -12,37 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: HTWWM_Game_01_BrainDrain
   m_EditorClassIdentifier: 
+  m_hint: "Kudos for finishing the story! To further engage you in this literary
+    text, we have prepared this puzzle for you. Have you noticed and checked out
+    our set of vocabulary words as you go about our selection? If yes, then you\u2019ll
+    have an edge in accomplishing this game. Given the example sentences, get the
+    SYNONYM of each underlined words based on the list of vocabulary terms used in
+    the story. Answer all 10 items so you could earn a badge! How cool is that? As
+    a head start, we have provided you with some clues. Good luck!"
+  m_requireTapToContinue: 1
   m_puzzleType: 0
   m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
   m_gridSize: {x: 16, y: 16}
   m_puzzlePieces:
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0
   - m_direction: 0
     m_position: {x: 0, y: 0}
+    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
     m_wordBankIndex: 0

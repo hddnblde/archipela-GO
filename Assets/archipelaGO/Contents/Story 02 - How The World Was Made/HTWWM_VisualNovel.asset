@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4964ae67cdd6449b6d206331a79bf8, type: 3}
   m_Name: HTWWM_VisualNovel
   m_EditorClassIdentifier: 
+  m_hint: 
+  m_requireTapToContinue: 0
   m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
   m_backgroundScenes:
   - {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
