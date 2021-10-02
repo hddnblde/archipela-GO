@@ -113,12 +113,21 @@ namespace archipelaGO.Game
 
             if (config.requireTapToContinue)
                 ShowHintScreen(config.hint);
+
+            else
+                HideHintScreen();
         }
 
         private void ShowHintScreen(string hintText)
         {
             if (m_hintScreen != null)
                 m_hintScreen.ShowHintText(hintText);
+        }
+
+        private void HideHintScreen()
+        {
+            if (m_hintScreen != null)
+                m_hintScreen.Hide();
         }
 
         private void InvokeOnGameCompleted()
