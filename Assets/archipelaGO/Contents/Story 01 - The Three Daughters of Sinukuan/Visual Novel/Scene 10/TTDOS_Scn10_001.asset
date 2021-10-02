@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TTDOS_Scn8_000
+  m_Name: TTDOS_Scn10_001
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
-  - m_characterIndex: 2
+  - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: We succeeded, brothers!
-  - m_characterIndex: 3
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: Hurray!
+      m_text: Makiling was at that time {slumbering} in his palace when he was awakened
+        by a {tremendous} noise produced by a falling body. When he looked at the
+        window, he saw a {horrible} scene. His three sons had been crushed to death.

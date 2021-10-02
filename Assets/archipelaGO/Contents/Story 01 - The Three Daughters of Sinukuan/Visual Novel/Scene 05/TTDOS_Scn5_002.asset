@@ -19,10 +19,3 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "Okay, let\u2019s head back to our place first and come visit them
         the next Sunday. Besides, we already know how they go about."
-  - m_characterIndex: 0
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: The time came and the sons of Makiling, dressed in their royal attires,
-        went to the place where the three daughters of Sinukuan usually stopped before
-        they ascended the mountain. They did not wait a long time, when the sisters
-        arrived.

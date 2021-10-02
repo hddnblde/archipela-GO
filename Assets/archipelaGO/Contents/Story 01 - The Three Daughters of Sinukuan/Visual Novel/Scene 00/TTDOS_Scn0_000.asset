@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TTDOS_Scn8_000
+  m_Name: TTDOS_Scn0_000
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
-  - m_characterIndex: 2
+  - m_characterIndex: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: We succeeded, brothers!
-  - m_characterIndex: 3
-    m_lines:
+      m_text: The time came when the town was put in a great danger of being reduced
+        to ruins by a deadly duel between Sinukuan and Makiling, the king of the
+        mountain of that same name situated in the southern part of Luzon.
     - m_voiceOver: {fileID: 0}
-      m_text: Hurray!
+      m_text: Makiling had three sons who possessed an adventurous spirit. Although
+        they were brave, his three sons lacked in them that noble sentiment often
+        found among the royal families of old.
