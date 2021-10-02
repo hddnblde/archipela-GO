@@ -399,9 +399,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7047377836545051951}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &7047377836545051949
 MonoBehaviour:
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7047377836769339527}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.06385967
+  m_Size: 0.08652337
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
