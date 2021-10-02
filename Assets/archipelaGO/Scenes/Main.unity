@@ -1004,9 +1004,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7047377836545051949, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
+      propertyPath: m_resetChoices
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7047377836545051951, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
       propertyPath: m_Name
       value: Agreement Module
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047377836621715592, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047377836621715592, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047377836621715592, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7047377836769339527, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
       propertyPath: m_AnchorMax.x
