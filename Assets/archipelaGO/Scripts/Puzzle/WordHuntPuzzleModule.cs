@@ -44,7 +44,7 @@ namespace archipelaGO.Puzzle
                 m_word = word;
 
                 if (guessed)
-                    m_word = $"<u>{ m_word }</u>";
+                    m_word = $"<s>{ m_word }</s>";
             }
 
             private int m_order;
