@@ -7,6 +7,8 @@ namespace archipelaGO.UI
     {
         private CanvasGroup m_canvasGroup = null;
 
+        public bool shown => m_canvasGroup.blocksRaycasts;
+
         protected virtual void Awake() =>
             m_canvasGroup = GetComponent<CanvasGroup>();
 
