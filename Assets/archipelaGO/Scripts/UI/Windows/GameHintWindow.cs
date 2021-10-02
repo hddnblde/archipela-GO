@@ -9,10 +9,12 @@ namespace archipelaGO.UI.Windows
         [SerializeField]
         private TextMeshProUGUI m_text = null;
 
-        public void SetHintText(string text)
+        public void ShowHintText(string text)
         {
             if (m_text != null)
                 m_text.text = text;
+
+            Show();
         }
 
         public void OnPointerClick(PointerEventData eventData)
