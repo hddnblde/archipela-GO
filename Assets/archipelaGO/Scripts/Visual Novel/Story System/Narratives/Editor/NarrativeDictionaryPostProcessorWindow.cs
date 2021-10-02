@@ -123,7 +123,23 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         }
 
         private void RemoveNewLineFromText(SerializedProperty textProperty) =>
-            textProperty.stringValue = textProperty.stringValue.Trim('\n', '\r', '\t');
+            textProperty.stringValue = RemoveLineEndings(textProperty.stringValue);
+        
+        private string RemoveLineEndings(string stringValue)
+        {
+            if(string.IsNullOrEmpty(stringValue))
+                return stringValue;
+
+            string lineSeparator = ((char) 0x2028).ToString();
+            string paragraphSeparator = ((char)0x2029).ToString();
+            string whiteSpace = " ";
+
+            return stringValue.Replace("\r\n", whiteSpace)
+                        .Replace("\n", whiteSpace)
+                        .Replace("\r", whiteSpace)
+                        .Replace(lineSeparator, whiteSpace)
+                        .Replace(paragraphSeparator, whiteSpace);
+        }
 
         private List<string> GetWordCollectionFromBank()
         {
