@@ -119,7 +119,7 @@ namespace archipelaGO.Puzzle
                     down.AppendLine(crosswordHint.GetHint());
             }
 
-            return $"<b>ACROSS</b>\n{ across }\n<b>DOWN</b>\n{ down }";
+            return $"<align=center><b>ACROSS</b></align>\n<align=left>{ across }</align>\n<align=center><b>DOWN</b></align>\n<align=left>{ down }</align>";
         }
 
         protected override (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition) =>
