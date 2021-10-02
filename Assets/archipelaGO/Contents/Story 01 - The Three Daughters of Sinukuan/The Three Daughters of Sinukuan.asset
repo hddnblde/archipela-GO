@@ -23,5 +23,5 @@ MonoBehaviour:
     m_position: {x: -0.03, y: -2.31}
   - m_config: {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
     m_position: {x: 8.04, y: -3.44}
-  - m_config: {fileID: 11400000, guid: 8212f860bead4bb4e9a2c3d7a5ee32ab, type: 2}
+  - m_config: {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
     m_position: {x: 10.83, y: 0.02}
