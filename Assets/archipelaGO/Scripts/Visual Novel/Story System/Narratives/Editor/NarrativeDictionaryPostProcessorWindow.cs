@@ -99,6 +99,7 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
                 SerializedProperty line = lines.GetArrayElementAtIndex(i);
                 SerializedProperty text = line.FindPropertyRelative("m_text");
                 ProcessText(text, words);
+                RemoveNewLineFromText(text);
             }
         }
 
@@ -120,6 +121,9 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
 
             textProperty.stringValue = textValue;
         }
+
+        private void RemoveNewLineFromText(SerializedProperty textProperty) =>
+            textProperty.stringValue = textProperty.stringValue.Trim('\n', '\r', '\t');
 
         private List<string> GetWordCollectionFromBank()
         {
