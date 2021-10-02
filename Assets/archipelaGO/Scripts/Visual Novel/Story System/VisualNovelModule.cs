@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.VisualNovel.StorySystem.Plot>;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
@@ -42,7 +43,7 @@ namespace archipelaGO.VisualNovel.StorySystem
         private void InitializeVisualNovelController() =>
             m_vnController = GetComponent<VisualNovelController>();
 
-        private void SetScene(Sprite scene) =>
+        private IEnumerator SetScene(Sprite scene) =>
             m_vnController.SetBackgroundScene(scene);
 
         private IEnumerator PlotPlayback(Plot plot)
@@ -52,7 +53,7 @@ namespace archipelaGO.VisualNovel.StorySystem
             for (int i = 0; i < plot.plotlineCount; i++)
             {
                 (Narrative narrative, Sprite scene) plotline = plot.GetPlotline(i);
-                SetScene(plotline.scene);
+                yield return SetScene(plotline.scene);
                 yield return PlayNarrative(plotline.narrative, plot.wordBank);
             }
 
