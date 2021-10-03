@@ -2410,8 +2410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_animatedText: {fileID: 969564200646094752}
   m_skipButton: {fileID: 969564199905388270}
-  m_characterStageLeft: {fileID: 0}
-  m_characterStageRight: {fileID: 0}
+  m_characterStageLeft: {fileID: 969564199202904527}
+  m_characterStageRight: {fileID: 1177787076978918996}
   m_characterNameText: {fileID: 969564199469609026}
 --- !u!225 &969564200785086144
 CanvasGroup:
