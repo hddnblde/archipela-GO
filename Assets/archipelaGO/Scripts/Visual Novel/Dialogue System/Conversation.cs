@@ -20,22 +20,22 @@ namespace archipelaGO.VisualNovel.DialogueSystem
 
 
         #region Public Method
-        public (DialogueCharacter character, Dialogue dialogue) GetDialogueLine(int index)
+        public (DialogueCharacter character, DialogueCharacterBlocking blocking, Dialogue dialogue) GetDialogueLine(int index)
         {
             if (m_dialogues == null || m_characters.Count <= 0)
-                return (null, null);
+                return (null, DialogueCharacterBlocking.StageLeft, null);
             
             if (index < 0 || index >= dialogueCount)
-                return (null, null);
+                return (null, DialogueCharacterBlocking.StageLeft, null);
             
             Dialogue dialogue = m_dialogues[index];
             
             if (dialogue.characterIndex < 0 || dialogue.characterIndex >= m_characters.Count)
-                return (null, dialogue);
+                return (null, dialogue.blocking, dialogue);
 
             DialogueCharacter character = m_characters.GetCharacter(dialogue.characterIndex);
 
-            return (character, dialogue);
+            return (character, dialogue.blocking, dialogue);
         }
         #endregion
     }

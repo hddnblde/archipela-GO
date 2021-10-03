@@ -17,16 +17,11 @@ namespace archipelaGO.VisualNovel.DialogueSystem.Elements
         private string m_name;
 
         [SerializeField]
-        private DialogueCharacterBlocking m_blocking;
-
-        [SerializeField]
         private Sprite m_sprite;
-
         #endregion
 
 
         #region Properties
-        public DialogueCharacterBlocking blocking => m_blocking;
         public Sprite sprite => m_sprite;
         public string characterName => m_name;
         #endregion

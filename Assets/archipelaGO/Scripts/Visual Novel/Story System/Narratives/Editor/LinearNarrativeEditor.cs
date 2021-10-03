@@ -125,18 +125,36 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             rect.height = EditorGUIUtility.singleLineHeight;
             dialogue.isExpanded = EditorGUI.Foldout(rect, dialogue.isExpanded, GUIContent.none);
             rect.width = propertyWidth - HorizontalOffset;
-            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex");
-            DrawCharacterIndexProperty(rect, dialogueIndex, characterIndex);
+
+            SerializedProperty characterIndex = dialogue.FindPropertyRelative("m_characterIndex"),
+                blocking = dialogue.FindPropertyRelative("m_blocking");
+
+            DrawCharacterIndexProperty(rect, dialogueIndex, characterIndex, blocking);
         }
 
-        private void DrawCharacterIndexProperty(Rect rect, int index, SerializedProperty characterIndex)
+        private void DrawCharacterIndexProperty(Rect rect, int index,
+            SerializedProperty characterIndex, SerializedProperty blocking)
         {
+            float currentLabelWidth = EditorGUIUtility.labelWidth;
+            EditorGUIUtility.labelWidth = 72f;
+
             rect.y += (EditorGUIUtility.standardVerticalSpacing / 2f);
+            float blockingPropertyWidth = Mathf.Min(85f, rect.width / 2f);
+            rect.width -= blockingPropertyWidth;
 
             if (m_characters.objectReferenceValue == null)
                 EditorGUI.LabelField(rect, $"Dialogue { index }");
+
             else
-                characterIndex.intValue = EditorGUI.Popup(rect, $"Dialogue { index }", characterIndex.intValue, m_characterNames);
+            {
+                characterIndex.intValue = EditorGUI.Popup(rect, $"Dialogue { index }",
+                    characterIndex.intValue, m_characterNames);
+            }
+
+            rect.x = rect.xMax;
+            rect.width = blockingPropertyWidth;
+            EditorGUI.PropertyField(rect, blocking, GUIContent.none);
+            EditorGUIUtility.labelWidth = currentLabelWidth;
         }
 
         private string[] GetCharacterNamesFromCharacterSet()

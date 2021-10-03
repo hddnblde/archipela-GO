@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.VisualNovel.StorySystem.Plot>;
 using Conversation = archipelaGO.VisualNovel.DialogueSystem.Conversation;
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
+using StageBlocking = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacterBlocking;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
@@ -80,11 +80,11 @@ namespace archipelaGO.VisualNovel.StorySystem
 
             for (int i = 0; i < conversation.dialogueCount; i++)
             {
-                (DialogueCharacter character, Dialogue dialogue) dialogueLine =
+                (DialogueCharacter character, StageBlocking blocking, Dialogue dialogue) dialogueLine =
                     conversation.GetDialogueLine(i);
 
                 yield return m_vnController.
-                    ShowDialogue(dialogueLine.character, dialogueLine.dialogue, wordBank);
+                    ShowDialogue(dialogueLine.character, dialogueLine.blocking, dialogueLine.dialogue, wordBank);
             }
         }
         #endregion

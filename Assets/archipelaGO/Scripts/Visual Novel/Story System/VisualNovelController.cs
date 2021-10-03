@@ -6,6 +6,7 @@ using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.Dialog
 using Dialogue = archipelaGO.VisualNovel.DialogueSystem.Dialogue;
 using DialogueLine = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueLine;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
+using StageBlocking = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacterBlocking;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
@@ -52,7 +53,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Public Methods
-        public IEnumerator ShowDialogue(DialogueCharacter character, Dialogue dialogue, WordBank wordBank)
+        public IEnumerator ShowDialogue(DialogueCharacter character, StageBlocking blocking, Dialogue dialogue, WordBank wordBank)
         {
             for (int i = 0; i < dialogue.lineCount; i++)
             {
@@ -60,7 +61,7 @@ namespace archipelaGO.VisualNovel.StorySystem
                 PlayVoiceOverAudio(line.voiceOver);
 
                 yield return m_dialogueWindow.
-                    ShowDialogueLine(character.sprite, character.blocking,
+                    ShowDialogueLine(character.sprite, blocking,
                     character.characterName, line.text, wordBank);
             }
         }
