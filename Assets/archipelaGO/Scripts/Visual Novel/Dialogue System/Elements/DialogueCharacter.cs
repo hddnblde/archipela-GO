@@ -14,13 +14,14 @@ namespace archipelaGO.VisualNovel.DialogueSystem.Elements
     {
         #region Fields
         [SerializeField]
+        private string m_name;
+
+        [SerializeField]
         private DialogueCharacterBlocking m_blocking;
 
         [SerializeField]
         private Sprite m_sprite;
 
-        [SerializeField]
-        private string m_name;
         #endregion
 
 
