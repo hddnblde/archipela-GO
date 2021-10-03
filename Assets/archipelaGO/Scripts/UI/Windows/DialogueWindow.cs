@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
+using StageBlocking = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacterBlocking;
 
 namespace archipelaGO.UI.Windows
 {
@@ -18,7 +19,10 @@ namespace archipelaGO.UI.Windows
         [Space]
 
         [SerializeField]
-        private Image m_characterImage = null;
+        private Image m_characterStageLeft = null;
+        
+        [SerializeField]
+        private Image m_characterStageRight = null;
 
         [SerializeField]
         private Text m_characterNameText = null;
@@ -64,11 +68,12 @@ namespace archipelaGO.UI.Windows
             base.Hide();
         }
 
-        public IEnumerator ShowDialogueLine(Sprite characterSprite, string characterName, string dialogueLine, WordBank wordBank)
+        public IEnumerator ShowDialogueLine(Sprite characterSprite, StageBlocking stageBlocking,
+            string characterName, string dialogueLine, WordBank wordBank)
         {
             m_showNextDialogue = false;
             Show();
-            SetCharacter(characterSprite, characterName);
+            SetCharacter(characterSprite, stageBlocking, characterName);
             yield return AnimateDialogueLine(dialogueLine, wordBank);
             yield return new WaitUntil(() => m_showNextDialogue);
             Hide();
@@ -77,16 +82,25 @@ namespace archipelaGO.UI.Windows
 
 
         #region Internal Methods
-        private void SetCharacter(Sprite sprite, string name)
+        private void SetCharacter(Sprite sprite, StageBlocking blocking, string name)
         {
-            if (m_characterImage != null)
-            {
-                m_characterImage.sprite = sprite;
-                m_characterImage.enabled = (sprite != null);
-            }
-
             if (m_characterNameText != null)
                 m_characterNameText.text = name;
+
+            AssignCharacterSprite(m_characterStageLeft,
+                (blocking == StageBlocking.StageLeft ? sprite : null));
+
+            AssignCharacterSprite(m_characterStageRight,
+                (blocking == StageBlocking.StageRight ? sprite : null));
+        }
+
+        private void AssignCharacterSprite(Image characterImage, Sprite sprite)
+        {
+            if (characterImage == null)
+                return;
+
+            m_characterStageLeft.sprite = sprite;
+            m_characterStageLeft.enabled = (sprite != null);
         }
 
         private IEnumerator AnimateDialogueLine(string dialogueLine, WordBank wordBank)
