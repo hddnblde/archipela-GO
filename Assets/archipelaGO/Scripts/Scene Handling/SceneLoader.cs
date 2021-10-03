@@ -8,6 +8,9 @@ namespace archipelaGO.SceneHandling
     {
         #region Fields
         [SerializeField]
+        private float m_minLoadingTime = 3f;
+
+        [SerializeField]
         private float m_fadeDuration = 1.25f;
 
         [SerializeField]
@@ -115,6 +118,9 @@ namespace archipelaGO.SceneHandling
 
             AsyncOperation sceneLoading =
                 SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
+
+            float startTime = Time.time;
+
             yield return new WaitUntil(() => sceneLoading.isDone);
 
             m_loaded = true;
@@ -123,6 +129,16 @@ namespace archipelaGO.SceneHandling
                 SceneManager.UnloadSceneAsync(currentSceneIndex);
 
             yield return new WaitUntil(() => sceneUnloading.isDone);
+            yield return WaitForLoadTimeToFinish(startTime);
+        }
+
+        private IEnumerator WaitForLoadTimeToFinish(float startTime)
+        {
+            float totalLoadingTime = (Time.time - startTime);
+            float remainingLoadTime = Mathf.Max(m_minLoadingTime - totalLoadingTime, 0f);
+
+            if (remainingLoadTime > 0f)
+                yield return new WaitForSeconds(remainingLoadTime);
         }
 
         private IEnumerator FadeScreenRoutine(bool fadeIn)
