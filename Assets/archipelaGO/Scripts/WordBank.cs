@@ -111,6 +111,9 @@ namespace archipelaGO
 
                     case PartOfSpeech.Conjuction:
                         return "conj.";
+                    
+                    case PartOfSpeech.Interjection:
+                        return "interj.";
 
                     default:
                         return string.Empty;
@@ -127,7 +130,8 @@ namespace archipelaGO
             Adjective = 2,
             Verb = 3,
             Adverb = 4,
-            Conjuction = 5
+            Conjuction = 5,
+            Interjection = 6
         }
         #endregion
 
