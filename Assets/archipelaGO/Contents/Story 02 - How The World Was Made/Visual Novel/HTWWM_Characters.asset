@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: HTWWM_Characters
   m_EditorClassIdentifier: 
   m_characters:
-  - m_sprite: {fileID: 0}
-    m_name: Narrator
-  - m_sprite: {fileID: 0}
-    m_name: Captan (You)
-  - m_sprite: {fileID: 0}
-    m_name: Maguayan
-  - m_sprite: {fileID: 0}
-    m_name: Lihangin
-  - m_sprite: {fileID: 0}
-    m_name: Lidagat
-  - m_sprite: {fileID: 0}
-    m_name: Licalibutan
-  - m_sprite: {fileID: 0}
-    m_name: Liadlao
-  - m_sprite: {fileID: 0}
-    m_name: Libulan
-  - m_sprite: {fileID: 0}
-    m_name: Lisuga
+  - m_name: Narrator
+    m_sprite: {fileID: 0}
+  - m_name: Captan (You)
+    m_sprite: {fileID: 7899217477028851948, guid: a0426cc73c62a0c4cb8f777093565730, type: 3}
+  - m_name: Maguayan
+    m_sprite: {fileID: 4379473361280674825, guid: 411cf6bfa60074349acf9958e35ff7f4, type: 3}
+  - m_name: Lihangin
+    m_sprite: {fileID: -7156692459425005794, guid: c6899449ca6404745adb451457134343, type: 3}
+  - m_name: Lidagat
+    m_sprite: {fileID: 715146929326616139, guid: c6899449ca6404745adb451457134343, type: 3}
+  - m_name: Licalibutan
+    m_sprite: {fileID: -4360384156774260305, guid: 411cf6bfa60074349acf9958e35ff7f4, type: 3}
+  - m_name: Liadlao
+    m_sprite: {fileID: 4797119071393200273, guid: 7e38076f49b762140ad604fcd92b567c, type: 3}
+  - m_name: Libulan
+    m_sprite: {fileID: 1225437067646281713, guid: 7e38076f49b762140ad604fcd92b567c, type: 3}
+  - m_name: Lisuga
+    m_sprite: {fileID: -2643793856068697430, guid: a0426cc73c62a0c4cb8f777093565730, type: 3}

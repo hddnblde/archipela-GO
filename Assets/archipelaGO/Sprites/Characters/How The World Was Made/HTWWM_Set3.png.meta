@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7899217477028851948
-    second: HTWWM_Set3_0
+    second: HTWWM_Set3_Captan
   - first:
       213: -2643793856068697430
-    second: HTWWM_Set3_1
+    second: HTWWM_Set3_Lisuga
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,15 +109,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HTWWM_Set3_0
+      name: HTWWM_Set3_Captan
       rect:
         serializedVersion: 2
-        x: 31
+        x: 40
         y: 12
         width: 1084
         height: 2029
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HTWWM_Set3_1
+      name: HTWWM_Set3_Lisuga
       rect:
         serializedVersion: 2
         x: 1181
@@ -138,7 +138,7 @@ TextureImporter:
         width: 687
         height: 1571
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

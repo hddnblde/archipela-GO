@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4360384156774260305
-    second: HTWWM_Set4_0
+    second: HTWWM_Set4_Licalibutan
   - first:
       213: 4379473361280674825
-    second: HTWWM_Set4_1
+    second: HTWWM_Set4_Maguayan
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HTWWM_Set4_0
+      name: HTWWM_Set4_Licalibutan
       rect:
         serializedVersion: 2
         x: 39
@@ -135,7 +135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HTWWM_Set4_1
+      name: HTWWM_Set4_Maguayan
       rect:
         serializedVersion: 2
         x: 1109

@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4797119071393200273
-    second: HTWWM_Set1_0
+    second: HTWWM_Set1_Liadlao
   - first:
       213: 1225437067646281713
-    second: HTWWM_Set1_1
+    second: HTWWM_Set1_Libulan
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HTWWM_Set1_0
+      name: HTWWM_Set1_Liadlao
       rect:
         serializedVersion: 2
         x: 236
@@ -130,7 +130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HTWWM_Set1_1
+      name: HTWWM_Set1_Libulan
       rect:
         serializedVersion: 2
         x: 1233

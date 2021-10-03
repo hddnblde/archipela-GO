@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 715146929326616139
-    second: HTWWM_Set2_0
+    second: HTWWM_Set2_Lidagat
   - first:
       213: -7156692459425005794
-    second: HTWWM_Set2_1
+    second: HTWWM_Set2_Lihangin
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HTWWM_Set2_0
+      name: HTWWM_Set2_Lidagat
       rect:
         serializedVersion: 2
         x: 116
@@ -117,7 +117,7 @@ TextureImporter:
         width: 627
         height: 2013
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HTWWM_Set2_1
+      name: HTWWM_Set2_Lihangin
       rect:
         serializedVersion: 2
         x: 971
@@ -138,7 +138,7 @@ TextureImporter:
         width: 1059
         height: 1981
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
