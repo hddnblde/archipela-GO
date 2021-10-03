@@ -17,7 +17,7 @@ MonoBehaviour:
   m_modules:
   - m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
     m_position: {x: -9.95, y: -3.09}
-  - m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+  - m_config: {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
     m_position: {x: -9.95, y: 1.89}
   - m_config: {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
     m_position: {x: -0.03, y: -2.31}

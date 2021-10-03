@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TTDOS_SL2_Scn3_001
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
+  m_dialogues:
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Hurry up, my dear sisters. We need to reach the mountainside before
+        it gets dark.
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Ugh! This wardrobe change is really tiring.
+  - m_characterIndex: 7
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "We don\u2019t have a choice, do we? If we do not hide in the mountains
+        as we change from our {peasant} attires into our royal  ones, you know what
+        will happen."
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Yeah, yeah. I get it, sister.
+  - m_characterIndex: 0
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Meanwhile, hidden behind some big rocks were the three sons of Makiling
+        who have spotted these three girls as they walked around the town market
+        earlier. They have been secretly following Sinukuan\u2019s daughters ever
+        since."

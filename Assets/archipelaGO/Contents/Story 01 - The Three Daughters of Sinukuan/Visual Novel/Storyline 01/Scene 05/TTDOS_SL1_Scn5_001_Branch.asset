@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91623a688d5a7a645b615586e6015bff, type: 3}
+  m_Name: TTDOS_SL1_Scn5_001_Branch
+  m_EditorClassIdentifier: 
+  m_title: What would you do?
+  m_branches:
+  - m_subtitle: Follow the princesses home
+    m_narrative: {fileID: 11400000, guid: 87e5edcb69984b840b7549ae45a26637, type: 2}
+  - m_subtitle: Strategize some more
+    m_narrative: {fileID: 11400000, guid: f47362cb4e18c9c49b8067329e23bc92, type: 2}

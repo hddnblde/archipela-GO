@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TTDOS_SL2_Scn8_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
+  m_dialogues:
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Oh, father! Thank you for saving us!
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Are you alright, my dear daughters?
+  - m_characterIndex: 7
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Yes, we are. We are very much grateful for this rescue.
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "And yes, father. We know what you\u2019re about to say, too. We will
+        take more precautionary measures for this to not happen again."
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Yes! At least you know. I couldn\u2019t see myself losing all three
+        of you. It will surely break my heart if anything happens to any of you."
+  - m_characterIndex: 7
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Thank you again, father.
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Let\u2019s all go home."
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: That would be {marvelous}.

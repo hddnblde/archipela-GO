@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TTDOS_SL2_Scn2_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
+  m_dialogues:
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: What is this thing which you speak among your suitors?
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Father, I hope you understand. But my sisters and I have talked among
+        ourselves that we vow not to get married.
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: And why is that so?
+  - m_characterIndex: 7
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Because we believe that we are bound for more incredible things rather
+        than to be stuck with a husband whose only care  is that we stay beautiful
+        and youthful.
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "What\u2019s the problem with that? These are noblemen who will {spoil}
+        you with your hearts\u2019 desires. Besides, it is your goal as a woman to
+        settle down and build a family."
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: But we do not wish for that, father.
+  - m_characterIndex: 8
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Then what is it that you desire?
