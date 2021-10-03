@@ -14,281 +14,300 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_words:
   - m_title: lowlands
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "low\xB7\u200Blands | \\ \u02C8l\u014D-l\u0259ndz, -\u02CClandz
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: an area where the land is at, near, or below the level of the sea
+      and where there are not usually mountains or large hills
   - m_title: prosperous
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "pros\xB7\u200Bper\xB7\u200Bous | \\ \u02C8pr\xE4-sp(\u0259-)r\u0259s
+      \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: marked by success or economic well-being
   - m_title: affluence
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "af\xB7\u200Bflu\xB7\u200Bence | \\ \u02C8a-(\u02CC)fl\xFC-\u0259n(t)s
+      also a-\u02C8fl\xFC-\\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: an abundant flow or supply
   - m_title: pernicious
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "per\xB7\u200Bni\xB7\u200Bcious | \\ p\u0259r-\u02C8ni-sh\u0259s
+      \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: highly injurious or destructive; deadly
   - m_title: devour
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "de\xB7\u200Bvour | \\ di-\u02C8vau\u0307(-\u0259)r, d\u0113-
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to eat up greedily or ravenously; to prey upon
   - m_title: petty
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "pet\xB7\u200Bty | \\ \u02C8pe-t\u0113 \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: having little or no importance or significance
   - m_title: defy
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "de\xB7\u200Bfy | \\ di-\u02C8f\u012B, d\u0113- \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to confront with assured power of resistance
   - m_title: adjacent
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "ad\xB7\u200Bja\xB7\u200Bcent | \\ \u0259-\u02C8j\u0101-s\u0259nt\\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: immediately preceding or following
   - m_title: oppose
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "op\xB7\u200Bpose | \\ \u0259-\u02C8p\u014Dz \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to offer resistance to; defy
   - m_title: snuff
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8sn\u0259f \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to make extinct; put an end to
   - m_title: devastate
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "dev\xB7\u200Bas\xB7\u200Btate | \\ \u02C8de-v\u0259-\u02CCst\u0101t
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to bring to ruin or chaos by violent action
   - m_title: odd
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8\xE4d \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: differing markedly from the usual, ordinary, or accepted
   - m_title: distant
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "dis\xB7\u200Btant | \\ \u02C8di-st\u0259nt \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: situated at a great distance
   - m_title: ravage
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "rav\xB7\u200Bage | \\ \u02C8ra-vij \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: ruinously destructive and wasting.
   - m_title: zeal
     m_phoneticSpelling: 
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: eagerness and interest in pursuit of something
   - m_title: enthusiasm
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "en\xB7\u200Bthu\xB7\u200Bsi\xB7\u200Basm | \\ in-\u02C8th\xFC-z\u0113-\u02CCa-z\u0259m
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: strong excitement of feeling
   - m_title: endeavor
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "en\xB7\u200Bdeav\xB7\u200Bor | \\ in-\u02C8de-v\u0259r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to attempt (something, such as the fulfillment of an obligation)
   - m_title: interfere
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "in\xB7\u200Bter\xB7\u200Bfere | \\ \u02CCin-t\u0259r-\u02C8fir,
+      \u02CCin-t\u0259- \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to enter into or take a part in the concerns of others
   - m_title: overrun
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "over\xB7\u200Brun | \\ \u02CC\u014D-v\u0259r-\u02C8r\u0259n,
+      \u02CC\u014D-v\u0259- \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to invade and occupy or ravage
   - m_title: steady
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8ste-d\u0113 \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: firm in position
   - m_title: populace
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "pop\xB7\u200Bu\xB7\u200Blace | \\ \u02C8p\xE4-py\u0259-l\u0259s
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: the common people; population
   - m_title: perilous
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "per\xB7\u200Bil\xB7\u200Bous | \\ \u02C8per-\u0259-l\u0259s,
+      \u02C8pe-r\u0259- \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: Dangerous, risky
   - m_title: kris
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8kr\u0113s \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: a Malay or Indonesian dagger with a ridged serpentine blade
   - m_title: foretell
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "fore\xB7\u200Btell | \\ f\u022Fr-\u02C8tel \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to tell beforehand; predict
   - m_title: eradicate
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "erad\xB7\u200Bi\xB7\u200Bcate | \\ i-\u02C8ra-d\u0259-\u02CCk\u0101t
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to do away with as completely as if by pulling up by the roots
   - m_title: savage
     m_phoneticSpelling: 
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: lacking the restraints normal to civilized human beings
   - m_title: victorious
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "vic\xB7\u200Bto\xB7\u200Bri\xB7\u200Bous | \\ vik-\u02C8t\u022Fr-\u0113-\u0259s
+      \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: having won a victory; triumphant
   - m_title: summit
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "sum\xB7\u200Bmit | \\ \u02C8s\u0259-m\u0259t \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: the highest point; peak
   - m_title: alas
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u0259-\u02C8las \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 6
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: used to express unhappiness, pity, or concern
   - m_title: dreadful
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "dread\xB7\u200Bful | \\ \u02C8dred-f\u0259l \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: extremely bad, distasteful, unpleasant, or shocking
   - m_title: utter
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "ut\xB7\u200Bter | \\ \u02C8\u0259-t\u0259r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to give public expression to; express in words
   - m_title: astonishing
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "as\xB7\u200Bton\xB7\u200Bish\xB7\u200Bing | \\ \u0259-\u02C8st\xE4-ni-shi\u014B
+      \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: causing a feeling of great surprise or wonder
   - m_title: scourge
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8sk\u0259rj, \u02C8sk\u022Frj, \u02C8sku\u0307rj
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: one used to inflict pain or punishment
   - m_title: awful
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "aw\xB7\u200Bful | \\ \u02C8\u022F-f\u0259l \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: extremely disagreeable or objectionable
   - m_title: martyr
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "mar\xB7\u200Btyr | \\ \u02C8m\xE4r-t\u0259r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: a person who sacrifices something of great value and especially
+      life itself for the sake of principle
   - m_title: combat
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "com\xB7\u200Bbat | \\ \u02C8k\xE4m-\u02CCbat \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: a fight or contest between individuals or groups
   - m_title: havoc
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "com\xB7\u200Bbat | \\ \u02C8k\xE4m-\u02CCbat \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
-  - m_title: befallen
-    m_phoneticSpelling: 
-    m_keywords: []
-    m_partOfSpeech: 2
+    m_definition: wide and general destruction
+  - m_title: befall
+    m_phoneticSpelling: "be\xB7\u200Bfall | \\ bi-\u02C8f\u022Fl, b\u0113- \\"
+    m_keywords:
+    - befallen
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to happen especially as if by fate
   - m_title: massive
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "mas\xB7\u200Bsive | \\ \u02C8ma-siv \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: forming or consisting of a large mass
   - m_title: wither
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "with\xB7\u200Ber | \\ \u02C8wi-th\u035F\u0259r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to lose vitality, force, or freshness
   - m_title: owe
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8\u014D \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to be indebted to
   - m_title: omen
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "\\ \u02C8\u014D-m\u0259n \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 0
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: an occurrence or phenomenon
   - m_title: assure
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "as\xB7\u200Bsure | \\ \u0259-\u02C8shu\u0307r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to make sure or certain; convince
   - m_title: vanquish
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "van\xB7\u200Bquish | \\ \u02C8va\u014B-kwish, \u02C8van-
+      \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: to overcome in battle; defeat
   - m_title: slaughter
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "slaugh\xB7\u200Bter | \\ \u02C8sl\u022F-t\u0259r \\"
     m_keywords: []
-    m_partOfSpeech: 2
+    m_partOfSpeech: 3
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: the act of killing; slay
   - m_title: noxious
-    m_phoneticSpelling: 
+    m_phoneticSpelling: "nox\xB7\u200Bious | \\ \u02C8n\xE4k-sh\u0259s \\"
     m_keywords: []
     m_partOfSpeech: 2
     m_pronunciation: {fileID: 0}
-    m_definition: 
+    m_definition: physically harmful or destructive to living beings
   - m_title: wretched
     m_phoneticSpelling: 
     m_keywords: []
