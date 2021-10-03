@@ -99,8 +99,8 @@ namespace archipelaGO.UI.Windows
             if (characterImage == null)
                 return;
 
-            m_characterStageLeft.sprite = sprite;
-            m_characterStageLeft.enabled = (sprite != null);
+            characterImage.sprite = sprite;
+            characterImage.enabled = (sprite != null);
         }
 
         private IEnumerator AnimateDialogueLine(string dialogueLine, WordBank wordBank)
