@@ -1,4 +1,5 @@
 using System.Text;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,9 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private GameObject m_lineHintPrefab = null;
 
+        [SerializeField]
+        private float m_revealAnimationInterval = 0.12f;
+
         private const string LettersInTheAlphabet =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -34,21 +38,26 @@ namespace archipelaGO.Puzzle
         #region Data Structure
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
-            public WordHuntPuzzlePiece(string word, WordCell[] cells, Color hintColor, float alpha) : base(word, cells)
+            public WordHuntPuzzlePiece(WordPuzzleModule puzzleModule, float revealAnimationInterval,
+                string word, WordCell[] cells, Color hintColor, float alpha) :
+                base(puzzleModule, word, cells, revealAnimationInterval)
             {
                 m_hintColor = hintColor;
                 m_hintColor.a = alpha;
             }
 
-            public override void Reveal()
+            protected override IEnumerator OnRevealPuzzle()
             {
                 if (m_cells == null)
-                    return;
+                    yield break;
 
                 foreach (WordCell cell in m_cells)
                 {
-                    if (cell != null)
-                        cell.SetState(CellState.CharacterShownAsBold);
+                    if (cell == null)
+                        continue;
+
+                    cell.SetState(CellState.CharacterRevealed);
+                    yield return new WaitForSeconds(revealAnimationInterval);
                 }
             }
 
@@ -99,7 +108,7 @@ namespace archipelaGO.Puzzle
         }
 
         protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
-            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor, LineHintAlpha);
+            new WordHuntPuzzlePiece(this, m_revealAnimationInterval, gridWord.word.title, cells, gridWord.hintColor, LineHintAlpha);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord)
         {
@@ -149,7 +158,7 @@ namespace archipelaGO.Puzzle
                 PuzzlePiece solvedPiece = GetSolvedPuzzlePiece(i);
 
                 if (solvedPiece != null)
-                    solvedPiece.Reveal();
+                    solvedPiece.PlayRevealAnimation();
             }
         }
 

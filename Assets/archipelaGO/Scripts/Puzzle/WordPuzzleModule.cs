@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,11 +41,18 @@ namespace archipelaGO.Puzzle
 
         protected abstract class PuzzlePiece
         {
-            public PuzzlePiece(string word, WordCell[] cells) =>
-                (m_word, m_cells) = (word.ToLower(), cells);
+            public PuzzlePiece(WordPuzzleModule puzzleModule, string word, WordCell[] cells, float revealAnimationInterval) =>
+                (m_puzzleModule, m_word, m_cells, m_revealAnimationInterval) = (puzzleModule, word.ToLower(), cells, revealAnimationInterval);
 
+
+            private WordPuzzleModule m_puzzleModule = null;
             private string m_word = string.Empty;
             protected WordCell[] m_cells = null;
+            private Coroutine m_revealAnimation = null;
+            private float m_revealAnimationInterval = 0f;
+
+            protected float revealAnimationInterval => m_revealAnimationInterval;
+            private bool m_alreadyRevealed = false;
 
             public bool Matches(string word)
             {
@@ -54,7 +62,21 @@ namespace archipelaGO.Puzzle
                 return string.Equals(m_word, word.ToLower());
             }
 
-            public abstract void Reveal();
+            public void PlayRevealAnimation()
+            {
+                if (m_puzzleModule == null || m_alreadyRevealed)
+                    return;
+
+                if (m_revealAnimation != null)
+                    m_puzzleModule.StopCoroutine(m_revealAnimation);
+
+                m_revealAnimation =
+                    m_puzzleModule.StartCoroutine(OnRevealPuzzle());
+
+                m_alreadyRevealed = true;
+            }
+
+            protected abstract IEnumerator OnRevealPuzzle();
         }
 
         protected abstract class WordHint
@@ -127,7 +149,7 @@ namespace archipelaGO.Puzzle
             if (result == null)
                 return false;
 
-            result.Reveal();
+            result.PlayRevealAnimation();
 
             if (m_pendingPieces.Contains(result))
                 m_pendingPieces.Remove(result);

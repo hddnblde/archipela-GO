@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -19,6 +20,11 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private Image m_backgroundImage = null;
 
+        [Space]
+
+        [SerializeField]
+        private WordCellRevealAnimation m_revealAnimation = null;
+
         [SerializeField]
         private float m_revealAnimationTime = 0.25f;
 
@@ -33,10 +39,11 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private Color m_highlightedColor = Color.yellow;
 
-        private bool m_highlighted = false;
+        private bool m_highlighted = false, m_revealed = false;
         public event CursorEvent OnCursorEventInvoked;
         private State m_currentState = State.Empty;
         private char m_assignedCharacter = ' ';
+        private Coroutine m_revealAnimationRoutine = null;
         #endregion
 
 
@@ -55,7 +62,7 @@ namespace archipelaGO.Puzzle
             Empty = 0,
             CharacterHidden = 1,
             CharacterShown = 2,
-            CharacterShownAsBold = 3
+            CharacterRevealed = 3
         }
         #endregion
 
@@ -113,9 +120,9 @@ namespace archipelaGO.Puzzle
         {
             m_currentState = state;
             (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
-            bool isBold = (state == State.CharacterShownAsBold);
+            bool playRevealAnimation = (state == State.CharacterRevealed);
             SetBackgroundColor(cell.backgroundColor);
-            ShowCharacter(cell.showCharacter, isBold);
+            ShowCharacter(cell.showCharacter, playRevealAnimation);
         }
 
         public void SetAsHighlighted(bool highlighted)
@@ -147,13 +154,35 @@ namespace archipelaGO.Puzzle
                 m_backgroundImage.color = color;
         }
 
-        private void ShowCharacter(bool shown, bool showAsBold)
+        private void ShowCharacter(bool shown, bool playRevealAnimation)
         {
             if (m_characterContainer == null)
                 return;
 
             m_characterContainer.enabled = shown;
-            m_characterContainer.fontStyle = (showAsBold ? FontStyle.Bold : FontStyle.Normal);
+
+            if (!playRevealAnimation || m_revealed)
+                return;
+
+            m_revealed = true;
+
+            if (m_revealAnimationRoutine != null)
+                StopCoroutine(m_revealAnimationRoutine);
+
+            m_revealAnimationRoutine =
+                StartCoroutine(RevealAnimation(m_characterContainer, m_revealAnimationTime));
+        }
+
+        private IEnumerator RevealAnimation(Text characterContainer, float duration)
+        {
+            for (float current = 0f; current < duration; current += Time.deltaTime)
+            {
+                float t = Mathf.InverseLerp(0f, duration, current);
+                m_revealAnimation?.Animate(characterContainer, t);
+                yield return null;
+            }
+
+            m_revealAnimation?.Animate(characterContainer, 1f);
         }
         #endregion
 
@@ -162,8 +191,8 @@ namespace archipelaGO.Puzzle
         private (Color backgroundColor, bool showCharacter) GetCellState(State state)
         {
             Color backgroundColor = GetStateColor(state);
-            bool showCharacter = (state == State.CharacterShown || state == State.CharacterShownAsBold);
-        
+            bool showCharacter = (state == State.CharacterShown || state == State.CharacterRevealed);
+
             return (backgroundColor, showCharacter);
         }
 

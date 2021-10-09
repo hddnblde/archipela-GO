@@ -1,4 +1,5 @@
 using System.Text;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ namespace archipelaGO.Puzzle
         private bool m_revealFirstLetterOfAllWords = false;
 
         [SerializeField]
+        private float m_revealAnimationInterval = 0.12f;
+
+        [SerializeField]
         private InputField m_answerField = null;
         #endregion
 
@@ -21,17 +25,21 @@ namespace archipelaGO.Puzzle
         #region Data Structure
         private class CrosswordPuzzlePiece : PuzzlePiece
         {
-            public CrosswordPuzzlePiece(string word, WordCell[] cells) : base(word, cells) {}
+            public CrosswordPuzzlePiece(WordPuzzleModule puzzleModule, float revealAnimationInterval,
+                string word, WordCell[] cells) : base(puzzleModule, word, cells, revealAnimationInterval) {}
 
-            public override void Reveal()
+            protected override IEnumerator OnRevealPuzzle()
             {
                 if (m_cells == null)
-                    return;
+                    yield break;
 
                 foreach (WordCell cell in m_cells)
                 {
-                    if (cell != null)
-                        cell.SetState(CellState.CharacterShown);
+                    if (cell == null)
+                        continue;
+
+                    cell.SetState(CellState.CharacterRevealed);
+                    yield return new WaitForSeconds(revealAnimationInterval);
                 }
             }
         }
@@ -95,7 +103,7 @@ namespace archipelaGO.Puzzle
         }
 
         protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
-            new CrosswordPuzzlePiece(gridWord.word.title, cells);
+            new CrosswordPuzzlePiece(this, m_revealAnimationInterval, gridWord.word.title, cells);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord) =>
             new CrosswordHint(order, gridWord.direction, $"({ gridWord.word.partOfSpeechAbridged }) { gridWord.word.definition }");
