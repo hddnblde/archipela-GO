@@ -20,6 +20,9 @@ namespace archipelaGO
         private VideoPlayer m_splashScreenPlayer = null;
 
         [SerializeField]
+        private AudioSource m_splashScreenAudioStinger = null;
+
+        [SerializeField]
         private Scene m_firstSceneToLoad = Scene.WorldMap;
         #endregion
 
@@ -37,11 +40,17 @@ namespace archipelaGO
                 goto LoadFirstScene;
             #endif
 
+
             if (m_splashScreenPlayer != null)
             {
                 m_splashScreenPlayer.Prepare();
                 yield return new WaitUntil(() => m_splashScreenPlayer.isPrepared);
+
                 m_splashScreenPlayer.Play();
+
+                if (m_splashScreenAudioStinger != null)
+                    m_splashScreenAudioStinger.Play();
+
                 yield return new WaitUntil(() => !m_splashScreenPlayer.isPlaying);
                 yield return new WaitForSeconds(m_delayBeforeLoadingFirstScene);
             }
