@@ -169,7 +169,12 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             for (int i = 0; i < names.Length; i++)
             {
                 SerializedProperty character = characters.GetArrayElementAtIndex(i);
-                SerializedProperty characterName = character.FindPropertyRelative("m_name");
+
+                if (character.objectReferenceValue == null)
+                    continue;
+
+                SerializedObject characterObject = new SerializedObject(character.objectReferenceValue);
+                SerializedProperty characterName = characterObject.FindProperty("m_name");
                 names[i] = characterName.stringValue;
             }
 
