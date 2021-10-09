@@ -76,12 +76,14 @@ namespace archipelaGO.Puzzle
                 m_direction = gridWord.direction;
                 m_position = gridWord.position;
                 m_word = wordBank.GetWord(gridWord.wordBankIndex);
+                m_hintColor = gridWord.hintColor;
             }
 
             #region Fields
             private int m_direction = 0;
             private Vector2Int m_position = Vector2Int.zero;
             private Word m_word = new Word();
+            private Color m_hintColor = Color.clear;
             #endregion
 
 
@@ -89,6 +91,7 @@ namespace archipelaGO.Puzzle
             public int direction => m_direction;
             public Vector2Int position => m_position;
             public Word word => m_word;
+            public Color hintColor => m_hintColor;
             #endregion
         }
         #endregion

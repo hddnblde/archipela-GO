@@ -20,6 +20,7 @@ namespace archipelaGO.Puzzle
 
         private readonly string[] CrosswordDirections = { "Across", "Down" };
         private readonly string[] WordHuntDirections = { "→", "↓", "↗", "↘", "←", "↑", "↙", "↖" };
+        private const int CrosswordIndex = 0, WordHuntIndex = 1;
         #endregion
 
 
@@ -244,8 +245,15 @@ namespace archipelaGO.Puzzle
             SerializedProperty direction = puzzlePiece.FindPropertyRelative("m_direction"),
                 position = puzzlePiece.FindPropertyRelative("m_position");
 
+
             using (new EditorGUI.IndentLevelScope())
             {
+                if (m_puzzleType.enumValueIndex == WordHuntIndex)
+                {
+                    SerializedProperty hintColor = puzzlePiece.FindPropertyRelative("m_hintColor");
+                    EditorGUILayout.PropertyField(hintColor);
+                }
+
                 DrawDirectionProperty(direction);
                 EditorGUILayout.PropertyField(position);
             }
@@ -253,8 +261,6 @@ namespace archipelaGO.Puzzle
 
         private void DrawDirectionProperty(SerializedProperty direction)
         {
-            const int CrosswordIndex = 0;
-
             string[] directionsContext = (m_puzzleType.enumValueIndex == CrosswordIndex ?
                 CrosswordDirections : WordHuntDirections);
 

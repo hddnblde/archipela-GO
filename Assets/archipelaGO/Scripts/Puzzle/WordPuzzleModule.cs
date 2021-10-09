@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using GameModule = archipelaGO.Game.GameModule<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
-using Word = archipelaGO.WordBank.Word;
 using TMPro;
 
 namespace archipelaGO.Puzzle
@@ -91,7 +90,7 @@ namespace archipelaGO.Puzzle
         protected abstract void AssignCharacterToCell(char character, int characterIndex, int puzzleIndex, WordCell cell);
         protected abstract WordHint GenerateHint(int order, GridWord gridWord);
         protected abstract string GenerateHintText(List<WordHint> hints);
-        protected abstract PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells);
+        protected abstract PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells);
         #endregion
 
 
@@ -116,7 +115,14 @@ namespace archipelaGO.Puzzle
 
         protected bool VerifyAnswer(string answer)
         {
-            PuzzlePiece result = GetPuzzlePiece(answer);
+            PuzzlePiece result;
+
+            return VerifyAnswer(answer, out result);
+        }
+
+        protected bool VerifyAnswer(string answer, out PuzzlePiece result)
+        {
+            result = GetPuzzlePiece(answer);
 
             if (result == null)
                 return false;
@@ -194,15 +200,15 @@ namespace archipelaGO.Puzzle
                 if (gridWord == null)
                     continue;
 
-                Word word = gridWord.word;
-                int direction = gridWord.direction;
+                // Word word = gridWord.word;
+                // int direction = gridWord.direction;
                 Vector2Int position = gridWord.position;
 
                 if (!plottedPoints.Contains(position))
                     plottedPoints.Add(position);
 
                 int wordIndex = plottedPoints.IndexOf(position) + 1;
-                PuzzlePiece puzzlePiece = GeneratePuzzlePiece(wordIndex, word.title, position, direction, grid);
+                PuzzlePiece puzzlePiece = GeneratePuzzlePiece(wordIndex, gridWord, grid);
                 m_pendingPieces.Add(puzzlePiece);
             }
         }
@@ -289,8 +295,11 @@ namespace archipelaGO.Puzzle
             return wordCellComponent;
         }
 
-        private PuzzlePiece GeneratePuzzlePiece(int index, string word, Vector2Int position, int direction, WordCell[,] grids)
+        private PuzzlePiece GeneratePuzzlePiece(int index, GridWord gridWord, WordCell[,] grids)
         {
+            string word = gridWord.word.title;
+            int direction = gridWord.direction;
+            Vector2Int position = gridWord.position;
             int wordLength = word.Length;
             (int columns, int rows) gridSize = GetGridSize(grids);
             List<WordCell> cells = new List<WordCell>();
@@ -312,7 +321,7 @@ namespace archipelaGO.Puzzle
                     AssignCharacterToCell(character, characterIndex, index, cell);
             }
 
-            return GeneratePuzzlePiece(word, cells.ToArray());
+            return GeneratePuzzlePiece(gridWord, cells.ToArray());
         }
 
         protected abstract (int column, int row) GetCellPosition(Vector2Int anchor, int direction, int length, int currentPosition);

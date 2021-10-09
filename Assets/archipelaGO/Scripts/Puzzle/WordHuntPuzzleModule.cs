@@ -32,23 +32,32 @@ namespace archipelaGO.Puzzle
         #region Data Structure
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
-            public WordHuntPuzzlePiece(string word, WordCell[] cells) : base(word, cells) {}
+            public WordHuntPuzzlePiece(string word, WordCell[] cells, Color hintColor) : base(word, cells) =>
+                m_hintColor = hintColor;
+
             public override void Reveal() {}
+
+            private Color m_hintColor = Color.clear;
+            public Color hintColor => m_hintColor;
         }
 
         private class WordHuntHint : WordHint
         {
-            public WordHuntHint (int order, string word, bool guessed)
+            public WordHuntHint (Color color, int order, string word, bool guessed)
             {
                 m_order = order;
                 m_word = word;
 
-                if (guessed)
-                    m_word = $"<s>{ m_word }</s>";
+                if (!guessed)
+                    return;
+
+                string colorString = ColorUtility.ToHtmlStringRGBA(color);
+                m_word = $"<color={ colorString }><s>{ m_word }</s></color>";
             }
 
             private int m_order;
             private string m_word;
+            private Color m_color;
 
             public override string GetHint() => $"{ m_word.ToUpper() }";
         }
@@ -75,14 +84,14 @@ namespace archipelaGO.Puzzle
             cell.OnCursorEventInvoked += GenerateCursorEventHandler(column, row);
         }
 
-        protected override PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells) =>
-            new WordHuntPuzzlePiece(word, cells);
+        protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
+            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord)
         {
             bool guessed = AlreadyAnswered(gridWord.word.title);
 
-            return new WordHuntHint(order, gridWord.word.title, guessed);
+            return new WordHuntHint(gridWord.hintColor, order, gridWord.word.title, guessed);
         }
 
         protected override string GenerateHintText(List<WordHint> hints)
@@ -130,7 +139,7 @@ namespace archipelaGO.Puzzle
             }
         }
 
-        private void DrawLineHint(Vector3 startPosition, Vector3 endPosition, float width)
+        private void DrawLineHint(Color color, Vector3 startPosition, Vector3 endPosition, float width)
         {
             if (m_lineHintPrefab == null)
                 return;
@@ -140,6 +149,8 @@ namespace archipelaGO.Puzzle
 
             if (lineHintImage == null)
                 return;
+
+            lineHintImage.color = color;
 
             Vector3 direction = (endPosition - startPosition);
             float angle = Mathf.Rad2Deg * Mathf.Atan2(direction.y, direction.x);
@@ -194,8 +205,9 @@ namespace archipelaGO.Puzzle
         private void OnCellPressedUp(int column, int row)
         {
             m_cellDragBegan = false;
+            PuzzlePiece result;
 
-            if (VerifyAnswer(m_pendingWord))
+            if (VerifyAnswer(m_pendingWord, out result))
             {
                 WordCell startCell = GetCell(m_cellDragStartPosition);
                 WordCell endCell = GetCell(m_cellDragEndPosition);
@@ -203,11 +215,12 @@ namespace archipelaGO.Puzzle
                 RectTransform startCellRectTransform = startCell.transform as RectTransform;
                 RectTransform endCellRectTransform = endCell.transform as RectTransform;
 
+                Color hintColor = (result != null ? (result as WordHuntPuzzlePiece).hintColor : Color.clear);
                 Vector3 startCellWorldPosition = startCellRectTransform.transform.position;
                 Vector3 endCellWorldPosition = endCellRectTransform.transform.position;
                 float width = (endCellRectTransform.anchoredPosition3D - startCellRectTransform.anchoredPosition3D).magnitude;
                 float widthPadding = (startCellRectTransform.rect.width / 2f) + (endCellRectTransform.rect.width / 2f) - 8f;
-                DrawLineHint(startCellWorldPosition, endCellWorldPosition, width + widthPadding);
+                DrawLineHint(hintColor, startCellWorldPosition, endCellWorldPosition, width + widthPadding);
             }
 
             SetUpHints();

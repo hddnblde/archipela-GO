@@ -94,8 +94,8 @@ namespace archipelaGO.Puzzle
             cell.SetAsEmptyTile(true);
         }
 
-        protected override PuzzlePiece GeneratePuzzlePiece(string word, WordCell[] cells) =>
-            new CrosswordPuzzlePiece(word, cells);
+        protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
+            new CrosswordPuzzlePiece(gridWord.word.title, cells);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord) =>
             new CrosswordHint(order, gridWord.direction, $"({ gridWord.word.partOfSpeechAbridged }) { gridWord.word.definition }");
