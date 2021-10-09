@@ -15,6 +15,7 @@ MonoBehaviour:
   m_hint: 
   m_requireTapToContinue: 0
   m_wordBank: {fileID: 11400000, guid: 8d21eb487f6bb5942a6b39b31b095f13, type: 2}
+  m_mainCharacter: {fileID: 11400000, guid: f9bd8c5f60cb81b438457f350b927428, type: 2}
   m_backgroundScenes:
   - {fileID: 0}
   m_plotlines:
