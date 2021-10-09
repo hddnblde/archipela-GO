@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a277a5e56e48e834894015734a80a306, type: 3}
+  m_Name: TTDOS_Chr_Magat
+  m_EditorClassIdentifier: 
+  m_name: Magat
+  m_sprite: {fileID: -551346373475003925, guid: c2eaa3729037b0a4aaad7d255d329d8e, type: 3}

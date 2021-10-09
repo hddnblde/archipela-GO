@@ -13,19 +13,11 @@ MonoBehaviour:
   m_Name: TMOM_Characters
   m_EditorClassIdentifier: 
   m_characters:
-  - m_sprite: {fileID: 0}
-    m_name: Narrator
-  - m_sprite: {fileID: 0}
-    m_name: Raja Sulayman
-  - m_sprite: {fileID: 0}
-    m_name: Raja Indarapatra
-  - m_sprite: {fileID: 0}
-    m_name: Kurita
-  - m_sprite: {fileID: 0}
-    m_name: Tarabusaw
-  - m_sprite: {fileID: 0}
-    m_name: Pah
-  - m_sprite: {fileID: 0}
-    m_name: Balbal
-  - m_sprite: {fileID: 0}
-    m_name: Messenger
+  - {fileID: 11400000, guid: 3828bd921d8f4f64a9a3558a1523785e, type: 2}
+  - {fileID: 11400000, guid: f9bd8c5f60cb81b438457f350b927428, type: 2}
+  - {fileID: 11400000, guid: 438d471efc4457a42a838d88b8af0b9c, type: 2}
+  - {fileID: 11400000, guid: 113fc922882c30b4aaba32e224e55775, type: 2}
+  - {fileID: 11400000, guid: 1b6a6743d21454f4792e7abc70acf27f, type: 2}
+  - {fileID: 11400000, guid: e4abb7afa5940eb4d9d04bda87231465, type: 2}
+  - {fileID: 11400000, guid: 77bd01abc67a30240abe8a21e91107e3, type: 2}
+  - {fileID: 11400000, guid: 717cdaf3098b84046a8e6f17f91cf0b8, type: 2}

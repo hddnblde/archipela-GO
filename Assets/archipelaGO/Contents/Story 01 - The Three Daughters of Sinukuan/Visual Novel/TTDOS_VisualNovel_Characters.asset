@@ -13,30 +13,12 @@ MonoBehaviour:
   m_Name: TTDOS_VisualNovel_Characters
   m_EditorClassIdentifier: 
   m_characters:
-  - m_blocking: 0
-    m_sprite: {fileID: 0}
-    m_name: Narrator
-  - m_blocking: 0
-    m_sprite: {fileID: -1042369448145165882, guid: c2eaa3729037b0a4aaad7d255d329d8e, type: 3}
-    m_name: Kalaw (You)
-  - m_blocking: 0
-    m_sprite: {fileID: -551346373475003925, guid: c2eaa3729037b0a4aaad7d255d329d8e, type: 3}
-    m_name: Magat
-  - m_blocking: 0
-    m_sprite: {fileID: -2334751806337691960, guid: c2eaa3729037b0a4aaad7d255d329d8e, type: 3}
-    m_name: Maglente
-  - m_blocking: 1
-    m_sprite: {fileID: 7078815010831765837, guid: 01a12ecdf14fbd14b891d1c9471dff14, type: 3}
-    m_name: Makiling
-  - m_blocking: 0
-    m_sprite: {fileID: -2009877643845922804, guid: 4d0c26adfd762db4a9c35a4d895ea290, type: 3}
-    m_name: Rosa-Minda
-  - m_blocking: 0
-    m_sprite: {fileID: 8653954690801130645, guid: 4d0c26adfd762db4a9c35a4d895ea290, type: 3}
-    m_name: Rosalina
-  - m_blocking: 0
-    m_sprite: {fileID: -4739246367852332572, guid: 4d0c26adfd762db4a9c35a4d895ea290, type: 3}
-    m_name: "Do\xF1a Maria"
-  - m_blocking: 1
-    m_sprite: {fileID: 8944107668380331245, guid: 605b8d8cd0cf43f458124f61e27a121a, type: 3}
-    m_name: Sinukuan
+  - {fileID: 11400000, guid: 3828bd921d8f4f64a9a3558a1523785e, type: 2}
+  - {fileID: 11400000, guid: a4f11010539d35740946f3370e6448f8, type: 2}
+  - {fileID: 11400000, guid: 7d9356d5775602348a50f8b2e043820c, type: 2}
+  - {fileID: 11400000, guid: 72040b81c09fafa47819714e17a4f224, type: 2}
+  - {fileID: 11400000, guid: 6bf430acdeaa5d94c9de0963516bf06c, type: 2}
+  - {fileID: 11400000, guid: b52f57c1c2aa414408d0483a0fda82cd, type: 2}
+  - {fileID: 11400000, guid: 7714a1fd6798e8b448b9bffcc48b78b0, type: 2}
+  - {fileID: 11400000, guid: e30eda85287d5a946b2adca66f2bbdac, type: 2}
+  - {fileID: 11400000, guid: 993ccc4e0ead8b8418e07eca253e0a0f, type: 2}
