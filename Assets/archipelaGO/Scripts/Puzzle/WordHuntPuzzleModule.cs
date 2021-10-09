@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using CursorEvent = archipelaGO.Puzzle.WordCell.CursorEvent;
 using CursorState = archipelaGO.Puzzle.WordCell.CursorState;
+using CellState = archipelaGO.Puzzle.WordCell.State;
 
 namespace archipelaGO.Puzzle
 {
@@ -17,9 +18,6 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private GameObject m_lineHintPrefab = null;
 
-        [SerializeField, Range(0f, 1f)]
-        private float m_lineHintAlpha = 0.85f;
-
         private const string LettersInTheAlphabet =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -28,6 +26,7 @@ namespace archipelaGO.Puzzle
         private Vector2Int m_cellDragStartPosition = Vector2Int.zero,
             m_cellDragEndPosition = Vector2Int.zero;
         
+        private const float LineHintAlpha = 0.7f;
         private string m_pendingWord = string.Empty;
         #endregion
 
@@ -41,7 +40,17 @@ namespace archipelaGO.Puzzle
                 m_hintColor.a = alpha;
             }
 
-            public override void Reveal() {}
+            public override void Reveal()
+            {
+                if (m_cells == null)
+                    return;
+
+                foreach (WordCell cell in m_cells)
+                {
+                    if (cell != null)
+                        cell.SetState(CellState.CharacterShownAsBold);
+                }
+            }
 
             private Color m_hintColor = Color.clear;
             public Color hintColor => m_hintColor;
@@ -58,7 +67,7 @@ namespace archipelaGO.Puzzle
                     return;
 
                 string colorString = ColorUtility.ToHtmlStringRGBA(color);
-                m_word = $"<color={ colorString }><s>{ m_word }</s></color>";
+                m_word = $"<color=#{ colorString }><b>{ m_word }</b></color>";
             }
 
             private int m_order;
@@ -90,7 +99,7 @@ namespace archipelaGO.Puzzle
         }
 
         protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
-            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor, m_lineHintAlpha);
+            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor, LineHintAlpha);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord)
         {
