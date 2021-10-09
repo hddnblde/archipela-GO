@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7215f31490dae4c9ba77f1804f90bf, type: 3}
+  m_Name: Word Hunt Reveal Animation
+  m_EditorClassIdentifier: 
+  m_boldFontStyleThreshold: 0.892
+  m_curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.009433985
+      inSlope: 1.5871283
+      outSlope: 1.5871283
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.32990175
+      value: 0.5141624
+      inSlope: 4.209777
+      outSlope: 4.209777
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.11773697
+    - serializedVersion: 3
+      time: 0.58141166
+      value: 0.97325754
+      inSlope: -1.0187558
+      outSlope: -1.0187558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.78096384
+      value: 0.20241392
+      inSlope: -2.415025
+      outSlope: -2.415025
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.009433985
+      inSlope: -0.96718234
+      outSlope: -0.96718234
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_minScale: 1
+  m_maxScale: 1.25

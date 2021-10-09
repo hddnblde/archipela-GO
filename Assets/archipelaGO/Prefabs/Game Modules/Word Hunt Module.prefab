@@ -130,6 +130,7 @@ MonoBehaviour:
   m_hintText: {fileID: 2251810266785520429}
   m_lineHintParent: {fileID: 243199724011054529}
   m_lineHintPrefab: {fileID: 2077448971213940056, guid: df1f732b3b0435745a4d4e6d249b201f, type: 3}
+  m_revealAnimationInterval: 0.07291
 --- !u!1 &3371227762591428200
 GameObject:
   m_ObjectHideFlags: 0

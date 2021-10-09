@@ -229,7 +229,8 @@ MonoBehaviour:
   m_indexContainer: {fileID: 1132331347854272402}
   m_characterContainer: {fileID: 5497155671473685500}
   m_backgroundImage: {fileID: 6831548354694065876}
-  m_revealAnimationTime: 0.25
+  m_revealAnimation: {fileID: 11400000, guid: 87fce12c7f653fa4b97f3217ab8bbc9d, type: 2}
+  m_revealAnimationTime: 0.36
   m_enabledColor: {r: 1, g: 1, b: 1, a: 1}
   m_emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_highlightedColor: {r: 1, g: 0.86910975, b: 0, a: 1}

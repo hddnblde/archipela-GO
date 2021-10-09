@@ -573,6 +573,7 @@ MonoBehaviour:
   m_padding: 50
   m_hintText: {fileID: 8207025214713640828}
   m_revealFirstLetterOfAllWords: 1
+  m_revealAnimationInterval: 0.0729
   m_answerField: {fileID: 2802357203299028480}
 --- !u!1 &2802357202805254746
 GameObject:

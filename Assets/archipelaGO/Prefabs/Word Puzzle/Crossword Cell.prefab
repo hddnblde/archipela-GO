@@ -131,9 +131,11 @@ MonoBehaviour:
   m_indexContainer: {fileID: 1132331347854272402}
   m_characterContainer: {fileID: 5497155671473685500}
   m_backgroundImage: {fileID: 6831548354694065876}
+  m_revealAnimation: {fileID: 11400000, guid: f97f4b2be51c71443b35352c67fa486f, type: 2}
   m_revealAnimationTime: 0.25
   m_enabledColor: {r: 1, g: 1, b: 1, a: 1}
   m_emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_highlightedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!222 &7312112954385406747
 CanvasRenderer:
   m_ObjectHideFlags: 0
