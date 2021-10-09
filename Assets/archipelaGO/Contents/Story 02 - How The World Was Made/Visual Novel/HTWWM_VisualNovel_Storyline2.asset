@@ -15,9 +15,62 @@ MonoBehaviour:
   m_hint: 
   m_requireTapToContinue: 0
   m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
+  m_mainCharacter: {fileID: 11400000, guid: c44860fc9991cf544a5e4c3678373ee2, type: 2}
   m_backgroundScenes:
   - {fileID: 21300000, guid: 887eebfcf3ecc8f4297099ae06b4ea28, type: 3}
   - {fileID: 21300000, guid: b4976383a37118f45b60af5e38c735dd, type: 3}
   - {fileID: 21300000, guid: 621c7c94a8c8b1a4289f171bb5a938f8, type: 3}
   - {fileID: 21300000, guid: e703f0dc9e29ca4498158818a2807c33, type: 3}
-  m_plotlines: []
+  m_plotlines:
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 67c7e2d5d747b6c429d3c78350668dfb, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: b309529c54679254fb47e8bc1999ca5e, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: ef905293867dff34ab839823c99a2096, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 2a1a21041fd610c4ab5a3de171b5c31b, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 85d06d31d4d2b5c4581c27970e6a3a0e, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: c5708e29d983dc64daf143bda2822137, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 1e3543cc3b61fac48aff187f367ebcc0, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 01ab4956259dd15438733f08bbc65e19, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 41415538dc21a544cab7ef85024eb310, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 0d87ffaeb6d502246801d51aa085a704, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: e4a58225cca005044952540c4e0939d1, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: ff8a703ca5496854f8419f9197beb81d, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 3f98da794f66922438c9ac1aa37ca227, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 446fa8d0ed750dc40a3a019dfaa635c5, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 3042446a7f53e69419fd0890545684fe, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d0f0b39a0e9883b4c8a6283f12b2fcfd, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 4f8f3225de4545f4daf0d8ad261f413c, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 5d1e33fd250e1a541b446b12f0205343, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: a02219fdb68edd34d92f6d917debf97f, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: e52364b2f7384a340be0d54b8bde450c, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 83112fe050c6f8b4a93c72e9d40065f1, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 4820f181c116dac46b6afde8f66da41b, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 1823e166633a55642bd03e95b8227e8a, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 261bea886ef75354c90f387460da9ec6, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 84d61fb722737b346939b2ee62ab72c5, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: a2d65d2996d6fc644ade8867e6084b01, type: 2}

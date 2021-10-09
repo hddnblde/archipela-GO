@@ -10,29 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn5_000
+  m_Name: HTWWM_SL2_Scn6_005_Choice_A
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
+  - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: When all was ready, Licalibutan, Liadlao, and Libulan rushed to the
-        sky and were greeted by the huge gates of steel that guarded the entrance.
-  - m_characterIndex: 5
+      m_text: "I\u2019m kind of skeptic with this seed, Captan."
+  - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Oh no! Why are the gates here? In any case, my strongest winds can
-        topple these metal bars in all directions. Hold on there, brothers.
-  - m_characterIndex: 6
+      m_text: "Please, don\u2019t be. I feel guilty now for this {wrongdoing}. I
+        want to do something right, though."
+  - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: That was cool.
-  - m_characterIndex: 5
+      m_text: Then, what is this about?
+  - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "I know. Come on, let\u2019s proceed!"
+      m_text: I grant you the responsibility of planting it on land so it could prop
+        the new human race.
+  - m_characterIndex: 2
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Alright. I\u2019ll take care of this for the sake of Licalibutan."

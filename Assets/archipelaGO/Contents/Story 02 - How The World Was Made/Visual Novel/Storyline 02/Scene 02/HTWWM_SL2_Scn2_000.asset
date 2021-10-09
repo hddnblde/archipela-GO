@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn1_001
+  m_Name: HTWWM_SL2_Scn2_000
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
@@ -18,5 +18,15 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Maguayan, I\u2019m so {ecstatic}. Look at these adorable children!
-        Lidagat and Lihangin surely know how to make marvelous offsprings!"
+      m_text: I'm in {grief} due to my son's death.
+  - m_characterIndex: 2
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Captan, I'm sorry to hear about that. He is undisputedly one of the
+        best.
+  - m_characterIndex: 1
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Could you help me plan our next actions now that Lihangin is dead?

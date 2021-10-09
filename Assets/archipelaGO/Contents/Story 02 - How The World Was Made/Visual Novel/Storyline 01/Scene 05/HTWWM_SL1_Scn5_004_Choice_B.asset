@@ -10,29 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn5_000
+  m_Name: HTWWM_SL1_Scn5_004_Choice_B
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
-    m_blocking: 0
+  - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: When all was ready, Licalibutan, Liadlao, and Libulan rushed to the
-        sky and were greeted by the huge gates of steel that guarded the entrance.
-  - m_characterIndex: 5
-    m_blocking: 0
+      m_text: Lisuga! What are you doing here?
+  - m_characterIndex: 8
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Oh no! Why are the gates here? In any case, my strongest winds can
-        topple these metal bars in all directions. Hold on there, brothers.
-  - m_characterIndex: 6
-    m_blocking: 0
+      m_text: I would just like to ask if you have seen my brothers around here?
+  - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: That was cool.
-  - m_characterIndex: 5
-    m_blocking: 0
+      m_text: "Ahh! Maybe you\u2019re one of them too. \u2018Causing troubles everywhere,
+        eh?"
+  - m_characterIndex: 8
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "I know. Come on, let\u2019s proceed!"
+      m_text: No, grandfather. I was just looking for my brothers.
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Liar! Take this!

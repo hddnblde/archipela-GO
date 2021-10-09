@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn1_001
+  m_Name: HTWWM_SL2_Scn2_002
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
@@ -18,5 +18,5 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Maguayan, I\u2019m so {ecstatic}. Look at these adorable children!
-        Lidagat and Lihangin surely know how to make marvelous offsprings!"
+      m_text: "I\u2019m sorry as well. This has been a difficult time. Anyway, okay,
+        let\u2019s see if Licalibutan\u2019s up for his new responsibility."

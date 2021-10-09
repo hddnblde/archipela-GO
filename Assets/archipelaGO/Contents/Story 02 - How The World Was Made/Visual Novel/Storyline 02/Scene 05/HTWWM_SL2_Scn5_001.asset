@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn6_000
+  m_Name: HTWWM_SL2_Scn5_001
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
@@ -18,11 +18,15 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: After the incident, Captan came down from the sky and tore the sea
-        apart, calling on Maguayan to come to him.
+      m_text: The brothers dashed into the opening, only to be met by the enraged
+        god  Captan. He was so angered by the incident that he sent three lightning
+        bolts  after the three brothers. The first strike melted the copper Libulan
+        and formed it  into a ball. The second hit the golden Liadlao, melting him
+        as well. The third bolt  hit Licalibutan, causing his rocky body to {shatter}
+        and fall into the sea.
   - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Maguayan! Maguayan! Come out there at once. How dare you order the
-        attack against me?
+      m_text: "If you, rascals, hadn\u2019t done this stupid act in the first place,
+        you wouldn\u2019t end up that way."

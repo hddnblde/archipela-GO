@@ -10,29 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn5_000
+  m_Name: HTWWM_SL1_Scn5_002_Choice_B
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
-    m_blocking: 0
+  - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: When all was ready, Licalibutan, Liadlao, and Libulan rushed to the
-        sky and were greeted by the huge gates of steel that guarded the entrance.
+      m_text: You naughty, children! What have you done to my gates? Do you wish
+        to talk to me about something? You could have just knocked, you know, Haha!
   - m_characterIndex: 5
-    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Oh no! Why are the gates here? In any case, my strongest winds can
-        topple these metal bars in all directions. Hold on there, brothers.
-  - m_characterIndex: 6
-    m_blocking: 0
+      m_text: Ha! Your gates deserve that treatment, old man! Come one, brothers.
+        Run for your lives!
+  - m_characterIndex: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: That was cool.
-  - m_characterIndex: 5
-    m_blocking: 0
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: "I know. Come on, let\u2019s proceed!"
+      m_text: "What did you just say? Now you\u2019re pissing me off. You\u2019ll
+        never get away from these even if you continue running!"

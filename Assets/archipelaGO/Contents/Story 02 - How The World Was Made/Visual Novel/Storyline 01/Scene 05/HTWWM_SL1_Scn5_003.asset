@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: HTWWM_SL1_Scn5_003
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Captan was so enraged by the incident that he dispatched three bolts
+        of lightning after the three brothers. The first strike melted the copper
+        Libulan into a ball.
+    - m_voiceOver: {fileID: 0}
+      m_text: The second struck the golden Liadlao, causing him to melt as well.
+        The third bolt struck Licalibutan, delivering his rocky body to {shatter}
+        and fall into the sea.
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "If you hadn\u2019t done this stupid act in the first place, you wouldn\u2019t
+        end up that way."
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Meanwhile, the gentle Lisuga had missed her brothers and began looking
+        for them. She moved toward the sky to check if Licalibutan, Liadlao, and
+        Libulan had wandered in his grandfather\u2019s place."
+  - m_characterIndex: 8
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Excuse me, grandfather.

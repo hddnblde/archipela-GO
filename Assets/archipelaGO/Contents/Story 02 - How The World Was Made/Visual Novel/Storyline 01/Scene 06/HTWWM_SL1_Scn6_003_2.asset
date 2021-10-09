@@ -10,29 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn5_000
+  m_Name: HTWWM_SL1_Scn6_003_2
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
+  - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: When all was ready, Licalibutan, Liadlao, and Libulan rushed to the
-        sky and were greeted by the huge gates of steel that guarded the entrance.
-  - m_characterIndex: 5
+      m_text: "Given that Liadlao is made of pure gold, why don\u2019t we transform
+        him into a sun? He could shine his golden {radiance} into the world during
+        the daytime. "
+    - m_voiceOver: {fileID: 0}
+      m_text: Libulan, with his silvery tone, on one hand, could become the moon
+        that lights the path at night. What do you think?
+  - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Oh no! Why are the gates here? In any case, my strongest winds can
-        topple these metal bars in all directions. Hold on there, brothers.
-  - m_characterIndex: 6
+      m_text: Sounds acceptable. And how about Licalubutan and Lisuga?
+  - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: That was cool.
-  - m_characterIndex: 5
-    m_blocking: 0
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: "I know. Come on, let\u2019s proceed!"
+      m_text: "Lisuga shall be with Libulan, {befitting} to be the stars in the night
+        sky\u2014 quiet, {serene}, yet fascinating. As for that {wicked} Licalibutan..."
