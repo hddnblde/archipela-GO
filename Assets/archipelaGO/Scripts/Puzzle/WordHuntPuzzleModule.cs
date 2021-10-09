@@ -17,6 +17,9 @@ namespace archipelaGO.Puzzle
         [SerializeField]
         private GameObject m_lineHintPrefab = null;
 
+        [SerializeField, Range(0f, 1f)]
+        private float m_lineHintAlpha = 0.85f;
+
         private const string LettersInTheAlphabet =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -32,8 +35,11 @@ namespace archipelaGO.Puzzle
         #region Data Structure
         private class WordHuntPuzzlePiece : PuzzlePiece
         {
-            public WordHuntPuzzlePiece(string word, WordCell[] cells, Color hintColor) : base(word, cells) =>
+            public WordHuntPuzzlePiece(string word, WordCell[] cells, Color hintColor, float alpha) : base(word, cells)
+            {
                 m_hintColor = hintColor;
+                m_hintColor.a = alpha;
+            }
 
             public override void Reveal() {}
 
@@ -57,7 +63,6 @@ namespace archipelaGO.Puzzle
 
             private int m_order;
             private string m_word;
-            private Color m_color;
 
             public override string GetHint() => $"{ m_word.ToUpper() }";
         }
@@ -85,7 +90,7 @@ namespace archipelaGO.Puzzle
         }
 
         protected override PuzzlePiece GeneratePuzzlePiece(GridWord gridWord, WordCell[] cells) =>
-            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor);
+            new WordHuntPuzzlePiece(gridWord.word.title, cells, gridWord.hintColor, m_lineHintAlpha);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord)
         {

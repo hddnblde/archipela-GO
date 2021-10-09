@@ -57,7 +57,7 @@ namespace archipelaGO.Puzzle
             [SerializeField]
             private Vector2Int m_position;
 
-            [SerializeField]
+            [SerializeField, ColorUsage(false)]
             private Color m_hintColor;
 
             [SerializeField]
@@ -77,6 +77,7 @@ namespace archipelaGO.Puzzle
                 m_position = gridWord.position;
                 m_word = wordBank.GetWord(gridWord.wordBankIndex);
                 m_hintColor = gridWord.hintColor;
+                m_hintColor.a = 1f;
             }
 
             #region Fields
