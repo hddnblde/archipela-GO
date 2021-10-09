@@ -23,61 +23,61 @@ MonoBehaviour:
   m_puzzlePieces:
   - m_direction: 1
     m_position: {x: 7, y: 5}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.74599713, g: 0.8980392, b: 0.39215687, a: 0}
     m_wordBankIndex: 14
   - m_direction: 0
     m_position: {x: 7, y: 12}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.754717, g: 0.23139909, b: 0.5087058, a: 0}
     m_wordBankIndex: 6
   - m_direction: 4
     m_position: {x: 9, y: 3}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.8679245, g: 0.50866807, b: 0.40530434, a: 0}
     m_wordBankIndex: 32
   - m_direction: 0
     m_position: {x: 5, y: 11}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.51738465, g: 0.3809185, b: 0.754717, a: 0}
     m_wordBankIndex: 45
   - m_direction: 0
     m_position: {x: 5, y: 10}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.2622375, g: 0.54990727, b: 0.7830189, a: 0}
     m_wordBankIndex: 29
   - m_direction: 1
     m_position: {x: 9, y: 3}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.40258992, g: 0.46062154, b: 0.7830189, a: 0}
     m_wordBankIndex: 25
   - m_direction: 0
     m_position: {x: 1, y: 5}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.29196337, g: 0.764151, b: 0.7200802, a: 0}
     m_wordBankIndex: 4
   - m_direction: 7
     m_position: {x: 6, y: 12}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.8207547, g: 0.77203065, b: 0.3213332, a: 0}
     m_wordBankIndex: 9
   - m_direction: 1
     m_position: {x: 1, y: 6}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.8113208, g: 0.60765344, b: 0.3099858, a: 0}
     m_wordBankIndex: 18
   - m_direction: 4
     m_position: {x: 11, y: 0}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.6603774, g: 0.47422573, b: 0.40183342, a: 0}
     m_wordBankIndex: 27
   - m_direction: 0
     m_position: {x: 6, y: 1}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.38527945, g: 0.6243041, b: 0.735849, a: 0}
     m_wordBankIndex: 20
   - m_direction: 0
     m_position: {x: 5, y: 2}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.60511, g: 0.8396226, b: 0.32872015, a: 0}
     m_wordBankIndex: 2
   - m_direction: 1
     m_position: {x: 12, y: 3}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.74772525, g: 0.37887147, b: 0.8113208, a: 0}
     m_wordBankIndex: 23
   - m_direction: 0
     m_position: {x: 10, y: 6}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.8867924, g: 0.3946975, b: 0.35555357, a: 0}
     m_wordBankIndex: 41
   - m_direction: 5
     m_position: {x: 0, y: 7}
-    m_hintColor: {r: 0, g: 0, b: 0, a: 0}
+    m_hintColor: {r: 0.5696232, g: 0.4577697, b: 0.764151, a: 0}
     m_wordBankIndex: 34
