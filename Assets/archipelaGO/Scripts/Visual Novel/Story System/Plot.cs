@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GameModuleConfig = archipelaGO.Game.GameModuleConfig;
+using DialogueCharacter = archipelaGO.VisualNovel.DialogueSystem.Elements.DialogueCharacter;
 
 namespace archipelaGO.VisualNovel.StorySystem
 {
@@ -10,6 +11,9 @@ namespace archipelaGO.VisualNovel.StorySystem
         #region Fields
         [SerializeField]
         private WordBank m_wordBank = null;
+
+        [SerializeField]
+        private DialogueCharacter m_mainCharacter = null;
 
         [SerializeField]
         private List<Sprite> m_backgroundScenes = new List<Sprite>();
@@ -27,16 +31,16 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Public Method
-        public (Narrative narrative, Sprite scene) GetPlotline(int index)
+        public (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) GetPlotline(int index)
         {
             if (index < 0 || index >= plotlineCount)
-                return (null, null);
+                return (null, null, m_mainCharacter);
             
             Plotline plotline = m_plotlines[index];
             Sprite scene = GetScene(plotline.backgroundIndex);
             Narrative narrative = plotline.narrative;
 
-            return (narrative, scene);
+            return (narrative, scene, m_mainCharacter);
         }
         #endregion
 

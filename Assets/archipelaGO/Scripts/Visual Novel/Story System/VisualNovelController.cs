@@ -53,8 +53,13 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Public Methods
-        public IEnumerator ShowDialogue(DialogueCharacter character, StageBlocking blocking, Dialogue dialogue, WordBank wordBank)
+        public IEnumerator ShowDialogue(DialogueCharacter character, StageBlocking blocking, Dialogue dialogue, WordBank wordBank, bool isMainCharacter)
         {
+            string displayedCharacterName = character.displayedName;
+
+            if (isMainCharacter)
+                displayedCharacterName += " (You)";
+
             for (int i = 0; i < dialogue.lineCount; i++)
             {
                 DialogueLine line = dialogue.GetLine(i);
@@ -62,7 +67,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
                 yield return m_dialogueWindow.
                     ShowDialogueLine(character.sprite, blocking,
-                    character.displayedName, line.text, wordBank);
+                    displayedCharacterName, line.text, wordBank);
             }
         }
 

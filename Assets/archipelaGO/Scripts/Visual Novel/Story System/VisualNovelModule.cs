@@ -52,15 +52,15 @@ namespace archipelaGO.VisualNovel.StorySystem
 
             for (int i = 0; i < plot.plotlineCount; i++)
             {
-                (Narrative narrative, Sprite scene) plotline = plot.GetPlotline(i);
+                (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) plotline = plot.GetPlotline(i);
                 yield return SetScene(plotline.scene);
-                yield return PlayNarrative(plotline.narrative, plot.wordBank);
+                yield return PlayNarrative(plotline.narrative, plot.wordBank, plotline.mainCharacter);
             }
 
             InvokeGameCompleted();
         }
 
-        private IEnumerator PlayNarrative(Narrative narrative, WordBank wordBank)
+        private IEnumerator PlayNarrative(Narrative narrative, WordBank wordBank, DialogueCharacter mainCharacter)
         {
             string title;
             string[] choices;
@@ -83,8 +83,11 @@ namespace archipelaGO.VisualNovel.StorySystem
                 (DialogueCharacter character, StageBlocking blocking, Dialogue dialogue) dialogueLine =
                     conversation.GetDialogueLine(i);
 
+                bool isMainCharacter = (mainCharacter != null && dialogueLine.character == mainCharacter);
+
                 yield return m_vnController.
-                    ShowDialogue(dialogueLine.character, dialogueLine.blocking, dialogueLine.dialogue, wordBank);
+                    ShowDialogue(dialogueLine.character, dialogueLine.blocking,
+                        dialogueLine.dialogue, wordBank, isMainCharacter);
             }
         }
         #endregion
