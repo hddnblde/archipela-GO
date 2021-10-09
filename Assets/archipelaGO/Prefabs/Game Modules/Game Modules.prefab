@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7736160555550320317}
   - component: {fileID: 1958751380178708214}
   - component: {fileID: 1433856282411080382}
+  - component: {fileID: 8278246983797127853}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -75,6 +76,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &8278246983797127853
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081789676960428960}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: -3
+  m_TargetDisplay: 0
 --- !u!1 &1182724000058001338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,11 +1247,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b05aab45f7776f944a88e002d4f99b3c, type: 3}
---- !u!224 &8966322527931294887 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4433062802224756182, guid: b05aab45f7776f944a88e002d4f99b3c, type: 3}
-  m_PrefabInstance: {fileID: 4750068305555345777}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8870654237333609709 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4247251735378300316, guid: b05aab45f7776f944a88e002d4f99b3c, type: 3}
@@ -1241,3 +1258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f079a38da5179f4eab7642c9b9036a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8966322527931294887 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4433062802224756182, guid: b05aab45f7776f944a88e002d4f99b3c, type: 3}
+  m_PrefabInstance: {fileID: 4750068305555345777}
+  m_PrefabAsset: {fileID: 0}
