@@ -62,7 +62,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
                 yield return m_dialogueWindow.
                     ShowDialogueLine(character.sprite, blocking,
-                    character.characterName, line.text, wordBank);
+                    character.displayedName, line.text, wordBank);
             }
         }
 

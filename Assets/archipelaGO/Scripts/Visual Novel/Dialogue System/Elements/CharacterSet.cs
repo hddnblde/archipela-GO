@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace archipelaGO.VisualNovel.DialogueSystem.Elements
 {
-    [CreateAssetMenu(fileName = "Characters", menuName = "archipelaGO/Visual Novel/Characters")]
+    [CreateAssetMenu(fileName = "Character Set", menuName = "archipelaGO/Visual Novel/Character Set")]
     public class CharacterSet : ScriptableObject
     {
         [SerializeField]

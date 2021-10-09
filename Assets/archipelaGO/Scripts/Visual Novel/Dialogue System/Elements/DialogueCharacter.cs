@@ -9,8 +9,8 @@ namespace archipelaGO.VisualNovel.DialogueSystem.Elements
         StageRight = 1
     }
 
-    [System.Serializable]
-    public class DialogueCharacter
+    [CreateAssetMenu(fileName = "Character", menuName = "archipelaGO/Visual Novel/Character")]
+    public class DialogueCharacter : ScriptableObject
     {
         #region Fields
         [SerializeField]
@@ -23,7 +23,7 @@ namespace archipelaGO.VisualNovel.DialogueSystem.Elements
 
         #region Properties
         public Sprite sprite => m_sprite;
-        public string characterName => m_name;
+        public string displayedName => m_name;
         #endregion
     }
 }
