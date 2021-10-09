@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TMOM_SL1_Scn6_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Sulayman then proceeded to Mount Bita after killing Tarabusaw. The
+        devastation was even worse. Sulayman passed by many houses, but they were
+        all empty.
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: What {havoc} and what misfortune has {befallen} this place!
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Suddenly, there came darkness upon the land, and Raja Sulayman wondered
+        what it could mean. He looked up to the sky and beheld a wonderful and huge
+        bird descending from the sky upon him.
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: This must be Pah!
+  - m_characterIndex: 5
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Indeed, I am. It was wrong for you to come here to Mount Bita. Prepare
+        to face your death.

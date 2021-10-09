@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: HTWWM_SL1_Scn4_001
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
+  m_dialogues:
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Liadlao, come here. I have a proposal.
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: What is it?
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "I just realized how stronger and more powerful we can be if we defeated
+        our grandparent, Captan. Don\u2019t you think that\u2019s a marvelous idea?"
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Can you hear yourself? That sounds so {insane}.
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: No, no, no. Hear me out. He is the god of the sky above, right? I am
+        merely the god of the winds. If I kill him through your help, I will also
+        rule over the sky and those above.
+    - m_voiceOver: {fileID: 0}
+      m_text: "Don\u2019t you worry. I\u2019ll find a kingdom for you to rule over
+        as well. You like that, don\u2019t you?"
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "You\u2019re crazy."
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Are you going to help me, or should I start this plan on you?!
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Woah! Calm down, brother. It seems like you\u2019ll never back away
+        from this plan. Okay, I\u2019m with you."
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Good. Now we\u2019re getting somewhere."
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Hold on, how about Libulan? Would you still include him in this {nefarious}
+        plan?
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Now that you have made mention, hmm, why not? Come on, let\u2019s
+        get him going, too."

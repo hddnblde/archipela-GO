@@ -58,11 +58,15 @@ namespace archipelaGO.Puzzle
             private Vector2Int m_position;
 
             [SerializeField]
+            private Color m_hintColor;
+
+            [SerializeField]
             private int m_wordBankIndex;
 
             public int wordBankIndex => m_wordBankIndex;
             public int direction => m_direction;
             public Vector2Int position => m_position;
+            public Color hintColor => m_hintColor;
         }
 
         public class GridWord

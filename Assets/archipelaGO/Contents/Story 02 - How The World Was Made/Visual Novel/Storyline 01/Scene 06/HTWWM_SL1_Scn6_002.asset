@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: HTWWM_SL1_Scn6_002
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Captan and Maguayan gave their all in bringing back Lihangin and Lidagat\u2019s
+        children with their {joint} powers. But as expected, all their efforts were
+        in {vain}."
+    - m_voiceOver: {fileID: 0}
+      m_text: They did, however, {endow} each body with a beautiful light that will
+        shine forever.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "I guess you\u2019re right. This was an impossible {feat}."
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Although, I think we could still revive our grandchildren so they could
+        live on, {albeit} in a different form.
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: What do you have in mind?
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Given that Liadlao is made of pure gold, why don\u2019t we transform
+        him into a sun? He could shine his golden {radiance} into the world during
+        the daytime. "
+    - m_voiceOver: {fileID: 0}
+      m_text: Libulan, with his silvery tone, on one hand, could become the moon
+        that lights the path at night. What do you think?
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Sounds acceptable. And how about Licalubutan and Lisuga?
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Lisuga shall be with Libulan, {befitting} to be the stars in the night
+        sky\u2014 quiet, {serene}, yet fascinating. As for that {wicked} Licalibutan..."

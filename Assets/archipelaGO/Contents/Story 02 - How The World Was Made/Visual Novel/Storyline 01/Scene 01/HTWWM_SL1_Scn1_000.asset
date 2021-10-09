@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: HTWWM_SL1_Scn1_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Thousand of years ago, there was no land nor sun nor moon nor stars,
+        and the world was only a great sea of water, above which stretched the sky.
+        The water was the kingdom of the god, Maguayan, and the great god, Captan,
+        ruled the sky.
+    - m_voiceOver: {fileID: 0}
+      m_text: Maguayan had a daughter called Lidagat, the sea, and Captan had a son
+        known as Lihangin, the wind. The gods agreed to the marriage of their children,
+        so the sea became the bride of the wind.
+    - m_voiceOver: {fileID: 0}
+      m_text: Three sons and a daughter were born to them. The sons were called Licalibutan,
+        Liadlao, and Libulan, and the daughter received the name of Lisuga.

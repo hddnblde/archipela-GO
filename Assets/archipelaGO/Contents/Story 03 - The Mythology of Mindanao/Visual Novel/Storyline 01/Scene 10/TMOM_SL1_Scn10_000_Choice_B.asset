@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TMOM_SL1_Scn10_000_Choice_B
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
+  m_dialogues:
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Do you still want to continue this mission? Though, I think it\u2019s
+        best for you to go back to Mantapuli and regain your strength."
+  - m_characterIndex: 1
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "I am considering that option\u2014 to return to Mantapuli for a while.
+        Besides, there\u2019s only one creature to {vanquish}."
+  - m_characterIndex: 2
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "Don\u2019t worry about it. I will handle Balbal."
