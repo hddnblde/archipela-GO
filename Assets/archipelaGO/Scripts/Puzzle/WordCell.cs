@@ -54,7 +54,8 @@ namespace archipelaGO.Puzzle
         {
             Empty = 0,
             CharacterHidden = 1,
-            CharacterShown = 2
+            CharacterShown = 2,
+            CharacterShownAsBold = 3
         }
         #endregion
 
@@ -112,8 +113,9 @@ namespace archipelaGO.Puzzle
         {
             m_currentState = state;
             (Color backgroundColor, bool showCharacter) cell = GetCellState(state);
+            bool isBold = (state == State.CharacterShownAsBold);
             SetBackgroundColor(cell.backgroundColor);
-            ShowCharacter(cell.showCharacter);
+            ShowCharacter(cell.showCharacter, isBold);
         }
 
         public void SetAsHighlighted(bool highlighted)
@@ -145,10 +147,13 @@ namespace archipelaGO.Puzzle
                 m_backgroundImage.color = color;
         }
 
-        private void ShowCharacter(bool shown)
+        private void ShowCharacter(bool shown, bool showAsBold)
         {
-            if (m_characterContainer != null)
-                m_characterContainer.enabled = shown;
+            if (m_characterContainer == null)
+                return;
+
+            m_characterContainer.enabled = shown;
+            m_characterContainer.fontStyle = (showAsBold ? FontStyle.Bold : FontStyle.Normal);
         }
         #endregion
 
@@ -157,7 +162,7 @@ namespace archipelaGO.Puzzle
         private (Color backgroundColor, bool showCharacter) GetCellState(State state)
         {
             Color backgroundColor = GetStateColor(state);
-            bool showCharacter = (state == State.CharacterShown);
+            bool showCharacter = (state == State.CharacterShown || state == State.CharacterShownAsBold);
         
             return (backgroundColor, showCharacter);
         }
