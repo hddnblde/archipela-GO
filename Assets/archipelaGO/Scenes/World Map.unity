@@ -380,7 +380,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_bounds: {x: 28.54, y: 15}
+  m_bounds: {x: 47.51, y: 15}
   m_boundsPadding: {x: 1, y: 0}
   m_boundsPivot: {x: 0, y: 0}
 --- !u!20 &641278129
