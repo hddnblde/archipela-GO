@@ -22,7 +22,7 @@ MonoBehaviour:
         Sulayman passed by many houses, but they were all vacant, and not a soul
         lived there.
   - m_characterIndex: 1
-    m_blocking: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What {havoc} and what misfortune has {befallen} this place!
@@ -34,7 +34,7 @@ MonoBehaviour:
         what it could mean. He looked up to the sky and beheld a wonderful and huge
         bird descending from the sky upon him.
   - m_characterIndex: 1
-    m_blocking: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: This must be Pah!

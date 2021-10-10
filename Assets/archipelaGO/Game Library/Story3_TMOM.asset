@@ -16,6 +16,8 @@ MonoBehaviour:
   m_nodeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_modules:
   - m_config: {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
+    m_position: {x: -9.95, y: 1.47}
+  - m_config: {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
     m_position: {x: -9.95, y: -1.47}
   - m_config: {fileID: 11400000, guid: c927233b0c8c05043ace9271cc39b1c3, type: 2}
     m_position: {x: -0.03, y: -2.31}

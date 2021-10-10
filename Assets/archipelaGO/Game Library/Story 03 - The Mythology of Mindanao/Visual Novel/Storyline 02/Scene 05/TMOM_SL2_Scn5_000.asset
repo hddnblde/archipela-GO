@@ -28,7 +28,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Roooooooooooaaaaarrrr!!!! I will {devour} you!
   - m_characterIndex: 1
-    m_blocking: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019m not afraid of you. Let\u2019s see who will be the first one
@@ -54,7 +54,7 @@ MonoBehaviour:
       m_text: Congratulations on your success. You have defeated me. Again, I shall
         die the death of a {martyr}.
   - m_characterIndex: 1
-    m_blocking: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Your previous deeds brought this death on you.

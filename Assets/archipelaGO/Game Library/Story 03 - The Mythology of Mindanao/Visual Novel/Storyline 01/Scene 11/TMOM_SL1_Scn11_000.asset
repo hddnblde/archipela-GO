@@ -27,7 +27,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: You fool! How dare you challenge me?
   - m_characterIndex: 2
-    m_blocking: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Haha! For I know, I can easily defeat you.
@@ -37,5 +37,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: With his Juru Pakal, Indarapatra easily slaughtered Balbal. Having
         destroyed all these {noxious} animals and having restored peace and safety
-        to the land, he then set himself searching for the people that might have
-        escaped destruction.
+        to the land.
+    - m_voiceOver: {fileID: 0}
+      m_text: He then set himself searching for the people that might have escaped
+        destruction.

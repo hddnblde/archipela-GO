@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TMOM_SL1_Scn1_000
+  m_Name: TMOM_SL2_Scn7_002_3
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
@@ -18,10 +18,14 @@ MonoBehaviour:
     m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Long before the days of Kabungsuwan, Magindanao was embraced by water,
-        and the sea reached across the {lowlands}, leaving only mountains visible.
-        On both sides of the mountains, humans lived. They were numerous and {prosperous},
-        and various villages and settlements sprang up all over the place.
+      m_text: Indarapatra passed on Mount Bita and resumed his search for Raja Sulayman.
+        There he saw the dead bird lying on the ground, and as he lifted the severed
+        wing.
     - m_voiceOver: {fileID: 0}
-      m_text: Their {affluence} and peace, however, did not last long, for {pernicious}
-        beasts appeared on the land, devouring every human being they could reach.
+      m_text: He saw the bones of Sulayman and recognized them by means of the sword
+        that was lying by their side.
+  - m_characterIndex: 2
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Oh Sulayman! What a sad fate.
