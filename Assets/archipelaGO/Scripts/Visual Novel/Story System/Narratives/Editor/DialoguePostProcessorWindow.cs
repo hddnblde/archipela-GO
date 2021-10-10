@@ -3,10 +3,11 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using archipelaGO.VisualNovel.DialogueSystem.Elements;
 
 namespace archipelaGO.VisualNovel.StorySystem.Narratives
 {
-    public class NarrativeDictionaryPostProcessorWindow : EditorWindow
+    public class DialoguePostProcessorWindow : EditorWindow
     {
         [SerializeField]
         private WordBank m_wordBank = null;
@@ -14,14 +15,24 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         [SerializeField]
         private List<LinearNarrative> m_narrativeLines = new List<LinearNarrative>();
 
-        private SerializedObject m_serializedObject = null;
-        private SerializedProperty m_wordBankProperty = null,
-            m_narrativeLinesProperty = null;
+        [SerializeField]
+        private bool m_automaticallyAssignStageBlocking = true;
 
-        [MenuItem("Utility/Narrative line Post-processor")]
+        [SerializeField]
+        private DialogueCharacter m_mainCharacter = null;
+
+        private SerializedObject m_serializedObject = null;
+
+        private SerializedProperty m_wordBankProperty = null,
+            m_narrativeLinesProperty = null,
+            m_automaticallyAssignStageBlockingProperty = null,
+            m_mainCharacterProperty = null;
+
+        [MenuItem("Utility/Dialogue Post-processor")]
         private static void InitializeWindow()
         {
-            NarrativeDictionaryPostProcessorWindow window = EditorWindow.GetWindow<NarrativeDictionaryPostProcessorWindow>();
+            DialoguePostProcessorWindow window = EditorWindow.GetWindow<DialoguePostProcessorWindow>();
+            window.titleContent = new GUIContent("Dialogue Post-processor");
             window.Show();
         }
 
@@ -51,6 +62,15 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
 
         private void DrawProperties()
         {
+            EditorGUILayout.PropertyField(m_automaticallyAssignStageBlockingProperty);
+
+            if (m_automaticallyAssignStageBlockingProperty.boolValue)
+            {
+                using (new EditorGUI.IndentLevelScope())
+                    EditorGUILayout.PropertyField(m_mainCharacterProperty);
+            }
+
+            EditorGUILayout.Space();
             EditorGUILayout.PropertyField(m_wordBankProperty);
             EditorGUILayout.PropertyField(m_narrativeLinesProperty);
         }
@@ -60,6 +80,8 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             m_serializedObject = new SerializedObject(this);
             m_wordBankProperty = m_serializedObject.FindProperty("m_wordBank");
             m_narrativeLinesProperty = m_serializedObject.FindProperty("m_narrativeLines");
+            m_automaticallyAssignStageBlockingProperty = m_serializedObject.FindProperty("m_automaticallyAssignStageBlocking");
+            m_mainCharacterProperty = m_serializedObject.FindProperty("m_mainCharacter");
         }
 
         private void ProcessWords()
@@ -79,11 +101,17 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         private void ProcessWordsOnNarrativeLine(SerializedProperty narrativeLine, List<string> words)
         {
             SerializedObject narrativeLineObject = new SerializedObject(narrativeLine.objectReferenceValue);
-            SerializedProperty dialoguesProperty = narrativeLineObject.FindProperty("m_dialogues");
+
+            SerializedProperty dialoguesProperty = narrativeLineObject.FindProperty("m_dialogues"),
+                charactersProperty = narrativeLineObject.FindProperty("m_characters");
 
             for (int i = 0; i < dialoguesProperty.arraySize; i++)
             {
                 SerializedProperty dialogueProperty = dialoguesProperty.GetArrayElementAtIndex(i);
+
+                if (m_automaticallyAssignStageBlockingProperty.boolValue)
+                    ProcessBlocking(charactersProperty, dialogueProperty, m_mainCharacterProperty);
+
                 ProcessDialogueLine(dialogueProperty, words);
             }
 
@@ -93,6 +121,7 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
         private void ProcessDialogueLine(SerializedProperty dialogueLine, List<string> words)
         {
             SerializedProperty lines = dialogueLine.FindPropertyRelative("m_lines");
+            
 
             for (int i = 0; i < lines.arraySize; i++)
             {
@@ -101,6 +130,20 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
                 ProcessText(text, words);
                 RemoveNewLineFromText(text);
             }
+        }
+
+        private void ProcessBlocking(SerializedProperty characters, SerializedProperty dialogueLine, SerializedProperty mainCharacter)
+        {
+            SerializedProperty characterIndex = dialogueLine.FindPropertyRelative("m_characterIndex");
+
+            if (characterIndex.intValue < 0 || characterIndex.intValue >= characters.arraySize)
+                return;
+
+            SerializedProperty character = characters.GetArrayElementAtIndex(characterIndex.intValue);
+            bool isMainCharacter = (character.objectReferenceValue == mainCharacter.objectReferenceValue);
+            
+            SerializedProperty blocking = dialogueLine.FindPropertyRelative("m_blocking");
+            blocking.enumValueIndex = (int)(isMainCharacter ? DialogueCharacterBlocking.StageLeft : DialogueCharacterBlocking.StageRight);
         }
 
         private void ProcessText(SerializedProperty textProperty, List<string> words)
