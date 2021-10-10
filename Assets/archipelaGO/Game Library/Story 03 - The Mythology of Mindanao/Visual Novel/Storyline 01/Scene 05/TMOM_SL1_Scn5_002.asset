@@ -15,16 +15,19 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: And truly, Sulayman struck Tarabusaw with his sword and instantly killed
         it. As the animal was dying, it looked up to him and said a few words.
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Congratulations on your success. You have defeated me. Again, I shall
         die the death of a {martyr}.
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Your previous deeds brought this death on you.

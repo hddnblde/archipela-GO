@@ -20,23 +20,23 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, that would be nice.
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Do\xF1a Maria! What are you doing? We cannot accept their offer."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That\u2019s true, father. We'll disguise ourselvesAnd why is that
         so?as one of them to avoid drawing attention."
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We can handle our baggages. They\u2019re not that heavy."
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes. We are fine. We got this.

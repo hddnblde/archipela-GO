@@ -15,7 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Captan and Maguayan gave their all in bringing back Lihangin and Lidagat\u2019s
@@ -25,7 +25,7 @@ MonoBehaviour:
       m_text: They did, however, {endow} each body with a beautiful light that will
         shine forever.
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: This was an impossible {feat}.
@@ -36,7 +36,7 @@ MonoBehaviour:
       m_text: Although, I think we could still revive our grandchildren so they could
         live on, {albeit} in a different form.
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What do you have in mind?

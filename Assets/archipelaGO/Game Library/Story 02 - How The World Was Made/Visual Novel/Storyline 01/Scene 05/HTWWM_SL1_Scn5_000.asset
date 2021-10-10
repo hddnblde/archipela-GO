@@ -15,24 +15,24 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: When all was ready, Licalibutan, Liadlao, and Libulan rushed to the
         sky and were greeted by the huge gates of steel that guarded the entrance.
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Oh no! Why are the gates here? In any case, my strongest winds can
         topple these metal bars in all directions. Hold on there, brothers.
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: That was cool.
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I know. Come on, let\u2019s proceed!"

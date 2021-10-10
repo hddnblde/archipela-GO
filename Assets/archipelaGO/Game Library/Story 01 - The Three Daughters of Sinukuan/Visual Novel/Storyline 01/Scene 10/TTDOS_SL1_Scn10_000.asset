@@ -15,6 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 8
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "You\u2019ll never win against me\u2014sons of Makiling!"

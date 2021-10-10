@@ -15,6 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Sad at heart but full of determination and desire for revenge, Raja
@@ -22,19 +23,23 @@ MonoBehaviour:
         to search for his brother. He traveled in the air with wonderful speed and
         came to Kabalalan first.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "This must be Kurita\u2019s bones lying everywhere. My brother had
         gone here."
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Indarapatra then went to Matutun.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: He even defeated Tarabusaw.
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Indarapatra passed on Mount Bita and resumed his search for Raja Sulayman.
@@ -42,10 +47,12 @@ MonoBehaviour:
         wing, he saw the bones of Sulayman and recognized them by means of the sword
         that was lying by their side.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Oh Sulayman! What a sad fate.
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Raising his head, Indarapatra turned around and saw a small jar of

@@ -15,21 +15,25 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "My sympathy is with you, Maguayan. Lihangin must have taken her husband\u2019s
         death so much; it has taken her life away, too."
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "My heart\u2019s in pain, Captan. However, I think their {offspring}
         must have {tremendous} {grief} than what I feel right now. They are now left
         without a father and a mother."
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Those poor children.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Would you like to take care of them? We are their only relatives left.

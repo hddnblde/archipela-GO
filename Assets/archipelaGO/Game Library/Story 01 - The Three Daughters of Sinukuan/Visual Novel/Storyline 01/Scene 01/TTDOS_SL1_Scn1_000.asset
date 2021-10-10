@@ -15,6 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Brothers! I have great news! Come and I\u2019ll tell you. "

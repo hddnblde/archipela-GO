@@ -15,47 +15,39 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Sulayman then proceeded to Mount Bita. The devastation was even worse.
-        Sulayman
-
-        passed by many houses, but they were all vacant, and not
-        a soul lived there.'
+      m_text: Sulayman then proceeded to Mount Bita. The devastation was even worse.
+        Sulayman passed by many houses, but they were all vacant, and not a soul
+        lived there.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: What havoc and what misfortune has befallen this place!
+      m_text: What {havoc} and what misfortune has {befallen} this place!
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Suddenly, there came darkness upon the land, and Raja Sulayman wondered
-        what it
-
-        could mean. He looked up to the sky and beheld a wonderful
-        and huge bird descending
-
-        from the sky upon him.'
+      m_text: Suddenly, there came darkness upon the land, and Raja Sulayman wondered
+        what it could mean. He looked up to the sky and beheld a wonderful and huge
+        bird descending from the sky upon him.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: This must be Pah!
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Indeed, I am. It was wrong for you to come here to Mount Bita. Prepare
         to face your death.
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Raja Sulayman quickly drew his Juru Pakal and struck the bird, severing
-        its wing. The
-
-        massive bird died, but one of its wings fell on the
-        raja and killed him.'
+      m_text: Raja Sulayman quickly drew his Juru Pakal and struck the bird, severing
+        its wing. The {massive} bird died, but one of its wings fell on the raja
+        and killed him.

@@ -18,31 +18,20 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Are you sure
-
-        about this? We can defeat those savages
-
-        together.'
+      m_text: Are you sure about this? We can defeat those savages together.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'I know this is a risky task, but do
-
-        not worry. I can handle
-        this well.'
+      m_text: I know this is a risky task, but do not worry. I can handle this well.
   - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Alright! But
-
-        please, do your best, alright? Go back home
-
-        victorious
-        and in one piece.'
+      m_text: Alright! But please, do your best, alright? Go back home {victorious}
+        and in one piece.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I will surely do that, brother.

@@ -21,7 +21,7 @@ MonoBehaviour:
       m_text: Together, you and I have great powers. Perhaps we could restore them
         from the dead and grant them their life back?
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I would like to try that.

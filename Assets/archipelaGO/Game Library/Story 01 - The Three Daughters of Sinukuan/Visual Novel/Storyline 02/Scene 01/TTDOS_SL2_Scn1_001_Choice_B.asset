@@ -20,12 +20,12 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: We can just pretend that we got some flu! What do you say, huh?
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Might be a nice idea!
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "No, no. That\u2019s too risky. Father might suddenly call the local

@@ -15,13 +15,13 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Have you discovered another mountain which we can explore? My {steed}
         is in need of some stretching.
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Oh brothers! It\u2019s better than that."
@@ -31,7 +31,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "Then, pray tell! Don\u2019t make us wait around here."
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Alright, you crabby old man. It has come to my attention that Sinukuan
@@ -43,22 +43,22 @@ MonoBehaviour:
       m_text: I am thinking of going into their place so we could {woo} them. I believe
         they make such fine wives for us.
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Are you nuts? You know the deal with Sinukuan, right?
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Yes, I\u2019m aware. But can you resist such beauty?"
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "It\u2019ll kill us, brother."
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "No, it won\u2019t as long as we be extra careful. You know that Sinukuan

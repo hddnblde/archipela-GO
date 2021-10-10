@@ -18,22 +18,14 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "I have to be\r\nbrave and face these perilous monsters. I do not\r\nwant
+      m_text: "I have to be brave and face these {perilous} monsters. I do not want
         Mindanao\u2019s doom to last forever."
     - m_voiceOver: {fileID: 0}
-      m_text: 'Messenger,
-
-        bring this letter to my brother, Raja Sulayman,
-        and
-
-        ask inform him that I will be fighting off these
-
-        ravaging
-        monsters. He could also back me up,
-
-        just in case.'
+      m_text: Messenger, bring this letter to my brother, Raja Sulayman, and ask
+        inform him that I will be fighting off these ravaging monsters. He could
+        also back me up, just in case.
   - m_characterIndex: 7
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, Raja Indarapatra.

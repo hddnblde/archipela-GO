@@ -15,19 +15,23 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Woah! Would you look at that.
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Careful, Magat. You do not want to {arouse} the suspicion of the town
         folks. Just act normally.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Okay, just chill. How about you, Maglente, are you okay?
   - m_characterIndex: 3
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I guess so. What are we going to do, Kalaw?

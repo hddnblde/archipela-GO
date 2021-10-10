@@ -15,20 +15,24 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: My sons! Who did this to you? SINUKUAAAAANN!!! I demand an explanation
         for the death of my sons! I know you did this to them! Speak to me now!
   - m_characterIndex: 8
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I have nothing to explain to you. Your sons deserve death as a punishment
         for their crimes.
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Is that so? I will {avenge} their deaths! Now take this!
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Makiling took a huge {pestle} for {pounding} stones and {hurled} it

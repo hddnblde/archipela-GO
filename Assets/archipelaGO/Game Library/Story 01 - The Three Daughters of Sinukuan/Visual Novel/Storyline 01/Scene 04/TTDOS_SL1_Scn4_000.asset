@@ -15,12 +15,12 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Hey, brothers! Look at those three. Aren\u2019t they a sight to see?"
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Let\u2019s go introduce ourselves to them. They seem to be such fine
@@ -31,7 +31,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "Is that {darac} they\u2019re buying? Come! Let\u2019s check them out."
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: The three princes decided to follow the {{peasant}} girls in order

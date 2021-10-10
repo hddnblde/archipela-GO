@@ -18,19 +18,16 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "I\u2019m afraid I\r\ncannot give you my permission to go on. You have\r\ngone
-        through so much in this journey. I think it\u2019s\r\nbest if you go back
-        to Mantapuli and regain your\r\nstrength."
+      m_text: "I\u2019m afraid I cannot give you my permission to go on. You have
+        gone through so much in this journey. I think it\u2019s best if you go back
+        to Mantapuli and regain your strength."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'But brother, I
-
-        have to finish this.'
+      m_text: But brother, I have to finish this.
   - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Please, listen to me. Don\u2019t\r\nworry about it. I will handle
-        Balbal."
+      m_text: "Please, listen to me. Don\u2019t worry about it. I will handle Balbal."

@@ -20,18 +20,18 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: We wish to help the poor people of Arayat, father.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Is that so?
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, father. We would like to extend whatever service we may offer
         to our people.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What ideas are you brewing?

@@ -21,27 +21,27 @@ MonoBehaviour:
       m_text: How about we just entertain them right now, and just think of a more
         {sensible} reason afterwards?
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Alright. I agree to this idea.
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: How about we just tell them the   truth?
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That we don\u2019t really want to get married?"
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, sister.
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "How about father? What\u2019s your take on this Do\xF1a Maria?"
@@ -52,7 +52,7 @@ MonoBehaviour:
       m_text: I think Rosalina is right. Father would understand. At least we told
         him the truth.
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "It\u2019s settled then."

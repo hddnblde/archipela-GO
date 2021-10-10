@@ -15,14 +15,14 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "This can\u2019t be\r\nthe end of Mindanao. Messenger, bring this letter\r\nto
-        my brother, Raja Sulayman. Ask him if he could\r\ncome and defend this place
-        from the ravaging\r\nanimals."
+      m_text: "This can\u2019t be the end of Mindanao. Messenger, bring this letter
+        to my brother, Raja Sulayman. Ask him if he could come and defend this place
+        from the ravaging animals."
   - m_characterIndex: 7
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, Raja Indarapatra.

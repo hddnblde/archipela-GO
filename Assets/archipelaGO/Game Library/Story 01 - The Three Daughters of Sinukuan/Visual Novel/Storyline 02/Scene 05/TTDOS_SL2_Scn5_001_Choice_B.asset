@@ -21,13 +21,13 @@ MonoBehaviour:
       m_text: "Oh! it\u2019s nothing. We just can\u2019t accept it as what my sister
         said."
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Just tell us why. We have traveled from afar just to convince you to
         marry us.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: We do not wish to come home empty-handed.
@@ -38,22 +38,22 @@ MonoBehaviour:
       m_text: "We apologize but we really can\u2019t marry you as we vowed to never
         marry."
   - m_characterIndex: 3
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: And why is that? If I may ask?
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: We want to spend the rest of   our lives helping the needy.
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We\u2019re sorry, but we have already made up our minds."
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That\u2019s nonsense!"

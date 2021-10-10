@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "We will go on some disguises so the people won\u2019t recognize us."
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That\u2019s true, father. We'll disguise ourselves as one of them

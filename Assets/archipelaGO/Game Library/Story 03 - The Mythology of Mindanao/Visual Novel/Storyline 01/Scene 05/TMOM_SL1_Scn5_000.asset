@@ -15,25 +15,30 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Sulayman went to Matutun. There he saw greater devastation and a more
         {awful} condition of affairs. As he stood on the mountain, he heard a noise
         in the forest and saw a movement in the trees.
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Roooooooooooaaaaarrrr!!!! I will {devour} you!
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019m not afraid of you. Let\u2019s see who will be the first one
         to get killed."
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: If you kill me, I shall die the death of a {martyr}.
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: As it said these words, Tarabusaw broke large branches from the trees

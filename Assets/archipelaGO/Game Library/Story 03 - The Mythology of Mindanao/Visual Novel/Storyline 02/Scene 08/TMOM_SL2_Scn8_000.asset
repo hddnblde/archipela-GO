@@ -15,8 +15,8 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Now that I\u2019m back. Allow me to continue this mission, brother.
-        Besides, there\u2019s\r\nonly one creature to vanquish."
+        Besides, there\u2019s only one creature to {vanquish}."

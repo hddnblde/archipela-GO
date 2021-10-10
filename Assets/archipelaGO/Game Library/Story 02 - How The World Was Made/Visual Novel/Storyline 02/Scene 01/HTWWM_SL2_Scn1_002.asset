@@ -22,7 +22,7 @@ MonoBehaviour:
         body that is both strong and brave. Then Liadlao,  made of gold, is unquestionably
         a happy one.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Libulan, our copper-clad grandson, appears shy. Hopefully, he can overcome
@@ -34,7 +34,7 @@ MonoBehaviour:
       m_text: Our gentle and sweet granddaughter. Her silver {radiance} and frame
         are ideal for her.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I couldn't agree more, especially since I see how happy our Lidagat

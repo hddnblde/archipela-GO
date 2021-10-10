@@ -18,11 +18,11 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Sulayman,\r\nyou\u2019ll be coming home with me so I can give you\r\na
-        proper burial."
+      m_text: "Sulayman, you\u2019ll be coming home with me so I can give you a proper
+        burial."
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Though before Indarapatra picked up\r\nhis brother\u2019s cadaver,
-        an idea suddenly struck\r\nhim."
+      m_text: "Though before Indarapatra picked up his brother\u2019s cadaver, an
+        idea suddenly struck him."

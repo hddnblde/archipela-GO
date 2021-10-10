@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019m kind of skeptic with this seed, Captan."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Please, don\u2019t be. I feel guilty now for this {wrongdoing}. I
@@ -31,7 +31,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Then, what is this about?
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I grant you the responsibility of planting it on land so it could prop

@@ -21,7 +21,7 @@ MonoBehaviour:
       m_text: "Perhaps, you take over your son\u2019s kingdom for the meantime while
         we wait for Licalibutan to be ready."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Don\u2019t you think Licalibutan is already fit to take over his father\u2019s

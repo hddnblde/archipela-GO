@@ -18,10 +18,10 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "I am\r\nconsidering that option. Besides, there\u2019s only one\r\ncreature
-        to vanquish."
+      m_text: "I am considering that option. Besides, there\u2019s only one creature
+        to {vanquish}."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Thank you, brother.
@@ -29,11 +29,11 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "However,\r\ndon\u2019t you think it\u2019s best for you to go back
-        to\r\nManatapuli for a bit before you continue your\r\njourney to kill Balbal?
-        Gain some strength, first."
+      m_text: "However, don\u2019t you think it\u2019s best for you to go back to
+        Manatapuli for a bit before you continue your journey to kill Balbal? Gain
+        some strength, first."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That\u2019s also a good option."
@@ -41,4 +41,4 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "If you want,\r\nI\u2019ll just handle the Balbal."
+      m_text: "If you want, I\u2019ll just handle the Balbal."

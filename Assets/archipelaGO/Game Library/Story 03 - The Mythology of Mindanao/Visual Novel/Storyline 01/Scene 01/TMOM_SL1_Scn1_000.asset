@@ -15,6 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Long before the days of Kabungsuwan, Magindanao was embraced by water,
@@ -25,17 +26,20 @@ MonoBehaviour:
       m_text: Their {affluence} and peace, however, did not last long, for {pernicious}
         beasts appeared on the land, devouring every human being they could reach.
   - m_characterIndex: 3
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I am Kurita! I own Mount Kabalalan. All those who try to go against
         me shall be wiped out, even those {petty} animals who dare cross my path!
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Fear me, you worthless humans! I am Tarabusaw, and I will conquer
         Mount Matutun and all its neighboring places. You shall not {defy} me, or
         I\u2019ll make sure to end your life in an instant!"
   - m_characterIndex: 5
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Ha-ha! Such worthless beings! I will cover Mount Bita and the eastern
@@ -43,12 +47,14 @@ MonoBehaviour:
         you, poor creatures. Hide in the caves, but remember, I can still find you.
         Ha-ha-ha!
   - m_characterIndex: 6
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: With my seven heads, no one can escape me! For I, Balbal is the most
         powerful creature here in Mount Gurayn and its {adjacent} country. Come dare
         {oppose} me, and I will make sure to snuf you out in this world!
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: The devastation was total, and the land was in ruins. The tragic word

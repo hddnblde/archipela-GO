@@ -18,9 +18,5 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Though I am
-
-        sad at heart, I need to look for my brother and
-
-        retrieve
-        his body.'
+      m_text: Though I am sad at heart, I need to look for my brother and retrieve
+        his body.

@@ -21,7 +21,7 @@ MonoBehaviour:
       m_text: "Perhaps, I believe Licalibutan is now ready to take his father\u2019s
         place."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I think so, too. Licalibutan has grown to be such a fine god and can

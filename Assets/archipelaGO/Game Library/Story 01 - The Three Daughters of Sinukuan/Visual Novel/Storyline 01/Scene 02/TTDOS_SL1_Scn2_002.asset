@@ -15,31 +15,37 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What made you decide on this?
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "If the rumors were true and these daughters really possess such {radiant}
         beauty, then perhaps that\u2019s something we should not let slip away."
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I believe so, too.
   - m_characterIndex: 4
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Seems like I could no longer refrain you from {departing}. However,
         please take care not to {arouse} the {wrath} of Sinukuan. You know how he
         is.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We will surely be careful, father. Once we return, prepare the finest
         meals in this palace. We\u2019ll {revel} until our hearts desire; until our
         stomachs are full!"
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We\u2019ll be going first thing in the morning, father."

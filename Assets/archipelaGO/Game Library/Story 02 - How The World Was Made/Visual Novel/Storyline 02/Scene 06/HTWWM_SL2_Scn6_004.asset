@@ -15,7 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Why don't we turn Liadlao into a sun, given that he's made of pure
@@ -29,7 +29,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Sounds acceptable. And how about Licalubutan and Lisuga?
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Lisuga shall be with Libulan, {befitting} to be the stars in the night
@@ -44,7 +44,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Tell me about it.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Take this seed and do me a favor, please?

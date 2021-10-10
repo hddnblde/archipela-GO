@@ -15,7 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Haha! I agree, Captan. Look at Licalibutan. He has a body of rock,
@@ -29,7 +29,7 @@ MonoBehaviour:
         he gets past that attitude so he could be stronger. And  ahh, of course,
         our lovely Lisuga.
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Our sweet and gentle granddaughter. Her silver {radiance} and form
@@ -41,7 +41,7 @@ MonoBehaviour:
       m_text: "I couldn\u2019t agree more, especially, as I see both our Lidagat
         and Lihangin being also happy by having this family."
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Indeed, indeed. I hope all is this well.

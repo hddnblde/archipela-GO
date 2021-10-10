@@ -15,12 +15,14 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Perhaps, I take over my son\u2019s kingdom for the meantime while
         we wait for Licalibutan to be ready. How\u2019s your daughter holding up,
         by the way?"
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Don\u2019t you think Licalibutan is already fit to take over his father\u2019s

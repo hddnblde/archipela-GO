@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: What is this, Captan? A seed? What would I do with this seed?
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: I grant you the responsibility of planting it on land so it could prop

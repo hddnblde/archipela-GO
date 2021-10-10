@@ -15,20 +15,24 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: It was then decided that Raja Sulayman must return to Mantapuli, whereas
         Raja Indarapatra continued his march to Mount Gurayn, where he met the {dreadful}
         bird that had seven heads.
   - m_characterIndex: 6
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: You fool! How dare you challenge me?
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Haha! For I know, I can easily defeat you.
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: With his Juru Pakal, Indarapatra easily slaughtered Balbal. Having

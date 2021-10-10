@@ -15,26 +15,31 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Brother! Thank you for accepting my invite! As you are well aware,
         Mindanao is currently {overrun} by terrible monsters who are steadily depleting
         the {populace}.
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, I have read in your letter, brother. Allow me to help these poor
         people.
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: That I know I can always count on. To help you in this {perilous} journey,
         I hand you my {kris}, Juru Pakal. I wish for your safety and success, brother.
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019ll use this well in slaying the beasts that haunt Mindanao."
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Before we part, Sulayman, let me plant this sapling in front of my

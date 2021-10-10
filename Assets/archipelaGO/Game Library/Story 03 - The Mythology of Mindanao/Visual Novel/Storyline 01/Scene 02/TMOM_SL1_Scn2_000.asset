@@ -15,18 +15,21 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "When the news reached Raja Indarapatra, King of Mantapuli, he was
         deeply saddened and filled with sympathy. Thus, he decided to put an end
         to Mindanao\u2019s misery."
   - m_characterIndex: 2
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Messenger, bring this letter to my brother, Raja Sulayman, and ask
         him if he could come to Mindanao and defend this place from the ravaging
         animals.
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "And so, the messenger traveled to Raja Sulayman\u2019s kingdom to

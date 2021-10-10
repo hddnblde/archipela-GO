@@ -15,10 +15,12 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Don\u2019t be afraid, brothers. We won\u2019t give up without a fight!"
   - m_characterIndex: 3
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yeah! Once we defeated him, father would be proud of us.

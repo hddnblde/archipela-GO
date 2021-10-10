@@ -15,14 +15,10 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Raising his head, Indarapatra turned around and saw a small jar of
-        water nearby.
-
-        He knew that the jar was sent down from heaven, so
-        he took it and poured its water on
-
-        the bones of his brother, and
-        his brother came back to life.'
+      m_text: Raising his head, Indarapatra turned around and saw a small jar of
+        water nearby. He knew that the jar was sent down from heaven, so he took
+        it and poured its water on the bones of his brother, and his brother came
+        back to life.

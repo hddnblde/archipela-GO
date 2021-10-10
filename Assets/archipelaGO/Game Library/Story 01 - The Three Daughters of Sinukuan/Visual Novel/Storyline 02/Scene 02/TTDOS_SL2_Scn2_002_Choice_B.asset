@@ -20,13 +20,13 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "I guess you\u2019re right, father."
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "What\u2019s with you, Do\xF1a Maria? Why are you backing out? Just
         continue with how we planned it."
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Just spill it.
@@ -37,7 +37,7 @@ MonoBehaviour:
       m_text: "Hmm... we will go on some disguises so the people won\u2019t recognize
         us."
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "That\u2019s true, father. We'll disguise ourselves as one of them

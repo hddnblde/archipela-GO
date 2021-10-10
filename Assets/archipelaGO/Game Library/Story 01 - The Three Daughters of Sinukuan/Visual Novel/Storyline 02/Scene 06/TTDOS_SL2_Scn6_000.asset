@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Please, let us go.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: We told you. We do not wish to come home empty-handed.

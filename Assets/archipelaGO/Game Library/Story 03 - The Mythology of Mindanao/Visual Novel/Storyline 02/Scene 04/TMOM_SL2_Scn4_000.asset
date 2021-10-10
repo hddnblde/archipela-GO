@@ -15,17 +15,11 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'As Sulayman spoke these words, the entire mountain shook, and a ferocious
-        animal
-
-        appeared from the ground, attacking Sulayman and digging
-        its claws into his flesh.
-
-        Sulayman recognized the Kurita as the
-        evil scourge of the land the moment he saw it,
-
-        and he immediately
-        drew his sword and cut it to pieces.'
+      m_text: As Sulayman spoke these words, the entire mountain shook, and a ferocious
+        animal appeared from the ground, attacking Sulayman and digging its claws
+        into his flesh. Sulayman recognized the Kurita as the evil {scourge} of the
+        land the moment he saw it, and he immediately drew his sword and cut it to
+        pieces.

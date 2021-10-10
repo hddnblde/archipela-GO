@@ -15,18 +15,18 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What is this thing which you speak among your suitors?
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Father, I hope you understand. But my sisters and I have talked among
         ourselves that we vow not to get married.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: And why is that so?
@@ -38,19 +38,19 @@ MonoBehaviour:
         than to be stuck with a husband whose only care  is that we stay beautiful
         and youthful.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "What\u2019s the problem with that? These are noblemen who will {spoil}
         you with your hearts\u2019 desires. Besides, it is your goal as a woman to
         settle down and build a family."
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: But we do not wish for that, father.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Then what is it that you desire?

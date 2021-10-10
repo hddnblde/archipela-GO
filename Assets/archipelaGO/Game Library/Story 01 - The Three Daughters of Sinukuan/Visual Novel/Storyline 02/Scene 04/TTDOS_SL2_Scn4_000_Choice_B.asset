@@ -20,17 +20,17 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "Oh! Thank you. But that won\u2019t be necessary."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Don\u2019t be shy. Look how heavy those are!"
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "We can handle our baggages.  They\u2019re not that heavy."
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yes. We are fine.

@@ -15,13 +15,13 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Hurry up, my dear sisters. We need to reach the mountainside before
         it gets dark.
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Ugh! This wardrobe change is really tiring.
@@ -33,12 +33,12 @@ MonoBehaviour:
         as we change from our {peasant} attires into our royal  ones, you know what
         will happen."
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Yeah, yeah. I get it, sister.
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Meanwhile, hidden behind some big rocks were the three sons of Makiling

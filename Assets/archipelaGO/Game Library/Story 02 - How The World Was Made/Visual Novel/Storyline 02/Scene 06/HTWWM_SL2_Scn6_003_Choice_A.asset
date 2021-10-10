@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: I would like to revive them.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: No, let's do it together. You and I have great powers. Perhaps we could

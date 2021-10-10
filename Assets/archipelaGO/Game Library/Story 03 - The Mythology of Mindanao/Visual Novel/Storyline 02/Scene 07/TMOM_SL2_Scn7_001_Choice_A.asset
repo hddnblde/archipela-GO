@@ -18,14 +18,10 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'I should not
-
-        have allowed him to go alone. This is all my
-        fault.
-
-        My poor brother.'
+      m_text: I should not have allowed him to go alone. This is all my fault. My
+        poor brother.
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: And Indarapatra wept.
@@ -33,4 +29,5 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "However,\r\nthough I am in grief. I need to retrieve my brother\u2019s\r\nbody."
+      m_text: "However, though I am in grief. I need to retrieve my brother\u2019s
+        body."

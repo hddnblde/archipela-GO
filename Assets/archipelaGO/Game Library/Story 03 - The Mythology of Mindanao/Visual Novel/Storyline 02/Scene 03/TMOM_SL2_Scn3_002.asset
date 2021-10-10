@@ -18,15 +18,10 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'This is, no doubt, a perilous journey. To help you in your combat,
-
-        I
-        hand you my kris, Juru Pakal. I wish for your safety and
-
-        success,
-        brother.'
+      m_text: This is, no doubt, a {perilous} journey. To help you in your {combat},
+        I hand you my {kris}, Juru Pakal. I wish for your safety and success, brother.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019ll use this well in slaying the beasts that haunt Mindanao."
@@ -35,5 +30,5 @@ MonoBehaviour:
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Before we part, Sulayman, let me plant this sapling in front of my
-        window so that\r\nI can foretell your fate. If this tree lives, you will
-        also live; and if this tree dies,\r\nthen so will you.\u201D"
+        window so that I can {foretell} your fate. If this tree lives, you will also
+        live; and if this tree dies, then so will you.\u201D"

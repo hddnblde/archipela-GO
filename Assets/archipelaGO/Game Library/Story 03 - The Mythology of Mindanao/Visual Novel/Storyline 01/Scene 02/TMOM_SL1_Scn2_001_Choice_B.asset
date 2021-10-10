@@ -15,16 +15,19 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I apologize. Kindly tell my brother that I\u2019m in no mood to deal
         with such things."
   - m_characterIndex: 7
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: But, Raja Sulayman. I have no means to {interfere}, but Mindanao needs
         you. We are all in danger, including the raja.
   - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Very well, I\u2019ll try to see what I can do."

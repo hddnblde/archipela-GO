@@ -15,11 +15,9 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Raja Indarapatra, King of Mantapuli, was deeply saddened and filled
-        with sympathy
-
-        when he heard the news. As a result, he resolved to
-        put an end to Mindanao''s misery.'
+      m_text: Raja Indarapatra, King of Mantapuli, was deeply saddened and filled
+        with sympathy when he heard the news. As a result, he resolved to put an
+        end to Mindanao's misery.

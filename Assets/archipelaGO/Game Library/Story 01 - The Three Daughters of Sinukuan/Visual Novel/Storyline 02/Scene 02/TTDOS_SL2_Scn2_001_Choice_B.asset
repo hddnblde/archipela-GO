@@ -20,12 +20,12 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Forget it, Rosa-Minda. Shush now. Father would not like our plan.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: What ideas are you brewing?
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Tell him, Do\xF1a Maria. This might be our only chance."
@@ -35,7 +35,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Oh, alright. We wish to help the poor people of Arayat, father.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: How would you do that?

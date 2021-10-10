@@ -18,24 +18,13 @@ MonoBehaviour:
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Brother! You have come. As you are aware, Mindanao is
-
-        currently
-        being overrun by terrifying monsters that are steadily
-
-        depleting
-        the populace.'
+      m_text: Brother! You have come. As you are aware, Mindanao is currently being
+        {overrun} by terrifying monsters that are steadily depleting the {populace}.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Yes, I read what you wrote in your letter, brother. Allow me to assist
-        these needy
-
-        people. I''d like to slay these monsters alone, with
-        your permission. Because I
-
-        am younger than you, my dear brother,
-        I have more strength; hence, I can easily
-
-        defeat these monsters.'
+      m_text: Yes, I read what you wrote in your letter, brother. Allow me to assist
+        these needy people. I'd like to slay these monsters alone, with your permission.
+        Because I am younger than you, my dear brother, I have more strength; hence,
+        I can easily defeat these monsters.

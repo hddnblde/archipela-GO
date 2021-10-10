@@ -15,11 +15,13 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 8
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "How dare you kill my people! Here\u2019s a mortar for you! You can\u2019t
         beat me, Makiling!"
   - m_characterIndex: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: And Sinukuan {hurled} the massive and heavy mortar to Makiling. The

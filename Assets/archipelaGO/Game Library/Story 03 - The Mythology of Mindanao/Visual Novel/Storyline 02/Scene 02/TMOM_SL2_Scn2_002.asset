@@ -15,17 +15,14 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "And so, the messenger traveled to Raja Sulayman\u2019s kingdom to
-        deliver Raja\r\nIndarapatra\u2019s news."
+        deliver Raja Indarapatra\u2019s news."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: 'Messenger, tell my brother that I can sense the grief of the people
-        in Mindanao,
-
-        and thus, with zeal and enthusiasm, I have agreed to
-        come.'
+      m_text: Messenger, tell my brother that I can sense the grief of the people
+        in Mindanao, and thus, with {zeal} and {enthusiasm}, I have agreed to come.

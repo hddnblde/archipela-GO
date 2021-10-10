@@ -21,7 +21,7 @@ MonoBehaviour:
       m_text: I grant you the responsibility of planting it on land so it could prop
         the new human race.
   - m_characterIndex: 2
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Alright. I\u2019ll take care of this for the sake of Licalibutan."

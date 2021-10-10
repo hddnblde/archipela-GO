@@ -15,12 +15,12 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 693e1a8748a7839438eead41adabef88, type: 2}
   m_dialogues:
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Oh, father! Thank you for saving us!
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: Are you alright, my dear daughters?
@@ -30,13 +30,13 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Yes, we are. We are very much grateful for this rescue.
   - m_characterIndex: 5
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "And yes, father. We know what you\u2019re about to say, too. We will
         take more precautionary measures for this to not happen again."
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Yes! At least you know. I couldn\u2019t see myself losing all three
@@ -47,12 +47,12 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: Thank you again, father.
   - m_characterIndex: 8
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Let\u2019s all go home."
   - m_characterIndex: 6
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: That would be {marvelous}.

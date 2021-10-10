@@ -15,7 +15,7 @@ MonoBehaviour:
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
   - m_characterIndex: 0
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: The brothers dashed into the opening, only to be met by the enraged
@@ -25,7 +25,7 @@ MonoBehaviour:
         as well. The third bolt  hit Licalibutan, causing his rocky body to {shatter}
         and fall into the sea.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "If you, rascals, hadn\u2019t done this stupid act in the first place,

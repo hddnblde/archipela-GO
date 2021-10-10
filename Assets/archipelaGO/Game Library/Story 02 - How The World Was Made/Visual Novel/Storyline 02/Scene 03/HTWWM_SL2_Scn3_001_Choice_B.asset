@@ -20,7 +20,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "I\u2019m not good with that duty, Captan. I hope you understand."
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "I see. But don\u2019t you want to give it a try? They\u2019re your
@@ -36,7 +36,7 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: You got me convinced.
   - m_characterIndex: 1
-    m_blocking: 0
+    m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
       m_text: "Then it\u2019s settled."
