@@ -55,6 +55,12 @@ namespace archipelaGO.VisualNovel.StorySystem
         #region Public Methods
         public IEnumerator ShowDialogue(DialogueCharacter character, StageBlocking blocking, Dialogue dialogue, WordBank wordBank, bool isMainCharacter)
         {
+            if (character == null)
+            {
+                yield return new WaitForSeconds(0.7f);
+                yield break;
+            }
+
             string displayedCharacterName = character.displayedName;
 
             if (isMainCharacter)
