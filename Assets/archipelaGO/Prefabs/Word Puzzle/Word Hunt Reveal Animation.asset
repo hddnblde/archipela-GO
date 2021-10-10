@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7215f31490dae4c9ba77f1804f90bf, type: 3}
   m_Name: Word Hunt Reveal Animation
   m_EditorClassIdentifier: 
-  m_boldFontStyleThreshold: 0.892
+  m_boldFontStyleThreshold: 0.729
   m_curve:
     serializedVersion: 2
     m_Curve:
@@ -65,4 +65,4 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_minScale: 1
-  m_maxScale: 1.25
+  m_maxScale: 1.4
