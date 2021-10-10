@@ -18,10 +18,6 @@ MonoBehaviour:
     m_blocking: 1
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: The time came when the town was put in a great danger of being reduced
-        to ruins by a deadly duel between Sinukuan and Makiling, the king of the
-        mountain of that same name situated in the southern part of Luzon.
-    - m_voiceOver: {fileID: 0}
       m_text: Makiling had three sons who possessed an adventurous spirit. Although
         they were brave, his three sons lacked in them that noble sentiment often
         found among the royal families of old.

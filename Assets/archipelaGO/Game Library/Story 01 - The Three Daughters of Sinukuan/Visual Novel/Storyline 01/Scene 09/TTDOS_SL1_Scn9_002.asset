@@ -31,12 +31,6 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "We are Makiling\u2019s son and if you don\u2019t return to Arayat,
         we will {slay} you."
-  - m_characterIndex: 3
-    m_blocking: 1
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: "We are Makiling\u2019s son and if you don\u2019t return to Arayat,
-        we will {slay} you."
   - m_characterIndex: 8
     m_blocking: 1
     m_lines:
