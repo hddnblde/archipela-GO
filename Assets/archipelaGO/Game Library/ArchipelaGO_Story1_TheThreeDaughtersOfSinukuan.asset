@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 529590a633ccd7e45973103605c960ee, type: 3}
-  m_Name: The Mythology of Mindanao
+  m_Name: ArchipelaGO_Story1_TheThreeDaughtersOfSinukuan
   m_EditorClassIdentifier: 
   m_worldBackground: {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
   m_nodeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_modules:
-  - m_config: {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
-    m_position: {x: -9.95, y: -1.47}
-  - m_config: {fileID: 11400000, guid: c927233b0c8c05043ace9271cc39b1c3, type: 2}
+  - m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+    m_position: {x: -9.95, y: -3.09}
+  - m_config: {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
+    m_position: {x: -9.95, y: 1.89}
+  - m_config: {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
     m_position: {x: -0.03, y: -2.31}
-  - m_config: {fileID: 11400000, guid: bd6c67382ebbeee45a1c6886224f8fc8, type: 2}
+  - m_config: {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
     m_position: {x: 8.04, y: -3.44}
-  - m_config: {fileID: 11400000, guid: 29c1a99870e35f14f94840b13fc396e1, type: 2}
+  - m_config: {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
     m_position: {x: 10.83, y: 0.02}
