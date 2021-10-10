@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 529590a633ccd7e45973103605c960ee, type: 3}
-  m_Name: ArchipelaGO_Story2_HowTheWorldWasMade
+  m_Name: Story2_HTWWM
   m_EditorClassIdentifier: 
   m_worldBackground: {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
   m_nodeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
