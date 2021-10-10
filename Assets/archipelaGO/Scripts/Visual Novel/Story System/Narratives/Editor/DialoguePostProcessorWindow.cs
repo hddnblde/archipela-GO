@@ -103,19 +103,31 @@ namespace archipelaGO.VisualNovel.StorySystem.Narratives
             SerializedObject narrativeLineObject = new SerializedObject(narrativeLine.objectReferenceValue);
 
             SerializedProperty dialoguesProperty = narrativeLineObject.FindProperty("m_dialogues"),
-                charactersProperty = narrativeLineObject.FindProperty("m_characters");
+                characterSetProperty = narrativeLineObject.FindProperty("m_characters");
+            
+            SerializedProperty characters = GetCharactersFromCharacterSet(characterSetProperty);
 
             for (int i = 0; i < dialoguesProperty.arraySize; i++)
             {
                 SerializedProperty dialogueProperty = dialoguesProperty.GetArrayElementAtIndex(i);
 
                 if (m_automaticallyAssignStageBlockingProperty.boolValue)
-                    ProcessBlocking(charactersProperty, dialogueProperty, m_mainCharacterProperty);
+                    ProcessBlocking(characters, dialogueProperty, m_mainCharacterProperty);
 
                 ProcessDialogueLine(dialogueProperty, words);
             }
 
             narrativeLineObject.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+        private SerializedProperty GetCharactersFromCharacterSet(SerializedProperty characterSet)
+        {
+            if (characterSet.objectReferenceValue == null)
+                return null;
+            
+            SerializedObject serializedObject = new SerializedObject(characterSet.objectReferenceValue);
+
+            return serializedObject.FindProperty("m_characters");
         }
 
         private void ProcessDialogueLine(SerializedProperty dialogueLine, List<string> words)
