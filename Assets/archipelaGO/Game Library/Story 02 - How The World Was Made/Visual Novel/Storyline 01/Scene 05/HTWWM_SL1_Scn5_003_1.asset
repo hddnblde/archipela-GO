@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: HTWWM_SL1_Scn5_003
+  m_Name: HTWWM_SL1_Scn5_003_1
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: 493566efcd8181446ae1c03dfff64df7, type: 2}
   m_dialogues:
@@ -31,15 +31,3 @@ MonoBehaviour:
     - m_voiceOver: {fileID: 0}
       m_text: "If you hadn\u2019t done this stupid act in the first place, you wouldn\u2019t
         end up that way."
-  - m_characterIndex: 0
-    m_blocking: 1
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: "Meanwhile, the gentle Lisuga had missed her brothers and began looking
-        for them. She moved toward the sky to check if Licalibutan, Liadlao, and
-        Libulan had wandered in his grandfather\u2019s place."
-  - m_characterIndex: 8
-    m_blocking: 1
-    m_lines:
-    - m_voiceOver: {fileID: 0}
-      m_text: Excuse me, grandfather.

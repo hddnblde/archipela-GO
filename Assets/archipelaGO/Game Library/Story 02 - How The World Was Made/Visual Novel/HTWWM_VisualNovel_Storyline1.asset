@@ -18,49 +18,59 @@ MonoBehaviour:
   m_mainCharacter: {fileID: 11400000, guid: 9ad0c581c696fbf4aa1b553fac797efa, type: 2}
   m_backgroundScenes:
   - {fileID: 21300000, guid: 887eebfcf3ecc8f4297099ae06b4ea28, type: 3}
-  - {fileID: 21300000, guid: b4976383a37118f45b60af5e38c735dd, type: 3}
   - {fileID: 21300000, guid: 621c7c94a8c8b1a4289f171bb5a938f8, type: 3}
+  - {fileID: 21300000, guid: b4976383a37118f45b60af5e38c735dd, type: 3}
   - {fileID: 21300000, guid: e703f0dc9e29ca4498158818a2807c33, type: 3}
   m_plotlines:
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 67c7e2d5d747b6c429d3c78350668dfb, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 2
     m_narrative: {fileID: 11400000, guid: b309529c54679254fb47e8bc1999ca5e, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 2
     m_narrative: {fileID: 11400000, guid: 96c921229e056ea40bb9b4e005d1cf53, type: 2}
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: dbb79383591ff0745a1d79dee745850b, type: 2}
   - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: f4b8f261b8e79ab409964cf41d80a6d0, type: 2}
   - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: d33d125216c09b4418a7d28cd6e1e633, type: 2}
   - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: a5d6ebd560cdabb45beef5c80288ddf8, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: dbb79383591ff0745a1d79dee745850b, type: 2}
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: f9dec64355a1aef48a12bc56728fa3ae, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: 774599a661ba5c0438df257bf5f3c2e8, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: 41415538dc21a544cab7ef85024eb310, type: 2}
-  - m_backgroundIndex: 3
+  - m_backgroundIndex: 2
     m_narrative: {fileID: 11400000, guid: 0d87ffaeb6d502246801d51aa085a704, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: 8857b1cefa005e74fa3c682b4ebe8e45, type: 2}
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: e4a58225cca005044952540c4e0939d1, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: 1630970f9ba37b74593ec67f567e5647, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: d04836dbf9ffbbe4f86ea3012363ff2a, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: d139b2aaf0f1a4c4baf37c92fc83e52e, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 0
+    m_narrative: {fileID: 11400000, guid: d20d462eb007192429591a230b237161, type: 2}
+  - m_backgroundIndex: 3
+    m_narrative: {fileID: 11400000, guid: 10f545904a6e73b4cb4ef448765819a0, type: 2}
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: 8d54453838aeeb6479784621edd7905a, type: 2}
-  - m_backgroundIndex: 1
+  - m_backgroundIndex: 3
     m_narrative: {fileID: 11400000, guid: 0b44505d93b3799438f0d68569e9e067, type: 2}
-  - m_backgroundIndex: 2
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: 5d1e33fd250e1a541b446b12f0205343, type: 2}
-  - m_backgroundIndex: 2
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: 0808bc7337391204792f7af95a55c33d, type: 2}
-  - m_backgroundIndex: 2
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: e52364b2f7384a340be0d54b8bde450c, type: 2}
-  - m_backgroundIndex: 2
+  - m_backgroundIndex: 1
     m_narrative: {fileID: 11400000, guid: efb3b2146ce0a744da945bd5f6023aca, type: 2}
   - m_backgroundIndex: 2
     m_narrative: {fileID: 11400000, guid: a24f0c5817f03364b93bddd5a5996f83, type: 2}
@@ -72,5 +82,5 @@ MonoBehaviour:
     m_narrative: {fileID: 11400000, guid: 8a9a61a728e44af4fbb31dbc64bfe175, type: 2}
   - m_backgroundIndex: 2
     m_narrative: {fileID: 11400000, guid: 646eff2ca848ba449978e325f9b7cb00, type: 2}
-  - m_backgroundIndex: 2
+  - m_backgroundIndex: 0
     m_narrative: {fileID: 11400000, guid: a2d65d2996d6fc644ade8867e6084b01, type: 2}
