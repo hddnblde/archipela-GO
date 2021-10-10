@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TMOM_Chr_Messenger
   m_EditorClassIdentifier: 
   m_name: Messenger
-  m_sprite: {fileID: 0}
+  m_sprite: {fileID: -6055464051900641973, guid: b913381c13d5ac44abba56acf9507eb7, type: 3}
