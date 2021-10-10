@@ -10,20 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TMOM_SL1_Scn4_001_Choice_A
+  m_Name: TMOM_SL2_Scn7_001_Choice_A
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
-  - m_characterIndex: 1
+  - m_characterIndex: 2
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Aghhh! This isn\u2019t going too well. I better run and hide."
-    - m_voiceOver: {fileID: 0}
-      m_text: "Hold on! What am I doing? I\u2019m stronger than this creature."
-    - m_voiceOver: {fileID: 0}
-      m_text: "You evil {scourge}! You won\u2019t win against me. I came here to
-        kill you."
-  - m_characterIndex: 3
+      m_text: 'I should not
+
+        have allowed him to go alone. This is all my
+        fault.
+
+        My poor brother.'
+  - m_characterIndex: 0
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: "Is that so? We\u2019ll see."
+      m_text: And Indarapatra wept.
+  - m_characterIndex: 2
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: "However,\r\nthough I am in grief. I need to retrieve my brother\u2019s\r\nbody."

@@ -10,20 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TMOM_SL1_Scn4_000
+  m_Name: TMOM_SL2_Scn3_000
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
+  - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Raja Sulayman took off from Mantapuli and flew to Mindanao. He didn't
-        walk or use a boat. Kabalalan was the first place he arrived where he stood
-        on the mountain's {summit}, looking out over the land and villages, yet he
-        couldn't see a single human being anywhere.
+      m_text: 'Brother! You have come. As you are aware, Mindanao is
+
+        currently
+        being overrun by terrifying monsters that are steadily
+
+        depleting
+        the populace.'
   - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: '{Alas}, how pitiful and {dreadful} is this devastation!'
+      m_text: 'Yes, I read what you wrote in your letter, brother. Allow me to assist
+        these needy
+
+        people. I''d like to slay these monsters alone, with
+        your permission. Because I
+
+        am younger than you, my dear brother,
+        I have more strength; hence, I can easily
+
+        defeat these monsters.'

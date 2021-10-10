@@ -10,12 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TMOM_SL1_Scn4_002
+  m_Name: TMOM_SL2_Scn2_001_Choice_B
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
+  - m_characterIndex: 1
+    m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: As the Kurita headed towards Sulayman, the raja immediately drew his
-        sword and cut the beast into pieces.
+      m_text: "This can\u2019t be\r\nthe end of Mindanao. Messenger, bring this letter\r\nto
+        my brother, Raja Sulayman. Ask him if he could\r\ncome and defend this place
+        from the ravaging\r\nanimals."
+  - m_characterIndex: 7
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: Yes, Raja Indarapatra.

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
+  m_Name: TMOM_SL2_Scn1_000
+  m_EditorClassIdentifier: 
+  m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
+  m_dialogues:
+  - m_characterIndex: 0
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'Long before the days of Kabungsuwan, Magindanao was engulfed by water,
+        and the
+
+        sea reached across the lowlands, leaving only mountains
+        visible. Humans lived on both
+
+        sides of the mountains. They were
+        numerous and prosperous, and villages and
+
+        settlements sprouted up
+        all over the place.'
+    - m_voiceOver: {fileID: 0}
+      m_text: 'Their affluence and peace, however, were short-lived, as pernicious
+        beasts appeared on
+
+        the land, gobbling up every human being they
+        could reach.'
+  - m_characterIndex: 3
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'Kurita is my name! Mount Kabalalan is mine. All those who try to oppose
+        me will be
+
+        eliminated, including petty animals who dare to cross
+        my path!'
+  - m_characterIndex: 4
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'You worthless humans, be afraid of me! I am Tarabusaw, and I intend
+        to conquer Mount
+
+        Matutun and all of its surrounding areas. You must
+        not defy me, or I will take your life in
+
+        an instant!'
+  - m_characterIndex: 5
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'Ha-ha! Such worthless creatures! I will entrap Mount Bita and the
+        eastern portion of the
+
+        Ranao region in darkness and devour you all!
+        Go! Go, you wretched creatures. Hide
+
+        in the caves, but keep in mind
+        that I can still find you. Ha-ha-ha!'
+  - m_characterIndex: 6
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'With my seven heads, no one can escape me! For I, Balbal is the most
+        powerful
+
+        creature here in Mount Gurayn and its adjacent country.
+        Come dare oppose me, and I
+
+        will ensure to snuf you out in this world!'
+  - m_characterIndex: 0
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'The land had been completely devastated, and it lay in ruins. The
+        tragic news spread to
+
+        strange and distant lands, and many nations
+        felt sorry for Mindanao''s plight.'

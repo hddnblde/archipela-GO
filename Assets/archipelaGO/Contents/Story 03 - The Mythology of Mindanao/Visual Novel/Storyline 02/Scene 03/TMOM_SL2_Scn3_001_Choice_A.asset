@@ -10,20 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d071e2fc56df9e4796de1d20a466c78, type: 3}
-  m_Name: TMOM_SL1_Scn4_000
+  m_Name: TMOM_SL2_Scn3_001_Choice_A
   m_EditorClassIdentifier: 
   m_characters: {fileID: 11400000, guid: e978c85066e4f8045bae06fe769e7e98, type: 2}
   m_dialogues:
-  - m_characterIndex: 0
+  - m_characterIndex: 2
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: Raja Sulayman took off from Mantapuli and flew to Mindanao. He didn't
-        walk or use a boat. Kabalalan was the first place he arrived where he stood
-        on the mountain's {summit}, looking out over the land and villages, yet he
-        couldn't see a single human being anywhere.
+      m_text: 'Are you sure
+
+        about this? We can defeat those savages
+
+        together.'
   - m_characterIndex: 1
     m_blocking: 0
     m_lines:
     - m_voiceOver: {fileID: 0}
-      m_text: '{Alas}, how pitiful and {dreadful} is this devastation!'
+      m_text: 'I know this is a risky task, but do
+
+        not worry. I can handle
+        this well.'
+  - m_characterIndex: 2
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: 'Alright! But
+
+        please, do your best, alright? Go back home
+
+        victorious
+        and in one piece.'
+  - m_characterIndex: 1
+    m_blocking: 0
+    m_lines:
+    - m_voiceOver: {fileID: 0}
+      m_text: I will surely do that, brother.

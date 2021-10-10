@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91623a688d5a7a645b615586e6015bff, type: 3}
-  m_Name: TMOM_SL1_Scn4_001_Branch
+  m_Name: TMOM_SL2_Scn8_001_Branch
   m_EditorClassIdentifier: 
-  m_title: What would you do?
+  m_title: How would you respond?
   m_branches:
-  - m_subtitle: Run and hide
-    m_narrative: {fileID: 11400000, guid: bd78f6fbbfd9dc942ae1090c1d7daa4a, type: 2}
-  - m_subtitle: Face Kurita
-    m_narrative: {fileID: 11400000, guid: dccc77a597036dd4b80fbb7fa262d6da, type: 2}
+  - m_subtitle: Dismiss the idea
+    m_narrative: {fileID: 11400000, guid: 1ca963179a6a34944aee66890497f604, type: 2}
+  - m_subtitle: Allow the idea
+    m_narrative: {fileID: 11400000, guid: 85a6a0e4d44d0354b936f670ae4e4273, type: 2}
