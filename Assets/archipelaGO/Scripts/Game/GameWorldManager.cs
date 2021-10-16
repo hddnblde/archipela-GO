@@ -1,5 +1,4 @@
 using UnityEngine;
-using GameModuleNode = archipelaGO.Game.GameLibrary.ModuleNode;
 using SceneLoadTrigger = archipelaGO.SceneHandling.SceneLoadTrigger;
 using Scene = archipelaGO.SceneHandling.Scene;
 
@@ -53,6 +52,12 @@ namespace archipelaGO.Game
             GameObject nodeGameObject = Instantiate(m_nodePrefab, nodePosition, Quaternion.identity);
             nodeGameObject.name = $"Node { index + 1 }";
             nodeGameObject.transform.SetParent(transform);
+
+            SpriteRenderer spriteRenderer =
+                nodeGameObject.GetComponent<SpriteRenderer>();
+
+            if (spriteRenderer != null)
+                spriteRenderer.sprite = library.GetNodeSprite(index);
 
             GameModuleLinker moduleMediator = nodeGameObject.AddComponent<GameModuleLinker>();
             SceneLoadTrigger sceneLoadTrigger = nodeGameObject.GetComponent<SceneLoadTrigger>();

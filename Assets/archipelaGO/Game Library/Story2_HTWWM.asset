@@ -12,16 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529590a633ccd7e45973103605c960ee, type: 3}
   m_Name: Story2_HTWWM
   m_EditorClassIdentifier: 
-  m_worldBackground: {fileID: 21300000, guid: 4ce07d9493c852a41945b6ca97bd12cc, type: 3}
-  m_nodeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_worldBackground: {fileID: 21300000, guid: 38a1937b2727f834185f522cfe245ecf, type: 3}
+  m_nodeSprites:
+  - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
+  - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   m_modules:
   - m_config: {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
-    m_position: {x: -9.95, y: 1.47}
+    m_position: {x: -9.95, y: 3.04}
+    m_spriteIndex: 0
   - m_config: {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
-    m_position: {x: -9.95, y: -1.47}
+    m_position: {x: -9.95, y: -3.3}
+    m_spriteIndex: 0
   - m_config: {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
     m_position: {x: -0.03, y: -2.31}
+    m_spriteIndex: 1
   - m_config: {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
-    m_position: {x: 8.04, y: -3.44}
+    m_position: {x: 10.86, y: -3.44}
+    m_spriteIndex: 1
   - m_config: {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}
-    m_position: {x: 10.83, y: 0.02}
+    m_position: {x: 16.6, y: 0.02}
+    m_spriteIndex: 1

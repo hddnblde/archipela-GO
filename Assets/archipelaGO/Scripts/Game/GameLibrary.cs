@@ -11,7 +11,7 @@ namespace archipelaGO.Game
         private Sprite m_worldBackground = null;
 
         [SerializeField]
-        private Sprite m_nodeSprite = null;
+        private List<Sprite> m_nodeSprites = new List<Sprite>();
 
         [SerializeField]
         private List<ModuleNode> m_modules = new List<ModuleNode>();
@@ -28,12 +28,16 @@ namespace archipelaGO.Game
 
             [SerializeField]
             private Vector2 m_position = Vector2.zero;
+
+            [SerializeField]
+            private int m_spriteIndex = 0;
             #endregion
 
 
             #region Properties
             public GameModuleConfig config => m_config;
             public Vector2 position => m_position;
+            public int spriteIndex => m_spriteIndex;
             #endregion
         }
         #endregion
@@ -41,7 +45,6 @@ namespace archipelaGO.Game
 
         #region Properties
         public Sprite worldBackground => m_worldBackground;
-        public Sprite nodeSprite => m_nodeSprite;
         public int moduleCount => m_modules.Count;
         #endregion
 
@@ -69,12 +72,31 @@ namespace archipelaGO.Game
                 return null;
         }
 
+        public Sprite GetNodeSprite(int index)
+        {
+            ModuleNode node = GetNode(index);
+
+            if (node != null)
+                return GetSprite(node.spriteIndex);
+
+            else
+                return null;
+        }
+
         private ModuleNode GetNode(int index)
         {
             if (index < 0 || index >= moduleCount)
                 return null;
 
             return m_modules[index];
+        }
+
+        private Sprite GetSprite(int index)
+        {
+            if (index < 0 || index >= m_nodeSprites.Count)
+                return null;
+
+            return m_nodeSprites[index];
         }
         #endregion
     }
