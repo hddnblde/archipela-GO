@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34117648, g: 0.27058825, b: 0.22745098, a: 0.9411765}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -231,9 +231,9 @@ MonoBehaviour:
   m_backgroundImage: {fileID: 6831548354694065876}
   m_revealAnimation: {fileID: 11400000, guid: 87fce12c7f653fa4b97f3217ab8bbc9d, type: 2}
   m_revealAnimationTime: 0.36
-  m_enabledColor: {r: 1, g: 1, b: 1, a: 1}
-  m_emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_highlightedColor: {r: 1, g: 0.86910975, b: 0, a: 1}
+  m_enabledColor: {r: 0.33962262, g: 0.27115154, b: 0.22876467, a: 0.9411765}
+  m_emptyColor: {r: 0.5471698, g: 0.45718837, b: 0.40469918, a: 0.8392157}
+  m_highlightedColor: {r: 0.9811321, g: 0.810259, b: 0.2721253, a: 1}
 --- !u!222 &7312112954385406747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!114 &5885510273044333201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +348,8 @@ GameObject:
   - component: {fileID: 5215856591210508601}
   - component: {fileID: 338298320004786156}
   - component: {fileID: 5497155671473685500}
+  - component: {fileID: 3793411994306323120}
+  - component: {fileID: 7334160285507817453}
   m_Layer: 7
   m_Name: Character Container
   m_TagString: Untagged
@@ -371,8 +373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -5}
-  m_SizeDelta: {x: -20, y: -26}
+  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_SizeDelta: {x: -24, y: -24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &338298320004786156
 CanvasRenderer:
@@ -395,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
+  m_Color: {r: 0.8301887, g: 0.6759887, b: 0.5278747, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -416,3 +418,33 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: R
+--- !u!114 &3793411994306323120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676126021636993655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.11320752, g: 0.07672995, b: 0.05275897, a: 1}
+  m_EffectDistance: {x: 1.15, y: -1.15}
+  m_UseGraphicAlpha: 1
+--- !u!114 &7334160285507817453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676126021636993655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 0.75, y: -1.4}
+  m_UseGraphicAlpha: 1
