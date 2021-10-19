@@ -60,12 +60,12 @@ namespace archipelaGO.Puzzle
 
 
         #region Game Module Implementation
-        public override void Initialize(WordPuzzle config)
+        protected override void OnInitialize()
         {
             if (m_answerField != null)
                 m_answerField.onEndEdit.AddListener(OnSubmitAnswer);
 
-            base.Initialize(config);
+            base.OnInitialize();
         }
         #endregion
 

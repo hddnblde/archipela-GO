@@ -30,8 +30,6 @@ namespace archipelaGO.Puzzle
         private List<PuzzlePiece> m_pendingPieces = new List<PuzzlePiece>();
         private List<PuzzlePiece> m_solvedPieces = new List<PuzzlePiece>();
         private List<WordHint> m_hints = new List<WordHint>();
-
-        private WordPuzzle m_wordPuzzle = null;
         private WordCell[,] m_wordGrid = null;
         #endregion
 
@@ -94,10 +92,9 @@ namespace archipelaGO.Puzzle
 
 
         #region Game Module Implementation
-        public override void Initialize(WordPuzzle config)
+        protected override void OnInitialize()
         {
             m_rectTransform = transform as RectTransform;
-            m_wordPuzzle = config;
             SetUpGrid();
             SetUpHints();
         }
@@ -119,10 +116,10 @@ namespace archipelaGO.Puzzle
         #region Internal Methods
         private void SetUpGrid()
         {
-            if (m_wordPuzzle == null || m_cellPrefab == null)
+            if (config == null || m_cellPrefab == null)
                 return;
 
-            Vector2Int size = m_wordPuzzle.gridSize;
+            Vector2Int size = config.gridSize;
             m_wordGrid = InitializeGrid(size);
             SetUpWords(m_wordGrid);
         }
@@ -215,9 +212,9 @@ namespace archipelaGO.Puzzle
             List<Vector2Int> plottedPoints = new List<Vector2Int>();
             m_pendingPieces.Clear();
 
-            for (int i = 0; i < m_wordPuzzle.wordSize; i++)
+            for (int i = 0; i < config.wordSize; i++)
             {
-                GridWord gridWord = m_wordPuzzle.GetWord(i);
+                GridWord gridWord = config.GetWord(i);
 
                 if (gridWord == null)
                     continue;
@@ -239,9 +236,9 @@ namespace archipelaGO.Puzzle
         {            
             m_hints.Clear();
 
-            for (int i = 0; i < m_wordPuzzle.wordSize; i++)
+            for (int i = 0; i < config.wordSize; i++)
             {
-                GridWord gridWord = m_wordPuzzle.GetWord(i);
+                GridWord gridWord = config.GetWord(i);
 
                 if (gridWord == null)
                     continue;

@@ -20,18 +20,14 @@ namespace archipelaGO.Quiz
         [SerializeField]
         private ChoiceWindow m_choiceWindow = null;
 
-        private QuizConfig m_quiz = null;
         private Coroutine m_quizRoutine = null;
         private int m_guessedCorrectAnswers = 0;
         #endregion
 
 
         #region Game Module Implementation
-        public override void Initialize(QuizConfig config)
-        {
-            m_quiz = config;
+        protected override void OnInitialize() =>
             BeginQuizRoutine();
-        }
         #endregion
 
 
@@ -54,10 +50,10 @@ namespace archipelaGO.Quiz
 
         private List<(string, string[], int[])> GenerateQuestions()
         {
-            if (m_quiz == null || m_items <= 0)
+            if (config == null || m_items <= 0)
                 return null;
 
-            return m_quiz.GenerateRandomSetOfQuestions(m_items);
+            return config.GenerateRandomSetOfQuestions(m_items);
         }
 
         private IEnumerator QuizRoutine(List<(string, string[], int[])> questions)

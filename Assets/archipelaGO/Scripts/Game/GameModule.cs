@@ -6,17 +6,29 @@ namespace archipelaGO.Game
         where T : GameModuleConfig
     {
         #region Fields
-        public delegate void GameCompleted();
+        private T m_config = null;
+        public delegate void GameCompleted(string message);
         public event GameCompleted OnGameCompleted;
         #endregion
 
 
+        #region Property
+        protected T config => m_config;
+        #endregion
+
+
         #region Methods
-        public abstract void Initialize(T config);
+        public void Initialize(T config)
+        {
+            m_config = config;
+            OnInitialize();
+        }
+
+        protected abstract void OnInitialize();
 
         protected void InvokeGameCompleted()
         {
-            OnGameCompleted?.Invoke();
+            OnGameCompleted?.Invoke(m_config?.endMessage ?? "Game ended!");
             OnGameCompleted = null;
         }
         #endregion

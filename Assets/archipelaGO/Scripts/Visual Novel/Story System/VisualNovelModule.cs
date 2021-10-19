@@ -22,11 +22,11 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Game Module Implementation
-        public override void Initialize(Plot config)
+        protected override void OnInitialize()
         {
             InitializeVisualNovelController();
             StopPlot();
-            m_plotRoutine = StartCoroutine(PlotPlayback(config));
+            m_plotRoutine = StartCoroutine(PlotPlayback());
         }
         #endregion
 
@@ -46,15 +46,15 @@ namespace archipelaGO.VisualNovel.StorySystem
         private IEnumerator SetScene(Sprite scene) =>
             m_vnController.SetBackgroundScene(scene);
 
-        private IEnumerator PlotPlayback(Plot plot)
+        private IEnumerator PlotPlayback()
         {
             yield return new WaitForSeconds(m_startDelay);
 
-            for (int i = 0; i < plot.plotlineCount; i++)
+            for (int i = 0; i < config.plotlineCount; i++)
             {
-                (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) plotline = plot.GetPlotline(i);
+                (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) plotline = config.GetPlotline(i);
                 yield return SetScene(plotline.scene);
-                yield return PlayNarrative(plotline.narrative, plot.wordBank, plotline.mainCharacter);
+                yield return PlayNarrative(plotline.narrative, config.wordBank, plotline.mainCharacter);
             }
 
             InvokeGameCompleted();
