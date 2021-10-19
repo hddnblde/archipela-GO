@@ -7,8 +7,9 @@ using VisualNovelModule = archipelaGO.VisualNovel.StorySystem.VisualNovelModule;
 using CrosswordPuzzleModule = archipelaGO.Puzzle.CrosswordPuzzleModule;
 using WordHuntPuzzleModule = archipelaGO.Puzzle.WordHuntPuzzleModule;
 using QuizModule = archipelaGO.Quiz.QuizModule;
-using WorldMapLinker = archipelaGO.WorldMap.WorldMapLinker;
+using IWorldMapLinker = archipelaGO.WorldMap.IWorldMapLinker;
 using GameHint = archipelaGO.UI.Windows.GameHintWindow;
+using EndScreen = archipelaGO.UI.Windows.EndScreenWindow;
 
 namespace archipelaGO.Game
 {
@@ -30,6 +31,9 @@ namespace archipelaGO.Game
         [SerializeField]
         private GameHint m_hintScreen = null;
 
+        [SerializeField]
+        private EndScreen m_endScreen = null;
+
         private List<string> m_unlockableModules = new List<string>();
         #endregion
 
@@ -37,10 +41,22 @@ namespace archipelaGO.Game
         #region Public Methods
         public void SetUpWorldMapLinkers(GameLibrary library)
         {
-            WorldMapLinker[] linkers = GameObject.FindObjectsOfType<WorldMapLinker>(true);
+            GameObject[] rootGameObjects = GetRootGameObjects();
 
-            foreach (WorldMapLinker linker in linkers)
-                linker.SetGameLibrary(library);
+            if (rootGameObjects == null || rootGameObjects.Length <= 0)
+                return;
+            
+            foreach (GameObject root in rootGameObjects)
+            {
+                IWorldMapLinker[] linkers =
+                    root.GetComponentsInChildren<IWorldMapLinker>(true);
+
+                if (linkers == null)
+                    continue;
+
+                foreach (IWorldMapLinker linker in linkers)
+                    linker.SetGameLibrary(library);
+            }
         }
 
         public void LoadModule(GameModuleConfig module, params string[] unlockableModules)
@@ -97,6 +113,24 @@ namespace archipelaGO.Game
 
         private void LoadQuizModule(QuizConfig config) =>
             LoadModule<QuizModule, QuizConfig>(m_quizModule, config);
+
+        private void ShowHintScreen(string hintText)
+        {
+            if (m_hintScreen != null)
+                m_hintScreen.ShowHintText(hintText);
+        }
+
+        private void HideHintScreen()
+        {
+            if (m_hintScreen != null)
+                m_hintScreen.Hide();
+        }
+
+        private void InvokeOnGameCompleted(string message)
+        {
+            if (m_endScreen != null)
+                m_endScreen.Show(message);
+        }
         #endregion
 
 
@@ -118,23 +152,9 @@ namespace archipelaGO.Game
                 HideHintScreen();
         }
 
-        private void ShowHintScreen(string hintText)
-        {
-            if (m_hintScreen != null)
-                m_hintScreen.ShowHintText(hintText);
-        }
-
-        private void HideHintScreen()
-        {
-            if (m_hintScreen != null)
-                m_hintScreen.Hide();
-        }
-
-        private void InvokeOnGameCompleted()
-        {
-            foreach (string unlockedModule in m_unlockableModules)
-                ProgressDataHandler.Unlock(unlockedModule);
-        }
+        private GameObject[] GetRootGameObjects() =>
+            UnityEngine.SceneManagement.SceneManager.
+                GetActiveScene().GetRootGameObjects();
         #endregion
     }
 }
