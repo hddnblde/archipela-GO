@@ -4,7 +4,12 @@ using SceneLinker = archipelaGO.SceneHandling.SceneLinker<archipelaGO.Game.GameW
 
 namespace archipelaGO.WorldMap
 {
-    public class WorldMapLinker : SceneLinker
+    public interface IWorldMapLinker
+    {
+        void SetGameLibrary(GameLibrary library);
+    }
+
+    public class WorldMapLinker : SceneLinker, IWorldMapLinker
     {
         [SerializeField]
         private GameLibrary m_library = null;
