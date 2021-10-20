@@ -22,6 +22,29 @@ namespace archipelaGO.Quiz
 
         private Coroutine m_quizRoutine = null;
         private int m_guessedCorrectAnswers = 0;
+        private int m_currentQuestionIndex = -1;
+        private List<Question> m_questions = new List<Question>();
+        #endregion
+
+
+        #region Data Structure
+        private class Question
+        {
+            public Question (string stem, string[] choices, int[] correctAnswers)
+            {
+                m_stem = stem;
+                m_choices = choices;
+                m_correctAnswers = correctAnswers;
+            }
+
+            private string m_stem = string.Empty;
+            private string[] m_choices = null;
+            private int[] m_correctAnswers = null;
+
+            public string stem => m_stem;
+            public string[] choices => m_choices;
+            public int[] correctAnswerIndices => null;
+        }
         #endregion
 
 
@@ -40,45 +63,94 @@ namespace archipelaGO.Quiz
             if (m_quizRoutine != null)
                 StopCoroutine(m_quizRoutine);
 
-            List<(string, string[], int[])> questions = GenerateQuestions();
+            m_questions = GenerateQuestions();
 
-            if (questions == null)
+            if (m_questions == null)
                 return;
 
-            m_quizRoutine = StartCoroutine(QuizRoutine(questions));
+            m_quizRoutine = StartCoroutine(QuizRoutine());
         }
 
-        private List<(string, string[], int[])> GenerateQuestions()
+        private List<Question> GenerateQuestions()
         {
-            if (config == null || m_items <= 0)
-                return null;
+            List<Question> questions = new List<Question>();
 
-            return config.GenerateRandomSetOfQuestions(m_items);
+            if (config == null || m_items <= 0)
+                return questions;
+
+            List<(string, string[], int[])> setOfQuestions = config.GenerateRandomSetOfQuestions(m_items);
+
+            if (setOfQuestions == null)
+                return questions;
+            
+            foreach ((string stem, string[] choices, int[] correctAnswers) item in setOfQuestions)
+            {
+                Question question = new Question(item.stem, item.choices, item.correctAnswers);
+                questions.Add(question);
+            }
+
+            return questions;
         }
 
-        private IEnumerator QuizRoutine(List<(string, string[], int[])> questions)
+        private IEnumerator QuizRoutine()
         {
             m_guessedCorrectAnswers = 0;
+            m_currentQuestionIndex = 0;
 
-            foreach ((string stem, string[] choices, int[] correctAnswers) question in questions)
+            for (; m_currentQuestionIndex < m_questions.Count; m_currentQuestionIndex++)
             {
+                Question question = GetCurrentQuestion();
+
                 WaitForChosenOption quizChoice =
                     m_choiceWindow.Show(question.stem, question.choices, false);
 
                 yield return quizChoice;
 
-                if (question.correctAnswers.Contains(quizChoice.choiceIndex))
+                if (question.correctAnswerIndices.Contains(quizChoice.choiceIndex))
                     m_guessedCorrectAnswers++;
 
-                m_choiceWindow.ShowCorrectAnswer(quizChoice.choiceIndex, question.correctAnswers);
-                
+                m_choiceWindow.ShowCorrectAnswer(quizChoice.choiceIndex, question.correctAnswerIndices);
+
                 yield return new WaitForSeconds(m_delayBeforeMovingToNextItem);
             }
 
             //TODO: clear screen
+            //TODO: medal screen
             Debug.Log($"Quiz finished! Guessed correct answers = { m_guessedCorrectAnswers }");
+            // display medal first before ending
             InvokeGameCompleted();
         }
+
+        private Question GetCurrentQuestion()
+        {
+            if (m_questions == null || m_currentQuestionIndex < 0 ||
+                m_currentQuestionIndex >= m_questions.Count)
+                return null;
+
+            return m_questions[m_currentQuestionIndex];
+        }
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public override IEnumerator Debug_Autoplay()
+        {
+            if (m_questions == null || m_questions.Count <= 0)
+                yield break;
+
+            int activeQuestion = m_currentQuestionIndex;
+
+            while (m_currentQuestionIndex < m_questions.Count)
+            {
+                Question question = GetCurrentQuestion();
+
+                if (question.correctAnswerIndices == null || question.correctAnswerIndices.Length <= 0)
+                    yield break;
+
+                m_choiceWindow.Debug_ChooseAnswer(question.correctAnswerIndices[0]);
+                yield return new WaitUntil(() => activeQuestion != m_currentQuestionIndex);
+            }
+        }
+        #endif
     }
 }

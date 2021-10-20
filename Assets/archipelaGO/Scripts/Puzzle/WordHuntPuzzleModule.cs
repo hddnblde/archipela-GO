@@ -46,10 +46,16 @@ namespace archipelaGO.Puzzle
                 m_hintColor.a = alpha;
             }
 
+            private bool m_animationFinished = false;
+
+            public override bool revealAnimationFinished => m_animationFinished;
+
             protected override IEnumerator OnRevealPuzzle()
             {
+                m_animationFinished = false;
+
                 if (m_cells == null)
-                    yield break;
+                    goto End;
 
                 foreach (WordCell cell in m_cells)
                 {
@@ -59,6 +65,9 @@ namespace archipelaGO.Puzzle
                     cell.SetState(CellState.CharacterRevealed);
                     yield return new WaitForSeconds(revealAnimationInterval);
                 }
+
+                End:
+                m_animationFinished = true;
             }
 
             private Color m_hintColor = Color.clear;
@@ -162,7 +171,7 @@ namespace archipelaGO.Puzzle
             }
         }
 
-        private void DrawLineHint(Color color, Vector3 startPosition, Vector3 endPosition, float width)
+        private void CreateLineHintImage(Color color, Vector3 startPosition, Vector3 endPosition, float width)
         {
             if (m_lineHintPrefab == null)
                 return;
@@ -231,22 +240,25 @@ namespace archipelaGO.Puzzle
             PuzzlePiece result;
 
             if (VerifyAnswer(m_pendingWord, out result))
-            {
-                WordCell startCell = GetCell(m_cellDragStartPosition);
-                WordCell endCell = GetCell(m_cellDragEndPosition);
-
-                RectTransform startCellRectTransform = startCell.transform as RectTransform;
-                RectTransform endCellRectTransform = endCell.transform as RectTransform;
-
-                Color hintColor = (result != null ? (result as WordHuntPuzzlePiece).hintColor : Color.clear);
-                Vector3 startCellWorldPosition = startCellRectTransform.transform.position;
-                Vector3 endCellWorldPosition = endCellRectTransform.transform.position;
-                float width = (endCellRectTransform.anchoredPosition3D - startCellRectTransform.anchoredPosition3D).magnitude;
-                float widthPadding = (startCellRectTransform.rect.width / 2f) + (endCellRectTransform.rect.width / 2f) - 8f;
-                DrawLineHint(hintColor, startCellWorldPosition, endCellWorldPosition, width + widthPadding);
-            }
+                DrawLineHint(m_cellDragStartPosition, m_cellDragEndPosition, result);
 
             SetUpHints();
+        }
+
+        private void DrawLineHint(Vector2Int start, Vector2Int end, PuzzlePiece result)
+        {
+            WordCell startCell = GetCell(start);
+            WordCell endCell = GetCell(end);
+
+            RectTransform startCellRectTransform = startCell.transform as RectTransform;
+            RectTransform endCellRectTransform = endCell.transform as RectTransform;
+
+            Color hintColor = (result != null ? (result as WordHuntPuzzlePiece).hintColor : Color.clear);
+            Vector3 startCellWorldPosition = startCellRectTransform.transform.position;
+            Vector3 endCellWorldPosition = endCellRectTransform.transform.position;
+            float width = (endCellRectTransform.anchoredPosition3D - startCellRectTransform.anchoredPosition3D).magnitude;
+            float widthPadding = (startCellRectTransform.rect.width / 2f) + (endCellRectTransform.rect.width / 2f) - 8f;
+            CreateLineHintImage(hintColor, startCellWorldPosition, endCellWorldPosition, width + widthPadding);
         }
 
         private void OnCellPointerEnter(int column, int row)
@@ -355,5 +367,15 @@ namespace archipelaGO.Puzzle
             return (column, row);
         }
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        protected override void Debug_RevealAnswer(PuzzlePiece puzzlePiece)
+        {
+            (Vector2Int start, Vector2Int end) positions = puzzlePiece.Debug_GetGridPositions();
+            DrawLineHint(positions.start, positions.end, puzzlePiece);
+            puzzlePiece.PlayRevealAnimation();
+        }
+        #endif
     }
 }

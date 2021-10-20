@@ -18,6 +18,7 @@ namespace archipelaGO.VisualNovel.StorySystem
 
         private VisualNovelController m_vnController = null;
         private Coroutine m_plotRoutine = null;
+        private int m_currentPlot = -1;
         #endregion
 
 
@@ -50,9 +51,11 @@ namespace archipelaGO.VisualNovel.StorySystem
         {
             yield return new WaitForSeconds(m_startDelay);
 
-            for (int i = 0; i < config.plotlineCount; i++)
+            m_currentPlot = 0;
+
+            for (; m_currentPlot < config.plotlineCount; m_currentPlot++)
             {
-                (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) plotline = config.GetPlotline(i);
+                (Narrative narrative, Sprite scene, DialogueCharacter mainCharacter) plotline = config.GetPlotline(m_currentPlot);
                 yield return SetScene(plotline.scene);
                 yield return PlayNarrative(plotline.narrative, config.wordBank, plotline.mainCharacter);
             }
@@ -91,5 +94,14 @@ namespace archipelaGO.VisualNovel.StorySystem
             }
         }
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public override IEnumerator Debug_Autoplay()
+        {
+            Debug.LogWarning("Visual Novel Module does not support autoplay!");
+            yield return null;
+        }
+        #endif
     }
 }

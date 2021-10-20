@@ -12,6 +12,9 @@ namespace archipelaGO.Puzzle
     {
         #region Fields
         [SerializeField]
+        private float m_answerDelay = 0.75f;
+
+        [SerializeField]
         private bool m_revealFirstLetterOfAllWords = false;
 
         [SerializeField]
@@ -25,13 +28,19 @@ namespace archipelaGO.Puzzle
         #region Data Structure
         private class CrosswordPuzzlePiece : PuzzlePiece
         {
+            private bool m_animationFinished = false;
+
+            public override bool revealAnimationFinished => m_animationFinished;
+
             public CrosswordPuzzlePiece(WordPuzzleModule puzzleModule, float revealAnimationInterval,
                 string word, WordCell[] cells) : base(puzzleModule, word, cells, revealAnimationInterval) {}
 
             protected override IEnumerator OnRevealPuzzle()
             {
+                m_animationFinished = false;
+
                 if (m_cells == null)
-                    yield break;
+                    goto End;
 
                 foreach (WordCell cell in m_cells)
                 {
@@ -41,6 +50,9 @@ namespace archipelaGO.Puzzle
                     cell.SetState(CellState.CharacterRevealed);
                     yield return new WaitForSeconds(revealAnimationInterval);
                 }
+
+                End:
+                m_animationFinished = true;
             }
         }
 
@@ -149,11 +161,8 @@ namespace archipelaGO.Puzzle
 
 
         #region Answering Implementation
-        private void OnSubmitAnswer(string answer)
-        {
-            ClearAnswerField();
-            VerifyAnswer(answer);
-        }
+        private void OnSubmitAnswer(string answer) =>
+            StartCoroutine(SubmitAnswerRoutine(answer));
 
         private void ClearAnswerField()
         {
@@ -171,6 +180,29 @@ namespace archipelaGO.Puzzle
             m_answerField.interactable = false;
             m_answerField.text = "Puzzle finished!";
         }
+
+        private IEnumerator SubmitAnswerRoutine(string answer)
+        {
+            m_answerField.interactable = false;
+
+            if (Application.isMobilePlatform)
+                yield return new WaitForSeconds(m_answerDelay);
+
+            m_answerField.interactable = true;
+            ClearAnswerField();
+            VerifyAnswer(answer);
+        }
+
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public override IEnumerator Debug_Autoplay()
+        {
+            m_answerField.interactable = false;
+            yield return base.Debug_Autoplay();
+            m_answerField.interactable = true;
+        }
+        #endif
     }
 }

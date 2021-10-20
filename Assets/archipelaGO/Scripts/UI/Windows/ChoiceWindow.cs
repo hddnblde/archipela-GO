@@ -91,7 +91,6 @@ namespace archipelaGO.UI.Windows
             foreach (int correctAnswer in correctAnswers)
                 SetChoiceButtonColor(correctAnswer, AnswerButtonState.Correct);
         }
-
         #endregion
 
 
@@ -214,5 +213,15 @@ namespace archipelaGO.UI.Windows
             }
         }
         #endregion
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public void Debug_ChooseAnswer(int index)
+        {
+            if (index < 0 || index >= m_choiceButtons.Count)
+                return;
+
+            m_choiceButtons[index].onClick.Invoke();
+        }
+        #endif
     }
 }

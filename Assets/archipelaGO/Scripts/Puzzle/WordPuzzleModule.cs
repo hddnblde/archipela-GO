@@ -42,15 +42,32 @@ namespace archipelaGO.Puzzle
             public PuzzlePiece(WordPuzzleModule puzzleModule, string word, WordCell[] cells, float revealAnimationInterval) =>
                 (m_puzzleModule, m_word, m_cells, m_revealAnimationInterval) = (puzzleModule, word.ToLower(), cells, revealAnimationInterval);
 
-
             private WordPuzzleModule m_puzzleModule = null;
             private string m_word = string.Empty;
             protected WordCell[] m_cells = null;
             private Coroutine m_revealAnimation = null;
             private float m_revealAnimationInterval = 0f;
+            private bool m_revealed = false;
 
             protected float revealAnimationInterval => m_revealAnimationInterval;
-            private bool m_alreadyRevealed = false;
+
+            #if ARCHIPELAGO_DEBUG_MODE
+            public (Vector2Int start, Vector2Int end) Debug_GetGridPositions()
+            {
+                if (m_cells == null || m_cells.Length <= 0 || m_puzzleModule == null)
+                    return (new Vector2Int(-1, -1), new Vector2Int(-1, -1));
+
+                WordCell startCell = m_cells[0];
+                Vector2Int startPosition = m_puzzleModule.Debug_GetCellPosition(startCell);
+
+                WordCell endCell = m_cells[m_cells.Length - 1];
+                Vector2Int endPosition = m_puzzleModule.Debug_GetCellPosition(endCell);
+
+                return (startPosition, endPosition);
+            }
+            #endif
+
+            public abstract bool revealAnimationFinished { get; }
 
             public bool Matches(string word)
             {
@@ -62,7 +79,7 @@ namespace archipelaGO.Puzzle
 
             public void PlayRevealAnimation()
             {
-                if (m_puzzleModule == null || m_alreadyRevealed)
+                if (m_puzzleModule == null || m_revealed)
                     return;
 
                 if (m_revealAnimation != null)
@@ -71,7 +88,7 @@ namespace archipelaGO.Puzzle
                 m_revealAnimation =
                     m_puzzleModule.StartCoroutine(OnRevealPuzzle());
 
-                m_alreadyRevealed = true;
+                m_revealed = true;
             }
 
             protected abstract IEnumerator OnRevealPuzzle();
@@ -155,12 +172,15 @@ namespace archipelaGO.Puzzle
                 m_solvedPieces.Add(result);
 
             if (m_pendingPieces.Count <= 0)
-            {
-                OnPuzzleCompleted();
-                InvokeGameCompleted();
-            }
+                InvokePuzzleCompleted();
 
             return true;
+        }
+
+        private void InvokePuzzleCompleted()
+        {
+            OnPuzzleCompleted();
+            InvokeGameCompleted();
         }
 
         protected bool AlreadyAnswered(string answer)
@@ -219,8 +239,6 @@ namespace archipelaGO.Puzzle
                 if (gridWord == null)
                     continue;
 
-                // Word word = gridWord.word;
-                // int direction = gridWord.direction;
                 Vector2Int position = gridWord.position;
 
                 if (!plottedPoints.Contains(position))
@@ -376,5 +394,49 @@ namespace archipelaGO.Puzzle
             select puzzlePiece
         ).FirstOrDefault();
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public Vector2Int Debug_GetCellPosition(WordCell cell)
+        {
+            if (cell == null || m_wordGrid == null)
+                goto End;
+            
+            for (int column = 0; column < Columns; column++)
+            {
+                for (int row = 0; row < Rows; row++)
+                {
+                    Vector2Int currentPosition = new Vector2Int(column, row);
+                    WordCell currentCell = m_wordGrid[column, row];
+
+                    if (cell == currentCell)
+                        return currentPosition;
+                }
+            }
+
+            End:
+            return new Vector2Int(-1, -1);
+        }
+        public override IEnumerator Debug_Autoplay()
+        {
+            for (int i = m_pendingPieces.Count - 1; i >= 0; i--)
+            {
+                PuzzlePiece pendingPuzzle = m_pendingPieces[i];
+
+                if (pendingPuzzle == null)
+                    continue;
+
+                Debug_RevealAnswer(pendingPuzzle);
+                yield return new WaitUntil(() => pendingPuzzle.revealAnimationFinished);
+                yield return new WaitForSeconds(0.25f);
+            }
+
+            yield return new WaitForSeconds(0.7362901f);
+            InvokePuzzleCompleted();
+        }
+
+        protected virtual void Debug_RevealAnswer(PuzzlePiece puzzlePiece) =>
+            puzzlePiece.PlayRevealAnimation();
+        #endif
     }
 }
