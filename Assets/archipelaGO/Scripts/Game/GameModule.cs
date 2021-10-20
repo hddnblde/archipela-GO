@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 namespace archipelaGO.Game
 {
-    public abstract class GameModule<T> : MonoBehaviour
+    public abstract class GameModule<T> : MonoBehaviour, IAutoplayable
         where T : GameModuleConfig
     {
         #region Fields
@@ -32,5 +33,10 @@ namespace archipelaGO.Game
             OnGameCompleted = null;
         }
         #endregion
+
+
+        #if ARCHIPELAGO_DEBUG_MODE
+        public abstract IEnumerator Debug_Autoplay();
+        #endif
     }
 }
