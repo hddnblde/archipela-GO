@@ -152,7 +152,7 @@ namespace archipelaGO.Game
                 HideHintScreen();
         }
 
-        private GameObject[] GetRootGameObjects() =>
+        public static GameObject[] GetRootGameObjects() =>
             UnityEngine.SceneManagement.SceneManager.
                 GetActiveScene().GetRootGameObjects();
         #endregion
