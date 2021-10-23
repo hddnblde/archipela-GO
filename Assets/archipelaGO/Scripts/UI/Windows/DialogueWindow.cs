@@ -11,6 +11,15 @@ namespace archipelaGO.UI.Windows
     {
         #region Fields
         [SerializeField]
+        private RectTransform m_speakerPanel = null;
+
+        [SerializeField, Range(0f, 1f)]
+        private float m_speakerPanelPivot = 0.1f;
+
+        [SerializeField]
+        private Vector2 m_speakerPanelAnchoredOffset = Vector2.up * 14f;
+
+        [SerializeField]
         private AnimatedText m_animatedText = null;
 
         [SerializeField]
@@ -68,12 +77,13 @@ namespace archipelaGO.UI.Windows
             base.Hide();
         }
 
-        public IEnumerator ShowDialogueLine(Sprite characterSprite, StageBlocking stageBlocking,
-            string characterName, string dialogueLine, WordBank wordBank)
+        public IEnumerator ShowDialogueLine(Sprite characterSprite, Vector2 pivotOffset,
+            float scale, StageBlocking stageBlocking, string characterName,
+            string dialogueLine, WordBank wordBank)
         {
             m_showNextDialogue = false;
             Show();
-            SetCharacter(characterSprite, stageBlocking, characterName);
+            SetCharacter(characterSprite, stageBlocking, characterName, pivotOffset, scale);
             yield return AnimateDialogueLine(dialogueLine, wordBank);
             yield return new WaitUntil(() => m_showNextDialogue);
             Hide();
@@ -82,25 +92,52 @@ namespace archipelaGO.UI.Windows
 
 
         #region Internal Methods
-        private void SetCharacter(Sprite sprite, StageBlocking blocking, string name)
+        private void SetCharacter(Sprite sprite, StageBlocking blocking, string name, Vector2 pivotOffset, float scale)
         {
+            bool stageLeft = (blocking == StageBlocking.StageLeft);
             if (m_characterNameText != null)
                 m_characterNameText.text = name;
+            
+            if (m_speakerPanel != null)
+            {
+                float anchor = (stageLeft ? 0f : 1f);
+                m_speakerPanel.anchorMin = new Vector2(anchor, 1f);
+                m_speakerPanel.anchorMax = new Vector2(anchor, 1f);
+
+                float xPivot = (stageLeft ? m_speakerPanelPivot :
+                    (1f - m_speakerPanelPivot));
+
+                m_speakerPanel.pivot = new Vector2(xPivot, 0f);
+                m_speakerPanel.anchoredPosition = m_speakerPanelAnchoredOffset;
+            }
 
             AssignCharacterSprite(m_characterStageLeft,
-                (blocking == StageBlocking.StageLeft ? sprite : null));
+                (stageLeft ? sprite : null),
+                (stageLeft ? pivotOffset : Vector2.zero),
+                (stageLeft ? scale : 1f),
+                false);
 
             AssignCharacterSprite(m_characterStageRight,
-                (blocking == StageBlocking.StageRight ? sprite : null));
+                (!stageLeft ? sprite : null),
+                (!stageLeft ? pivotOffset : Vector2.zero),
+                (!stageLeft ? scale : 1f),
+                true);
         }
 
-        private void AssignCharacterSprite(Image characterImage, Sprite sprite)
+        private void AssignCharacterSprite(Image characterImage, Sprite sprite,
+            Vector2 pivotOffset, float scale, bool mirrored)
         {
             if (characterImage == null)
                 return;
 
             characterImage.sprite = sprite;
             characterImage.enabled = (sprite != null);
+            characterImage.rectTransform.anchoredPosition = pivotOffset;
+
+            float horizontalScale = (mirrored ? -1f : 1f) * scale;
+
+            characterImage.rectTransform.localScale =
+                new Vector3(horizontalScale, scale, 1f);
         }
 
         private IEnumerator AnimateDialogueLine(string dialogueLine, WordBank wordBank)

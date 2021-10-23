@@ -72,8 +72,9 @@ namespace archipelaGO.VisualNovel.StorySystem
                 PlayVoiceOverAudio(line.voiceOver);
 
                 yield return m_dialogueWindow.
-                    ShowDialogueLine(character.sprite, blocking,
-                    displayedCharacterName, line.text, wordBank);
+                    ShowDialogueLine(character.sprite, character.pivotOffset,
+                        character.scale, blocking, displayedCharacterName,
+                        line.text, wordBank);
             }
         }
 
