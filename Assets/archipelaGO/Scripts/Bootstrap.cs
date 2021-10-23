@@ -8,10 +8,12 @@ namespace archipelaGO
     {
         #region Fields
         [SerializeField]
-        private float m_delayBeforeLoadingFirstScene = 5f;
+        private SplashScreenController m_splashScreen = null;
 
         [SerializeField]
-        private SplashScreenController m_splashScreen = null;
+        private float m_delayAfterSplashScreen = 5f;
+
+        [Space]
 
         [SerializeField]
         private Scene m_firstSceneToLoad = Scene.WorldMap;
@@ -29,7 +31,7 @@ namespace archipelaGO
             if (m_splashScreen != null)
             {
                 yield return m_splashScreen.PlaybackRoutine();
-                yield return new WaitForSeconds(m_delayBeforeLoadingFirstScene);
+                yield return new WaitForSeconds(m_delayAfterSplashScreen);
             }
 
             SceneLoader.LoadScene(m_firstSceneToLoad);
