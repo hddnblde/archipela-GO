@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
@@ -9,6 +11,9 @@ namespace archipelaGO.UI
     public class AnimatedText : MonoBehaviour, IPointerClickHandler
     {
         #region Fields
+        [SerializeField]
+        private List<PreferredFont> m_fontSizes = new List<PreferredFont>();
+
         [SerializeField]
         private TextMeshProUGUI m_text = null;
 
@@ -24,6 +29,35 @@ namespace archipelaGO.UI
 
         public static event WordSelected OnWordSelected;
         public delegate void WordSelected(Word word);
+        private int m_previousScreenWidth = -1;
+        #endregion
+
+
+        #region Data Structure
+        [System.Serializable]
+        private struct PreferredFont
+        {
+            [SerializeField]
+            private float m_size;
+
+            [SerializeField]
+            private int m_preferredScreenWidth;
+
+            public float size => m_size;
+            public int preferredScreenWidth => m_preferredScreenWidth;
+        }
+        #endregion
+
+
+        #region MonoBehaviour Implementation
+        private void Update()
+        {
+            if (m_previousScreenWidth == Screen.width)
+                return;
+
+            m_previousScreenWidth = Screen.width;
+            InitializeFontSize();
+        }
         #endregion
 
 
@@ -73,6 +107,30 @@ namespace archipelaGO.UI
 
 
         #region Internal Methods
+        private void InitializeFontSize() =>
+            m_text.fontSize = GetPreferredFontSize(Screen.width);
+
+        private float GetPreferredFontSize(int screenWidth)
+        {
+            if (m_text == null)
+                return 0;
+            
+            if (m_fontSizes == null || m_fontSizes.Count <= 0)
+                goto End;
+
+            List<PreferredFont> orderedFontSizes = m_fontSizes.
+                OrderByDescending(f => f.preferredScreenWidth).ToList();
+
+            foreach (PreferredFont preferredFont in orderedFontSizes)
+            {
+                if (screenWidth >= preferredFont.preferredScreenWidth)
+                    return preferredFont.size;
+            }
+
+            End:
+            return m_text.fontSize;
+        }
+
         private IEnumerator ScrollText()
         {
             float duration = GetTotalDuration();
