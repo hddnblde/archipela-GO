@@ -372,9 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b751d7b0424985e44acb73ed1167a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_skipSplashScreen: 1
-  m_delayBeforeLoadingFirstScene: 5
   m_splashScreen: {fileID: 440859659}
+  m_delayAfterSplashScreen: 5
   m_firstSceneToLoad: 1
 --- !u!4 &1387369490
 Transform:
