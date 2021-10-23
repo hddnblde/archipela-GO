@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Lisuga
   m_sprite: {fileID: -2643793856068697430, guid: a0426cc73c62a0c4cb8f777093565730, type: 3}
+  m_pivotOffset: {x: 0, y: 172}
+  m_scale: 0.78

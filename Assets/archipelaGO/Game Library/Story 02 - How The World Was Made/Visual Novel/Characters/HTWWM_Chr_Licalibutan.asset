@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Licalibutan
   m_sprite: {fileID: -4360384156774260305, guid: 411cf6bfa60074349acf9958e35ff7f4, type: 3}
+  m_pivotOffset: {x: 0, y: 132}
+  m_scale: 0.79

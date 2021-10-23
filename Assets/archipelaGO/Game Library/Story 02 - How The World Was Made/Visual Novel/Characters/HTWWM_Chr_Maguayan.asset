@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Maguayan
   m_sprite: {fileID: 4379473361280674825, guid: 411cf6bfa60074349acf9958e35ff7f4, type: 3}
+  m_pivotOffset: {x: 0, y: 102}
+  m_scale: 0.94

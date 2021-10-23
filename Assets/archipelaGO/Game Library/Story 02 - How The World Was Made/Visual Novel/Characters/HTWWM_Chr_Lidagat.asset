@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Lidagat
   m_sprite: {fileID: 715146929326616139, guid: c6899449ca6404745adb451457134343, type: 3}
+  m_pivotOffset: {x: 0, y: 132}
+  m_scale: 1

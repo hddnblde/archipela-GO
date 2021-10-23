@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Captan
   m_sprite: {fileID: 7899217477028851948, guid: a0426cc73c62a0c4cb8f777093565730, type: 3}
+  m_pivotOffset: {x: 0, y: 102}
+  m_scale: 0.94
