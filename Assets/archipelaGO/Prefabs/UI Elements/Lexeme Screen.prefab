@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 3120321948980644328}
   - component: {fileID: 3120321948980644330}
   m_Layer: 5
-  m_Name: Lexeme Window
+  m_Name: Lexeme Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
