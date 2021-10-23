@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Messenger
   m_sprite: {fileID: -6055464051900641973, guid: b913381c13d5ac44abba56acf9507eb7, type: 3}
+  m_pivotOffset: {x: 0, y: 274}
+  m_scale: 0.5

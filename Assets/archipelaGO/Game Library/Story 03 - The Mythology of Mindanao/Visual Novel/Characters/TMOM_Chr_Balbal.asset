@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Balbal
   m_sprite: {fileID: -2528574754312666094, guid: 38c9bb283284e4b4abe65cde3cb84b8d, type: 3}
+  m_pivotOffset: {x: 0, y: 5}
+  m_scale: 1

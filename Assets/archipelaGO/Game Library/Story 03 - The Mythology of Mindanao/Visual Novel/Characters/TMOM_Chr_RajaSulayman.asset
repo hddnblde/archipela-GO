@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Raja Sulayman
   m_sprite: {fileID: -3817924614848873922, guid: b913381c13d5ac44abba56acf9507eb7, type: 3}
+  m_pivotOffset: {x: 0, y: 132}
+  m_scale: 0.8

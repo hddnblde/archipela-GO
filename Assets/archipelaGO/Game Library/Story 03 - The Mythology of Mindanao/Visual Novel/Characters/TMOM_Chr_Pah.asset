@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Pah
   m_sprite: {fileID: 3419034062435615425, guid: 1d4ef765bb07e65409275d0de43804dc, type: 3}
+  m_pivotOffset: {x: 0, y: 0}
+  m_scale: 1
