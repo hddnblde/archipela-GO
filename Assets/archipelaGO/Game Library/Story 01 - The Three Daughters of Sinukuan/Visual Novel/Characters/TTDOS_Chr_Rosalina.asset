@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Rosalina
   m_sprite: {fileID: -4739246367852332572, guid: 4d0c26adfd762db4a9c35a4d895ea290, type: 3}
+  m_pivotOffset: {x: 0, y: 132}
+  m_scale: 0.72

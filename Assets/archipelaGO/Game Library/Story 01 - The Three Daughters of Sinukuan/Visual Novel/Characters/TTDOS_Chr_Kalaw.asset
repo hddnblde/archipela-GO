@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Kalaw
   m_sprite: {fileID: -1042369448145165882, guid: c2eaa3729037b0a4aaad7d255d329d8e, type: 3}
+  m_pivotOffset: {x: 0, y: 132}
+  m_scale: 0.75

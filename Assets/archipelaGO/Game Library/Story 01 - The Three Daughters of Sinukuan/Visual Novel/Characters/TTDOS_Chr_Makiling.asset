@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Makiling
   m_sprite: {fileID: 7078815010831765837, guid: 01a12ecdf14fbd14b891d1c9471dff14, type: 3}
+  m_pivotOffset: {x: 0, y: 14}
+  m_scale: 1

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Sinukuan
   m_sprite: {fileID: 8944107668380331245, guid: 605b8d8cd0cf43f458124f61e27a121a, type: 3}
+  m_pivotOffset: {x: 0, y: 14}
+  m_scale: 1
