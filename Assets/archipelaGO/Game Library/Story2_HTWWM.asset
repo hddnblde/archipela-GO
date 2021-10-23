@@ -17,11 +17,11 @@ MonoBehaviour:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   m_modules:
-  - m_label: Story 1
+  - m_label: Story of Captan
     m_config: {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
     m_position: {x: -9.95, y: 3.04}
     m_spriteIndex: 0
-  - m_label: Story 2
+  - m_label: Story of Maguayan
     m_config: {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
     m_position: {x: -9.95, y: -3.3}
     m_spriteIndex: 0

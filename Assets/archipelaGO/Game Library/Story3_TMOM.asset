@@ -17,11 +17,11 @@ MonoBehaviour:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   m_modules:
-  - m_label: Story 1
+  - m_label: Story of Sulayman
     m_config: {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
     m_position: {x: -13.75, y: 4.39}
     m_spriteIndex: 0
-  - m_label: Story 2
+  - m_label: Story of Indaraptra
     m_config: {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
     m_position: {x: -13.75, y: -4.61}
     m_spriteIndex: 0

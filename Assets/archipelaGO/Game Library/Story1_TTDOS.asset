@@ -17,11 +17,11 @@ MonoBehaviour:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   m_modules:
-  - m_label: Story 1
+  - m_label: Story of Kalaw
     m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
     m_position: {x: -11.6, y: 2.5}
     m_spriteIndex: 0
-  - m_label: Story 2
+  - m_label: "Story of Do\xF1a Maria"
     m_config: {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
     m_position: {x: -11.6, y: -2.45}
     m_spriteIndex: 0
