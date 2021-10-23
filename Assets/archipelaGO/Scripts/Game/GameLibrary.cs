@@ -24,6 +24,9 @@ namespace archipelaGO.Game
         {
             #region Fields
             [SerializeField]
+            private string m_label = string.Empty;
+
+            [SerializeField]
             private GameModuleConfig m_config = null;
 
             [SerializeField]
@@ -35,6 +38,7 @@ namespace archipelaGO.Game
 
 
             #region Properties
+            public string label => m_label;
             public GameModuleConfig config => m_config;
             public Vector2 position => m_position;
             public int spriteIndex => m_spriteIndex;
@@ -72,15 +76,15 @@ namespace archipelaGO.Game
                 return null;
         }
 
-        public Sprite GetNodeSprite(int index)
+        public (string label, Sprite sprite) GetNodeVisuals(int index)
         {
             ModuleNode node = GetNode(index);
 
             if (node != null)
-                return GetSprite(node.spriteIndex);
+                return (node.label, GetSprite(node.spriteIndex));
 
             else
-                return null;
+                return (string.Empty, null);
         }
 
         private ModuleNode GetNode(int index)
