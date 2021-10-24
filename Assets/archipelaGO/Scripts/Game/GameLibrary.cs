@@ -152,12 +152,12 @@ namespace archipelaGO.Game
         {
             if (keys == null || keys.Length <= 0 ||
                 m_progressKeys == null || m_progressKeys.keyCount <= 0)
-                return null;
+                return new string[0];
 
             string[] keyNames = new string[keys.Length];
 
             for (int i = 0; i < keyNames.Length; i++)
-                keyNames[i] = m_progressKeys.GetKey(i);
+                keyNames[i] = m_progressKeys.GetKey(keys[i]);
 
             return keyNames;
         }
