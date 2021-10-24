@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Story2_HTWWM
   m_EditorClassIdentifier: 
   m_worldBackground: {fileID: 21300000, guid: 38a1937b2727f834185f522cfe245ecf, type: 3}
+  m_progressKeys: {fileID: 11400000, guid: 98970c53edf38f94ca58c7ae55ac2574, type: 2}
   m_nodeSprites:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
@@ -21,19 +22,42 @@ MonoBehaviour:
     m_config: {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
     m_position: {x: -9.95, y: 3.04}
     m_spriteIndex: 0
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
+    - {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
   - m_label: Story of Maguayan
     m_config: {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
     m_position: {x: -9.95, y: -3.3}
     m_spriteIndex: 0
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
+    - {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
   - m_label: Brain Drain
     m_config: {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
     m_position: {x: -0.03, y: -2.31}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
+    - {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
   - m_label: Peek-a-Boo
     m_config: {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
     m_position: {x: 10.86, y: -3.44}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
   - m_label: Train of Thought
     m_config: {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}
     m_position: {x: 16.6, y: 0.02}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Story1_TTDOS
   m_EditorClassIdentifier: 
   m_worldBackground: {fileID: 21300000, guid: a280f5574388ade44923d9fd73c21077, type: 3}
+  m_progressKeys: {fileID: 11400000, guid: 98970c53edf38f94ca58c7ae55ac2574, type: 2}
   m_nodeSprites:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
@@ -21,19 +22,40 @@ MonoBehaviour:
     m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
     m_position: {x: -11.6, y: 2.5}
     m_spriteIndex: 0
+    m_requiredKeys: []
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+    - {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
   - m_label: "Story of Do\xF1a Maria"
     m_config: {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
     m_position: {x: -11.6, y: -2.45}
     m_spriteIndex: 0
+    m_requiredKeys: []
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+    - {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
   - m_label: Brain Drain
     m_config: {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
     m_position: {x: -0.03, y: -2.31}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
+    - {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
   - m_label: Peek-a-Boo
     m_config: {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
     m_position: {x: 10.43, y: -4.25}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
   - m_label: Train of Thought
     m_config: {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
     m_position: {x: 17.6, y: -1.01}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}

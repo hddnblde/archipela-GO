@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Story3_TMOM
   m_EditorClassIdentifier: 
   m_worldBackground: {fileID: 21300000, guid: 1a3f35809915222499730d3e0718f939, type: 3}
+  m_progressKeys: {fileID: 11400000, guid: 98970c53edf38f94ca58c7ae55ac2574, type: 2}
   m_nodeSprites:
   - {fileID: 647710455260848925, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
   - {fileID: -3932432270140478629, guid: de648d2d9b198944a99f6df15f6a06c9, type: 3}
@@ -21,19 +22,42 @@ MonoBehaviour:
     m_config: {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
     m_position: {x: -13.75, y: 4.39}
     m_spriteIndex: 0
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
+    - {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
   - m_label: Story of Indaraptra
     m_config: {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
     m_position: {x: -13.75, y: -4.61}
     m_spriteIndex: 0
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
+    - {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
   - m_label: Brain Drain
     m_config: {fileID: 11400000, guid: c927233b0c8c05043ace9271cc39b1c3, type: 2}
     m_position: {x: -2.12, y: -0.48}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: 68665e87b90d81b48b527ad3626f323a, type: 2}
+    - {fileID: 11400000, guid: 2db6dba63aaab2149bbb788f9fc5fe1f, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: c927233b0c8c05043ace9271cc39b1c3, type: 2}
   - m_label: Peek-a-Boo
     m_config: {fileID: 11400000, guid: bd6c67382ebbeee45a1c6886224f8fc8, type: 2}
     m_position: {x: 8.17, y: -3.69}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: c927233b0c8c05043ace9271cc39b1c3, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: bd6c67382ebbeee45a1c6886224f8fc8, type: 2}
   - m_label: Train of Thought
     m_config: {fileID: 11400000, guid: 29c1a99870e35f14f94840b13fc396e1, type: 2}
     m_position: {x: 16.25, y: -1.3}
     m_spriteIndex: 1
+    m_requiredKeys:
+    - {fileID: 11400000, guid: bd6c67382ebbeee45a1c6886224f8fc8, type: 2}
+    m_unlockedKeys:
+    - {fileID: 11400000, guid: 29c1a99870e35f14f94840b13fc396e1, type: 2}
