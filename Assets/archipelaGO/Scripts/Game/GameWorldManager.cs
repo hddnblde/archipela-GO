@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
 using SceneLoadTrigger = archipelaGO.SceneHandling.SceneLoadTrigger;
 using Scene = archipelaGO.SceneHandling.Scene;
 using WorldMapNode = archipelaGO.WorldMap.WorldMapNode;
+using archipelaGO.GameData;
 
 namespace archipelaGO.Game
 {
@@ -58,17 +58,41 @@ namespace archipelaGO.Game
             (string label, Sprite sprite) nodeVisuals =
                 library.GetNodeVisuals(index);
             
+            (string[] required, string[] unlocked) keys =
+                library.GetProgressKeys(index);
+            
             WorldMapNode nodeController =
                 nodeGameObject.GetComponent<WorldMapNode>();
 
             if (nodeController != null)
-                nodeController.Set(nodeVisuals.sprite, nodeVisuals.label);
+                nodeController.SetVisuals(nodeVisuals.sprite, nodeVisuals.label);
 
             GameModuleLinker moduleMediator = nodeGameObject.AddComponent<GameModuleLinker>();
             SceneLoadTrigger sceneLoadTrigger = nodeGameObject.GetComponent<SceneLoadTrigger>();
 
-            moduleMediator.Initialize(library, index);
-            sceneLoadTrigger.SetSceneToLoad(Scene.Game);
+            bool nodeUnlocked = NodeUnlocked(keys.required);
+            moduleMediator.Initialize(library, index, keys.unlocked);
+            sceneLoadTrigger.SetSceneToLoad(Scene.Game, nodeUnlocked);
+        }
+
+        private bool NodeUnlocked(string[] keys)
+        {
+            if (keys == null)
+                return false;
+
+            else if (keys.Length <= 0)
+                return true;
+
+            GameProgressionData progressData = GameDataHandler.
+                GetDataFromCurrentPlayer<GameProgressionData>();
+
+            if (progressData == null)
+            {
+                Debug.LogError("Cannot determine if node is unlocked because there is no progress data.");
+                return false;
+            }
+
+            return progressData.AreUnlocked(keys);
         }
         #endregion
     }
