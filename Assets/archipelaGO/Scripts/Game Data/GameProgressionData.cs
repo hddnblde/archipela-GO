@@ -13,8 +13,11 @@ namespace archipelaGO.GameData
 
         public void UnlockThisKey(string key)
         {
-            if (!IsUnlocked(key))
-                m_unlockedKeys.Add(key);
+            if (IsUnlocked(key))
+                return;
+
+            m_unlockedKeys.Add(key);
+            Debug.LogWarning($"Player earned a new key [{ key }].");
         }
 
         public bool AreUnlocked(string[] keys)
