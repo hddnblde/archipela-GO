@@ -1,14 +1,11 @@
 using System.Collections;
 using UnityEngine;
-using ProgressManager = archipelaGO.Game.ProgressManager;
 
 namespace archipelaGO.SceneHandling
 {
     public class SceneLoadTrigger : ClickableObject
     {
         #region Fields
-        // private ProgressManager m_progressManager = null;
-
         [SerializeField]
         private Scene m_sceneToLoad = Scene.Boot;
 
@@ -21,11 +18,6 @@ namespace archipelaGO.SceneHandling
         #region ClickableObject Implementation
         protected override bool IsInteractable()
         {
-            // if (m_progressManager == null)
-            //     return true;
-
-            // return m_progressManager.IsUnlocked();
-
             return true;
         }
 
