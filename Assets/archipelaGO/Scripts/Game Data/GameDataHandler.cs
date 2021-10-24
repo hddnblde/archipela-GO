@@ -13,7 +13,7 @@ namespace archipelaGO.GameData
             public GameDataJSON(BaseGameData data)
             {
                 m_jsonData = data.ToJson();
-                m_type = data.GetType().Name;
+                m_type = data.GetType().FullName;
             }
 
             [SerializeField]
@@ -48,7 +48,7 @@ namespace archipelaGO.GameData
 
                 foreach (GameDataJSON data in m_dataCluster)
                 {
-                    if (StringIsInvalid(data.json) || (data.type != typeof(BaseGameData)))
+                    if (StringIsInvalid(data.json) || !(data.type.IsSubclassOf(typeof(BaseGameData))))
                         continue;
 
                     BaseGameData gameData =
@@ -121,6 +121,7 @@ namespace archipelaGO.GameData
             if (data != null)
             {
                 m_dataCollection = data.GetCollection();
+                ValidateCurrentData();
                 Debug.LogWarning($"Data successfully retrieved from: { path }");
             }
 
@@ -132,6 +133,9 @@ namespace archipelaGO.GameData
 
             m_currentPlayerName = playerName;
         }
+
+        public static void SaveCurrentPlayerData() =>
+            Save(m_currentPlayerName);
 
         public static void Save(string playerName)
         {
