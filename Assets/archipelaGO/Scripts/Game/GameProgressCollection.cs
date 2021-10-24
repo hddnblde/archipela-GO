@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 namespace archipelaGO.Game
@@ -17,6 +18,14 @@ namespace archipelaGO.Game
                 return string.Empty;
 
             return m_keys[index].name;
+        }
+
+        public int IndexOf(GameModuleConfig gameModule)
+        {
+            if (m_keys == null)
+                return -1;
+
+            return m_keys.IndexOf(gameModule);
         }
     }
 }
