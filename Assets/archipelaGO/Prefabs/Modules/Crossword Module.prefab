@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287089137
-  m_fontColor: {r: 0.9433962, g: 0.78968114, b: 0.52954787, a: 1}
+    rgba: 4290172135
+  m_fontColor: {r: 0.90588236, g: 0.83137256, b: 0.7137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -588,6 +588,7 @@ MonoBehaviour:
   m_cellContainer: {fileID: 2802357202194657208}
   m_padding: 50
   m_hintText: {fileID: 8207025214713640828}
+  m_answerDelay: 0.75
   m_revealFirstLetterOfAllWords: 1
   m_revealAnimationInterval: 0.0729
   m_answerField: {fileID: 2802357203299028480}

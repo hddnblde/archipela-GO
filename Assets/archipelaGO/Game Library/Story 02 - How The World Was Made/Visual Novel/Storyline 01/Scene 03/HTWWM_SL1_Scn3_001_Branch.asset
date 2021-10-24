@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_title: What would you do?
   m_branches:
-  - m_subtitle: Accept Maguayan's Offer
+  - m_subtitle: Accept Maguayan's offer
     m_narrative: {fileID: 11400000, guid: 9dca573c835a8eb458fd6392a67226d3, type: 2}
-  - m_subtitle: Let Maguayan Take Care of them alone
+  - m_subtitle: Let Maguayan take care of them alone
     m_narrative: {fileID: 11400000, guid: 0d1a5a7c17131374d90d6c610ebc0a7b, type: 2}

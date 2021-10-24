@@ -17,6 +17,7 @@ MonoBehaviour:
     from the selection. Answer all of our questions to earn your next badge for this
     series! If you\u2019re ready for this game, put on your thinking hat, and hop
     on!"
+  m_endMessage: 
   m_requireTapToContinue: 1
   m_shuffleQuestions: 0
   m_shuffleChoices: 1
@@ -74,9 +75,9 @@ MonoBehaviour:
     - m_text: A battalion of soldiers
       m_isCorrect: 0
     - m_text: Some magic potions
-      m_isCorrect: 1
-    - m_text: The Juru Pakal
       m_isCorrect: 0
+    - m_text: The Juru Pakal
+      m_isCorrect: 1
     - m_text: The Tree of Life
       m_isCorrect: 0
   - m_stem: "During his escapade towards the extermination of the hideous and dangerous
