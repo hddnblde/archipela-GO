@@ -11,7 +11,7 @@ namespace archipelaGO.WorldMap
         [SerializeField]
         private Text m_label = null;
 
-        public void Set(Sprite sprite, string label)
+        public void SetVisuals(Sprite sprite, string label)
         {
             SetSprite(sprite);
             SetLabel(label.ToUpper());
