@@ -43,7 +43,7 @@ namespace archipelaGO.Quiz
 
             public string stem => m_stem;
             public string[] choices => m_choices;
-            public int[] correctAnswerIndices => null;
+            public int[] correctAnswerIndices => m_correctAnswers;
         }
         #endregion
 
