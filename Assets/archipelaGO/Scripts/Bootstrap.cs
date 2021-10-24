@@ -8,6 +8,11 @@ namespace archipelaGO
     {
         #region Fields
         [SerializeField]
+        private string m_playerName = "Player1";
+
+        [Space]
+
+        [SerializeField]
         private SplashScreenController m_splashScreen = null;
 
         [SerializeField]
@@ -28,6 +33,8 @@ namespace archipelaGO
         #region Internal Methods
         private IEnumerator BootRoutine()
         {
+            GameData.GameDataHandler.Load(m_playerName);
+
             if (m_splashScreen != null)
             {
                 yield return m_splashScreen.PlaybackRoutine();
