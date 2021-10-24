@@ -10,16 +10,15 @@ namespace archipelaGO.SceneHandling
         private Scene m_sceneToLoad = Scene.Boot;
 
         private Coroutine m_loadRoutine = null;
+        private bool m_isInteractable = true;
         public delegate void SceneLoaded();
         public event SceneLoaded OnSceneLoaded;
         #endregion
 
 
         #region ClickableObject Implementation
-        protected override bool IsInteractable()
-        {
-            return true;
-        }
+        protected sealed override bool IsInteractable() =>
+            m_isInteractable;
 
         protected override void OnObjectClicked()
         {
@@ -38,7 +37,11 @@ namespace archipelaGO.SceneHandling
 
 
         #region Methods
-        public void SetSceneToLoad(Scene scene) => m_sceneToLoad = scene;
+        public void SetSceneToLoad(Scene scene, bool unlocked)
+        {
+            m_sceneToLoad = scene;
+            m_isInteractable = unlocked;
+        }
 
         private IEnumerator LoadSceneRoutine()
         {
