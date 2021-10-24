@@ -10,6 +10,7 @@ using QuizModule = archipelaGO.Quiz.QuizModule;
 using IWorldMapLinker = archipelaGO.WorldMap.IWorldMapLinker;
 using GameHint = archipelaGO.UI.Windows.GameHintWindow;
 using EndScreen = archipelaGO.UI.Windows.EndScreenWindow;
+using archipelaGO.GameData;
 
 namespace archipelaGO.Game
 {
@@ -130,6 +131,15 @@ namespace archipelaGO.Game
         {
             if (m_endScreen != null)
                 m_endScreen.Show(message);
+            
+            GameProgressionData gameProgress =
+                GameDataHandler.GetDataFromCurrentPlayer<GameProgressionData>();
+            
+            if (gameProgress == null)
+                return;
+
+            gameProgress.UnlockTheseKeys(m_unlockableModules.ToArray());
+            GameDataHandler.SaveCurrentPlayerData();
         }
         #endregion
 
