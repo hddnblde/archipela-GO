@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using archipelaGO.SceneHandling;
 
-namespace archipelaGO
+namespace archipelaGO.Boot
 {
     public class Bootstrap : MonoBehaviour
     {

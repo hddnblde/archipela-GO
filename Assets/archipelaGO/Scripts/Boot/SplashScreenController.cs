@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace archipelaGO
+namespace archipelaGO.Boot
 {
     public class SplashScreenController : MonoBehaviour
     {
