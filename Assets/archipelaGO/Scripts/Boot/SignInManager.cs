@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace archipelaGO.Boot
@@ -8,5 +9,10 @@ namespace archipelaGO.Boot
         private string m_signedInPlayer = string.Empty;
 
         public string signedInPlayer => m_signedInPlayer;
+
+        public IEnumerator SignInRoutine()
+        {
+            yield return null;
+        }
     }
 }
