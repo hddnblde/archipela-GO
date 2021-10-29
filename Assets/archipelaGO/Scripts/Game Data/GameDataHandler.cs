@@ -6,176 +6,68 @@ namespace archipelaGO.GameData
 {
     public static class GameDataHandler
     {
-        #region Data Structure
-        [System.Serializable]
-        private struct GameDataJSON
-        {
-            public GameDataJSON(BaseGameData data)
-            {
-                m_jsonData = data.ToJson();
-                m_type = data.GetType().FullName;
-            }
-
-            [SerializeField]
-            private string m_jsonData;
-
-            [SerializeField]
-            private string m_type;
-
-            public string json => m_jsonData;
-            public System.Type type => System.Type.GetType(m_type);
-        }
-
-        [System.Serializable]
-        private class SerializedGameData
-        {
-            public SerializedGameData (List<GameDataJSON> jsonClusters)
-            {
-                List<GameDataJSON> newCluster = new List<GameDataJSON>();
-
-                foreach (GameDataJSON data in jsonClusters)
-                    newCluster.Add(data);
-
-                m_dataCluster = newCluster;
-            }
-
-            [SerializeField]
-            private List<GameDataJSON> m_dataCluster = new List<GameDataJSON>();
-
-            public List<BaseGameData> GetCollection()
-            {
-                List<BaseGameData> collection = new List<BaseGameData>();
-
-                foreach (GameDataJSON data in m_dataCluster)
-                {
-                    if (StringIsInvalid(data.json) || !(data.type.IsSubclassOf(typeof(BaseGameData))))
-                        continue;
-
-                    BaseGameData gameData =
-                        JsonUtility.FromJson(data.json, data.type)
-                        as BaseGameData;
-
-                    if (gameData != null)
-                        collection.Add(gameData);
-                }
-
-                return collection;
-            }
-        }
-        #endregion
-        
-        
-        #region Default Data Implementation
-        private static List<BaseGameData> GenerateDefaultData()
-        {
-            List<BaseGameData> defaultCollection = new List<BaseGameData>();
-            defaultCollection.Add(new GameProgressionData());
-
-            return defaultCollection;
-        }
-        #endregion
-
-
         #region Fields
-        [SerializeField]
-        private static List<BaseGameData> m_dataCollection = new List<BaseGameData>();
+        private static PlayerData m_currentPlayer = null;
 
-        private static string m_currentPlayerName = string.Empty;
-
-        private const string FolderRoot = "GAMEDATA",
+        private const string FolderRoot = "Debug_GameData",
             FileExtension = "dat";
         #endregion
 
 
         #region Public Methods
-        public static G GetDataFromCurrentPlayer<G>() where G : BaseGameData =>
-            GetData<G>(m_currentPlayerName);
+        public static PlayerData CurrentPlayer() => m_currentPlayer;
 
-        public static G GetData<G>(string playerName) where G : BaseGameData
+        public static PlayerData Load(string playerName)
         {
-            if (StringIsInvalid(playerName))
-                return null;
+            if (m_currentPlayer != null && string.Equals(m_currentPlayer.realName, playerName))
+                goto End;
 
-            if (!string.Equals(playerName, m_currentPlayerName))
-                Load(playerName);
+            string path = GetDataPathForPlayer(playerName);
 
-            foreach (BaseGameData data in m_dataCollection)
+            SerializedPlayerData serializedPlayerData =
+                DataManager.Load<SerializedPlayerData>(path);
+
+            if (serializedPlayerData != null)
             {
-                if (data is G)
-                    return (data as G);
-            }
-
-            return null;
-        }
-
-        public static void Load(string playerName)
-        {
-            if (StringIsInvalid(playerName))
-                return;
-
-            string path = GetPlayerDataPath(playerName);
-
-            SerializedGameData data = DataManager.
-                Load<SerializedGameData>(path);
-
-            if (data != null)
-            {
-                m_dataCollection = data.GetCollection();
-                ValidateCurrentData();
+                m_currentPlayer = serializedPlayerData.ToPlayerData(playerName);
                 Debug.LogWarning($"Data successfully retrieved from: { path }");
             }
 
             else
             {
-                ValidateCurrentData();
-                Save(playerName);
+                m_currentPlayer = new PlayerData(playerName);
+                Debug.LogWarning($"Creating new data to: { path }");
+                Save(m_currentPlayer);
             }
 
-            m_currentPlayerName = playerName;
+            End:
+            return m_currentPlayer;
         }
 
         public static void SaveCurrentPlayerData() =>
-            Save(m_currentPlayerName);
+            Save(m_currentPlayer);
 
-        public static void Save(string playerName)
+        public static void Save(PlayerData playerData)
         {
-            if (StringIsInvalid(playerName))
+            if (playerData == null)
+            {
+                Debug.LogWarning("Cannot save empty data.");
                 return;
+            }
 
-            string path = GetPlayerDataPath(playerName);
-            Debug.LogWarning($"Saving data to: { path }");
-
-            SerializedGameData data = new SerializedGameData(GenerateJSONClusters());
-            DataManager.Save(data, path);
+            string path = GetDataPathForPlayer(playerData.realName);
+            DataManager.Save(playerData.AsSerializable(), path);
+            Debug.LogWarning($"Data saved to: { path }");
         }
         #endregion
 
 
         #region Helper Methods
-        private static string GetPlayerDataPath(string playerName) =>
-            $"{ Application.persistentDataPath }/{ FolderRoot }/{ playerName }.{ FileExtension }";
+        private static string GetDataPathForPlayer(string playerName) =>
+            $"{ GetRootDataPath() }/{ playerName }.{ FileExtension }";
 
-        private static List<GameDataJSON> GenerateJSONClusters()
-        {
-            List<GameDataJSON> dataClusters = new List<GameDataJSON>();
-
-            foreach (BaseGameData data in m_dataCollection)
-            {
-                GameDataJSON cluster = new GameDataJSON(data);
-                dataClusters.Add(cluster);
-            }
-
-            return dataClusters;
-        }
-
-        private static void ValidateCurrentData()
-        {
-            if (m_dataCollection != null && m_dataCollection.Count > 0)
-                return;
-
-            Debug.LogWarning("Creating default player data.");
-            m_dataCollection = GenerateDefaultData();
-        }
+        private static string GetRootDataPath() =>
+            $"{ Application.persistentDataPath }/{ FolderRoot }";
 
         private static bool StringIsInvalid(string name) =>
             string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(name);
