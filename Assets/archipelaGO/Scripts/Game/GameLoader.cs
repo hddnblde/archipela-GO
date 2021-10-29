@@ -132,8 +132,13 @@ namespace archipelaGO.Game
             if (m_endScreen != null)
                 m_endScreen.Show(message);
             
+            PlayerData playerData = GameDataHandler.CurrentPlayer();
+
+            if (playerData == null)
+                return;
+
             GameProgressionData gameProgress =
-                GameDataHandler.GetDataFromCurrentPlayer<GameProgressionData>();
+                playerData.Access<GameProgressionData>();
             
             if (gameProgress == null)
                 return;
