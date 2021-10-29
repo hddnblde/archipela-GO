@@ -19,7 +19,7 @@ namespace archipelaGO.GameData
 
         public static PlayerData Load(string playerName)
         {
-            if (m_currentPlayer != null && string.Equals(m_currentPlayer.realName, playerName))
+            if (m_currentPlayer != null && string.Equals(m_currentPlayer.name, playerName))
                 goto End;
 
             string path = GetDataPathForPlayer(playerName);
@@ -55,7 +55,7 @@ namespace archipelaGO.GameData
                 return;
             }
 
-            string path = GetDataPathForPlayer(playerData.realName);
+            string path = GetDataPathForPlayer(playerData.name);
             DataManager.Save(playerData.AsSerializable(), path);
             Debug.LogWarning($"Data saved to: { path }");
         }

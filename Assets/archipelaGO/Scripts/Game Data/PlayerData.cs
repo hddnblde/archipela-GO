@@ -20,7 +20,7 @@ namespace archipelaGO.GameData
         private string m_name = string.Empty;
         private List<BaseGameData> m_data = new List<BaseGameData>();
 
-        public string realName => m_name;
+        public string name => m_name;
 
         public G Access<G>() where G : BaseGameData, new()
         {
