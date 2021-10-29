@@ -6,5 +6,6 @@ namespace archipelaGO.GameData
     public abstract class BaseGameData
     {
         public string ToJson() => JsonUtility.ToJson(this);
+        public abstract void Reset();
     }
 }
