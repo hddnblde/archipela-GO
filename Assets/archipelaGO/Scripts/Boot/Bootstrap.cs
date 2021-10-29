@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using archipelaGO.SceneHandling;
+using WaitForSignIn = archipelaGO.Boot.SignInManager.WaitForSignIn;
 
 namespace archipelaGO.Boot
 {
@@ -8,7 +9,7 @@ namespace archipelaGO.Boot
     {
         #region Fields
         [SerializeField]
-        private string m_playerName = "Player1";
+        private SignInManager m_signInManager = null;
 
         [Space]
 
@@ -33,7 +34,18 @@ namespace archipelaGO.Boot
         #region Internal Methods
         private IEnumerator BootRoutine()
         {
-            GameData.GameDataHandler.Load(m_playerName);
+            if (m_signInManager == null)
+            {
+                Debug.LogError("Failed to sign in because there was no manager assigned!");
+                yield break;
+            }
+
+            WaitForSignIn signIn =
+                m_signInManager.SignIn();
+
+            yield return signIn;
+
+            GameData.GameDataHandler.Load(signIn.playerName);
 
             if (m_splashScreen != null)
             {
