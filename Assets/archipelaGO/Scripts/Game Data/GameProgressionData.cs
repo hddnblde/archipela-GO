@@ -8,6 +8,9 @@ namespace archipelaGO.GameData
         [SerializeField]
         private List<string> m_unlockedKeys = new List<string>();
 
+        public override void Reset() =>
+            m_unlockedKeys = new List<string>();
+
         public bool IsUnlocked(string key) =>
             m_unlockedKeys.Contains(key);
 
