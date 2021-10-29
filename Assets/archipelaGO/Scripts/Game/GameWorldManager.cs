@@ -83,8 +83,16 @@ namespace archipelaGO.Game
             else if (keys.Length <= 0)
                 return true;
 
-            GameProgressionData progressData = GameDataHandler.
-                GetDataFromCurrentPlayer<GameProgressionData>();
+            PlayerData playerData = GameDataHandler.CurrentPlayer();
+
+            if (playerData == null)
+            {
+                Debug.LogError("Cannot determine if node is unlocked because no player data was loaded!");
+                return false;
+            }
+
+            GameProgressionData progressData = playerData.
+                Access<GameProgressionData>();
 
             if (progressData == null)
             {
