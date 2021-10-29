@@ -16,20 +16,17 @@ public static class DataManager
     public static bool DataExists(string path) =>
         File.Exists(path);
 
-    public static T Load<T>(string path)
+    public static T Load<T>(string path) where T : class
     {
         string directory = GetDirectoryOfPath(path);
 
         if (!Directory.Exists(directory))
             Directory.CreateDirectory(directory);
 
-        object data = Load(path);
+        object objectData = Load(path);
+        bool isValid = (objectData != null) && (objectData is T);
 
-        if (data == null || !(data is T))
-            return default;
-
-        else
-            return (T)data;
+        return (isValid ? objectData as T : null);
     }
     #endregion
 
