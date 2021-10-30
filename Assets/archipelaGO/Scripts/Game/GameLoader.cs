@@ -144,7 +144,7 @@ namespace archipelaGO.Game
                 return;
 
             gameProgress.UnlockTheseKeys(m_unlockableModules.ToArray());
-            GameDataHandler.SaveCurrentPlayerData();
+            GameDataHandler.SaveCurrentPlayer();
         }
         #endregion
 
