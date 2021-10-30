@@ -16,13 +16,15 @@ namespace archipelaGO.GameData
         public bool IsUnlocked(string key) =>
             m_unlockedKeys.Contains(key);
 
-        public void UnlockThisKey(string key)
+        public bool UnlockThisKey(string key)
         {
             if (IsUnlocked(key))
-                return;
+                return false;
 
             m_unlockedKeys.Add(key);
             Debug.LogWarning($"Player earned a new key [{ key }].");
+
+            return true;
         }
 
         public bool AreUnlocked(string[] keys)
@@ -36,10 +38,17 @@ namespace archipelaGO.GameData
             return true;
         }
 
-        public void UnlockTheseKeys(string[] keys)
+        public bool UnlockTheseKeys(string[] keys)
         {
+            bool unlockedAnyKey = false;
+
             foreach (string key in keys)
-                UnlockThisKey(key);
+            {
+                if (UnlockThisKey(key))
+                    unlockedAnyKey = true;
+            }
+
+            return unlockedAnyKey;
         }
     }
 }
