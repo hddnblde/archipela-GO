@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: 70
   m_PreferredWidth: -1
-  m_PreferredHeight: 120
+  m_PreferredHeight: 168
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -423,8 +423,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.05
-  m_Text: Save Slot
+    m_LineSpacing: 0.84
+  m_Text: "Save Slot\n\t<b>0%</b>"
 --- !u!114 &596743501232062708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,8 +613,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 12
     m_Right: 12
-    m_Top: 18
-    m_Bottom: 18
+    m_Top: 24
+    m_Bottom: 24
   m_ChildAlignment: 3
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
