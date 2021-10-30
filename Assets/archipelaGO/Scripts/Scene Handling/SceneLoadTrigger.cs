@@ -7,7 +7,7 @@ namespace archipelaGO.SceneHandling
     {
         #region Fields
         [SerializeField]
-        private Scene m_sceneToLoad = Scene.Boot;
+        private Scene m_sceneToLoad = Scene.SignIn;
 
         private Coroutine m_loadRoutine = null;
         private bool m_isInteractable = true;
