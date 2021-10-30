@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GameModule = archipelaGO.Game.GameModule<archipelaGO.Puzzle.WordPuzzle>;
+using ScorableGameModule = archipelaGO.Game.ScorableGameModule<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
 using TMPro;
 
 namespace archipelaGO.Puzzle
 {
-    public abstract class WordPuzzleModule : GameModule
+    public abstract class WordPuzzleModule : ScorableGameModule
     {
         #region Fields
         [SerializeField]
@@ -108,6 +108,23 @@ namespace archipelaGO.Puzzle
         #endregion
 
 
+        #region Scorable Module Implementation
+        public override int currentScore =>
+            m_solvedPieces?.Count ?? 0;
+
+        public override int totalScore
+        {
+            get
+            {
+                int unsolvedPieces = m_pendingPieces?.Count ?? 0;
+                int solvedPieces = m_solvedPieces?.Count ?? 0;
+
+                return unsolvedPieces + solvedPieces;
+            }
+        }
+        #endregion
+
+
         #region Game Module Implementation
         protected override void OnInitialize()
         {
@@ -180,7 +197,7 @@ namespace archipelaGO.Puzzle
         private void InvokePuzzleCompleted()
         {
             OnPuzzleCompleted();
-            InvokeGameCompleted();
+            InvokeGameOver();
         }
 
         protected bool AlreadyAnswered(string answer)

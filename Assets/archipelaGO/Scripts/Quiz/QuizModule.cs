@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using GameModule = archipelaGO.Game.GameModule<archipelaGO.Quiz.QuizConfig>;
+using ScorableGameModule = archipelaGO.Game.ScorableGameModule<archipelaGO.Quiz.QuizConfig>;
 using archipelaGO.UI.Windows;
 using WaitForChosenOption = archipelaGO.UI.Windows.ChoiceWindow.WaitForChosenOption;
 
 namespace archipelaGO.Quiz
 {
-    public class QuizModule : GameModule
+    public class QuizModule : ScorableGameModule
     {
         #region Fields
         [SerializeField, Range(5, 20)]
@@ -45,6 +45,12 @@ namespace archipelaGO.Quiz
             public string[] choices => m_choices;
             public int[] correctAnswerIndices => m_correctAnswers;
         }
+        #endregion
+
+
+        #region Scorable Module Implementation
+        public override int currentScore => m_guessedCorrectAnswers;
+        public override int totalScore => m_questions?.Count ?? 0;
         #endregion
 
 
@@ -118,7 +124,7 @@ namespace archipelaGO.Quiz
             //TODO: medal screen
             Debug.Log($"Quiz finished! Guessed correct answers = { m_guessedCorrectAnswers }");
             // display medal first before ending
-            InvokeGameCompleted();
+            InvokeGameOver();
         }
 
         private Question GetCurrentQuestion()
