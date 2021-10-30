@@ -434,6 +434,7 @@ namespace archipelaGO.Puzzle
             End:
             return new Vector2Int(-1, -1);
         }
+
         public override IEnumerator Debug_Autoplay()
         {
             for (int i = m_pendingPieces.Count - 1; i >= 0; i--)
