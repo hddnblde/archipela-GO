@@ -8,7 +8,11 @@ namespace archipelaGO.Puzzle
     public class WordPuzzleEditor : Editor
     {
         #region Fields
-        private SerializedProperty m_puzzleType = null,
+        private SerializedProperty m_passingScore = null,
+            m_hint = null,
+            m_endMessage = null,
+            m_failMessage = null,
+            m_puzzleType = null,
             m_wordBank = null,
             m_gridSize = null,
             m_puzzlePieces = null;
@@ -67,6 +71,10 @@ namespace archipelaGO.Puzzle
         #region Editor Implementation
         private void OnEnable()
         {
+            m_passingScore = serializedObject.FindProperty("m_passingScore");
+            m_hint = serializedObject.FindProperty("m_hint");
+            m_endMessage = serializedObject.FindProperty("m_endMessage");
+            m_failMessage = serializedObject.FindProperty("m_failMessage");
             m_puzzleType = serializedObject.FindProperty("m_puzzleType");
             m_wordBank = serializedObject.FindProperty("m_wordBank");
             m_gridSize = serializedObject.FindProperty("m_gridSize");
@@ -113,6 +121,12 @@ namespace archipelaGO.Puzzle
 
         private void DrawCustomGUI()
         {
+            EditorGUILayout.PropertyField(m_passingScore);
+            EditorGUILayout.PropertyField(m_hint);
+            EditorGUILayout.PropertyField(m_endMessage);
+            EditorGUILayout.PropertyField(m_failMessage);
+            EditorGUILayout.Space();
+
             EditorGUILayout.PropertyField(m_puzzleType);
             DrawWordBankProperty();
             DrawGridSizeProperty();
