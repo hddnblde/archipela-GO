@@ -139,12 +139,12 @@ namespace archipelaGO.Game
 
             GameProgressionData gameProgress =
                 playerData.Access<GameProgressionData>();
-            
+
             if (gameProgress == null)
                 return;
 
-            gameProgress.UnlockTheseKeys(m_unlockableModules.ToArray());
-            GameDataHandler.SaveCurrentPlayer();
+            if (gameProgress.UnlockTheseKeys(m_unlockableModules.ToArray()))
+                GameDataHandler.SaveCurrentPlayer();
         }
 
         private void ShowEndScreen(string message)
