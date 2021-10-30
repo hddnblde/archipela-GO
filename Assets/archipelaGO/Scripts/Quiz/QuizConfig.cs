@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GameModuleConfig = archipelaGO.Game.GameModuleConfig;
+using ScorableGameModuleConfig = archipelaGO.Game.ScorableGameModuleConfig;
 
 namespace archipelaGO.Quiz
 {
     [CreateAssetMenu(fileName = "Quiz", menuName = "archipelaGO/Game Module/Quiz", order = 2)]
-    public class QuizConfig : GameModuleConfig
+    public class QuizConfig : ScorableGameModuleConfig
     {
         #region Fields
         [SerializeField]
