@@ -23,6 +23,16 @@ namespace archipelaGO.VisualNovel.StorySystem
 
 
         #region Game Module Implementation
+        protected sealed override bool objectiveComplete
+        {
+            get
+            {
+                if (config == null)
+                    return false;
+
+                return (m_currentPlot >= config.plotlineCount);
+            }
+        }
         protected override void OnInitialize()
         {
             InitializeVisualNovelController();
@@ -60,7 +70,7 @@ namespace archipelaGO.VisualNovel.StorySystem
                 yield return PlayNarrative(plotline.narrative, config.wordBank, plotline.mainCharacter);
             }
 
-            InvokeGameCompleted();
+            InvokeGameOver();
         }
 
         private IEnumerator PlayNarrative(Narrative narrative, WordBank wordBank, DialogueCharacter mainCharacter)
