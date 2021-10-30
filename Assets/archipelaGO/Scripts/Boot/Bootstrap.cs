@@ -45,7 +45,7 @@ namespace archipelaGO.Boot
 
             yield return signIn;
 
-            GameData.GameDataHandler.Load(signIn.playerName);
+            GameData.GameDataHandler.Load(signIn.saveSlot);
 
             if (m_splashScreen != null)
             {
