@@ -8,7 +8,8 @@ namespace archipelaGO.Puzzle
     public class WordPuzzleEditor : Editor
     {
         #region Fields
-        private SerializedProperty m_passingScore = null,
+        private SerializedProperty m_timeLimit = null,
+            m_passingScore = null,
             m_hint = null,
             m_endMessage = null,
             m_failMessage = null,
@@ -71,6 +72,7 @@ namespace archipelaGO.Puzzle
         #region Editor Implementation
         private void OnEnable()
         {
+            m_timeLimit = serializedObject.FindProperty("m_timeLimit");
             m_passingScore = serializedObject.FindProperty("m_passingScore");
             m_hint = serializedObject.FindProperty("m_hint");
             m_endMessage = serializedObject.FindProperty("m_endMessage");
@@ -84,7 +86,8 @@ namespace archipelaGO.Puzzle
             Undo.undoRedoPerformed += OnUndoRedoPerformed;
         }
 
-        private void OnDisable() => Undo.undoRedoPerformed -= OnUndoRedoPerformed;
+        private void OnDisable() =>
+            Undo.undoRedoPerformed -= OnUndoRedoPerformed;
 
         public override void OnInspectorGUI()
         {
@@ -121,6 +124,7 @@ namespace archipelaGO.Puzzle
 
         private void DrawCustomGUI()
         {
+            EditorGUILayout.PropertyField(m_timeLimit);
             EditorGUILayout.PropertyField(m_passingScore);
             EditorGUILayout.PropertyField(m_hint);
             EditorGUILayout.PropertyField(m_endMessage);
