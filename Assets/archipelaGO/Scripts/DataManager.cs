@@ -28,6 +28,12 @@ public static class DataManager
 
         return (isValid ? objectData as T : null);
     }
+
+    public static void Delete(string path)
+    {
+        if (DataExists(path))
+            File.Delete(path);
+    }
     #endregion
 
 
