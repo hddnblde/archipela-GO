@@ -24,9 +24,11 @@ namespace archipelaGO.Boot
         private InputField m_inputField = null;
 
         private bool m_inputSubmitted = false;
-        private Coroutine m_signInRoutine = null;
         private int m_selectedSaveSlot = -1;
+        private Coroutine m_signInRoutine = null,
+            m_createNewPlayerDataRoutine = null;
         #endregion
+
 
         #region Data Structure
         private delegate void LoadSaveSlot(int index);
@@ -160,23 +162,31 @@ namespace archipelaGO.Boot
             m_createNewPlayerDataRoutine = StartCoroutine(CreateNewPlayerDataRoutine(slot));
         }
 
-        private Coroutine m_createNewPlayerDataRoutine = null;
-
         private IEnumerator CreateNewPlayerDataRoutine(int saveSlot)
         {
             ShowInputGroup(true);
             yield return new WaitUntil(() => m_inputSubmitted);
 
-            if (!m_inputField.wasCanceled)
-                GameDataHandler.Create(saveSlot, m_inputField.text);
+            if (m_inputField.wasCanceled || !NameIsValid(m_inputField.text))
+                yield break;
 
+            GameDataHandler.Create(saveSlot, m_inputField.text);
             LoadExistingPlayersData();
         }
 
+        private bool NameIsValid(string name) =>
+            (!string.IsNullOrEmpty(name) && !string.IsNullOrWhiteSpace(name));
+
         private void OnInputFieldSubmitted(string text)
         {
-            m_inputSubmitted = true;
-            ShowInputGroup(false);
+            if (!NameIsValid(name))
+                ClearInputField();
+
+            else
+            {
+                m_inputSubmitted = true;
+                ShowInputGroup(false);
+            }
         }
 
         private void ClearInputField()
