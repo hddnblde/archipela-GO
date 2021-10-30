@@ -51,9 +51,6 @@ namespace archipelaGO.GameData
         [SerializeField]
         private List<SerializableGameData> m_serializedData = new List<SerializableGameData>();
 
-        public SerializedPlayerData (string name) =>
-            new SerializedPlayerData(name, new List<BaseGameData>());
-
         public SerializedPlayerData (string name, List<BaseGameData> data)
         {
             m_name = name;
@@ -113,6 +110,6 @@ namespace archipelaGO.GameData
             public System.Type type => System.Type.GetType(m_type);
         }
 
-        public PlayerData ToPlayerData(string playerName) => new PlayerData(playerName, ToGameData(m_serializedData));
+        public PlayerData ToPlayerData() => new PlayerData(m_name, ToGameData(m_serializedData));
     }
 }
