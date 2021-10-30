@@ -1,15 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 namespace archipelaGO.GameData
 {
     public static class GameDataHandler
     {
         #region Fields
+        private static int m_currentSaveSlot = -1;
         private static PlayerData m_currentPlayer = null;
 
         private const string FolderRoot = "Debug_GameData",
+            FileName = "sav",
             FileExtension = "dat";
         #endregion
 
@@ -17,60 +19,115 @@ namespace archipelaGO.GameData
         #region Public Methods
         public static PlayerData CurrentPlayer() => m_currentPlayer;
 
-        public static PlayerData Load(string playerName)
+        public static bool SaveSlotExists(int slot)
         {
-            if (m_currentPlayer != null && string.Equals(m_currentPlayer.name, playerName))
-                goto End;
+            string path;
 
-            string path = GetDataPathForPlayer(playerName);
-
-            SerializedPlayerData serializedPlayerData =
-                DataManager.Load<SerializedPlayerData>(path);
-
-            if (serializedPlayerData != null)
-            {
-                m_currentPlayer = serializedPlayerData.ToPlayerData(playerName);
-                Debug.LogWarning($"Data successfully retrieved from: { path }");
-            }
-
-            else
-            {
-                m_currentPlayer = new PlayerData(playerName);
-                Debug.LogWarning($"Creating new data to: { path }");
-                Save(m_currentPlayer);
-            }
-
-            End:
-            return m_currentPlayer;
+            return SaveSlotExists(slot, out path);
         }
 
-        public static void SaveCurrentPlayerData() =>
-            Save(m_currentPlayer);
-
-        public static void Save(PlayerData playerData)
+        public static void Load(int slot)
         {
-            if (playerData == null)
+            string path;
+
+            if (!SaveSlotExists(slot, out path))
             {
-                Debug.LogWarning("Cannot save empty data.");
+                Debug.LogWarning($"[Save Slot : { slot }] does not exist.");
                 return;
             }
 
-            string path = GetDataPathForPlayer(playerData.name);
+            SerializedPlayerData serializedPlayerData = LoadPlayerData(path);
+
+            if (serializedPlayerData == null)
+            {
+                Debug.LogError($"[Save Slot : { slot }] failed to load!");
+                return;
+            }
+
+            m_currentPlayer = serializedPlayerData.ToPlayerData();
+            m_currentSaveSlot = slot;
+            Debug.LogWarning($"[Save Slot : { slot }] was retrieved from: { path }");
+        }
+
+        public static void SaveCurrentPlayer() =>
+            Save(m_currentSaveSlot, m_currentPlayer);
+
+        public static void Create(int slot, string name) =>
+            Save(slot, new PlayerData(name));
+        
+        public static void Delete(int slot)
+        {
+            string path;
+
+            if (!SaveSlotExists(slot, out path))
+                return;
+
+            DataManager.Delete(path);
+            Debug.LogWarning($"[Save Slot : { slot }] has been deleted.");
+        }
+
+        private static void Save(int slot, PlayerData playerData)
+        {
+            if (playerData == null)
+            {
+                Debug.LogWarning($"[Save Slot : { slot }] cannot be saved as empty.");
+                return;
+            }
+
+            string path = GetDataPathForSlot(slot);
             DataManager.Save(playerData.AsSerializable(), path);
-            Debug.LogWarning($"Data saved to: { path }");
+            Debug.LogWarning($"[Save Slot : { slot }] was saved to: { path }");
+        }
+
+        public static List<(int slot, PlayerData data)> GetListOfSaveSlots()
+        {
+            List<(int slot, PlayerData data)> list = new List<(int slot, PlayerData data)>();
+
+            string[] files = Directory.GetFiles(GetRootDataPath());
+
+            foreach (string file in files)
+            {
+                string[] substrings = file.Split(".".ToCharArray());
+
+                if (substrings == null || substrings.Length < 2)
+                    continue;
+                
+                int value = -1;
+
+                if (!int.TryParse(substrings[1], out value))
+                    continue;
+                
+                string path;
+
+                if (!SaveSlotExists(value, out path))
+                    continue;
+
+                SerializedPlayerData serializedPlayerData = LoadPlayerData(path);
+
+                if (serializedPlayerData != null)
+                    list.Add((value, serializedPlayerData.ToPlayerData()));
+            }
+            return list;
         }
         #endregion
 
 
         #region Helper Methods
-        private static string GetDataPathForPlayer(string playerName) =>
-            $"{ GetRootDataPath() }/{ playerName }.{ FileExtension }";
+        private static bool SaveSlotExists(int slot, out string path)
+        {
+            path = GetDataPathForSlot(slot);
+
+            return DataManager.DataExists(path);
+        }
+
+        private static SerializedPlayerData LoadPlayerData(string path) =>
+            DataManager.Load<SerializedPlayerData>(path);
+
+        private static string GetDataPathForSlot(int slot) =>
+            $"{ GetRootDataPath() }/{ FileName }.{ slot }.{ FileExtension }";
 
         private static string GetRootDataPath() =>
             $"{ Application.persistentDataPath }/{ FolderRoot }";
-
-        private static bool StringIsInvalid(string name) =>
-            string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(name);
         #endregion
     }
 }
