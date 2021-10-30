@@ -180,18 +180,23 @@ namespace archipelaGO.Puzzle
             if (result == null)
                 return false;
 
-            result.PlayRevealAnimation();
-
-            if (m_pendingPieces.Contains(result))
-                m_pendingPieces.Remove(result);
-
-            if (!m_solvedPieces.Contains(result))
-                m_solvedPieces.Add(result);
+            SetPuzzleAsSolved(result);
 
             if (m_pendingPieces.Count <= 0)
                 InvokePuzzleCompleted();
 
             return true;
+        }
+
+        private void SetPuzzleAsSolved(PuzzlePiece puzzle)
+        {
+            puzzle.PlayRevealAnimation();
+
+            if (m_pendingPieces.Contains(puzzle))
+                m_pendingPieces.Remove(puzzle);
+
+            if (!m_solvedPieces.Contains(puzzle))
+                m_solvedPieces.Add(puzzle);
         }
 
         private void InvokePuzzleCompleted()
@@ -445,6 +450,7 @@ namespace archipelaGO.Puzzle
                     continue;
 
                 Debug_RevealAnswer(pendingPuzzle);
+
                 yield return new WaitUntil(() => pendingPuzzle.revealAnimationFinished);
                 yield return new WaitForSeconds(0.25f);
             }
@@ -454,7 +460,7 @@ namespace archipelaGO.Puzzle
         }
 
         protected virtual void Debug_RevealAnswer(PuzzlePiece puzzlePiece) =>
-            puzzlePiece.PlayRevealAnimation();
+            SetPuzzleAsSolved(puzzlePiece);
         #endif
     }
 }

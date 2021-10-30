@@ -374,7 +374,7 @@ namespace archipelaGO.Puzzle
         {
             (Vector2Int start, Vector2Int end) positions = puzzlePiece.Debug_GetGridPositions();
             DrawLineHint(positions.start, positions.end, puzzlePiece);
-            puzzlePiece.PlayRevealAnimation();
+            base.Debug_RevealAnswer(puzzlePiece);
         }
         #endif
     }
