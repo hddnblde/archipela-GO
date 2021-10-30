@@ -15,11 +15,10 @@ namespace archipelaGO.GameData
         [SerializeField]
         private Text m_nameText = null;
 
-        private PlayerData m_playerData = null;
         public event Selection OnLoad;
         public event Selection OnDelete;
 
-        public delegate void Selection(PlayerData data);
+        public delegate void Selection();
         #endregion
 
 
@@ -30,12 +29,21 @@ namespace archipelaGO.GameData
 
 
         #region Public Method
-        public void Set(PlayerData data)
-        {
-            m_playerData = data;
+        public void Set(PlayerData data, int totalUnlockableKeys) =>
+            SetLabel(ConstructLabel(data, totalUnlockableKeys));
 
-            SetName(m_playerData != null ?
-                m_playerData.name : "Empty");
+        private string ConstructLabel(PlayerData data, int totalUnlockableKeys)
+        {
+            if (data == null)
+                return "\n\t<i>Create new file</i>";
+
+            int unlockedKeys = data.Access<GameProgressionData>()?.CountUnlockedKeys() ?? 0;
+
+            float totalProgress = (totalUnlockableKeys > 0 ? 
+                Mathf.FloorToInt(((unlockedKeys * 1f) / (totalUnlockableKeys * 1f)) * 100f) :
+                0f);
+
+            return $"{ data.name }\n\t<b>{ totalProgress.ToString("F0") }</b>%";
         }
         #endregion
 
@@ -68,10 +76,10 @@ namespace archipelaGO.GameData
         private void InvokeSelectionEvent(Selection selectionEvent)
         {
             if (m_nameText != null)
-                selectionEvent?.Invoke(m_playerData);
+                selectionEvent?.Invoke();
         }
 
-        private void SetName(string name)
+        private void SetLabel(string name)
         {
             if (m_nameText != null)
                 m_nameText.text = name;
