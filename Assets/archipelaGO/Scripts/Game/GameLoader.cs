@@ -12,6 +12,7 @@ using GameHint = archipelaGO.UI.Windows.GameHintWindow;
 using EndScreen = archipelaGO.UI.Windows.EndScreenWindow;
 using archipelaGO.GameData;
 using archipelaGO.UI;
+using Badge = archipelaGO.UI.Windows.EndScreenWindow.Badge;
 
 namespace archipelaGO.Game
 {
@@ -147,10 +148,10 @@ namespace archipelaGO.Game
                 GameDataHandler.SaveCurrentPlayer();
         }
 
-        private void ShowEndScreen(string message)
+        private void ShowEndScreen(string message, Badge badge)
         {
             if (m_endScreen != null)
-                m_endScreen.Show(message);
+                m_endScreen.Show(message, badge);
         }
         #endregion
 
@@ -162,12 +163,18 @@ namespace archipelaGO.Game
             if (module == null)
                 return;
 
-            module.OnFailed += ShowEndScreen;
+            module.OnFailed += (string message) =>
+                ShowEndScreen(message, Badge.None);
+
             module.OnSucceeded += (string message) =>
-                {
-                    ShowEndScreen(message);
-                    UnlockKeys();
-                };
+            {
+                Badge badge = (module is IScorableModule) ? 
+                    GetBadge(module as IScorableModule) :
+                    Badge.None;
+
+                ShowEndScreen(message, badge);
+                UnlockKeys();
+            };
 
             module.gameObject.SetActive(true);
             module.Initialize(config);
@@ -183,6 +190,26 @@ namespace archipelaGO.Game
                 module.Begin();
                 HideHintScreen();
             }
+        }
+
+        private Badge GetBadge(IScorableModule scorableModule)
+        {
+            if (scorableModule == null)
+                return Badge.None;
+
+            int roundedProgress = scorableModule.roundedProgress;
+
+            if (roundedProgress >= 75)
+                return Badge.Gold;
+
+            else if (roundedProgress >= 50)
+                return Badge.Silver;
+
+            else if (roundedProgress >= 25)
+                return Badge.Bronze;
+
+            else
+                return Badge.None;
         }
 
         public static GameObject[] GetRootGameObjects() =>
