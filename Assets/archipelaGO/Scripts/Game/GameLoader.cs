@@ -127,11 +127,8 @@ namespace archipelaGO.Game
                 m_hintScreen.Hide();
         }
 
-        private void InvokeOnGameCompleted(string message)
+        private void UnlockKeys()
         {
-            if (m_endScreen != null)
-                m_endScreen.Show(message);
-            
             PlayerData playerData = GameDataHandler.CurrentPlayer();
 
             if (playerData == null)
@@ -146,6 +143,12 @@ namespace archipelaGO.Game
             gameProgress.UnlockTheseKeys(m_unlockableModules.ToArray());
             GameDataHandler.SaveCurrentPlayer();
         }
+
+        private void ShowEndScreen(string message)
+        {
+            if (m_endScreen != null)
+                m_endScreen.Show(message);
+        }
         #endregion
 
 
@@ -156,7 +159,13 @@ namespace archipelaGO.Game
             if (module == null)
                 return;
 
-            module.OnGameCompleted += InvokeOnGameCompleted;
+            module.OnFailed += ShowEndScreen;
+            module.OnSucceeded += (string message) =>
+                {
+                    ShowEndScreen(message);
+                    UnlockKeys();
+                };
+
             module.gameObject.SetActive(true);
             module.Initialize(config);
 
