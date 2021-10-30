@@ -2,9 +2,10 @@ namespace archipelaGO.SceneHandling
 {
     public enum Scene
     {
-        Boot = 0,
-        Main = 1,
-        WorldMap = 2,
-        Game = 3
+        Splash = 0,
+        SignIn = 1,
+        Main = 2,
+        WorldMap = 3,
+        Game = 4
     }
 }
