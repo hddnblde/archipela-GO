@@ -4,55 +4,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using archipelaGO.UI;
 using archipelaGO.GameData;
+using archipelaGO.Game;
 
 namespace archipelaGO.Boot
 {
     public class SignInManager : UIWindow
     {
         #region Fields
-        #if UNITY_EDITOR
-        [Header ("Debug")]
-
         [SerializeField]
-        private bool m_debugForcedSignIn = false;
+        private GameProgressCollection m_progressKeys = null;
 
-        [SerializeField]
-        private string m_debugPlayerName = "player1";
-
-        [Space]
-        #endif
         [SerializeField]
         private List<SaveSlotUI> m_saveSlots = new List<SaveSlotUI>();
 
         [SerializeField]
-        private Text m_inputField = null;
+        private CanvasGroup m_inputGroup = null;
 
+        [SerializeField]
+        private InputField m_inputField = null;
+
+        private bool m_inputSubmitted = false;
         private Coroutine m_signInRoutine = null;
-        private PlayerData m_selectedPlayer = null;
+        private int m_selectedSaveSlot = -1;
         #endregion
 
         #region Data Structure
-        private delegate void SuccessfullySignedIn(string playerName);
+        private delegate void LoadSaveSlot(int index);
 
         public class WaitForSignIn : CustomYieldInstruction
         {
             public WaitForSignIn(SignInManager signInManager)
             {
                 if (signInManager != null)
-                    signInManager.Show(OnPlayerSuccessfullySignedIn);
+                    signInManager.Show(OnLoadSaveSlot);
             }
 
-            private string m_playerName = string.Empty;
-            private bool m_successfullySignedIn = false;
+            private int m_saveSlot = -1;
 
-            private void OnPlayerSuccessfullySignedIn(string playerName)
-            {
-                m_playerName = playerName;
-                m_successfullySignedIn = true;
-            }
+            private void OnLoadSaveSlot(int index) =>
+                m_saveSlot = index;
 
-            public string playerName => m_playerName;
-            public override bool keepWaiting => !m_successfullySignedIn;
+            public int saveSlot => m_saveSlot;
+            public override bool keepWaiting => m_saveSlot == -1;
         }
         #endregion
 
@@ -72,8 +65,10 @@ namespace archipelaGO.Boot
 
 
         #region Internal Methods
-        private void Show(SuccessfullySignedIn callback)
+        private void Show(LoadSaveSlot callback)
         {
+            m_selectedSaveSlot = -1;
+
             if (m_signInRoutine != null)
                 StopCoroutine(m_signInRoutine);
 
@@ -81,16 +76,21 @@ namespace archipelaGO.Boot
                 StartCoroutine(SignInRoutine(callback));
         }
 
-        private void LoadExistingPlayersData() =>
-            InitializeSaveSlots(GetPlayerDataList());
+        private void LoadExistingPlayersData()
+        {
+            int totalUnlockableKeys = (m_progressKeys != null ? m_progressKeys.keyCount : 0);
+            InitializeSaveSlots(GetPlayerDataList(), totalUnlockableKeys);
+        }
 
         private PlayerData[] GetPlayerDataList()
         {
-            PlayerData[] list = new PlayerData[4];
+            PlayerData[] list = new PlayerData[m_saveSlots.Count];
+            List<(int index, PlayerData data)> availableSaveSlots = GameDataHandler.GetListOfSaveSlots();
 
-            for (int i = 0; i < list.Length; i++)
+            foreach ((int index, PlayerData data) saveSlot in availableSaveSlots)
             {
-
+                if (saveSlot.index >= 0 && saveSlot.index < list.Length && saveSlot.data != null)
+                    list[saveSlot.index] = saveSlot.data;
             }
 
             return list;
@@ -106,12 +106,15 @@ namespace archipelaGO.Boot
                 if (saveSlot == null)
                     continue;
 
-                saveSlot.OnLoad += (PlayerData data) => OnLoadData(slotIndex, data);
-                saveSlot.OnDelete += (PlayerData data) => OnDeleteData(slotIndex, data);
+                saveSlot.OnLoad += () => OnLoadData(slotIndex);
+                saveSlot.OnDelete += () => OnDeleteData(slotIndex);
             }
+
+            if (m_inputField != null)
+                m_inputField.onEndEdit.AddListener(OnInputFieldSubmitted);
         }
 
-        private void InitializeSaveSlots(PlayerData[] saveList)
+        private void InitializeSaveSlots(PlayerData[] saveList, int totalUnlockableKeys)
         {
             if (saveList == null)
                 saveList = new PlayerData[0];
@@ -124,42 +127,83 @@ namespace archipelaGO.Boot
                     continue;
 
                 PlayerData data = (i < saveList.Length ? saveList[i] : null);
-                saveSlot.Set(data);
+                saveSlot.Set(data, totalUnlockableKeys);
             }
         }
 
-        private IEnumerator SignInRoutine(SuccessfullySignedIn signIn)
+        private IEnumerator SignInRoutine(LoadSaveSlot signIn)
         {
             LoadExistingPlayersData();
             this.Show();
 
-            yield return null;
+            yield return new WaitUntil(() => m_selectedSaveSlot != -1);
+            signIn?.Invoke(m_selectedSaveSlot);
+        }
 
-            #if UNITY_EDITOR
-            if (m_debugForcedSignIn)
-                signIn(m_debugPlayerName);
-            #else
-            yield return new WaitUntil(() => m_selectedPlayer != null);
-            signIn?.Invoke(m_selectedPlayer.name);
-            #endif
+        private void ShowInputGroup(bool shown)
+        {
+            if (m_inputGroup == null || m_inputField == null)
+                return;
+            
+            m_inputGroup.interactable = shown;
+            m_inputGroup.blocksRaycasts = shown;
+            m_inputGroup.alpha = (shown ? 1f : 0f);
+        }
+
+        private void CreateNewPlayerData(int slot)
+        {
+            ClearInputField();
+
+            if (m_createNewPlayerDataRoutine != null)
+                StopCoroutine(m_createNewPlayerDataRoutine);
+
+            m_createNewPlayerDataRoutine = StartCoroutine(CreateNewPlayerDataRoutine(slot));
+        }
+
+        private Coroutine m_createNewPlayerDataRoutine = null;
+
+        private IEnumerator CreateNewPlayerDataRoutine(int saveSlot)
+        {
+            ShowInputGroup(true);
+            yield return new WaitUntil(() => m_inputSubmitted);
+
+            if (!m_inputField.wasCanceled)
+                GameDataHandler.Create(saveSlot, m_inputField.text);
+
+            LoadExistingPlayersData();
+        }
+
+        private void OnInputFieldSubmitted(string text)
+        {
+            m_inputSubmitted = true;
+            ShowInputGroup(false);
+        }
+
+        private void ClearInputField()
+        {
+            m_inputField.text = string.Empty;
+            m_inputSubmitted = false;
         }
         #endregion
 
 
         #region Button Events Implementation
-        private void OnLoadData(int index, PlayerData data)
+        private void OnLoadData(int index)
         {
-            if (data != null)
-                m_selectedPlayer = data;
+            if (!GameDataHandler.SaveSlotExists(index))
+                CreateNewPlayerData(index);
+
             else
             {
-                // create new save
+                m_selectedSaveSlot = index;
+                Hide();
             }
         }
 
-        private void OnDeleteData(int index, PlayerData data)
+        private void OnDeleteData(int index)
         {
-            // if player decides to delete -- delete data
+            GameDataHandler.Delete(index);
+            LoadExistingPlayersData();
         }
         #endregion
     }
