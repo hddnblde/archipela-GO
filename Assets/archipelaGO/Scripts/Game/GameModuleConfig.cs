@@ -11,10 +11,14 @@ namespace archipelaGO.Game
         private string m_endMessage = string.Empty;
 
         [SerializeField]
+        private string m_failMessage = "Game over.";
+
+        [SerializeField]
         private bool m_requireTapToContinue = false;
 
         public string hint => m_hint;
         public string endMessage => m_endMessage;
+        public string failMessage => m_failMessage;
         public bool requireTapToContinue => m_requireTapToContinue;
     }
 }
