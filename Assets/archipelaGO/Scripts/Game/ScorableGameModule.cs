@@ -2,7 +2,14 @@ using UnityEngine;
 
 namespace archipelaGO.Game
 {
-    public abstract class ScorableGameModule<T> : GameModule<T>
+    public interface IScorableModule
+    {
+        int currentScore { get; }
+        int totalScore { get; }
+        int roundedProgress { get; }
+    }
+
+    public abstract class ScorableGameModule<T> : GameModule<T>, IScorableModule
         where T : ScorableGameModuleConfig
     {
         public abstract int currentScore { get; }
