@@ -11,6 +11,8 @@ namespace archipelaGO.GameData
         public override void Reset() =>
             m_unlockedKeys = new List<string>();
 
+        public int CountUnlockedKeys() => m_unlockedKeys.Count;
+
         public bool IsUnlocked(string key) =>
             m_unlockedKeys.Contains(key);
 
