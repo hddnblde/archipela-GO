@@ -29,8 +29,13 @@ namespace archipelaGO.GameData
 
 
         #region Public Method
-        public void Set(PlayerData data, int totalUnlockableKeys) =>
+        public void Set(PlayerData data, int totalUnlockableKeys)
+        {
             SetLabel(ConstructLabel(data, totalUnlockableKeys));
+
+            if (m_deleteButton != null)
+                m_deleteButton.interactable = (data != null);
+        }
 
         private string ConstructLabel(PlayerData data, int totalUnlockableKeys)
         {
