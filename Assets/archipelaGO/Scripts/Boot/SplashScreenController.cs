@@ -1,15 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
+using archipelaGO.SceneHandling;
 
 namespace archipelaGO.Boot
 {
-    public class SplashScreenController : MonoBehaviour
+    public class SplashScreenController : TransitionableScreen
     {
-        #if UNITY_EDITOR
         [SerializeField]
-        private bool m_skip = false;
-        #endif
+        private float m_delayAfterSplashScreen = 5f;
 
         [SerializeField]
         private VideoPlayer m_splashScreenPlayer = null;
@@ -17,25 +16,21 @@ namespace archipelaGO.Boot
         [SerializeField]
         private AudioSource m_splashScreenAudioStinger = null;
 
-        public IEnumerator PlaybackRoutine()
+        public override IEnumerator WaitUntilDone()
         {
-            #if UNITY_EDITOR
-            if (m_skip)
+            if (m_splashScreenPlayer == null)
                 yield break;
-            #endif
 
-            if (m_splashScreenPlayer != null)
-            {
-                m_splashScreenPlayer.Prepare();
-                yield return new WaitUntil(() => m_splashScreenPlayer.isPrepared);
+            m_splashScreenPlayer.Prepare();
+            yield return new WaitUntil(() => m_splashScreenPlayer.isPrepared);
 
-                m_splashScreenPlayer.Play();
+            m_splashScreenPlayer.Play();
 
-                if (m_splashScreenAudioStinger != null)
-                    m_splashScreenAudioStinger.Play();
+            if (m_splashScreenAudioStinger != null)
+                m_splashScreenAudioStinger.Play();
 
-                yield return new WaitUntil(() => !m_splashScreenPlayer.isPlaying);
-            }
+            yield return new WaitUntil(() => !m_splashScreenPlayer.isPlaying);
+            yield return new WaitForSeconds(m_delayAfterSplashScreen);
         }
     }
 }
