@@ -12,6 +12,23 @@ namespace archipelaGO.UI.Windows
     {
         #region Fields
         [SerializeField]
+        private RectTransform m_badgePanel = null;
+
+        [SerializeField]
+        private Image m_badge = null;
+
+        [SerializeField]
+        private Sprite m_goldBadge = null;
+
+        [SerializeField]
+        private Sprite m_silverBadge = null;
+
+        [SerializeField]
+        private Sprite m_bronzeBadge = null;
+
+        [Space]
+
+        [SerializeField]
         private Text m_messageText = null;
 
         [Space]
@@ -23,6 +40,18 @@ namespace archipelaGO.UI.Windows
         private Button m_returnButton = null;
 
         private GameLibrary m_library = null;
+        #endregion
+
+
+        #region Data Structure
+        [System.Serializable]
+        public enum Badge
+        {
+            None = 0,
+            Bronze = 1,
+            Silver = 2,
+            Gold = 3
+        }
         #endregion
 
 
@@ -43,12 +72,10 @@ namespace archipelaGO.UI.Windows
         public void SetGameLibrary(GameLibrary library) =>
             m_library = library;
 
-        public void Show(string message)
+        public void Show(string message, Badge badge = Badge.None)
         {
-            if (m_messageText == null)
-                return;
-
-            m_messageText.text = message;
+            SetMessage(message);
+            SetBadge(badge);
             this.Show();
         }
         #endregion
@@ -84,6 +111,41 @@ namespace archipelaGO.UI.Windows
 
             if (world != null)
                 world.LoadWorld(m_library);
+        }
+
+        private void SetMessage(string message)
+        {
+            if (m_messageText != null)
+                 m_messageText.text = message;
+        }
+
+        private void SetBadge(Badge badge)
+        {
+            m_badgePanel.gameObject.SetActive(badge != Badge.None);
+
+            if (!m_badgePanel.gameObject.activeInHierarchy)
+                return;
+            
+            if (m_badge != null)
+                m_badge.sprite = GetBadgeSprite(badge);
+        }
+
+        private Sprite GetBadgeSprite(Badge badge)
+        {
+            switch(badge)
+            {
+                case Badge.Gold:
+                    return m_goldBadge;
+
+                case Badge.Silver:
+                    return m_silverBadge;
+
+                case Badge.Bronze:
+                    return m_bronzeBadge;
+
+                default:
+                    return null;
+            }
         }
         #endregion
     }
