@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/archipelaGO/Scenes/Boot.unity
+    path: Assets/archipelaGO/Scenes/Splash.unity
+    guid: de49afe0368dee74baa4f29053da28ef
+  - enabled: 1
+    path: Assets/archipelaGO/Scenes/Sign In.unity
     guid: 5f182fe77a7b7e04bb8469c87627f347
   - enabled: 1
     path: Assets/archipelaGO/Scenes/Main.unity
