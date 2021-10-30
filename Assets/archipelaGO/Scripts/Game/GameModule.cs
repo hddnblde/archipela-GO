@@ -7,9 +7,14 @@ namespace archipelaGO.Game
         where T : GameModuleConfig
     {
         #region Fields
+        [SerializeField]
+        private float m_timeLimit = Mathf.Infinity;
+
         private T m_config = null;
         public delegate void GameCompleted(string message);
-        public event GameCompleted OnGameCompleted;
+        public event GameCompleted OnSucceeded;
+        public event GameCompleted OnFailed;
+        protected abstract bool objectiveComplete { get; }
         #endregion
 
 
@@ -27,10 +32,19 @@ namespace archipelaGO.Game
 
         protected abstract void OnInitialize();
 
-        protected void InvokeGameCompleted()
+        protected void InvokeGameOver()
         {
-            OnGameCompleted?.Invoke(m_config?.endMessage ?? "Game ended!");
-            OnGameCompleted = null;
+            bool objectiveComplete = this.objectiveComplete;
+
+            GameCompleted completionEvent = (objectiveComplete ?
+                OnSucceeded : OnFailed);
+
+            string message = (m_config != null ?
+                (objectiveComplete ? m_config.endMessage : m_config.failMessage) :
+                "Game ended!");
+
+            completionEvent?.Invoke(message);
+            completionEvent = null;
         }
         #endregion
 
