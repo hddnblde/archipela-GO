@@ -17,6 +17,7 @@ namespace archipelaGO.Game
         private Button m_button = null;
 
         private CanvasGroup m_canvasGroup = null;
+        private Coroutine m_autoplayer = null;
 
         private void Awake()
         {
@@ -53,7 +54,14 @@ namespace archipelaGO.Game
             m_canvasGroup.blocksRaycasts = false;
 
             List<IAutoplayable> playables = GetAllAutoplayablesInScene();
-            StartCoroutine(AutoplayRoutine(playables));
+            Stop();
+            m_autoplayer = StartCoroutine(AutoplayRoutine(playables));
+        }
+
+        public void Stop()
+        {
+            if (m_autoplayer != null)
+                StopCoroutine(m_autoplayer);
         }
 
         private IEnumerator AutoplayRoutine(List<IAutoplayable> playables)
