@@ -45,7 +45,10 @@ namespace archipelaGO.Game
         {
             m_config = config;
             OnInitialize();
+        }
 
+        public void Begin()
+        {
             if (timeLimit < Mathf.Infinity)
                 BeginCountdownTimer(timeLimit);
         }

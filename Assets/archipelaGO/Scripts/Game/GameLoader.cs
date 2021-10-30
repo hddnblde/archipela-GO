@@ -11,6 +11,7 @@ using IWorldMapLinker = archipelaGO.WorldMap.IWorldMapLinker;
 using GameHint = archipelaGO.UI.Windows.GameHintWindow;
 using EndScreen = archipelaGO.UI.Windows.EndScreenWindow;
 using archipelaGO.GameData;
+using archipelaGO.UI;
 
 namespace archipelaGO.Game
 {
@@ -115,10 +116,12 @@ namespace archipelaGO.Game
         private void LoadQuizModule(QuizConfig config) =>
             LoadModule<QuizModule, QuizConfig>(m_quizModule, config);
 
-        private void ShowHintScreen(string hintText)
+        private void ShowHintScreen(string hintText, UIWindow.Activity hideCallback)
         {
             if (m_hintScreen != null)
                 m_hintScreen.ShowHintText(hintText);
+            
+            m_hintScreen.OnHide += hideCallback;
         }
 
         private void HideHintScreen()
@@ -169,11 +172,17 @@ namespace archipelaGO.Game
             module.gameObject.SetActive(true);
             module.Initialize(config);
 
+            if (m_hintScreen != null)
+                m_hintScreen.OnHide += module.Begin;
+
             if (config.requireTapToContinue)
-                ShowHintScreen(config.hint);
+                ShowHintScreen(config.hint, module.Begin);
 
             else
+            {
+                module.Begin();
                 HideHintScreen();
+            }
         }
 
         public static GameObject[] GetRootGameObjects() =>
