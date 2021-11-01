@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9832861013223d243bc379ad4b3ad2ce, type: 3}
   m_Name: TMOM_Game_03_TrainOfThought
   m_EditorClassIdentifier: 
+  m_timeLimit: Infinity
   m_hint: "Congratulations for coming this far! We are so proud of you. As your last
     adventure for this story, we need you to think critically and apply your learnings
     from the selection. Answer all of our questions to earn your next badge for this
     series! If you\u2019re ready for this game, put on your thinking hat, and hop
     on!"
-  m_endMessage: 
+  m_endMessage: Good job!
+  m_failMessage: Game over.
   m_requireTapToContinue: 1
+  m_passingScore: 1
   m_shuffleQuestions: 0
   m_shuffleChoices: 1
   m_questions:

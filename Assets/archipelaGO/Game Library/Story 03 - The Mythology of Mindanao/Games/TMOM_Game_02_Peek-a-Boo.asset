@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: TMOM_Game_02_Peek-a-Boo
   m_EditorClassIdentifier: 
+  m_timeLimit: 190
   m_hint: "Oh wow! You\u2019re onto our next puzzle! High five! In this game, some
     words are trying to hide and mix with some random letters. Can you find them?
     If you see them all, you\u2019ll be earning another badge! So, clear that vision,
     and let\u2019s start this search!"
+  m_endMessage: Nice job on finishing the puzzle.
+  m_failMessage: Game over.
   m_requireTapToContinue: 1
+  m_passingScore: 1
   m_puzzleType: 1
   m_wordBank: {fileID: 11400000, guid: 8d21eb487f6bb5942a6b39b31b095f13, type: 2}
   m_gridSize: {x: 14, y: 14}
