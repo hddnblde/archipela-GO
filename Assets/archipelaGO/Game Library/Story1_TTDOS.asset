@@ -21,6 +21,7 @@ MonoBehaviour:
   - m_label: Story of Kalaw
     m_config: {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
     m_position: {x: -11.6, y: 2.5}
+    m_scale: 1.25
     m_spriteIndex: 0
     m_requiredKeys: []
     m_unlockedKeys:
@@ -29,6 +30,7 @@ MonoBehaviour:
   - m_label: "Story of Do\xF1a Maria"
     m_config: {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
     m_position: {x: -11.6, y: -2.45}
+    m_scale: 1.25
     m_spriteIndex: 0
     m_requiredKeys: []
     m_unlockedKeys:
@@ -36,7 +38,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 75a19e3059d890a4aa1b91c750ac5cdd, type: 2}
   - m_label: Brain Drain
     m_config: {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
-    m_position: {x: -0.03, y: -2.31}
+    m_position: {x: -5.18, y: 0.46}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: beb7a72e4d586d648b88b996868bee60, type: 2}
@@ -45,7 +48,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
   - m_label: Peek-a-Boo
     m_config: {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
-    m_position: {x: 10.43, y: -4.25}
+    m_position: {x: -1.46, y: -2.45}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: 9e775c35b8ca3df448072bd90895cdb3, type: 2}
@@ -53,7 +57,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}
   - m_label: Train of Thought
     m_config: {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
-    m_position: {x: 17.6, y: -1.01}
+    m_position: {x: 3.24, y: -0.25}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: a16253f3a00fe814aa68b446a7eb4314, type: 2}

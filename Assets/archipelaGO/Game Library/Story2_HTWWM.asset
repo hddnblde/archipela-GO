@@ -21,6 +21,7 @@ MonoBehaviour:
   - m_label: Story of Captan
     m_config: {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
     m_position: {x: -9.95, y: 3.04}
+    m_scale: 1.25
     m_spriteIndex: 0
     m_requiredKeys:
     - {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
@@ -30,6 +31,7 @@ MonoBehaviour:
   - m_label: Story of Maguayan
     m_config: {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
     m_position: {x: -9.95, y: -3.3}
+    m_scale: 1.25
     m_spriteIndex: 0
     m_requiredKeys:
     - {fileID: 11400000, guid: 0aa7a57f39e762f4ebadbf983259eb14, type: 2}
@@ -38,7 +40,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 60b6bb8747d7b764f95ab671306c7d93, type: 2}
   - m_label: Brain Drain
     m_config: {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
-    m_position: {x: -0.03, y: -2.31}
+    m_position: {x: -3.5, y: 0.44}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: 98e0ad908b880f04b845b1d3df5a9054, type: 2}
@@ -47,7 +50,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
   - m_label: Peek-a-Boo
     m_config: {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
-    m_position: {x: 10.86, y: -3.44}
+    m_position: {x: 1.21, y: -1.68}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: d0b18ef312e125144b18ca10d55e3b40, type: 2}
@@ -55,7 +59,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}
   - m_label: Train of Thought
     m_config: {fileID: 11400000, guid: 0f69134695c143c4a89faf05e4459c74, type: 2}
-    m_position: {x: 16.6, y: 0.02}
+    m_position: {x: 5.65, y: 1.6}
+    m_scale: 1.25
     m_spriteIndex: 1
     m_requiredKeys:
     - {fileID: 11400000, guid: 173d477a42f0ea14ca520f714a75193b, type: 2}

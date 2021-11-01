@@ -36,6 +36,9 @@ namespace archipelaGO.Game
             private Vector2 m_position = Vector2.zero;
 
             [SerializeField]
+            private float m_scale = 1f;
+
+            [SerializeField]
             private int m_spriteIndex = 0;
 
             [SerializeField]
@@ -51,6 +54,7 @@ namespace archipelaGO.Game
             public GameModuleConfig config => m_config;
             public Vector2 position => m_position;
             public int spriteIndex => m_spriteIndex;
+            public float scale => m_scale;
             #endregion
 
 
@@ -88,15 +92,15 @@ namespace archipelaGO.Game
 
 
         #region Methods
-        public Vector2 GetNodePosition(int index)
+        public (Vector2 position, float scale) GetNodeTransformation(int index)
         {
             ModuleNode node = GetNode(index);
 
             if (node != null)
-                return node.position;
+                return (node.position, node.scale);
 
             else
-                return Vector2.zero;
+                return (Vector2.zero, 0f);
         }
 
         public GameModuleConfig GetNodeConfig(int index)
