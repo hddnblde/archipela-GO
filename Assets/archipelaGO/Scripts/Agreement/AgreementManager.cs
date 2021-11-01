@@ -2,12 +2,16 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using archipelaGO.GameData;
 
 namespace archipelaGO.UI.Windows
 {
     public class AgreementManager : UIWindow
     {
         #region Fields
+        [SerializeField]
+        private Button m_reviewButton = null;
+
         #if UNITY_EDITOR
         [SerializeField]
         private bool m_resetChoices = false;
@@ -31,6 +35,7 @@ namespace archipelaGO.UI.Windows
         [SerializeField]
         private Button m_declineButton = null;
 
+        private Coroutine m_agreementRoutine = null;
         private AgreementDecision m_currentDecision = AgreementDecision.Undecided;
         private AgreementPolicy m_currentPolicy = AgreementPolicy.EULA;
 
@@ -60,14 +65,14 @@ namespace archipelaGO.UI.Windows
 
         private static bool agreedToEULA
         {
-            get => PlayerPrefs.GetInt(AgreementKey_EULA, 0) == 1;
-            set => PlayerPrefs.SetInt(AgreementKey_EULA, (value ? 1 : 0));
+            get => GameDataHandler.CurrentPlayer()?.Access<AgreementData>()?.agreedToEula ?? false;
+            set => GameDataHandler.CurrentPlayer()?.Access<AgreementData>()?.AgreeToEndUserLicenseAgreement(value);
         }
 
         private static bool agreedToPrivacyPolicy
         {
-            get => PlayerPrefs.GetInt(AgreementKey_PrivacyPolicy, 0) == 1;
-            set => PlayerPrefs.SetInt(AgreementKey_PrivacyPolicy, (value ? 1 : 0));
+            get => GameDataHandler.CurrentPlayer()?.Access<AgreementData>()?.agreedToPrivacyPolicy ?? false;
+            set => GameDataHandler.CurrentPlayer()?.Access<AgreementData>()?.AgreeToPrivacyPolicy(value);
         }
         #endregion
 
@@ -80,26 +85,37 @@ namespace archipelaGO.UI.Windows
 
             #if UNITY_EDITOR
             if (m_resetChoices)
-            {
-                agreedToEULA = false;
-                agreedToPrivacyPolicy = false;
-            }
+                ResetDecision();
             #endif
 
             RegisterResponseButtons();
+        }
+
+        private void ResetDecision()
+        {
+            agreedToEULA = false;
+            agreedToPrivacyPolicy = false;
+            GameDataHandler.SaveCurrentPlayer();
         }
         
         private void Start()
         {
             if (playerHasFullyAgreed)
-            {
-                Destroy(gameObject);
-                return;
-            }
+                Hide();
 
-            Show();
+            else
+                Show();
+        }
+
+        protected override void Show()
+        {
+            base.Show();
             ActivateDecisionButtons(false);
-            StartCoroutine(ShowAgreementRoutine());
+
+            if (m_agreementRoutine != null)
+                StopCoroutine(m_agreementRoutine);
+
+            m_agreementRoutine = StartCoroutine(ShowAgreementRoutine());
         }
 
         private void OnDestroy() =>
@@ -115,6 +131,9 @@ namespace archipelaGO.UI.Windows
             
             if (m_declineButton != null)
                 m_declineButton.onClick.AddListener(OnDeclineButtonClicked);
+
+            if (m_reviewButton)
+                m_reviewButton.onClick.AddListener(OnReviewButtonClicked);
         }
 
         private void DeregisterResponseButtons()
@@ -124,6 +143,9 @@ namespace archipelaGO.UI.Windows
 
             if (m_declineButton != null)
                 m_declineButton.onClick.RemoveListener(OnDeclineButtonClicked);
+
+            if (m_reviewButton)
+                m_reviewButton.onClick.RemoveListener(OnReviewButtonClicked);
         }
 
         private void MakeDecision()
@@ -139,6 +161,12 @@ namespace archipelaGO.UI.Windows
 
             if (m_declineButton != null)
                 m_declineButton.gameObject.SetActive(active);
+        }
+
+        private void OnReviewButtonClicked()
+        {
+            ResetDecision();
+            Show();
         }
 
         private void OnAcceptButtonClicked()
@@ -159,7 +187,7 @@ namespace archipelaGO.UI.Windows
             yield return ShowAgreementPolicy(AgreementPolicy.Privacy);
 
             if (playerHasFullyAgreed)
-                Destroy(gameObject);
+                Hide();
 
             else
             {
@@ -200,6 +228,8 @@ namespace archipelaGO.UI.Windows
                     agreedToPrivacyPolicy = accepted;
                     break;
             }
+
+            GameDataHandler.SaveCurrentPlayer();
         }
 
         private string RetrieveAgreementText(AgreementPolicy policy)
