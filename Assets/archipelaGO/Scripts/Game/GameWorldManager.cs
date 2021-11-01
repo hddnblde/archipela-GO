@@ -50,17 +50,18 @@ namespace archipelaGO.Game
 
         private void CreateNode(GameLibrary library, int index)
         {
-            Vector2 nodePosition = library.GetNodePosition(index);
-            GameObject nodeGameObject = Instantiate(m_nodePrefab, nodePosition, Quaternion.identity);
+            (Vector2 position, float scale) nodeTransform = library.GetNodeTransformation(index);
+            GameObject nodeGameObject = Instantiate(m_nodePrefab, nodeTransform.position, Quaternion.identity);
             nodeGameObject.name = $"Node { index + 1 }";
             nodeGameObject.transform.SetParent(transform);
+            nodeGameObject.transform.localScale = (Vector3.one * nodeTransform.scale);
 
             (string label, Sprite sprite) nodeVisuals =
                 library.GetNodeVisuals(index);
-            
+
             (string[] required, string[] unlocked) keys =
                 library.GetProgressKeys(index);
-            
+
             WorldMapNode nodeController =
                 nodeGameObject.GetComponent<WorldMapNode>();
 
