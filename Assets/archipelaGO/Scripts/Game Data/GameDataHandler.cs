@@ -87,7 +87,8 @@ namespace archipelaGO.GameData
 
             foreach (string file in files)
             {
-                string[] substrings = file.Split(".".ToCharArray());
+                string fileNiceName = Path.GetFileName(file);
+                string[] substrings = fileNiceName.Split(".".ToCharArray());
 
                 if (substrings == null || substrings.Length < 2)
                     continue;
@@ -95,7 +96,12 @@ namespace archipelaGO.GameData
                 int value = -1;
 
                 if (!int.TryParse(substrings[1], out value))
+                {
+                    Debug.LogError($"Failed to parse save.... { fileNiceName }");
                     continue;
+                }
+                else
+                    Debug.Log($"File { fileNiceName } detected.");
                 
                 string path;
 
@@ -126,8 +132,15 @@ namespace archipelaGO.GameData
         private static string GetDataPathForSlot(int slot) =>
             $"{ GetRootDataPath() }/{ FileName }.{ slot }.{ FileExtension }";
 
-        private static string GetRootDataPath() =>
-            $"{ Application.persistentDataPath }/{ FolderRoot }";
+        private static string GetRootDataPath()
+        {
+            string path = $"{ Application.persistentDataPath }/{ FolderRoot }";
+
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            return path;
+        }
         #endregion
     }
 }
