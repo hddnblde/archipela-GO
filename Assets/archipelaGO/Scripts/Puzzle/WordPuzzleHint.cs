@@ -17,7 +17,7 @@ namespace archipelaGO.Puzzle
             switch (type)
             {
                 case WordHintType.Word:
-                    return "";
+                    return word.title.ToUpper();
 
                 case WordHintType.Definition:
                     return $"({ word.partOfSpeechAbridged }) { word.definition }";
