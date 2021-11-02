@@ -14,207 +14,305 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_words:
   - m_title: ecstatic
+    m_definition: Full of overwhelming emotion; delightful
+    m_partOfSpeech: 2
     m_phoneticSpelling: "ec\xB7\u200Bstat\xB7\u200Bic | \\ ek-\u02C8sta-tik, ik-\u02C8sta-
       \\"
-    m_keywords: []
-    m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: cd117b0755572604fb363f0793581114, type: 3}
-    m_definition: Full of overwhelming emotion; delightful
+    m_keywords: []
+    m_synonyms:
+    - m_title: overwhelmed
+      m_definition: Overwhelmed by power, Licalibutan started plotting a bad plan.
+      m_partOfSpeech: 2
+    m_antonyms: []
   - m_title: offspring
+    m_definition: A child; Progeny
+    m_partOfSpeech: 0
     m_phoneticSpelling: "off\xB7\u200Bspring | \\ \u02C8\u022Ff-\u02CCspri\u014B
       \\"
-    m_keywords: []
-    m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: fb8e0eeb146ba10489f95060507c651d, type: 3}
-    m_definition: A child; Progeny
+    m_keywords: []
+    m_synonyms:
+    - m_title: children
+      m_definition: The children of Lihangin and Lidagat formed the world.
+      m_partOfSpeech: 0
+    m_antonyms: []
   - m_title: undoubted
+    m_definition: Not doubted; Genuine
+    m_partOfSpeech: 2
     m_phoneticSpelling: "un\xB7\u200Bdoubt\xB7\u200Bed | \\ \u02CC\u0259n-\u02C8dau\u0307-t\u0259d
       \\"
-    m_keywords: []
-    m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 319debb07a03f86439c35c301c574fff, type: 3}
-    m_definition: Not doubted; Genuine
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: tremendous
-    m_phoneticSpelling: "tre\xB7\u200Bmen\xB7\u200Bdous | \\ tri-\u02C8men-d\u0259s\\"
-    m_keywords: []
-    m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: 2c739ef8094cac04ba13cc2eaeaa714f, type: 3}
     m_definition: Notable by a reason of extreme size, power, greatness, or excellence
+    m_partOfSpeech: 2
+    m_phoneticSpelling: "tre\xB7\u200Bmen\xB7\u200Bdous | \\ tri-\u02C8men-d\u0259s\\"
+    m_pronunciation: {fileID: 8300000, guid: 2c739ef8094cac04ba13cc2eaeaa714f, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: grief
-    m_phoneticSpelling: "\\ \u02C8gr\u0113f \\"
-    m_keywords: []
-    m_partOfSpeech: 0
-    m_pronunciation: {fileID: 8300000, guid: 0b87ca30972384049989573338e2d0fe, type: 3}
     m_definition: A cause of great suffering
-  - m_title: ward off
-    m_phoneticSpelling: "\\ \u02C8w\u022Frd \u02C8\u022Ff \\"
+    m_partOfSpeech: 0
+    m_phoneticSpelling: "\\ \u02C8gr\u0113f \\"
+    m_pronunciation: {fileID: 8300000, guid: 0b87ca30972384049989573338e2d0fe, type: 3}
     m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: b4f8751eb55bc434bbfa6ef062439978, type: 3}
+    m_synonyms:
+    - m_title: suffering
+      m_definition: Captan and Maguayan were in suffering due to the death of Lihangin
+        and Lidagat.
+      m_partOfSpeech: 0
+    m_antonyms: []
+  - m_title: ward off
     m_definition: To avoid being hit by (something)
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "\\ \u02C8w\u022Frd \u02C8\u022Ff \\"
+    m_pronunciation: {fileID: 8300000, guid: b4f8751eb55bc434bbfa6ef062439978, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: resolve
+    m_definition: To deal with successfully; Clear up
+    m_partOfSpeech: 3
     m_phoneticSpelling: "re\xB7\u200Bsolve | \\ ri-\u02C8z\xE4lv, -\u02C8z\u022Flv
       \\"
+    m_pronunciation: {fileID: 8300000, guid: 332f3c6af434f734da58f3b69abe0e2a, type: 3}
     m_keywords:
     - resolved
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 332f3c6af434f734da58f3b69abe0e2a, type: 3}
-    m_definition: To deal with successfully; Clear up
+    m_synonyms: []
+    m_antonyms: []
   - m_title: risky
-    m_phoneticSpelling: "\\ \u02C8ri-sk\u0113 \\"
-    m_keywords: []
-    m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: 5b5c62ddc1ac4a34f8218904033a6308, type: 3}
     m_definition: Attended with risk or danger
-  - m_title: insane
-    m_phoneticSpelling: "in\xB7\u200Bsane | \\ (\u02CC)in-\u02C8s\u0101n \\"
-    m_keywords: []
     m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: e7b5d79aacf913249a7de75ae59c1e20, type: 3}
+    m_phoneticSpelling: "\\ \u02C8ri-sk\u0113 \\"
+    m_pronunciation: {fileID: 8300000, guid: 5b5c62ddc1ac4a34f8218904033a6308, type: 3}
+    m_keywords: []
+    m_synonyms:
+    - m_title: dangerous
+      m_definition: The dangerous plan killed the siblings.
+      m_partOfSpeech: 2
+    m_antonyms: []
+  - m_title: insane
     m_definition: Unable to think in a clear or sensible way.
+    m_partOfSpeech: 2
+    m_phoneticSpelling: "in\xB7\u200Bsane | \\ (\u02CC)in-\u02C8s\u0101n \\"
+    m_pronunciation: {fileID: 8300000, guid: e7b5d79aacf913249a7de75ae59c1e20, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: nefarious
+    m_definition: Not conforming to a high moral standard; morally unacceptable
+    m_partOfSpeech: 2
     m_phoneticSpelling: "ne\xB7\u200Bfar\xB7\u200Bi\xB7\u200Bous | \\ ni-\u02C8fer-\u0113-\u0259s
       \\"
-    m_keywords: []
-    m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 29380805ca89fc14ea7dd9c0dfd57a08, type: 3}
-    m_definition: Not conforming to a high moral standard; morally unacceptable
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: troublemaker
+    m_definition: A person who causes trouble or creates problems
+    m_partOfSpeech: 0
     m_phoneticSpelling: "trou\xB7\u200Bble\xB7\u200Bmak\xB7\u200Ber | \\\u02C8tr\u0259-b\u0259l-\u02CCm\u0101-k\u0259r
       \\"
-    m_keywords: []
-    m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 4f517f2446b51eb43a535e73a7f587e3, type: 3}
-    m_definition: A person who causes trouble or creates problems
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: dispute
-    m_phoneticSpelling: "dis\xB7\u200Bpute | \\ di-\u02C8spy\xFCt \\"
-    m_keywords: []
-    m_partOfSpeech: 0
-    m_pronunciation: {fileID: 8300000, guid: 768b4dc811bca4344a329a74917e1f35, type: 3}
     m_definition: An often noisy or angry expression of differing opinions
-  - m_title: rascal
-    m_phoneticSpelling: "ras\xB7\u200Bcal | \\ \u02C8ra-sk\u0259l \\"
-    m_keywords: []
     m_partOfSpeech: 0
-    m_pronunciation: {fileID: 8300000, guid: 4c9e8d52fc9f9614e89070dc6f476ad5, type: 3}
+    m_phoneticSpelling: "dis\xB7\u200Bpute | \\ di-\u02C8spy\xFCt \\"
+    m_pronunciation: {fileID: 8300000, guid: 768b4dc811bca4344a329a74917e1f35, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
+  - m_title: rascal
     m_definition: A mean, evil, or unprincipled person
+    m_partOfSpeech: 0
+    m_phoneticSpelling: "ras\xB7\u200Bcal | \\ \u02C8ra-sk\u0259l \\"
+    m_pronunciation: {fileID: 8300000, guid: 4c9e8d52fc9f9614e89070dc6f476ad5, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: dispatch
-    m_phoneticSpelling: "\\ d\u0259\u02C8spaCH \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 1b8eb509b9295294c98cc1a4aac077e4, type: 3}
     m_definition: To cause to go to be taken from one place to another
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "\\ d\u0259\u02C8spaCH \\"
+    m_pronunciation: {fileID: 8300000, guid: 1b8eb509b9295294c98cc1a4aac077e4, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: enrage
-    m_phoneticSpelling: "en\xB7\u200Brage | \\ in-\u02C8r\u0101j,en- \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 01f24831ec56a1c4785718574f7aa46e, type: 3}
     m_definition: "Feeling or showing\r anger"
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "en\xB7\u200Brage | \\ in-\u02C8r\u0101j,en- \\"
+    m_pronunciation: {fileID: 8300000, guid: 01f24831ec56a1c4785718574f7aa46e, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: shatter
-    m_phoneticSpelling: "shat\xB7\u200Bter | \\ \u02C8sha-t\u0259r \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 7f5c40531b1197d4fa5d2bab1da3d6f3, type: 3}
     m_definition: To cause to break with violence and much noise
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "shat\xB7\u200Bter | \\ \u02C8sha-t\u0259r \\"
+    m_pronunciation: {fileID: 8300000, guid: 7f5c40531b1197d4fa5d2bab1da3d6f3, type: 3}
+    m_keywords: []
+    m_synonyms:
+    - m_title: break
+      m_definition: Lisuga's body breaks and becomes the stars at night.
+      m_partOfSpeech: 0
+    m_antonyms: []
   - m_title: wander
-    m_phoneticSpelling: "wan\xB7\u200Bder | \\ \u02C8w\xE4n-d\u0259r \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 6df72d3abe343074fa6b3ff4255c1c32, type: 3}
     m_definition: To move about without a fixed course, aim, or goal
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "wan\xB7\u200Bder | \\ \u02C8w\xE4n-d\u0259r \\"
+    m_pronunciation: {fileID: 8300000, guid: 6df72d3abe343074fa6b3ff4255c1c32, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: fragment
-    m_phoneticSpelling: "frag\xB7\u200Bment | \\ \u02C8frag-\u02CCment \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: b615d9e26fad27d4d984b044dff416c9, type: 3}
     m_definition: Broken or separated into distinct parts
-  - m_title: pertain
-    m_phoneticSpelling: "per\xB7\u200Btain | \\ p\u0259r-\u02C8t\u0101n \\"
-    m_keywords: []
     m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: 3bf06d5962e2b944685d748d3e6c143f, type: 3}
+    m_phoneticSpelling: "frag\xB7\u200Bment | \\ \u02C8frag-\u02CCment \\"
+    m_pronunciation: {fileID: 8300000, guid: b615d9e26fad27d4d984b044dff416c9, type: 3}
+    m_keywords: []
+    m_synonyms:
+    - m_title: part
+      m_definition: Licalibutan, Liadlaw, Libulan, and Lisuga were shattered into
+        parts.
+      m_partOfSpeech: 3
+    m_antonyms: []
+  - m_title: pertain
     m_definition: To have reference
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "per\xB7\u200Btain | \\ p\u0259r-\u02C8t\u0101n \\"
+    m_pronunciation: {fileID: 8300000, guid: 3bf06d5962e2b944685d748d3e6c143f, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: backstabbing
+    m_definition: Betrayal
+    m_partOfSpeech: 0
     m_phoneticSpelling: "back\xB7\u200Bstab\xB7\u200Bbing | \\ \u02C8bak-\u02CCsta-bi\u014B
       \\"
-    m_keywords: []
-    m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 84bf8031be6a4934ea55b09c0703159b, type: 3}
-    m_definition: Betrayal
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: joint
-    m_phoneticSpelling: "\\ \u02C8j\u022Fint \\"
-    m_keywords: []
-    m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: acb013545af95ea41bb93cfe85df6803, type: 3}
     m_definition: United, combined
-  - m_title: vain
-    m_phoneticSpelling: "\\ \u02C8v\u0101n \\"
-    m_keywords: []
     m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: 31622cfb6ecb7164fb1aeaa5ff3a434a, type: 3}
+    m_phoneticSpelling: "\\ \u02C8j\u022Fint \\"
+    m_pronunciation: {fileID: 8300000, guid: acb013545af95ea41bb93cfe85df6803, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
+  - m_title: vain
     m_definition: Unsuccessful, Useless
+    m_partOfSpeech: 2
+    m_phoneticSpelling: "\\ \u02C8v\u0101n \\"
+    m_pronunciation: {fileID: 8300000, guid: 31622cfb6ecb7164fb1aeaa5ff3a434a, type: 3}
+    m_keywords: []
+    m_synonyms:
+    - m_title: useless
+      m_definition: Captan and Maguayan's efforts are useless for they cannot save
+        their grandchildren.
+      m_partOfSpeech: 2
+    m_antonyms: []
   - m_title: endow
-    m_phoneticSpelling: "en\xB7\u200Bdow | \\ in-\u02C8dau\u0307,en- \\"
-    m_keywords: []
-    m_partOfSpeech: 3
-    m_pronunciation: {fileID: 8300000, guid: ce90639811dedba458fe554bdadc46db, type: 3}
     m_definition: To provide with something freely or naturally
-  - m_title: feat
-    m_phoneticSpelling: "\\ \u02C8f\u0113t \\"
+    m_partOfSpeech: 3
+    m_phoneticSpelling: "en\xB7\u200Bdow | \\ in-\u02C8dau\u0307,en- \\"
+    m_pronunciation: {fileID: 8300000, guid: ce90639811dedba458fe554bdadc46db, type: 3}
     m_keywords: []
-    m_partOfSpeech: 0
-    m_pronunciation: {fileID: 8300000, guid: 0bf2902249a486a478006b22e0c50e1d, type: 3}
+    m_synonyms: []
+    m_antonyms: []
+  - m_title: feat
     m_definition: An act or product of skill, endurance, or ingenuity.
+    m_partOfSpeech: 0
+    m_phoneticSpelling: "\\ \u02C8f\u0113t \\"
+    m_pronunciation: {fileID: 8300000, guid: 0bf2902249a486a478006b22e0c50e1d, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: albeit
+    m_definition: Even though, although
+    m_partOfSpeech: 5
     m_phoneticSpelling: "al\xB7\u200Bbe\xB7\u200Bit | \\ \u022Fl-\u02C8b\u0113-\u0259t,al-
       \\"
-    m_keywords: []
-    m_partOfSpeech: 5
     m_pronunciation: {fileID: 8300000, guid: 52457fa7b22e1384b91f0b853b01e27a, type: 3}
-    m_definition: Even though, although
+    m_keywords: []
+    m_synonyms:
+    - m_title: although
+      m_definition: Although his grandchildren have done him wrong, Captan revived
+        them in a different form.
+      m_partOfSpeech: 5
+    m_antonyms: []
   - m_title: radiance
+    m_definition: Brightness
+    m_partOfSpeech: 0
     m_phoneticSpelling: "ra\xB7\u200Bdi\xB7\u200Bance | \\ \u02C8r\u0101-d\u0113-\u0259n(t)s
       \\"
-    m_keywords: []
-    m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 3e70db7d7139d4b479b8025a1a691eb6, type: 3}
-    m_definition: Brightness
+    m_keywords: []
+    m_synonyms:
+    - m_title: brightness
+      m_definition: Lisuga's brightness really suits her as her gentleness illuminates.
+      m_partOfSpeech: 0
+    m_antonyms: []
   - m_title: befitting
+    m_definition: Suitable, appropriate
+    m_partOfSpeech: 2
     m_phoneticSpelling: "be\xB7\u200Bfit\xB7\u200Bting | \\ bi-\u02C8fi-ti\u014B,
       b\u0113- \\"
-    m_keywords: []
-    m_partOfSpeech: 2
     m_pronunciation: {fileID: 8300000, guid: 216dfc31fa604d44ea75b44e5c0a809b, type: 3}
-    m_definition: Suitable, appropriate
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: serene
-    m_phoneticSpelling: "se\xB7\u200Brene | \\ s\u0259-\u02C8r\u0113n \\"
-    m_keywords: []
-    m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: 5bfa95238915fab42bf21a52c962d683, type: 3}
     m_definition: Shining bright and steady
-  - m_title: wicked
-    m_phoneticSpelling: "wick\xB7\u200Bed | \\ \u02C8wi-k\u0259d \\"
-    m_keywords: []
     m_partOfSpeech: 2
-    m_pronunciation: {fileID: 8300000, guid: 2a3ad1978317310458187d80333bb3f1, type: 3}
+    m_phoneticSpelling: "se\xB7\u200Brene | \\ s\u0259-\u02C8r\u0113n \\"
+    m_pronunciation: {fileID: 8300000, guid: 5bfa95238915fab42bf21a52c962d683, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
+  - m_title: wicked
     m_definition: Evil, vile
+    m_partOfSpeech: 2
+    m_phoneticSpelling: "wick\xB7\u200Bed | \\ \u02C8wi-k\u0259d \\"
+    m_pronunciation: {fileID: 8300000, guid: 2a3ad1978317310458187d80333bb3f1, type: 3}
+    m_keywords: []
+    m_synonyms:
+    - m_title: evil
+      m_definition: Due to their evil actions, the siblings lost their lives.
+      m_partOfSpeech: 0
+    m_antonyms: []
   - m_title: candor
+    m_definition: Brightness, brilliance
+    m_partOfSpeech: 0
     m_phoneticSpelling: "can\xB7\u200Bdor | \\ \u02C8kan-d\u0259r,-\u02CCd\u022Fr
       \\"
-    m_keywords: []
-    m_partOfSpeech: 0
     m_pronunciation: {fileID: 8300000, guid: 1e8d89a399057ae40bd0ff163afde9ed, type: 3}
-    m_definition: Brightness, brilliance
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
   - m_title: reincarnate
+    m_definition: To give a concrete or actual form
+    m_partOfSpeech: 3
     m_phoneticSpelling: "re\xB7\u200Bin\xB7\u200Bcar\xB7\u200Bnate | \\ \u02CCr\u0113-\u0259n-\u02C8k\xE4r-\u02CCn\u0101t,
       (\u02CC)r\u0113-\u02C8in-\u02CCk\xE4r- \\"
-    m_keywords: []
-    m_partOfSpeech: 3
     m_pronunciation: {fileID: 8300000, guid: 75da7f0abd6f74641a1a8bd42ff025f2, type: 3}
-    m_definition: To give a concrete or actual form
-  - m_title: wrongdoing
-    m_phoneticSpelling: "\\ \u02C8r\xF4NG\u02CCdo\u035EoiNG \\"
     m_keywords: []
-    m_partOfSpeech: 0
-    m_pronunciation: {fileID: 8300000, guid: 1355dc25264e95d449f9d03a3f46f34a, type: 3}
+    m_synonyms: []
+    m_antonyms: []
+  - m_title: wrongdoing
     m_definition: Evil or improper behavior or action
+    m_partOfSpeech: 0
+    m_phoneticSpelling: "\\ \u02C8r\xF4NG\u02CCdo\u035EoiNG \\"
+    m_pronunciation: {fileID: 8300000, guid: 1355dc25264e95d449f9d03a3f46f34a, type: 3}
+    m_keywords: []
+    m_synonyms: []
+    m_antonyms: []
