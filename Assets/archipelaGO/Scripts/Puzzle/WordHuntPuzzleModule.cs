@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
+using Word = archipelaGO.WordBank.Word;
 using CursorEvent = archipelaGO.Puzzle.WordCell.CursorEvent;
 using CursorState = archipelaGO.Puzzle.WordCell.CursorState;
 using CellState = archipelaGO.Puzzle.WordCell.State;
@@ -76,22 +77,31 @@ namespace archipelaGO.Puzzle
 
         private class WordHuntHint : WordHint
         {
-            public WordHuntHint (Color color, int order, string word, bool guessed)
+            public WordHuntHint (Word word, WordHintType hintType, Color color, int order, bool guessed) : base(word, hintType)
             {
                 m_order = order;
-                m_word = word;
-
-                if (!guessed)
-                    return;
-
-                string colorString = ColorUtility.ToHtmlStringRGBA(color);
-                m_word = $"<color=#{ colorString }><b>{ m_word }</b></color>";
+                m_guessed = guessed;
+                m_color = color;
             }
 
-            private int m_order;
-            private string m_word;
+            #region Fields
+            private Color m_color = Color.white;
+            private int m_order = -1;
+            private bool m_guessed = false;
+            #endregion
 
-            public override string GetHint() => $"{ m_word.ToUpper() }";
+            public override string GetHint()
+            {
+                string baseHint = base.GetHint();
+
+                if (!m_guessed)
+                    return baseHint;
+
+                string colorString = ColorUtility.ToHtmlStringRGBA(m_color);
+                baseHint = $"<color=#{ colorString }><b>{ baseHint }</b></color>";
+
+                return baseHint;
+            }
         }
         #endregion
 
@@ -123,7 +133,7 @@ namespace archipelaGO.Puzzle
         {
             bool guessed = AlreadyAnswered(gridWord.word.title);
 
-            return new WordHuntHint(gridWord.hintColor, order, gridWord.word.title, guessed);
+            return new WordHuntHint(gridWord.word, gridWord.hintType, gridWord.hintColor, order, guessed);
         }
 
         protected override string GenerateHintText(List<WordHint> hints)

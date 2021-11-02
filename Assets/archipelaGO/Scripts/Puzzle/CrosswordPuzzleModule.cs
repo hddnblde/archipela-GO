@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
+using Word = archipelaGO.WordBank.Word;
 using CellState = archipelaGO.Puzzle.WordCell.State;
 
 namespace archipelaGO.Puzzle
@@ -58,15 +59,14 @@ namespace archipelaGO.Puzzle
 
         private class CrosswordHint : WordHint
         {
-            public CrosswordHint (int order, int direction, string description) =>
-                (m_order, m_direction, m_description) = (order, direction, description);
+            public CrosswordHint (Word word, WordHintType hintType, int order, int direction) : base(word, hintType)=>
+                (m_order, m_direction) = (order, direction);
 
             private int m_order;
             private int m_direction;
-            private string m_description;
 
             public int direction => m_direction;
-            public override string GetHint() => $"{ m_order }. { m_description }";
+            public override string GetHint() => $"{ m_order }. { base.GetHint() }";
         }
         #endregion
 
@@ -118,7 +118,7 @@ namespace archipelaGO.Puzzle
             new CrosswordPuzzlePiece(this, m_revealAnimationInterval, gridWord.word.title, cells);
 
         protected override WordHint GenerateHint(int order, GridWord gridWord) =>
-            new CrosswordHint(order, gridWord.direction, $"({ gridWord.word.partOfSpeechAbridged }) { gridWord.word.definition }");
+            new CrosswordHint(gridWord.word, gridWord.hintType, order, gridWord.direction);
 
         protected override string GenerateHintText(List<WordHint> hints)
         {
