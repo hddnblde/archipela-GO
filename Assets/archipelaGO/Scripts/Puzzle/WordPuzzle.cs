@@ -52,6 +52,9 @@ namespace archipelaGO.Puzzle
         public struct PuzzlePiece
         {
             [SerializeField]
+            private int m_wordBankIndex;
+
+            [SerializeField]
             private int m_direction;
 
             [SerializeField]
@@ -61,12 +64,13 @@ namespace archipelaGO.Puzzle
             private Color m_hintColor;
 
             [SerializeField]
-            private int m_wordBankIndex;
+            private WordHintType m_hintType;
 
             public int wordBankIndex => m_wordBankIndex;
             public int direction => m_direction;
             public Vector2Int position => m_position;
             public Color hintColor => m_hintColor;
+            public WordHintType hintType => m_hintType;
         }
 
         public class GridWord
@@ -76,6 +80,7 @@ namespace archipelaGO.Puzzle
                 m_direction = gridWord.direction;
                 m_position = gridWord.position;
                 m_word = wordBank.GetWord(gridWord.wordBankIndex);
+                m_hintType = gridWord.hintType;
                 m_hintColor = gridWord.hintColor;
                 m_hintColor.a = 1f;
             }
@@ -84,6 +89,7 @@ namespace archipelaGO.Puzzle
             private int m_direction = 0;
             private Vector2Int m_position = Vector2Int.zero;
             private Word m_word = new Word();
+            private WordHintType m_hintType = WordHintType.Synonyms;
             private Color m_hintColor = Color.clear;
             #endregion
 
@@ -92,6 +98,7 @@ namespace archipelaGO.Puzzle
             public int direction => m_direction;
             public Vector2Int position => m_position;
             public Word word => m_word;
+            public WordHintType hintType => m_hintType;
             public Color hintColor => m_hintColor;
             #endregion
         }
