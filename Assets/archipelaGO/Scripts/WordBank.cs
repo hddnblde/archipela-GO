@@ -142,7 +142,7 @@ namespace archipelaGO
                 {
                     BaseWord word = listOfWords[i];
                     bool separate = (i < (listOfWords.Count - 1));
-                    string text = $"{ word.title }—{ word.definition }";
+                    string text = $"{ word.title.ToUpper() }—{ word.definition }";
 
                     if (separate)
                         text += separator;
