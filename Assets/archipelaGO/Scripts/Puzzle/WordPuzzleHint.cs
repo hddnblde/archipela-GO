@@ -23,10 +23,10 @@ namespace archipelaGO.Puzzle
                     return $"({ word.partOfSpeechAbridged }) { word.definition }";
 
                 case WordHintType.Synonyms:
-                    return $"({ word.GetSynonyms() }";
+                    return $"{ word.GetSynonyms() }";
 
                 case WordHintType.Antonyms:
-                    return $"({ word.GetAntonyms() }";
+                    return $"{ word.GetAntonyms() }";
 
                 default:
                     return string.Empty;
