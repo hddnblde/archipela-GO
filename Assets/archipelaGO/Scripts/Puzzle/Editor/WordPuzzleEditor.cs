@@ -263,9 +263,11 @@ namespace archipelaGO.Puzzle
             SerializedProperty direction = puzzlePiece.FindPropertyRelative("m_direction"),
                 position = puzzlePiece.FindPropertyRelative("m_position");
 
-
             using (new EditorGUI.IndentLevelScope())
             {
+                SerializedProperty hintType = puzzlePiece.FindPropertyRelative("m_hintType");
+                EditorGUILayout.PropertyField(hintType);
+
                 if (m_puzzleType.enumValueIndex == WordHuntIndex)
                 {
                     SerializedProperty hintColor = puzzlePiece.FindPropertyRelative("m_hintColor");
