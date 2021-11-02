@@ -36,6 +36,12 @@ namespace archipelaGO
 
             [SerializeField, TextArea, FormerlySerializedAs("m_description")]
             private string m_definition;
+
+            [SerializeField]
+            private List<string> m_synonyms;
+
+            [SerializeField]
+            private List<string> m_antonyms;
             #endregion
 
 
@@ -118,6 +124,27 @@ namespace archipelaGO
                     default:
                         return string.Empty;
                 }
+            }
+
+            public string GetSynonyms() => GetConcatinatedListOfStrings(m_synonyms, "; ");
+            public string GetAntonyms() => GetConcatinatedListOfStrings(m_antonyms, "; ");
+
+            private string GetConcatinatedListOfStrings(List<string> listOfStrings, string separator)
+            {
+                System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+
+                for (int i = 0; i < listOfStrings.Count; i++)
+                {
+                    string item = listOfStrings[i];
+                    bool separate = (i < (listOfStrings.Count - 1));
+
+                    if (separate)
+                        item += separator;
+
+                    stringBuilder.Append(item);
+                }
+
+                return stringBuilder.ToString();
             }
             #endregion
         }
