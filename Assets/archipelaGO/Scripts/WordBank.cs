@@ -16,85 +16,21 @@ namespace archipelaGO
 
         #region Data Structure
         [System.Serializable]
-        public struct Word
+        public class BaseWord
         {
-            #region Fields
             [SerializeField]
             private string m_title;
-
-            [SerializeField]
-            private string m_phoneticSpelling;
-
-            [SerializeField]
-            private List<string> m_keywords;
-
-            [SerializeField]
-            private PartOfSpeech m_partOfSpeech;
-
-            [SerializeField]
-            private AudioClip m_pronunciation;
 
             [SerializeField, TextArea, FormerlySerializedAs("m_description")]
             private string m_definition;
 
             [SerializeField]
-            private List<string> m_synonyms;
+            private PartOfSpeech m_partOfSpeech;
 
-            [SerializeField]
-            private List<string> m_antonyms;
-            #endregion
-
-
-            #region Properties
             public string title => m_title;
-            public string phoneticSpelling => m_phoneticSpelling;
+            public string definition => m_definition;
             public PartOfSpeech partOfSpeech => m_partOfSpeech;
             public string partOfSpeechAbridged => AbbreviatePartOfSpeech(m_partOfSpeech);
-            public AudioClip pronunciationClip => m_pronunciation;
-            public string definition => m_definition;
-            #endregion
-
-
-            #region Methods
-            public bool IsMatched(string key)
-            {
-                string match;
-
-                return IsMatched(key, out match);
-            }
-
-            public bool IsMatched(string key, out string match)
-            {
-                foreach (string keyword in GetSortedListOfKeywords())
-                {
-                    if (!string.Equals(keyword, key))
-                        continue;
-                    
-                    match = keyword;
-                    return true;
-                }
-
-                if (m_title.Contains(key))
-                {
-                    match = m_title;
-                    return true;
-                }
-
-                match = string.Empty;
-                return false;
-            }
-
-            public List<string> GetKeywords()
-            {
-                List<string> keywords = new List<string>();
-                keywords.Add(m_title);
-                keywords.AddRange(m_keywords);
-
-                return keywords;
-            }
-
-            private List<string> GetSortedListOfKeywords() =>
-                m_keywords.OrderByDescending(key => key.Length).ToList();
 
             private string AbbreviatePartOfSpeech(PartOfSpeech partOfSpeech)
             {
@@ -125,23 +61,93 @@ namespace archipelaGO
                         return string.Empty;
                 }
             }
+        }
 
-            public string GetSynonyms() => GetConcatinatedListOfStrings(m_synonyms, "; ");
-            public string GetAntonyms() => GetConcatinatedListOfStrings(m_antonyms, "; ");
+        [System.Serializable]
+        public class Word : BaseWord
+        {
+            #region Fields
+            [SerializeField]
+            private string m_phoneticSpelling = string.Empty;
 
-            private string GetConcatinatedListOfStrings(List<string> listOfStrings, string separator)
+            [SerializeField]
+            private AudioClip m_pronunciation = null;
+
+            [SerializeField]
+            private List<string> m_keywords = new List<string>();
+
+            [SerializeField]
+            private List<BaseWord> m_synonyms = new List<BaseWord>();
+
+            [SerializeField]
+            private List<BaseWord> m_antonyms = new List<BaseWord>();
+            #endregion
+
+
+            #region Properties
+            public string phoneticSpelling => m_phoneticSpelling;
+            public AudioClip pronunciationClip => m_pronunciation;
+            #endregion
+
+
+            #region Methods
+            public bool IsMatched(string key)
+            {
+                string match;
+
+                return IsMatched(key, out match);
+            }
+
+            public bool IsMatched(string key, out string match)
+            {
+                foreach (string keyword in GetSortedListOfKeywords())
+                {
+                    if (!string.Equals(keyword, key))
+                        continue;
+                    
+                    match = keyword;
+                    return true;
+                }
+
+                if (title.Contains(key))
+                {
+                    match = title;
+                    return true;
+                }
+
+                match = string.Empty;
+                return false;
+            }
+
+            public List<string> GetKeywords()
+            {
+                List<string> keywords = new List<string>();
+                keywords.Add(title);
+                keywords.AddRange(m_keywords);
+
+                return keywords;
+            }
+
+            private List<string> GetSortedListOfKeywords() =>
+                m_keywords.OrderByDescending(key => key.Length).ToList();
+
+            public string GetSynonyms() => GetConcatinatedListOfStrings(m_synonyms, ";\n");
+            public string GetAntonyms() => GetConcatinatedListOfStrings(m_antonyms, ";\n");
+
+            private string GetConcatinatedListOfStrings(List<BaseWord> listOfWords, string separator)
             {
                 System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
 
-                for (int i = 0; i < listOfStrings.Count; i++)
+                for (int i = 0; i < listOfWords.Count; i++)
                 {
-                    string item = listOfStrings[i];
-                    bool separate = (i < (listOfStrings.Count - 1));
+                    BaseWord word = listOfWords[i];
+                    bool separate = (i < (listOfWords.Count - 1));
+                    string text = $"{ word.title }—{ word.definition }";
 
                     if (separate)
-                        item += separator;
+                        text += separator;
 
-                    stringBuilder.Append(item);
+                    stringBuilder.Append(word);
                 }
 
                 return stringBuilder.ToString();
