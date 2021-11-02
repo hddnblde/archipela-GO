@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using ScorableGameModule = archipelaGO.Game.ScorableGameModule<archipelaGO.Puzzle.WordPuzzle>;
 using GridWord = archipelaGO.Puzzle.WordPuzzle.GridWord;
+using Word = archipelaGO.WordBank.Word;
 using TMPro;
 
 namespace archipelaGO.Puzzle
@@ -96,7 +97,11 @@ namespace archipelaGO.Puzzle
 
         protected abstract class WordHint
         {
-            public abstract string GetHint();
+            public WordHint (Word word, WordHintType hintType) =>
+                m_hintText = WordPuzzleHintGenerator.GetHint(word, hintType);
+
+            private string m_hintText;
+            public virtual string GetHint() => m_hintText;
         }
         #endregion
 
