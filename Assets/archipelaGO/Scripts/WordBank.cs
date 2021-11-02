@@ -147,7 +147,7 @@ namespace archipelaGO
                     if (separate)
                         text += separator;
 
-                    stringBuilder.Append(word);
+                    stringBuilder.Append(text);
                 }
 
                 return stringBuilder.ToString();
