@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Timer = archipelaGO.TimeHandling.Timer;
 
 namespace archipelaGO.Game
 {
@@ -13,10 +14,7 @@ namespace archipelaGO.Game
         public event GameCompleted OnFailed;
         private Coroutine m_timerRoutine = null;
         private float m_currentTime = 0f;
-
-        public event Tick OnCountUp;
-        public event Tick OnCountdown;
-        public delegate void Tick(int seconds);
+        private Timer m_timer = null;
         #endregion
 
 
@@ -41,22 +39,26 @@ namespace archipelaGO.Game
 
 
         #region Methods
-        public void Initialize(T config)
+        public void Initialize(T config, Timer timer)
         {
             m_config = config;
+            m_timer = timer;
             OnInitialize();
         }
 
         public void Begin()
         {
-            if (timeLimit < Mathf.Infinity)
-                BeginCountdownTimer(timeLimit);
+            if (timeLimit < Mathf.Infinity && m_timer != null)
+                m_timer.StartCountdown(timeLimit, InvokeGameOver);
         }
 
         protected abstract void OnInitialize();
 
         protected void InvokeGameOver()
         {
+            if (m_timer != null)
+                m_timer.StopCountdown();
+
             #if ARCHIPELAGO_DEBUG_MODE
             StopAllAutoplayers();
             #endif
@@ -72,41 +74,6 @@ namespace archipelaGO.Game
 
             completionEvent?.Invoke(message);
             completionEvent = null;
-        }
-
-        private void BeginCountdownTimer(float timeLimit)
-        {
-            if (m_timerRoutine != null)
-                StopCoroutine(m_timerRoutine);
-
-            m_timerRoutine = StartCoroutine(CountdownRoutine(timeLimit));
-        }
-
-        private IEnumerator CountdownRoutine(float timeLimit)
-        {
-            int previousTick = -1;
-
-            for (m_currentTime = 0f; m_currentTime < timeLimit; m_currentTime += Time.deltaTime)
-            {
-                int flooredTime = Mathf.FloorToInt(m_currentTime);
-
-                if (previousTick != flooredTime)
-                {
-                    previousTick = flooredTime;
-                    InvokeTick();
-                }
-                yield return null;
-            }
-
-            InvokeTick();
-            yield return null;
-            InvokeGameOver();
-        }
-
-        private void InvokeTick()
-        {
-            OnCountUp?.Invoke(Mathf.FloorToInt(currentTime));
-            OnCountdown?.Invoke(Mathf.FloorToInt(remainingTime));
         }
         #endregion
 

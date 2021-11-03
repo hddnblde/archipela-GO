@@ -13,6 +13,7 @@ using EndScreen = archipelaGO.UI.Windows.EndScreenWindow;
 using archipelaGO.GameData;
 using archipelaGO.UI;
 using Badge = archipelaGO.UI.Windows.EndScreenWindow.Badge;
+using Timer = archipelaGO.TimeHandling.Timer;
 
 namespace archipelaGO.Game
 {
@@ -36,6 +37,9 @@ namespace archipelaGO.Game
 
         [SerializeField]
         private EndScreen m_endScreen = null;
+
+        [SerializeField]
+        private Timer m_timer = null;
 
         private List<string> m_unlockableModules = new List<string>();
         #endregion
@@ -177,7 +181,7 @@ namespace archipelaGO.Game
             };
 
             module.gameObject.SetActive(true);
-            module.Initialize(config);
+            module.Initialize(config, m_timer);
 
             if (m_hintScreen != null)
                 m_hintScreen.OnHide += module.Begin;
