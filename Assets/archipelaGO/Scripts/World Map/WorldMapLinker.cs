@@ -18,7 +18,7 @@ namespace archipelaGO.WorldMap
         private GameLibrary m_library = null;
 
         [SerializeField]
-        private bool m_preUnlocked = false;
+        private List<GameLibrary> m_requiredUnlockedLibraries = new List<GameLibrary>();
 
         [SerializeField]
         private CanvasGroup m_canvasGroup = null;
@@ -26,10 +26,13 @@ namespace archipelaGO.WorldMap
         [SerializeField]
         private List<GameObject> m_interactables = new List<GameObject>();
 
+        [SerializeField]
+        private List<GameObject> m_nonInteractables = new List<GameObject>();
+
         protected override void Awake()
         {
             base.Awake();
-            bool unlocked = (m_preUnlocked || IsUnlocked());
+            bool unlocked = (m_requiredUnlockedLibraries.Count <= 0 || IsUnlocked());
 
             if (sceneLoadTrigger != null)
                 sceneLoadTrigger.isInteractable = unlocked;
@@ -44,6 +47,12 @@ namespace archipelaGO.WorldMap
             {
                 if (interactable != null)
                     interactable.SetActive(unlocked);
+            }
+
+            foreach (GameObject nonInteractable in m_nonInteractables)
+            {
+                if (nonInteractable != null)
+                    nonInteractable.SetActive(!unlocked);
             }
         }
 
@@ -93,12 +102,15 @@ namespace archipelaGO.WorldMap
 
             List<string> keys = new List<string>();
 
-            for (int i = 0; i < m_library.moduleCount; i++)
+            foreach (GameLibrary requiredLibrary in m_requiredUnlockedLibraries)
             {
-                GameModuleConfig config = m_library.GetNodeConfig(i);
+                for (int i = 0; i < requiredLibrary.moduleCount; i++)
+                {
+                    GameModuleConfig config = requiredLibrary.GetNodeConfig(i);
 
-                if (config != null)
-                    keys.Add(config.name);
+                    if (config != null)
+                        keys.Add(config.name);
+                }
             }
 
             return keys.ToArray();
