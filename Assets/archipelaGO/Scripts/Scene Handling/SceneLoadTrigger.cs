@@ -16,6 +16,15 @@ namespace archipelaGO.SceneHandling
         #endregion
 
 
+        #region Property
+        public bool isInteractable
+        {
+            get => m_isInteractable;
+            set => m_isInteractable = value;
+        }
+        #endregion
+
+
         #region ClickableObject Implementation
         protected sealed override bool IsInteractable() =>
             m_isInteractable;
