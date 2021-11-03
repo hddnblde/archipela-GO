@@ -11,16 +11,26 @@ namespace archipelaGO.WorldMap
         [SerializeField]
         private Text m_label = null;
 
-        public void SetVisuals(Sprite sprite, string label)
+        [SerializeField]
+        private Color m_enabledColor = Color.white;
+
+        [SerializeField]
+        private Color m_disabledColor = Color.gray;
+
+        public void SetVisuals(Sprite sprite, string label, bool unlocked)
         {
-            SetSprite(sprite);
+            Color color = (unlocked ? m_enabledColor : m_disabledColor);
+            SetSprite(sprite, color);
             SetLabel(label.ToUpper());
         }
 
-        private void SetSprite(Sprite sprite)
+        private void SetSprite(Sprite sprite, Color color)
         {
-            if (m_sprite != null)
-                m_sprite.sprite = sprite;
+            if (m_sprite == null)
+                return;
+
+            m_sprite.sprite = sprite;
+            m_sprite.color = color;
         }
 
         private void SetLabel(string label)
