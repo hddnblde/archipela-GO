@@ -155,6 +155,7 @@ namespace archipelaGO.Quiz
 
                 m_choiceWindow.Debug_ChooseAnswer(question.correctAnswerIndices[0]);
                 yield return new WaitUntil(() => activeQuestion != m_currentQuestionIndex);
+                activeQuestion = m_currentQuestionIndex;
             }
         }
         #endif
