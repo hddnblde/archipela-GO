@@ -248,6 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sprite: {fileID: 3816634830850152575}
   m_label: {fileID: 330976250079292767}
+  m_enabledColor: {r: 0.8, g: 0.5294118, b: 0.1764706, a: 1}
+  m_disabledColor: {r: 0.3529412, g: 0.27450982, b: 0.19215687, a: 0.74509805}
 --- !u!61 &2761335993335290142
 BoxCollider2D:
   m_ObjectHideFlags: 0
