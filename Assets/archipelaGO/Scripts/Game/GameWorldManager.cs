@@ -62,16 +62,17 @@ namespace archipelaGO.Game
             (string[] required, string[] unlocked) keys =
                 library.GetProgressKeys(index);
 
+            bool nodeUnlocked = NodeUnlocked(keys.required);
+
             WorldMapNode nodeController =
                 nodeGameObject.GetComponent<WorldMapNode>();
 
             if (nodeController != null)
-                nodeController.SetVisuals(nodeVisuals.sprite, nodeVisuals.label);
+                nodeController.SetVisuals(nodeVisuals.sprite, nodeVisuals.label, nodeUnlocked);
 
             GameModuleLinker moduleMediator = nodeGameObject.AddComponent<GameModuleLinker>();
             SceneLoadTrigger sceneLoadTrigger = nodeGameObject.GetComponent<SceneLoadTrigger>();
 
-            bool nodeUnlocked = NodeUnlocked(keys.required);
             moduleMediator.Initialize(library, index, keys.unlocked);
             sceneLoadTrigger.SetSceneToLoad(Scene.Game, nodeUnlocked);
         }
