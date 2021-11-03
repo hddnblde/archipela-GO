@@ -23,6 +23,8 @@ namespace archipelaGO.SceneHandling
                     yield return screen.WaitUntilDone();
             }
 
+            yield return new WaitUntil(SceneLoader.NotTransitioning);
+
             SceneLoader.LoadScene(m_nextSceneToLoad);
         }
     }
