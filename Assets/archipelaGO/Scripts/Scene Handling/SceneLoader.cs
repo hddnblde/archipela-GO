@@ -47,6 +47,14 @@ namespace archipelaGO.SceneHandling
         public static bool IsActive() =>
             (m_singletonInstance != null);
 
+        public static bool NotTransitioning()
+        {
+            if (!IsActive())
+                return true;
+            
+            return !m_singletonInstance.m_isTransitioning;
+        }
+
         public static bool FinishedLoadingScene()
         {
             if (IsActive())
