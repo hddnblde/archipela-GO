@@ -1328,6 +1328,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_library: {fileID: 11400000, guid: fde7731207d982340aedc67a72618014, type: 2}
+  m_preUnlocked: 1
+  m_canvasGroup: {fileID: 879957506}
+  m_interactables:
+  - {fileID: 275236603}
+  - {fileID: 394735659}
 --- !u!225 &879957506
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1668,6 +1673,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1985601278}
     m_Modifications:
+    - target: {fileID: 7047377836006889277, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7047377836545051938, guid: 6d3f08d1e2e8a6643b528776f36c62a1, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -2116,6 +2125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_library: {fileID: 11400000, guid: 5516efa1590fc1a43b47803904a2b207, type: 2}
+  m_preUnlocked: 0
+  m_canvasGroup: {fileID: 1434078783}
+  m_interactables:
+  - {fileID: 436713275}
+  - {fileID: 617260433}
 --- !u!1 &1445631054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,6 +2608,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_library: {fileID: 11400000, guid: 324d8fa03870c6b48bbdc244fead88ac, type: 2}
+  m_preUnlocked: 0
+  m_canvasGroup: {fileID: 1974686080}
+  m_interactables:
+  - {fileID: 843589737}
+  - {fileID: 935582272}
 --- !u!1 &1985601274
 GameObject:
   m_ObjectHideFlags: 0
