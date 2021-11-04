@@ -18,6 +18,9 @@ namespace archipelaGO.SceneHandling
 
         private Coroutine m_loadSceneRoutine = null;
         private bool m_isTransitioning = false, m_loaded = false;
+        public delegate void SceneLoaded(Scene scene);
+        public static event SceneLoaded OnPreLoad;
+        public static event SceneLoaded OnPostLoad;
         private static SceneLoader m_singletonInstance = null;
         #endregion
 
@@ -112,12 +115,16 @@ namespace archipelaGO.SceneHandling
 
         private IEnumerator SceneLoadingRoutine(int sceneIndex)
         {
+            Scene scene = (Scene)sceneIndex;
             m_isTransitioning = true;
             m_loaded = false;
+
+            OnPreLoad?.Invoke(scene);
             yield return FadeScreenRoutine(true);
             yield return LoadSceneAsynchronously(sceneIndex);
             yield return FadeScreenRoutine(false);
             m_isTransitioning = false;
+            OnPostLoad?.Invoke(scene);
         }
 
         private IEnumerator LoadSceneAsynchronously(int sceneIndex)

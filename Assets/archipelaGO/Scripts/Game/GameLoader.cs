@@ -41,6 +41,8 @@ namespace archipelaGO.Game
         [SerializeField]
         private Timer m_timer = null;
 
+        public static event GameLoaded OnGameLoaded;
+        public delegate void GameLoaded(GameModuleConfig config);
         private List<string> m_unlockableModules = new List<string>();
         #endregion
 
@@ -194,6 +196,8 @@ namespace archipelaGO.Game
                 module.Begin();
                 HideHintScreen();
             }
+
+            OnGameLoaded?.Invoke(config);
         }
 
         private Badge GetBadge(IScorableModule scorableModule)
