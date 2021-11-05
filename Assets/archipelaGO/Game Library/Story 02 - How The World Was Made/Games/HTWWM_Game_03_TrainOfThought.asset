@@ -109,11 +109,11 @@ MonoBehaviour:
       best word to describe the mood of Captan and Maguayan?"
     m_answers:
     - m_text: Brokenhearted
-      m_isCorrect: 0
+      m_isCorrect: 1
     - m_text: Contented
       m_isCorrect: 0
     - m_text: Joyful
-      m_isCorrect: 1
+      m_isCorrect: 0
     - m_text: Pleased
       m_isCorrect: 0
   - m_stem: "<i>\u201CAs for that wicked Licalibutan, he gave no candor, but his
