@@ -99,7 +99,6 @@ namespace archipelaGO.Audio
         private void OnGameLoaded(GameModuleConfig gameConfig)
         {
             AudioClip music = GetAudioClipForGame(gameConfig);
-            Debug.Log($"GAME LOADED = { gameConfig.name } : { music?.name ?? "NONE" }");
 
             if (music != null && m_player != null)
                 m_player.Play(music);
