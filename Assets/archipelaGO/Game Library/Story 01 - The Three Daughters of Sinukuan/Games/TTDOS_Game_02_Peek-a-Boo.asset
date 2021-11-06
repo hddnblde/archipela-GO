@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: TTDOS_Game_02_Peek-a-Boo
   m_EditorClassIdentifier: 
-  m_timeLimit: 240
+  m_timeLimit: 300
   m_hint: "Oh wow! You\u2019re onto our next puzzle! High five! In this game, some
     words are trying to hide and mix with some random letters. Can you find them?
     If you see them all, you\u2019ll be earning another badge! So, clear that vision,
@@ -25,43 +25,53 @@ MonoBehaviour:
   m_wordBank: {fileID: 11400000, guid: d5f1aac82a3752a4ca543043303702f3, type: 2}
   m_gridSize: {x: 14, y: 14}
   m_puzzlePieces:
-  - m_direction: 0
+  - m_wordBankIndex: 4
+    m_direction: 0
     m_position: {x: 1, y: 1}
     m_hintColor: {r: 0.4995563, g: 0.6509434, b: 0.3224012, a: 0}
-    m_wordBankIndex: 4
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 17
+    m_direction: 0
     m_position: {x: 6, y: 4}
     m_hintColor: {r: 0.6407126, g: 0.24363652, b: 0.7075472, a: 0}
-    m_wordBankIndex: 17
-  - m_direction: 1
+    m_hintType: 0
+  - m_wordBankIndex: 26
+    m_direction: 1
     m_position: {x: 4, y: 7}
     m_hintColor: {r: 0.764151, g: 0.37811333, b: 0.34963512, a: 0}
-    m_wordBankIndex: 26
-  - m_direction: 2
+    m_hintType: 0
+  - m_wordBankIndex: 27
+    m_direction: 2
     m_position: {x: 2, y: 11}
     m_hintColor: {r: 0.38522208, g: 0.2803489, b: 0.5660378, a: 0}
-    m_wordBankIndex: 27
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 28
+    m_direction: 0
     m_position: {x: 0, y: 2}
     m_hintColor: {r: 0.32805273, g: 0.544124, b: 0.7169812, a: 0}
-    m_wordBankIndex: 28
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 33
+    m_direction: 0
     m_position: {x: 7, y: 11}
     m_hintColor: {r: 0.34607512, g: 0.40370253, b: 0.7264151, a: 0}
-    m_wordBankIndex: 33
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 30
+    m_direction: 0
     m_position: {x: 1, y: 3}
     m_hintColor: {r: 0.19344072, g: 0.5943396, b: 0.5563233, a: 0}
-    m_wordBankIndex: 30
-  - m_direction: 4
+    m_hintType: 0
+  - m_wordBankIndex: 18
+    m_direction: 4
     m_position: {x: 12, y: 5}
     m_hintColor: {r: 0.6132076, g: 0.56754375, b: 0.16487184, a: 0}
-    m_wordBankIndex: 18
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 19
+    m_direction: 0
     m_position: {x: 4, y: 12}
     m_hintColor: {r: 0.5943396, g: 0.41800424, b: 0.15979885, a: 0}
-    m_wordBankIndex: 19
-  - m_direction: 4
+    m_hintType: 0
+  - m_wordBankIndex: 22
+    m_direction: 4
     m_position: {x: 8, y: 6}
     m_hintColor: {r: 0.6037736, g: 0.38913253, b: 0.31043077, a: 0}
-    m_wordBankIndex: 22
+    m_hintType: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: HTWWM_Game_01_BrainDrain
   m_EditorClassIdentifier: 
-  m_timeLimit: 210
+  m_timeLimit: 300
   m_hint: "Kudos for finishing the story! To further engage you in this literary
     text, we have prepared this puzzle for you. Have you noticed and checked out
     our set of vocabulary words as you go about our selection? If yes, then you\u2019ll

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58861ce0505bf14cb51d646cae92dae, type: 3}
   m_Name: HTWWM_Game_02_Peek-a-Boo
   m_EditorClassIdentifier: 
-  m_timeLimit: 260
+  m_timeLimit: 300
   m_hint: "Oh wow! You\u2019re onto our next puzzle! High five! In this game, some
     words are trying to hide and mix with some random letters. Can you find them?
     If you see them all, you\u2019ll be earning another badge! So, clear that vision,
@@ -25,51 +25,63 @@ MonoBehaviour:
   m_wordBank: {fileID: 11400000, guid: 91114602699fc4b46afac120f21a36b8, type: 2}
   m_gridSize: {x: 14, y: 14}
   m_puzzlePieces:
-  - m_direction: 7
+  - m_wordBankIndex: 16
+    m_direction: 7
     m_position: {x: 8, y: 13}
     m_hintColor: {r: 0.71434325, g: 0.9245283, b: 0.46662515, a: 0}
-    m_wordBankIndex: 16
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 9
+    m_direction: 0
     m_position: {x: 1, y: 0}
     m_hintColor: {r: 0.8134554, g: 0.44281775, b: 0.8773585, a: 0}
-    m_wordBankIndex: 9
-  - m_direction: 3
+    m_hintType: 0
+  - m_wordBankIndex: 12
+    m_direction: 3
     m_position: {x: 0, y: 6}
     m_hintColor: {r: 0.8962264, g: 0.41456032, b: 0.37624598, a: 0}
-    m_wordBankIndex: 12
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 14
+    m_direction: 0
     m_position: {x: 4, y: 1}
     m_hintColor: {r: 0.6261845, g: 0.48718405, b: 0.8679245, a: 0}
-    m_wordBankIndex: 14
-  - m_direction: 5
+    m_hintType: 0
+  - m_wordBankIndex: 26
+    m_direction: 5
     m_position: {x: 12, y: 11}
     m_hintColor: {r: 0.38020647, g: 0.6721252, b: 0.9056604, a: 0}
-    m_wordBankIndex: 26
-  - m_direction: 1
+    m_hintType: 0
+  - m_wordBankIndex: 13
+    m_direction: 1
     m_position: {x: 9, y: 2}
     m_hintColor: {r: 0.3700605, g: 0.4344933, b: 0.7924528, a: 0}
-    m_wordBankIndex: 13
-  - m_direction: 3
+    m_hintType: 0
+  - m_wordBankIndex: 11
+    m_direction: 3
     m_position: {x: 2, y: 6}
     m_hintColor: {r: 0.28261837, g: 0.6886792, b: 0.65078026, a: 0}
-    m_wordBankIndex: 11
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 29
+    m_direction: 0
     m_position: {x: 1, y: 12}
     m_hintColor: {r: 0.8207547, g: 0.77882934, b: 0.39101994, a: 0}
-    m_wordBankIndex: 29
-  - m_direction: 5
+    m_hintType: 0
+  - m_wordBankIndex: 31
+    m_direction: 5
     m_position: {x: 13, y: 10}
     m_hintColor: {r: 0.9811321, g: 0.7009946, b: 0.29156283, a: 1}
-    m_wordBankIndex: 31
-  - m_direction: 5
+    m_hintType: 0
+  - m_wordBankIndex: 30
+    m_direction: 5
     m_position: {x: 11, y: 13}
     m_hintColor: {r: 0.5943396, g: 0.41872907, b: 0.3504361, a: 0}
-    m_wordBankIndex: 30
-  - m_direction: 0
+    m_hintType: 0
+  - m_wordBankIndex: 27
+    m_direction: 0
     m_position: {x: 0, y: 5}
     m_hintColor: {r: 0.49803925, g: 0.79215693, b: 0.76470596, a: 0}
-    m_wordBankIndex: 27
-  - m_direction: 5
+    m_hintType: 0
+  - m_wordBankIndex: 22
+    m_direction: 5
     m_position: {x: 10, y: 12}
     m_hintColor: {r: 0.57797825, g: 0.7924528, b: 0.3252047, a: 0}
-    m_wordBankIndex: 22
+    m_hintType: 0
