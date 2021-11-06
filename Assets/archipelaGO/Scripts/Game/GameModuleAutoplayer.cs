@@ -22,7 +22,7 @@ namespace archipelaGO.Game
         private void Awake()
         {
             #if !ARCHIPELAGO_DEBUG_MODE
-            Destroy(gameObject)
+            Destroy(gameObject);
             return;
             #else
             m_canvasGroup = GetComponent<CanvasGroup>();
