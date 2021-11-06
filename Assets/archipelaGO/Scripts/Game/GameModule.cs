@@ -4,7 +4,11 @@ using Timer = archipelaGO.TimeHandling.Timer;
 
 namespace archipelaGO.Game
 {
+    #if ARCHIPELAGO_DEBUG_MODE
     public abstract class GameModule<T> : MonoBehaviour, IAutoplayable
+    #else
+    public abstract class GameModule<T> : MonoBehaviour
+    #endif
         where T : GameModuleConfig
     {
         #region Fields
